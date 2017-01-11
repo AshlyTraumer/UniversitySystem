@@ -13,6 +13,15 @@ namespace ClassLibrary
         {
         }
 
+        public DbSet<Departament> Departaments { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<Entrant> Entrants { get; set; }
+        public DbSet<Professor> Professors { get; set; }
+        public DbSet<Result> Results { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<Specialization> Specializations { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new DepartamentConfiguration());

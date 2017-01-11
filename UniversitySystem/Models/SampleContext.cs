@@ -6,7 +6,7 @@ using System.Web;
 
 namespace UniversitySystem.Models
 {
-    public class SampleContext : DbContext
+  /*  public class SampleContext : DbContext
     {
         // Имя будущей базы данных можно указать через
         // вызов конструктора базового класса
@@ -18,5 +18,5 @@ namespace UniversitySystem.Models
         public DbSet<Order> Orders { get; set; }
 
         
-    }
+    }*/
 }

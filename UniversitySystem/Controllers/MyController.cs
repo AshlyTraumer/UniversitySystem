@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,7 @@ namespace UniversitySystem.Controllers
         // GET: My
         public ActionResult Index()
         {
-            Customer customer = new Customer() { Age=00,Name="OK"};
+            Departament customer = new Departament() { Title="Biology"};
 
             // Получить данные из формы с помощью средств
             // привязки моделей ASP.NET
@@ -25,10 +26,10 @@ namespace UniversitySystem.Controllers
                 // В этой точке непосредственно начинается работа с Entity Framework
 
                 // Создать объект контекста
-                SampleContext context = new SampleContext();
+                RepositoryContext context = new RepositoryContext();
                 
                 // Вставить данные в таблицу Customers с помощью LINQ
-                context.Customers.Add(customer);
+                context.Departaments.Add(customer);
 
                 // Сохранить изменения в БД
                 context.SaveChanges();

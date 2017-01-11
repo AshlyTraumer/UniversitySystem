@@ -19,7 +19,7 @@ namespace ClassLibrary
         public string Name { get; set; }        
         public string LastName { get; set; }        
         public DateTime DateOfBirth { get; set; }
-        public char Sex { get; set; }
+        
 
         public int EnrollmentId { get; set; }
         public Enrollment Enrollment { get; set; }

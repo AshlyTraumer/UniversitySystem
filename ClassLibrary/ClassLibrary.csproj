@@ -49,23 +49,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DepartamentConfiguration.cs" />
+    <Compile Include="Configuration\DepartamentConfiguration.cs" />
     <Compile Include="Domen\Departament.cs" />
     <Compile Include="Domen\Enrollment.cs" />
     <Compile Include="Domen\Entrant.cs" />
     <Compile Include="Domen\Professor.cs" />
-    <Compile Include="EnrollmentConfiguration.cs" />
-    <Compile Include="EntrantConfiguration.cs" />
+    <Compile Include="Configuration\EnrollmentConfiguration.cs" />
+    <Compile Include="Configuration\EntrantConfiguration.cs" />
+    <Compile Include="Configuration\ProfessorConfiguration.cs" />
+    <Compile Include="Migrations\201701111225327_Migra.cs" />
+    <Compile Include="Migrations\201701111225327_Migra.Designer.cs">
+      <DependentUpon>201701111225327_Migra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domen\Result.cs" />
     <Compile Include="Domen\Schedule.cs" />
     <Compile Include="Domen\Specialization.cs" />
     <Compile Include="Domen\Subject.cs" />
     <Compile Include="RepositoryContext.cs" />
+    <Compile Include="Configuration\ResultConfiguration.cs" />
+    <Compile Include="Configuration\ScheduleConfiguration.cs" />
+    <Compile Include="Configuration\SpecializationConfiguration.cs" />
+    <Compile Include="Configuration\SubjectConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701111225327_Migra.resx">
+      <DependentUpon>201701111225327_Migra.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

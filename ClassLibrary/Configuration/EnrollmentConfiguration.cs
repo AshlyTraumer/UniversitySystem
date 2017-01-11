@@ -16,15 +16,17 @@ namespace ClassLibrary
 
             Property(p => p.Id).
                HasColumnName("Id").
-               HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).
-               IsRequired();
-
+               HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+               
             Property(p => p.Points)
                 .IsRequired();
 
             Property(p => p.RegistrationStatus)
                 .IsRequired();
-            
+
+            HasRequired(c => c.Entrant)
+                .WithRequiredPrincipal(c => c.Enrollment);
+
             ToTable("dbo.Enrollment");
         }
     }

@@ -16,8 +16,7 @@ namespace ClassLibrary
 
             Property(p => p.Id).
                HasColumnName("Id").
-               HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).
-               IsRequired();
+               HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);               
 
             Property(p => p.Title)
                 .HasMaxLength(30);
