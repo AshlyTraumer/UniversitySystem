@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary.Authorization;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace ClassLibrary
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Specialization> Specializations { get; set; }
         public DbSet<Subject> Subjects { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,6 +34,7 @@ namespace ClassLibrary
             modelBuilder.Configurations.Add(new ScheduleConfiguration());
             modelBuilder.Configurations.Add(new SpecializationConfiguration());
             modelBuilder.Configurations.Add(new SubjectConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
         }
     }
 }

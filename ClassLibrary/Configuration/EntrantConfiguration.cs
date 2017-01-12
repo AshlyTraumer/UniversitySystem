@@ -37,7 +37,9 @@ namespace ClassLibrary
 
             Property(p => p.DateOfBirth)
                 .HasColumnType("date")
-                .IsRequired();            
+                .IsRequired();
+
+            
 
             HasMany(p => p.Results)                
                .WithRequired(p => p.Entrant);          

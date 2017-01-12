@@ -14,7 +14,8 @@ namespace UniversitySystem.Controllers
         // GET: My
         public ActionResult Index()
         {
-            Departament customer = new Departament() { Title="Biology"};
+            Subject customer = new Subject() { Title="Математика",Form="Цт"};
+            
 
             // Получить данные из формы с помощью средств
             // привязки моделей ASP.NET
@@ -29,7 +30,7 @@ namespace UniversitySystem.Controllers
                 RepositoryContext context = new RepositoryContext();
                 
                 // Вставить данные в таблицу Customers с помощью LINQ
-                context.Departaments.Add(customer);
+                context.Subjects.Add(customer);
 
                 // Сохранить изменения в БД
                 context.SaveChanges();

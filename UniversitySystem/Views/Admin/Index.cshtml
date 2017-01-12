@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="~/Admin">Пользователи</a></li>
+        <li><a href="~/Logout/Index/@ViewBag.Id">Выход</a></li>
+    </ul>
+
+    <div class="form">
+        <table class="table table-striped">
+            <tr>
+                <td><p>ID</p></td>
+                <td><p>Логин</p></td>
+                <td><p>Пароль</p></td>
+                <td><p>Роль</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Users)
+            {            
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p>@b.Login</p></td>
+                    <td><p>@b.Password</p></td>
+                    @if (b.Role == ClassLibrary.Authorization.Role.Admin)
+                    {
+                        <td><p>Администратор</p></td>
+                    }
+                    else
+                    {
+                        <td><p>Секретарь</p></td>
+                    }
+                    @if (b.Role!=ClassLibrary.Authorization.Role.Admin)
+                    {
+                        <td><p><a href="/Admin/Delete/@b.Id">Удалить</a>/<a href="/Admin/Change/@b.Id">Изменить</a></p></td>
+                    }
+                    else
+                    {
+                        <td><p></p></td>
+                    }                
+                </tr>
+            }
+        </table>
+</div>
+
+    <style>
+        .form form {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+    </style>
+</body>
+</html>
+
+
+

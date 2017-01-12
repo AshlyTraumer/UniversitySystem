@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authorization\User.cs" />
+    <Compile Include="Authorization\UserConfiguration.cs" />
     <Compile Include="Configuration\DepartamentConfiguration.cs" />
     <Compile Include="Domen\Departament.cs" />
     <Compile Include="Domen\Enrollment.cs" />
@@ -60,6 +62,10 @@
     <Compile Include="Migrations\201701111225327_Migra.cs" />
     <Compile Include="Migrations\201701111225327_Migra.Designer.cs">
       <DependentUpon>201701111225327_Migra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701120638344_Migra2.cs" />
+    <Compile Include="Migrations\201701120638344_Migra2.Designer.cs">
+      <DependentUpon>201701120638344_Migra2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +86,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701111225327_Migra.resx">
       <DependentUpon>201701111225327_Migra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701120638344_Migra2.resx">
+      <DependentUpon>201701120638344_Migra2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

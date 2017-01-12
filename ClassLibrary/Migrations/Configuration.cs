@@ -9,7 +9,7 @@ namespace ClassLibrary.Migrations
     {
         public Configuration()
         {
-          //  AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(ClassLibrary.RepositoryContext context)

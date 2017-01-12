@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Join";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="~/Start">Вход</a></li>
+        <li><a href="~/Register">Регистрация</a></li>
+    </ul>
+
+    <div class="form">
+       <h2>@ViewBag.Message</h2>
+    </div>
+
+    <style>
+        .form form {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+    </style>
+</body>
+</html>
+
