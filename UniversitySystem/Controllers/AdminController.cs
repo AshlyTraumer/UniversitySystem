@@ -29,7 +29,7 @@ namespace UniversitySystem.Controllers
 
         // GET: Admin
         [HttpGet]
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
             User cookie = Check();
             if (cookie == null)
@@ -37,12 +37,11 @@ namespace UniversitySystem.Controllers
 
             try
             {
-                IEnumerable<User> users = context.Users;
-                ViewBag.Users = users;
-                ViewBag.Id = id;
-                return View();
+                IEnumerable<User> users = context.Users;                
+                ViewBag.Id = cookie.Id;
+                return View(users);
             }
-            catch (Exception e)
+            catch 
             {
                 ViewBag.Message = "Ошибка отображения данных";
                 return Redirect("Error");
@@ -91,8 +90,8 @@ namespace UniversitySystem.Controllers
                 User user = context.Users.FirstOrDefault(x => x.Id == id);
                 if (user != null)
                 {
-                    ViewBag.User = user;
-                    return View("Change");
+                    ViewBag.Id = cookie.Id;
+                    return View("Change", user);
                 }
                 else
                 {
@@ -107,29 +106,28 @@ namespace UniversitySystem.Controllers
         }
 
         [HttpPost]
-        public ActionResult Change(string id,string login, string password, string role)
+        public ActionResult Change(User user)
         {
             // или using
             try
-            {                            
-                User user = new User() { Login = login, Password = password, Id= Int32.Parse(id) };
-                switch (role)
+            {                 
+                switch (user.Role)
                 {
-                    case "Администратор": user.Role = Role.Admin; break;
-                    case "Секретарь": user.Role = Role.Secretary; break;
+                    case Role.Admin: user.Role = Role.Admin; break;
+                    case Role.Secretary: user.Role = Role.Secretary; break;
                 }
                 context.Entry(user).State = EntityState.Modified;
                 context.SaveChanges();
-                IEnumerable<User> users = context.Users;
-                ViewBag.Users = users;
+                IEnumerable<User> users = context.Users;                
                 HttpCookie cookie = Request.Cookies["Cookie"];
                 ViewBag.Id = cookie["id"];
+                return View("Index", users);
             }
             catch
             {
                 ViewBag.Message = "Ошибка регистрации";
-            }
-            return View("Index");
+                return Redirect("Error");
+            }            
         }
     }
 }

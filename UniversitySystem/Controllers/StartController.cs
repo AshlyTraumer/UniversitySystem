@@ -19,13 +19,13 @@ namespace UniversitySystem.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string login, string password)
+        public ActionResult Login(User u)
         {
             // или using
             try
             {
                 RepositoryContext context = new RepositoryContext();
-                User user= context.Users.FirstOrDefault(x => x.Login == login && x.Password == password);
+                User user= context.Users.FirstOrDefault(x => x.Login == u.Login && x.Password == u.Password);
                 switch (user?.Role)
                 {
                     case Role.Admin:                        
@@ -37,8 +37,7 @@ namespace UniversitySystem.Controllers
                         Response.Cookies.Add(cookie);
                         return Redirect("/Secretary/Index/" + user.Id);
                     default:
-                        ViewBag.Message = "Ошибка регистрации";
-                        return View("Index");
+                        throw new Exception();
                 }                
             }
             catch

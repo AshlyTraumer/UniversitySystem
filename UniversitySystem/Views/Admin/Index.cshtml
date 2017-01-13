@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ClassLibrary.Authorization.User>
 @{
     ViewBag.Title = "Index";
     
@@ -24,7 +24,7 @@
                 <td><p>Роль</p></td>
                 <td></td>
             </tr>
-            @foreach (var b in ViewBag.Users)
+            @foreach (ClassLibrary.Authorization.User b in Model)
             {            
                 <tr>
                     <td><p>@b.Id</p></td>
