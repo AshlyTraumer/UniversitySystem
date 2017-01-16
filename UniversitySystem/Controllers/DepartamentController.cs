@@ -5,103 +5,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UniversitySystem.DAO;
+using UniversitySystem.Models;
 
 namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        // GET: Departament
-        RepositoryContext context = new RepositoryContext();
-        public User Check()
-        {
-            HttpCookie cookie = Request.Cookies["Cookie"];
-            int coockieId = 0;
-            if ((cookie == null) || (!Int32.TryParse(cookie["id"], out coockieId)))
-                return null;
-            User user = context.Users.FirstOrDefault(x => x.Id == coockieId);
-            if ((user == null) || (user.Role != ClassLibrary.Authorization.Role.Secretary))
-                return null;
-            return user;
-        }
-
-        [Cookie]
+        // GET: Departament     
         public ActionResult Index()
         {
-            User cookie = Check();
-           if (cookie == null)
-                return Redirect("/Start");
-
-            try
-            {
-                IEnumerable<Departament> departaments = context.Departaments;
-                ViewBag.Id = cookie.Id;
-                return View(departaments);
-            }
-            catch
-            {
-                ViewBag.Message = "Ошибка отображения данных";
-                return Redirect("Error");
-            }
+            return View(new DepartamentDAO().Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
-            try
-            {
-                ViewBag.Id = cookie.Id;                
-                return View(new Departament());
-            }
-            catch
-            {
-                ViewBag.Message = "Ошибка отображения данных";
-                return Redirect("Error");
-            }
+            return View(new DepartamentModel());
         }
 
         [HttpPost]
-        public ActionResult Create(Departament p)
+        public ActionResult Create(DepartamentModel model)
         {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
-
-            try
-            {                
-                context.Departaments.Add(p);
-                context.SaveChanges();
-                return RedirectToAction("Index","Departament");
-                //return View("Index", context.Departaments);
-            }
-            catch
-            {
-                ViewBag.Message = "Ошибка отображения данных";
-                return Redirect("Error");
-            }
+            new DepartamentDAO().Create(model);
+            return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
+            new DepartamentDAO().Delete(id);
+            return RedirectToAction("Index", "Departament");
+        }
 
-            try
-            {
-                Departament p = new Departament() { Id = id };
-                context.Departaments.Attach(p);
-                context.Departaments.Remove(p);
-                context.SaveChanges();
+        [HttpGet]
+        public ActionResult Change(int id)
+        {
+            DepartamentModel departament = new DepartamentDAO().GetById(id);
+            if (departament != null)
+                return View("Change", departament);
+            else
                 return RedirectToAction("Index", "Departament");
-            }
-            catch
-            {
-                return RedirectToAction("Index", "Departament");
-            }
+        }
+
+        [HttpPost]
+        public ActionResult Change(DepartamentModel model)
+        {
+            new DepartamentDAO().Change(model);
+            return RedirectToAction("Index", "Departament");
         }
     }
 }

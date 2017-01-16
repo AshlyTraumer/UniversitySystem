@@ -24,6 +24,7 @@ namespace UniversitySystem.Controllers
             return user;
         }
 
+        [Authorize]
         public ActionResult Index()
         {
             User cookie = Check();
@@ -44,6 +45,7 @@ namespace UniversitySystem.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult Create()
         {
             User cookie = Check();
@@ -66,6 +68,7 @@ namespace UniversitySystem.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(Professor p)
         {
             User cookie = Check();
@@ -87,6 +90,7 @@ namespace UniversitySystem.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult Delete(int id)
         {
             User cookie = Check();

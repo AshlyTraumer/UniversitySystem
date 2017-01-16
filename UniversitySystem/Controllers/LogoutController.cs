@@ -12,6 +12,7 @@ namespace UniversitySystem.Controllers
     {
         // GET: Logout
         [HttpGet]
+        [Authorize]
         public ActionResult Index(int id)
         {
             RepositoryContext context = new RepositoryContext();

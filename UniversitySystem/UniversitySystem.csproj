@@ -200,12 +200,19 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
     <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="DAO\DAO.cs" />
+    <Compile Include="DAO\DepartamentDAO.cs" />
+    <Compile Include="DAO\AuthorizeDAO.cs" />
+    <Compile Include="DAO\ProfessorDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\SampleContext.cs" />
+    <Compile Include="Models\DepartamentModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ProfessorModel.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -247,7 +254,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Start\Index.cshtml" />
+    <Content Include="Views\Start\Login.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\Join.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
@@ -257,6 +264,7 @@
     <Content Include="Views\Professor\Index.cshtml" />
     <Content Include="Views\Professor\Create.cshtml" />
     <Content Include="Views\Departament\Create.cshtml" />
+    <Content Include="Views\Departament\Change.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

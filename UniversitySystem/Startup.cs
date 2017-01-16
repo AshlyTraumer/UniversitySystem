@@ -13,7 +13,7 @@ namespace UniversitySystem
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Account/Login")
+                LoginPath = new PathString("/Start/Login")
             });
 
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);

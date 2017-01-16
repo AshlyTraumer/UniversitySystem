@@ -9,6 +9,7 @@ namespace UniversitySystem.Controllers
     public class SecretaryController : Controller
     {
         // GET: Secretary
+        
         public ActionResult Index()
         {
             return View();

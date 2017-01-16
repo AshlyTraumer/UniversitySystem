@@ -11,7 +11,7 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li class="active"><a href="~/Admin">Пользователи</a></li>
+        <li class="active"><a href="@Url.Action("Index","Admin")">Пользователи</a></li>
         <li><a href="@Url.Action("Index","Logout")">Выход</a></li>
     </ul>
 
@@ -29,15 +29,8 @@
                 <tr>
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Login</p></td>
-                    <td><p>@b.Password</p></td>
-                    @if (b.Role == ClassLibrary.Authorization.Role.Admin)
-                    {
-                        <td><p>Администратор</p></td>
-                    }
-                    else
-                    {
-                        <td><p>Секретарь</p></td>
-                    }
+                    <td><p>@b.Password</p></td>                    
+                    <td><p>@b.Role</p></td>
                     @if (b.Role!=ClassLibrary.Authorization.Role.Admin)
                     {
                         <td><p><a href="/Admin/Delete/@b.Id">Удалить</a>/<a href="/Admin/Change/@b.Id">Изменить</a></p></td>
