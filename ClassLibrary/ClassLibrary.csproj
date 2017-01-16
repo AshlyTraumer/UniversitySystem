@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201701120638344_Migra2.Designer.cs">
       <DependentUpon>201701120638344_Migra2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701160731422_DomenMigration.cs" />
+    <Compile Include="Migrations\201701160731422_DomenMigration.Designer.cs">
+      <DependentUpon>201701160731422_DomenMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domen\Result.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701120638344_Migra2.resx">
       <DependentUpon>201701120638344_Migra2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701160731422_DomenMigration.resx">
+      <DependentUpon>201701160731422_DomenMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

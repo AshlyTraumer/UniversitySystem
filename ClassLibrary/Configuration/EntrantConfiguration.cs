@@ -33,13 +33,7 @@ namespace ClassLibrary
 
             Property(p => p.LastName)
                 .HasMaxLength(30)
-                .IsRequired();
-
-            Property(p => p.DateOfBirth)
-                .HasColumnType("date")
-                .IsRequired();
-
-            
+                .IsRequired();        
 
             HasMany(p => p.Results)                
                .WithRequired(p => p.Entrant);          

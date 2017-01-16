@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary
+namespace ClassLibrar
 {
     class ResultConfiguration : EntityTypeConfiguration<Result>
     {

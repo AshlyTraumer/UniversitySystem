@@ -20,13 +20,7 @@ namespace ClassLibrary
 
             Property(p => p.Title)
                 .HasMaxLength(30)
-                .IsRequired();
-
-            Property(p => p.freeCount)                
-                .IsRequired();
-
-            Property(p => p.payCount)
-                .IsRequired();
+                .IsRequired();           
 
             HasMany(p => p.Subjects)
                 .WithMany(c => c.Specializations);

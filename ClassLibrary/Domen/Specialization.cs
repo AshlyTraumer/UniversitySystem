@@ -12,8 +12,8 @@ namespace ClassLibrary
     {        
         public int Id { get; set; }        
         public string Title { get; set; }
-        public int freeCount { get; set; }        
-        public int payCount { get; set; }   
+        public int FreeCount { get; set; }        
+        public int PayCount { get; set; }   
              
         public int DepartamentId { get; set; }
         public Departament Departament { get; set; } 

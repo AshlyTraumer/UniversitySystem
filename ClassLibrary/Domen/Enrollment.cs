@@ -1,7 +1,18 @@
-﻿namespace ClassLibrary
+﻿using System.ComponentModel;
+
+
+namespace ClassLibrary
 {
     // Mark of enrollment.
-    public enum RegistrationStatus { OnFree, OnPaid, None }
+    public enum RegistrationStatus
+    {
+        [Description ("Бюджетное")]
+        OnFree=1,
+        [Description("Платное")]
+        OnPaid =2,
+        [Description("Не зачислен")]
+        None =3
+    }
 
     public class Enrollment
     {        

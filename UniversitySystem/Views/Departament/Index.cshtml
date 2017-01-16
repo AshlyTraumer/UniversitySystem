@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ClassLibrary.Departament>
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="~/Departament">Факультеты</a></li>
+        <li ><a href="~/Specialization">Специальности</a></li>
+        <li ><a href="~/Professor">Преподаватели</a></li>
+        <li><a href="~/Subject">Предметы</a></li>
+        <li><a href="~/Admin">Расписание ЦТ</a></li>
+        <li><a href="~/Logout/Index/@ViewBag.Id">Выход</a></li>
+        <li style="background-color:aqua"><a href="~/Departament/Create">Добавить</a></li>
+    </ul>
+    <div class="form">
+        <table class="table">
+            <tr>
+                <td><p>ID</p></td>
+                <td><p>Название</p></td>
+                <td><p>Преподаватели/Специальности</p></td>                
+                <td></td>
+            </tr>
+            @foreach (ClassLibrary.Departament b in Model)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p>@b.Title</p></td>
+                    <td><p>link/link</p></td>
+                    <td><p><a href="~/Departament/Delete/@b.Id">Удалить</a>/<a href="~/Departament/Change/@b.Id">Изменить</a></p></td>                 
+                </tr>
+            }
+        </table>
+    </div>
+
+    <style>
+        .form form {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+    </style>
+</body>
+</html>

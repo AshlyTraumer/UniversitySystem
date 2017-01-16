@@ -13,21 +13,20 @@ namespace UniversitySystem.Controllers
         // GET: Register     
         public ActionResult Index()
         {
-            return View();
+            return View(new User());
         }
 
         [HttpPost]
-        public ActionResult Join(string login, string password, string role)
+        public ActionResult Join(User user)
         {
             // или using
             try
             {
-                RepositoryContext context = new RepositoryContext();
-                User user = new User() { Login = login, Password = password };
-                switch (role)
+               RepositoryContext context = new RepositoryContext();               
+                switch (user.Role)
                 {
-                    case "Администратор": user.Role = Role.Admin; break;
-                    case "Секретарь": user.Role = Role.Secretary; break;
+                    case Role.Admin: user.Role = Role.Admin; break;
+                    case Role.Secretary: user.Role = Role.Secretary; break;
                 }
                 context.Users.Add(user);
                 context.SaveChanges();

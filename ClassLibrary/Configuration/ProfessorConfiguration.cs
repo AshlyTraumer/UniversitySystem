@@ -25,6 +25,8 @@ namespace ClassLibrary
             HasMany(p => p.Schedules)
                 .WithRequired(p => p.Professor);
 
+            
+
             ToTable("dbo.Professor");
         }
     }

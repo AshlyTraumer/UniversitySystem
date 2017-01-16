@@ -19,10 +19,7 @@ namespace ClassLibrary
                HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(p => p.Title)
-                .HasMaxLength(30);
-
-            Property(p => p.Form)
-                .HasMaxLength(30);
+                .HasMaxLength(30);            
 
             HasMany(p => p.Results)
                .WithRequired(p => p.Subject);

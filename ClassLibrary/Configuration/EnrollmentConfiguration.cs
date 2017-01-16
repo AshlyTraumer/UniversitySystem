@@ -16,11 +16,8 @@ namespace ClassLibrary
 
             Property(p => p.Id).
                HasColumnName("Id").
-               HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-               
-            Property(p => p.Points)
-                .IsRequired();
-
+               HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);             
+            
             Property(p => p.RegistrationStatus)
                 .IsRequired();
 

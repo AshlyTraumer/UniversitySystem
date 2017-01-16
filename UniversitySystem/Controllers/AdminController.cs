@@ -22,7 +22,7 @@ namespace UniversitySystem.Controllers
             if ((cookie == null) || (!Int32.TryParse(cookie["id"], out coockieId)))
                 return null;
             User user = context.Users.FirstOrDefault(x => x.Id == coockieId);
-            if (user == null)
+            if ((user == null)||(user.Role!=ClassLibrary.Authorization.Role.Admin))
                 return null;
             return user;                
         }

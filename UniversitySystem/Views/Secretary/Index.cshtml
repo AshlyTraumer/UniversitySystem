@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li><a href="~/Departament">Факультеты</a></li>
+        <li><a href="~/Specialization">Специальности</a></li>
+        <li><a href="~/Professor">Преподаватели</a></li>
+        <li><a href="~/Subject">Предметы</a></li>
+        <li class="active"><a href="~/Admin">Расписание ЦТ</a></li>
+        <li><a href="~/Logout/Index/@ViewBag.Id">Выход</a></li>
+    </ul>
+</body>
+</html>
