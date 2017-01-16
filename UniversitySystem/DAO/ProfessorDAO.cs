@@ -32,20 +32,28 @@ namespace UniversitySystem.DAO
             {
                 Id = id,
                 Name = professor.Name,
-                DepartamentId = professor.DepartamentId
+                DepartamentId = professor.DepartamentId,
+                Departaments = context.Departaments
+            };
+            return model;
+        }
+
+        public ProfessorModel GetEmptyModel()
+        {
+            ProfessorModel model = new ProfessorModel()
+            {
+                Departaments = context.Departaments
             };
             return model;
         }
 
         public void Change(ProfessorModel instance)
         {
-            /*Departament departament = context.Departaments.FirstOrDefault(x => x.Id == instance.Departament.Id);
-            Professor professor = new Professor()
-            {
-                Name = instance.Name,
-                Departament = departament
-            };
-            context.SaveChanges();*/
+            Departament departament = context.Departaments.FirstOrDefault(x => x.Id == instance.DepartamentId);
+            Professor professor = context.Professors.FirstOrDefault(x => x.Id == instance.Id);
+            professor.Name = instance.Name;
+            professor.Departament = departament;            
+            context.SaveChanges();
         }
 
         public void Create(ProfessorModel model)
@@ -58,5 +66,7 @@ namespace UniversitySystem.DAO
             context.Professors.Add(professor);
             context.SaveChanges();            
         }
+
+        
     }
 }

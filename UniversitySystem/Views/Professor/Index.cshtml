@@ -11,13 +11,13 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li><a href="~/Departament">Факультеты</a></li>
-        <li><a href="~/Specialization">Специальности</a></li>
-        <li class="active"><a href="~/Professor">Преподаватели</a></li>
-        <li><a href="~/Subject">Предметы</a></li>
-        <li><a href="~/Admin">Расписание ЦТ</a></li>
-        <li><a href="~/Logout/Index/@ViewBag.Id">Выход</a></li>
-        <li style="background-color:aqua"><a href="~/Professor/Create">Добавить</a></li>
+        <li><a href="@Url.Action("Index","Departament")">Факультеты</a></li>
+        <li><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
+        <li class="active"><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
+        <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>
+        <li><a href="@Url.Action("Index","Admin")">Расписание ЦТ</a></li>
+        <li><a href="@Url.Action("Index","Logout")">Выход</a></li>
+        <li style="background-color:aqua"><a href="@Url.Action("Create","Professor")">Добавить</a></li>
     </ul>
     <div class="form">
         <table class="table">
@@ -35,7 +35,7 @@
                     <td><p>@b.Name</p></td>
                     <td><p>@b.Departament.Title</p></td>
                     <td><p>link</p></td>
-                    <td><p><a href="~/Professor/Delete/@b.Id">Удалить</a>/<a href="~/Professor/Change/@b.Id">Изменить</a></p></td>
+                    <td><p><a href="@Url.Action("Delete","Professor",new { id=@b.Id})">Удалить</a>/<a href="@Url.Action("Change","Professor",new { id=@b.Id})">Изменить</a></p></td>
                 </tr>
             }
         </table>

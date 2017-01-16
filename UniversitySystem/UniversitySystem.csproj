@@ -265,6 +265,7 @@
     <Content Include="Views\Professor\Create.cshtml" />
     <Content Include="Views\Departament\Create.cshtml" />
     <Content Include="Views\Departament\Change.cshtml" />
+    <Content Include="Views\Professor\Change.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

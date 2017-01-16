@@ -6,109 +6,53 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using UniversitySystem.DAO;
+using UniversitySystem.Models;
 
 namespace UniversitySystem.Controllers
 {
     public class ProfessorController : Controller
     {
-        RepositoryContext context = new RepositoryContext();
-        public User Check()
-        {
-            HttpCookie cookie = Request.Cookies["Cookie"];
-            int coockieId = 0;
-            if ((cookie == null) || (!Int32.TryParse(cookie["id"], out coockieId)))
-                return null;
-            User user = context.Users.FirstOrDefault(x => x.Id == coockieId);
-            if ((user == null) || (user.Role != ClassLibrary.Authorization.Role.Secretary))
-                return null;
-            return user;
-        }
-
-        [Authorize]
         public ActionResult Index()
         {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
+            return View(new ProfessorDAO().Get());
+        }
 
-            try
-            {
-                List<Professor> professors = context.Professors.Include(x => x.Departament).ToList();                
-                ViewBag.Id = cookie.Id;
-                return View(professors);
-            }
-            catch
-            {
-                ViewBag.Message = "Ошибка отображения данных";
-                return Redirect("Error");
-            }
+        [HttpGet]        
+        public ActionResult Create()
+        {            
+                return View(new ProfessorDAO().GetEmptyModel());          
+        }
+
+        [HttpPost]        
+        public ActionResult Create(ProfessorModel model)
+        {
+            new ProfessorDAO().Create(model);
+            return RedirectToAction("Index", "Professor");
+        }
+
+        [HttpGet]        
+        public ActionResult Delete(int id)
+        {
+            new ProfessorDAO().Delete(id);
+            return RedirectToAction("Index", "Professor");
         }
 
         [HttpGet]
-        [Authorize]
-        public ActionResult Create()
+        public ActionResult Change(int id)
         {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
-            try
-            {
-                ViewBag.Id = cookie.Id;
-                Dictionary<int, string> dictionary = new Dictionary<int, string>();
-                foreach (Departament d in context.Departaments)
-                    dictionary.Add(d.Id, d.Title);
-                ViewBag.Departaments = dictionary;
-                return View(new Professor());
-            }
-            catch
-            {
-                ViewBag.Message = "Ошибка отображения данных";
-                return Redirect("Error");
-            }
+            ProfessorModel professor = new ProfessorDAO().GetById(id);
+            if (professor != null)
+                return View("Change", professor);
+            else
+                return RedirectToAction("Index", "Professor");
         }
 
         [HttpPost]
-        [Authorize]
-        public ActionResult Create(Professor p)
+        public ActionResult Change(ProfessorModel model)
         {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
-
-            try
-            {
-                p.Departament = context.Departaments.First(x => x.Id == p.DepartamentId);
-                context.Professors.Add(p);
-                context.SaveChanges();
-                return View("Index", context.Professors.Include(x => x.Departament));
-            }
-            catch
-            {
-                ViewBag.Message = "Ошибка отображения данных";
-                return Redirect("Error");
-            }
-        }
-
-        [HttpGet]
-        [Authorize]
-        public ActionResult Delete(int id)
-        {
-            User cookie = Check();
-            if (cookie == null)
-                return Redirect("/Start");
-
-            try
-            {
-                Professor p = new Professor() { Id = id };
-                context.Professors.Attach(p);
-                context.Professors.Remove(p);
-                context.SaveChanges();
-                return View("Index", context.Professors.Include(x => x.Departament));
-            }
-            catch
-            {
-                return View("Index", context.Professors.Include(x => x.Departament));
-            }
+            new ProfessorDAO().Change(model);
+            return RedirectToAction("Index", "Professor");
         }
     }
 }

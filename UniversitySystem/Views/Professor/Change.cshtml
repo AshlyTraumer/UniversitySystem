@@ -10,7 +10,7 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li ><a href="@Url.Action("Index","Departament")">Факультеты</a></li>
+        <li><a href="@Url.Action("Index","Departament")">Факультеты</a></li>
         <li><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
         <li class="active"><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
         <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>
@@ -20,29 +20,36 @@
     </ul>
 
     <div class="form">
-        <form class="form-horizontal" role="form" method="POST" action="@Url.Action("Create","Professor")">
+        <form class="form-horizontal" role="form" method="POST" action="@Url.Action("Change","Professor")">
             <div class="form-group">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Имя</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Name" placeholder="Введите имя" class="form-control"> 
+                        <input type="text" name="Name" placeholder="Введите имя" class="form-control" value="@Model.Name">
                     </div>
-                </div>                
+                </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Факультет:</label>
                     <div class="col-xs-10">
                         <select class="form-control" name="DepartamentId">
                             @foreach (ClassLibrary.Departament b in Model.Departaments)
                             {
-                                <option value="@b.Id">@b.Title</option>
-                            }                          
-                            
+                                if (b.Id == Model.DepartamentId)
+                                {
+                                    <option selected="selected" value="@b.Id">@b.Title</option>
+                                }
+                                else
+                                {
+                                    <option value="@b.Id">@b.Title</option>
+                                }
+                            }
+
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default btn-sm">Добавить</button>
+                        <button type="submit" class="btn btn-default btn-sm">Изменить</button>
                     </div>
                 </div>
             </div>
@@ -58,5 +65,3 @@
     </style>
 </body>
 </html>
-
-
