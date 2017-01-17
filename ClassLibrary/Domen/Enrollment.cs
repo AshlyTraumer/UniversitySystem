@@ -11,7 +11,7 @@ namespace ClassLibrary
         [Description("Платное")]
         OnPaid =2,
         [Description("Не зачислен")]
-        None =3
+        None = 3
     }
 
     public class Enrollment

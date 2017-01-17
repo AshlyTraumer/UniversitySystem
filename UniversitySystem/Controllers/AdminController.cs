@@ -9,14 +9,18 @@ using System.Web;
 using System.Web.Mvc;
 using UniversitySystem;
 using System.Security.Claims;
-using UniversitySystem.DAO;
+using UniversitySystem.Manager;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Controllers
 {
     public class AdminController : Controller
     {
-        RepositoryContext context = new RepositoryContext();
+        private RepositoryContext context;
+        public AdminController()
+        {
+            context = new RepositoryContext();
+        }
         //??????
         /* public User Check()
          {
@@ -30,35 +34,31 @@ namespace UniversitySystem.Controllers
              return user;                
          }*/
 
-        // GET: Admin
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new UserDAO().Get());
+            return View(new UserManager(context).Get());
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new UserDAO().Delete(id);
+            new UserManager(context).Delete(id);
             return RedirectToAction("Index", "Admin");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            User user = new UserDAO().GetById(id);
-            if (user != null)
-                return View("Change", user);
-            else
-                return RedirectToAction("Index", "Admin");
+            UserModel user = new UserManager(context).GetById(id);
+            return View("Change", user);
         }
 
         [HttpPost]
-        public ActionResult Change(User model)
+        public ActionResult Change(UserModel model)
         {
-            new UserDAO().Change(model);            
-            return RedirectToAction("Index","Admin");
+            new UserManager(context).Change(model);
+            return RedirectToAction("Index", "Admin");
         }
     }
 }

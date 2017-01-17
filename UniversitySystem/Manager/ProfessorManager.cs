@@ -5,29 +5,32 @@ using System.Linq;
 using System.Web;
 using UniversitySystem.Models;
 
-namespace UniversitySystem.DAO
+namespace UniversitySystem.Manager
 {
-    public class ProfessorDAO
+    public class ProfessorManager
     {
-        public RepositoryContext context = new RepositoryContext();
+        private RepositoryContext context;
+        public ProfessorManager(RepositoryContext context)
+        {
+            this.context = context;
+        }
+
         public IEnumerable<Professor> Get()
         {
-            return context.Professors.Include("Departament");
+            return context.Professors.Include("Departament").Select(x => x);
         }
 
         public void Delete(int id)
         {
-            Professor professor = context.Professors.FirstOrDefault(x => x.Id == id);
-            if (professor != null)
-            {
-                context.Professors.Remove(professor);
-                context.SaveChanges();
-            }
+            Professor professor = context.Professors.Single(x => x.Id == id);
+            context.Professors.Remove(professor);
+            context.SaveChanges();
         }
 
         public ProfessorModel GetById(int id)
         {
             Professor professor = context.Professors.FirstOrDefault(x => x.Id == id);
+
             ProfessorModel model = new ProfessorModel()
             {
                 Id = id,
@@ -49,24 +52,24 @@ namespace UniversitySystem.DAO
 
         public void Change(ProfessorModel instance)
         {
-            Departament departament = context.Departaments.FirstOrDefault(x => x.Id == instance.DepartamentId);
-            Professor professor = context.Professors.FirstOrDefault(x => x.Id == instance.Id);
+            Departament departament = context.Departaments.Single(x => x.Id == instance.DepartamentId);
+            Professor professor = context.Professors.Single(x => x.Id == instance.Id);
             professor.Name = instance.Name;
-            professor.Departament = departament;            
+            professor.Departament = departament;
             context.SaveChanges();
         }
 
         public void Create(ProfessorModel model)
         {
+            Departament departament = context.Departaments.First(x => x.Id == model.DepartamentId);
             Professor professor = new Professor()
             {
                 Name = model.Name,
-                Departament = context.Departaments.First(x => x.Id == model.DepartamentId)
+                Departament = departament
             };
-            context.Professors.Add(professor);
-            context.SaveChanges();            
-        }
 
-        
+            context.Professors.Add(professor);
+            context.SaveChanges();
+        }
     }
 }

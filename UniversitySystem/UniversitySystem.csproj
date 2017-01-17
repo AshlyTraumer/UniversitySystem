@@ -200,11 +200,10 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
     <Compile Include="Controllers\StartController.cs" />
-    <Compile Include="DAO\DAO.cs" />
-    <Compile Include="DAO\DepartamentDAO.cs" />
-    <Compile Include="DAO\AuthorizeDAO.cs" />
-    <Compile Include="DAO\ProfessorDAO.cs" />
-    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Manager\DepartamentManager.cs" />
+    <Compile Include="Manager\AuthorizeManager.cs" />
+    <Compile Include="Manager\ProfessorManager.cs" />
+    <Compile Include="Manager\UserManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

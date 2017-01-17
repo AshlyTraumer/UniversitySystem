@@ -10,12 +10,11 @@ namespace UniversitySystem.Controllers
 {
     public class LogoutController : Controller
     {
-        // GET: Logout
-        [HttpGet]
-        [Authorize]
+        
+        [HttpGet]        
         public ActionResult Index(int id)
         {
-            RepositoryContext context = new RepositoryContext();
+            /*RepositoryContext context = new RepositoryContext();
             HttpCookie cookie = Request.Cookies["Cookie"];
             int coockieId = 0;
             if ((cookie == null) || (!Int32.TryParse(cookie["id"], out coockieId)))
@@ -24,8 +23,8 @@ namespace UniversitySystem.Controllers
             if (user == null)
                 return Redirect("/Start");
             cookie.Expires = DateTime.Now.AddDays(-1);
-            Response.Cookies.Add(cookie);
-            return Redirect("/Start");
+            Response.Cookies.Add(cookie);*/
+            return RedirectToAction("Index","Start");
         }
     }
 }

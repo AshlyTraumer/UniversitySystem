@@ -9,12 +9,17 @@ using System.Web.Mvc;
 using Microsoft.Owin.Security;
 using UniversitySystem;
 using UniversitySystem.Models;
-using UniversitySystem.DAO;
+using UniversitySystem.Manager;
 
 namespace UniversitySystem.Controllers
 {
     public class StartController : Controller
     {
+        private RepositoryContext context;
+        public StartController()
+        {
+            context = new RepositoryContext();
+        }
 
         private IAuthenticationManager AuthenticationManager
         {
@@ -23,17 +28,15 @@ namespace UniversitySystem.Controllers
                 return HttpContext.GetOwinContext().Authentication;
             }
         }
+        //HttpCookie cookie = new HttpCookie("Cookie");        
 
-        // GET: Start      
-        //HttpCookie cookie = new HttpCookie("Cookie");
-        [AllowAnonymous]
+        [HttpGet]
         public ActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public ActionResult Login(LoginModel model)
         {
             //  var claimsIdentity = new ClaimsIdentity();
@@ -41,33 +44,15 @@ namespace UniversitySystem.Controllers
             //  claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
             //  AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = false }, claimsIdentity);
 
-            User user = new AuthorizeDAO().Login(model);            
-                switch (user.Role)
-                {
-                    case Role.Admin: return RedirectToAction("Index", "Admin");
-                    case Role.Secretary: return RedirectToAction("Index", "Secretary");
-                }
-                return RedirectToAction("Index", "Admin");
-            
-            
+            UserModel user = new AuthorizeManager(context).Login(model);
+            switch (user.Role)
+            {
+                case Role.Admin: return RedirectToAction("Index", "Admin");
+                case Role.Secretary: return RedirectToAction("Index", "Secretary");
+                default: return RedirectToAction("Index", "Admin");
+            }
+
             //AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-
-            /* RepositoryContext context = new RepositoryContext();
-             User user= context.Users.FirstOrDefault(x => x.Login == u.Login && x.Password == u.Password);
-             switch (user?.Role)
-             {
-                 case Role.Admin:                        
-                     cookie["id"] = user.Id.ToString();
-                     Response.Cookies.Add(cookie);
-                     return Redirect("/Admin/Index/" + user.Id);
-                 case Role.Secretary:                        
-                     cookie["id"] = user.Id.ToString();
-                     Response.Cookies.Add(cookie);
-                     return Redirect("/Secretary/Index/" + user.Id);
-                 default:
-                     throw new Exception();
-             }   */
-
         }
     }
 }
