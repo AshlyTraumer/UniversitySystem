@@ -1,0 +1,14 @@
+Закрытое соединение в 17.01.2017 15:40:07 +03:00
+
+
+[Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+ [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC

@@ -2,6 +2,7 @@
 using ClassLibrary.Authorization;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,16 +13,26 @@ namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        private RepositoryContext context;
+        RepositoryContext _context;
         public DepartamentController()
         {
-            context = new RepositoryContext();
+            _context = new RepositoryContext();
+            _context.Database.Log = LogMethod;
+        }
+
+        public void LogMethod(string str)
+        {
+            FileStream fs = new FileStream("e:\\UniversitySystem\\Departament.txt", FileMode.Append, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.WriteLine(str);
+            sw.Close();
+            fs.Close();
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new DepartamentManager(context).Get());
+            return View(new DepartamentManager(_context).Get());
         }
 
         [HttpGet]
@@ -33,28 +44,28 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(DepartamentModel model)
         {
-            new DepartamentManager(context).Create(model);
+            new DepartamentManager(_context).Create(model);
             return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new DepartamentManager(context).Delete(id);
+            new DepartamentManager(_context).Delete(id);
             return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            DepartamentModel departament = new DepartamentManager(context).GetById(id);
+            DepartamentModel departament = new DepartamentManager(_context).GetById(id);
             return View("Change", departament);
         }
 
         [HttpPost]
         public ActionResult Change(DepartamentModel model)
         {
-            new DepartamentManager(context).Change(model);
+            new DepartamentManager(_context).Change(model);
             return RedirectToAction("Index", "Departament");
         }
     }

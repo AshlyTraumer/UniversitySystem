@@ -12,7 +12,7 @@ namespace UniversitySystem.Controllers
     {
         
         [HttpGet]        
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
             /*RepositoryContext context = new RepositoryContext();
             HttpCookie cookie = Request.Cookies["Cookie"];

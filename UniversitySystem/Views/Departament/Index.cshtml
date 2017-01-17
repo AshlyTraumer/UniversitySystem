@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ClassLibrary.Departament>
+﻿@model IEnumerable<UniversitySystem.Models.DepartamentModel>
 @{
     ViewBag.Title = "Index";
 }
@@ -26,7 +26,7 @@
                 <td><p>Преподаватели/Специальности</p></td>                
                 <td></td>
             </tr>
-            @foreach (ClassLibrary.Departament b in Model)
+            @foreach (UniversitySystem.Models.DepartamentModel b in Model)
             {
                 <tr>
                     <td><p>@b.Id</p></td>

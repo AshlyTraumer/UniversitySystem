@@ -1,0 +1,7 @@
+Закрытое соединение в 17.01.2017 15:40:35 +03:00
+
+
+
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]

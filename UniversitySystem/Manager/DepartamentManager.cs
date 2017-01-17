@@ -9,27 +9,32 @@ namespace UniversitySystem.Manager
 {
     public class DepartamentManager //: DAO<Departament>
     {
-        private RepositoryContext context;
+        private RepositoryContext _context;
         public DepartamentManager(RepositoryContext context)
         {
-            this.context = context;
+            _context = context;
         }
 
-        public IEnumerable<Departament> Get()
+        public IEnumerable<DepartamentModel> Get()
         {
-            return context.Departaments.Select(x => x);
+            IEnumerable<DepartamentModel> uModel = _context.Departaments.Select(x => new DepartamentModel
+            {
+                Id = x.Id,
+                Title = x.Title
+            }).ToList();
+            return uModel;
         }
 
         public void Delete(int id)
         {
-            Departament departament = context.Departaments.Single(x => x.Id == id);
-            context.Departaments.Remove(departament);
-            context.SaveChanges();
+            Departament departament = _context.Departaments.Single(x => x.Id == id);
+            _context.Departaments.Remove(departament);
+            _context.SaveChanges();
         }
 
         public DepartamentModel GetById(int id)
         {
-            Departament departament = context.Departaments.Single(x => x.Id == id);
+            Departament departament = _context.Departaments.Single(x => x.Id == id);
             DepartamentModel model = new DepartamentModel()
             {
                 Id = id,
@@ -41,9 +46,9 @@ namespace UniversitySystem.Manager
 
         public void Change(DepartamentModel instance)
         {
-            Departament departament = context.Departaments.Single(x => x.Id == instance.Id);
+            Departament departament = _context.Departaments.Single(x => x.Id == instance.Id);
             departament.Title = instance.Title;
-            context.SaveChanges();
+            _context.SaveChanges();
         }
 
         public void Create(DepartamentModel departament)
@@ -53,8 +58,8 @@ namespace UniversitySystem.Manager
                 Title = departament.Title
             };
 
-            context.Departaments.Add(newDepartament);
-            context.SaveChanges();
+            _context.Departaments.Add(newDepartament);
+            _context.SaveChanges();
         }
 
     }

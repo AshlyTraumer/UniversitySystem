@@ -10,28 +10,35 @@ namespace UniversitySystem.Manager
 {
     public class UserManager//:DAO<User>
     {
-        private RepositoryContext context;
+        private RepositoryContext _context;
         public UserManager(RepositoryContext context)
         {
-            this.context = context;
+            _context = context;
         }
 
-        public IEnumerable<User> Get()
+        public IEnumerable<UserModel> Get()
         {
-            return context.Users.Select(x => x);
+            IEnumerable<UserModel> uModel = _context.Users.Select(x => new UserModel
+            {
+                Id = x.Id,
+                Login = x.Login,
+                Password = x.Password,
+                Role = x.Role
+            }).ToList();
+            return uModel;
         }
 
         public void Delete(int id)
         {
-            User user = context.Users.Single(x => x.Id == id);
+            User user = _context.Users.Single(x => x.Id == id);
             if (user.Role != Role.Admin)
-                context.Users.Remove(user);
-            context.SaveChanges();
+                _context.Users.Remove(user);
+            _context.SaveChanges();
         }
 
         public UserModel GetById(int id)
         {
-            User user = context.Users.Single(x => x.Id == id);
+            User user = _context.Users.Single(x => x.Id == id);
 
             UserModel model = new UserModel()
             {
@@ -45,11 +52,11 @@ namespace UniversitySystem.Manager
 
         public void Change(UserModel instance)
         {
-            User oldUser = context.Users.Single(x => x.Id == instance.Id);
+            User oldUser = _context.Users.Single(x => x.Id == instance.Id);
             oldUser.Login = instance.Login;
             oldUser.Password = instance.Password;
             oldUser.Role = instance.Role;
-            context.SaveChanges();
+            _context.SaveChanges();
         }
 
         public void Create(UserModel user)
@@ -60,8 +67,8 @@ namespace UniversitySystem.Manager
                 Password = user.Password,
                 Role = user.Role
             };
-            context.Users.Add(newUser);
-            context.SaveChanges();            
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
         }
     }
 }

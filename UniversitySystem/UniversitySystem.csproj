@@ -200,9 +200,11 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
     <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
     <Compile Include="Manager\ProfessorManager.cs" />
+    <Compile Include="Manager\RepositoryContex.cs" />
     <Compile Include="Manager\UserManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -210,6 +212,7 @@
     <Compile Include="Models\DepartamentModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ProfessorModel.cs" />
+    <Compile Include="Models\ProfessorViewModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,6 +273,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\Logout\" />
+    <Folder Include="Views\Subject\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

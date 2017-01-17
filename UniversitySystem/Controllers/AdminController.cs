@@ -11,16 +11,27 @@ using UniversitySystem;
 using System.Security.Claims;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
+using System.IO;
 
 namespace UniversitySystem.Controllers
 {
     public class AdminController : Controller
     {
-        private RepositoryContext context;
+        RepositoryContext _context;
         public AdminController()
         {
-            context = new RepositoryContext();
+            _context = new RepositoryContext();
+            _context.Database.Log = LogMethod;
         }
+
+        public void LogMethod(string str)
+        {
+            FileStream fs = new FileStream("e:\\UniversitySystem\\Admin.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.WriteLine(str);
+            sw.Close();
+        }
+
         //??????
         /* public User Check()
          {
@@ -37,27 +48,27 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new UserManager(context).Get());
+            return View(new UserManager(_context).Get());
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new UserManager(context).Delete(id);
+            new UserManager(_context).Delete(id);
             return RedirectToAction("Index", "Admin");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            UserModel user = new UserManager(context).GetById(id);
+            UserModel user = new UserManager(_context).GetById(id);
             return View("Change", user);
         }
 
         [HttpPost]
         public ActionResult Change(UserModel model)
         {
-            new UserManager(context).Change(model);
+            new UserManager(_context).Change(model);
             return RedirectToAction("Index", "Admin");
         }
     }
