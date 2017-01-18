@@ -1,0 +1,7 @@
+Закрытое соединение в 17.01.2017 17:13:32 +03:00
+
+
+ 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
