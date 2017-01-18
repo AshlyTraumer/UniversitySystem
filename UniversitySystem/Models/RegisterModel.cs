@@ -10,6 +10,7 @@ namespace UniversitySystem.Models
     {
         public string Login { get; set; }
         public string Password { get; set; }
+        //public string RetypePassword { get; set; }
         public Role Role { get; set; }
     }
 }

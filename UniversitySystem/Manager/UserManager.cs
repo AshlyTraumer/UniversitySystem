@@ -31,9 +31,14 @@ namespace UniversitySystem.Manager
         public void Delete(int id)
         {
             User user = _context.Users.Single(x => x.Id == id);
+
             if (user.Role != Role.Admin)
+            {
                 _context.Users.Remove(user);
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+
+            throw new Exception("sdfdfgfghgh");
         }
 
         public UserModel GetById(int id)

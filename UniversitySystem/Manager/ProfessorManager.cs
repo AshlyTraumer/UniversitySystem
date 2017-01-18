@@ -9,74 +9,73 @@ namespace UniversitySystem.Manager
 {
     public class ProfessorManager
     {
-        private RepositoryContext _context;
+        private readonly RepositoryContext _context;
         public ProfessorManager(RepositoryContext context)
         {
             _context = context;
         }
 
-        public IEnumerable<ProfessorViewModel> Get()
-        {            
-            IEnumerable<ProfessorViewModel> uModel = _context.Professors
-                .Join(
-                _context.Departaments,
-                x => x.DepartamentId,
-                y => y.Id,
-                (x, y) => new ProfessorViewModel
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    DepartamentTitle = y.Title
-                }).ToList(); ;
-            return uModel;
+        public List<ProfessorViewModel> Get()
+        {
+            return _context.Professors.Select(t => new ProfessorViewModel
+            {
+                Id = t.Id,
+                Name = t.Name,
+                DepartamentTitle = t.Departament.Title
+            }).ToList();
         }
 
         public void Delete(int id)
         {
-            Professor professor = _context.Professors.Single(x => x.Id == id);
+            var professor = _context.Professors.Single(x => x.Id == id);
+
             _context.Professors.Remove(professor);
             _context.SaveChanges();
         }
 
+        //TODO 
         public ProfessorModel GetById(int id)
         {
-            Professor professor = _context.Professors.Single(x => x.Id == id);
+            var professor = _context.Professors.Single(x => x.Id == id);
 
-            ProfessorModel model = new ProfessorModel()
+            var model = new ProfessorModel
             {
                 Id = id,
                 Name = professor.Name,
                 DepartamentId = professor.DepartamentId,
                 Departaments = _context.Departaments
             };
+
             return model;
         }
 
+        //TODO
         public ProfessorModel GetEmptyModel()
         {
-            ProfessorModel model = new ProfessorModel()
+            var model = new ProfessorModel
             {
                 Departaments = _context.Departaments
             };
+
             return model;
         }
 
         public void Change(ProfessorModel instance)
         {
-            Departament departament = _context.Departaments.Single(x => x.Id == instance.DepartamentId);
-            Professor professor = _context.Professors.Single(x => x.Id == instance.Id);
+            var professor = _context.Professors.Single(x => x.Id == instance.Id);
+
             professor.Name = instance.Name;
-            professor.Departament = departament;
+            professor.DepartamentId = instance.DepartamentId;
+
             _context.SaveChanges();
         }
 
         public void Create(ProfessorModel model)
         {
-            Departament departament = _context.Departaments.Single(x => x.Id == model.DepartamentId);
-            Professor professor = new Professor()
+            var professor = new Professor
             {
                 Name = model.Name,
-                Departament = departament
+                DepartamentId = model.DepartamentId
             };
 
             _context.Professors.Add(professor);

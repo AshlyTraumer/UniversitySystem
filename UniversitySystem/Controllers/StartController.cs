@@ -50,8 +50,15 @@ namespace UniversitySystem.Controllers
             //  claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
             //  AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = false }, claimsIdentity);
 
-            UserModel user = new AuthorizeManager(Context).Login(model);
-            switch (user.Role)
+            var role = new AuthorizeManager(Context).Login(model);
+
+            if (role == null)
+            {
+                ModelState.AddModelError("", "Incorrect password");
+                return View();
+            }
+
+            switch (role)
             {
                 case Role.Admin: return RedirectToAction("Index", "Admin");
                 case Role.Secretary: return RedirectToAction("Index", "Secretary");

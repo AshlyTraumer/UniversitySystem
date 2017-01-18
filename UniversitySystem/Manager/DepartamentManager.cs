@@ -7,35 +7,38 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class DepartamentManager //: DAO<Departament>
+    public class DepartamentManager 
     {
-        private RepositoryContext _context;
+        private readonly RepositoryContext _context;
+
         public DepartamentManager(RepositoryContext context)
         {
             _context = context;
         }
 
-        public IEnumerable<DepartamentModel> Get()
+        public List<DepartamentModel> Get()
         {
-            IEnumerable<DepartamentModel> uModel = _context.Departaments.Select(x => new DepartamentModel
-            {
-                Id = x.Id,
-                Title = x.Title
-            }).ToList();
-            return uModel;
+            return _context.Departaments
+                .Select(x => new DepartamentModel
+                {
+                    Id = x.Id,
+                    Title = x.Title
+                }).ToList();
         }
 
         public void Delete(int id)
         {
-            Departament departament = _context.Departaments.Single(x => x.Id == id);
+            var departament = _context.Departaments.Single(x => x.Id == id);
+
             _context.Departaments.Remove(departament);
             _context.SaveChanges();
         }
 
         public DepartamentModel GetById(int id)
         {
-            Departament departament = _context.Departaments.Single(x => x.Id == id);
-            DepartamentModel model = new DepartamentModel()
+            var departament = _context.Departaments.Single(x => x.Id == id);
+
+            var model = new DepartamentModel
             {
                 Id = id,
                 Title = departament.Title
@@ -46,14 +49,16 @@ namespace UniversitySystem.Manager
 
         public void Change(DepartamentModel instance)
         {
-            Departament departament = _context.Departaments.Single(x => x.Id == instance.Id);
+            var departament = _context.Departaments.Single(x => x.Id == instance.Id);
+
             departament.Title = instance.Title;
+
             _context.SaveChanges();
         }
 
         public void Create(DepartamentModel departament)
         {
-            Departament newDepartament = new Departament()
+            var newDepartament = new Departament
             {
                 Title = departament.Title
             };
@@ -61,6 +66,5 @@ namespace UniversitySystem.Manager
             _context.Departaments.Add(newDepartament);
             _context.SaveChanges();
         }
-
     }
 }

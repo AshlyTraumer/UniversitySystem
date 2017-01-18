@@ -21,7 +21,7 @@ namespace UniversitySystem.Manager
             {
                 Id = x.Id,
                 Title = x.Title,
-                Form=x.Form
+                Form = x.Form
             }).ToList();
             return uModel;
         }
