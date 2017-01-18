@@ -15,51 +15,50 @@ namespace UniversitySystem.Manager
             _context = context;
         }
 
-        public IEnumerable<SubjectModel> Get()
+        public List<SubjectModel> Get()
         {
-            IEnumerable<SubjectModel> uModel = _context.Subjects.Select(x => new SubjectModel
-            {
-                Id = x.Id,
-                Title = x.Title,
-                Form = x.Form
-            }).ToList();
-            return uModel;
+            return _context.Subjects
+                .Select(x => new SubjectModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Form = x.Form
+                })
+                .ToList();
         }
 
         public void Delete(int id)
         {
-            Subject subject = _context.Subjects.Single(x => x.Id == id);
+            var subject = _context.Subjects.Single(x => x.Id == id);
             _context.Subjects.Remove(subject);
             _context.SaveChanges();
         }
 
         public SubjectModel GetById(int id)
         {
-            Subject subject = _context.Subjects.Single(x => x.Id == id);
-            SubjectModel model = new SubjectModel()
+            var subject = _context.Subjects.Single(x => x.Id == id);
+            return new SubjectModel()
             {
                 Id = id,
                 Title = subject.Title,
                 Form = subject.Form
-            };
-
-            return model;
+            };            
         }
 
-        public void Change(SubjectModel instance)
+        public void Change(SubjectModel model)
         {
-            Subject subject = _context.Subjects.Single(x => x.Id == instance.Id);
-            subject.Title = instance.Title;
-            subject.Form = instance.Form;
+            var subject = _context.Subjects.Single(x => x.Id == model.Id);
+            subject.Title = model.Title;
+            subject.Form = model.Form;
             _context.SaveChanges();
         }
 
-        public void Create(SubjectModel instance)
+        public void Create(SubjectModel model)
         {
-            Subject subject= new Subject()
+            var subject = new Subject()
             {
-                Title = instance.Title,
-                Form = instance.Form
+                Title = model.Title,
+                Form = model.Form
             };
 
             _context.Subjects.Add(subject);

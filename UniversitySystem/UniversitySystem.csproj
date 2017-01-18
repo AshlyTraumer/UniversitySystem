@@ -213,6 +213,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DepartamentModel.cs" />
+    <Compile Include="Models\DropDownList.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ProfessorModel.cs" />
     <Compile Include="Models\ProfessorViewModel.cs" />

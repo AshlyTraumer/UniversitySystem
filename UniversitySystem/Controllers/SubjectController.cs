@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
 
@@ -12,26 +13,20 @@ namespace UniversitySystem.Controllers
 {
     public class SubjectController : Controller
     {
-        RepositoryContext _context;
-        public SubjectController()
+        private RepositoryContext _context;
+        public RepositoryContext Context
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
-        }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Subject.txt", FileMode.Append, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(str);
-            sw.Close();
-            fs.Close();
+            get
+            {
+                _context = HttpContext.GetContextPerRequest();
+                return _context;
+            }
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new SubjectManager(_context).Get());
+            return View(new SubjectManager(Context).Get());
         }
 
         [HttpGet]
@@ -43,29 +38,37 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(SubjectModel model)
         {
-            new SubjectManager(_context).Create(model);
-            return RedirectToAction("Index", "Subject");
+            if (ModelState.IsValid)
+            {
+                new SubjectManager(Context).Create(model);
+                return RedirectToAction("Index", "Subject");
+            }
+            return View(model);
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new SubjectManager(_context).Delete(id);
+            new SubjectManager(Context).Delete(id);
             return RedirectToAction("Index", "Subject");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            SubjectModel subject = new SubjectManager(_context).GetById(id);
+            SubjectModel subject = new SubjectManager(Context).GetById(id);
             return View("Change", subject);
         }
 
         [HttpPost]
         public ActionResult Change(SubjectModel model)
         {
-            new SubjectManager(_context).Change(model);
-            return RedirectToAction("Index", "Subject");
+            if (ModelState.IsValid)
+            {
+                new SubjectManager(Context).Change(model);
+                return RedirectToAction("Index", "Subject");
+            }
+            return View(model);
         }
     }
 }

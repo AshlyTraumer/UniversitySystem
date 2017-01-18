@@ -7,7 +7,7 @@ namespace UniversitySystem.Core
 {
     public static class HttpContextExtensions
     {
-        public static RepositoryContext GetContextPerRequest(this HttpContextBase httpContext,string fileName)
+        public static RepositoryContext GetContextPerRequest(this HttpContextBase httpContext)
         {
             var key = "RepositoryContext";
 
@@ -17,7 +17,7 @@ namespace UniversitySystem.Core
             {
                 context = new RepositoryContext();
 
-                var path=Path.Combine(httpContext.Server.MapPath("~/Logs"), fileName);
+                var path=Path.Combine(httpContext.Server.MapPath("~/Logs"), "Log.txt");
 
                 context.Database.Log = str =>
                 {

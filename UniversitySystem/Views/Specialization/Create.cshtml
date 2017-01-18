@@ -1,6 +1,7 @@
 ﻿@model UniversitySystem.Models.SpecializationModel
 @{
     ViewBag.Title = "Create";
+    ViewBag.List = ViewBag.List;
 }
 
 <html>
@@ -36,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-10 control-label">Набор на платное</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-10">                        
                         <input type="text" name="PayCount" placeholder="Введите число" class="form-control">
                     </div>
                 </div>
@@ -44,7 +45,7 @@
                     <label class="col-sm-10 control-label">Факультет:</label>
                     <div class="col-xs-10">
                         <select class="form-control" name="DepartamentId">
-                            @foreach (ClassLibrary.Departament b in Model.Departaments)
+                            @foreach (UniversitySystem.Models.DropDownList b in ViewBag.List)
                             {
                                 <option value="@b.Id">@b.Title</option>
                             }
@@ -55,6 +56,11 @@
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-default btn-sm">Добавить</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        @Html.ValidationSummary()
                     </div>
                 </div>
             </div>

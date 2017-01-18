@@ -23,7 +23,8 @@ namespace UniversitySystem.Manager
                 {
                     Id = x.Id,
                     Title = x.Title
-                }).ToList();
+                })
+                .ToList();
         }
 
         public void Delete(int id)
@@ -47,23 +48,23 @@ namespace UniversitySystem.Manager
             return model;
         }
 
-        public void Change(DepartamentModel instance)
+        public void Change(DepartamentModel model)
         {
-            var departament = _context.Departaments.Single(x => x.Id == instance.Id);
+            var departament = _context.Departaments.Single(x => x.Id == model.Id);
 
-            departament.Title = instance.Title;
+            departament.Title = model.Title;
 
             _context.SaveChanges();
         }
 
-        public void Create(DepartamentModel departament)
+        public void Create(DepartamentModel model)
         {
-            var newDepartament = new Departament
+            var departament = new Departament
             {
-                Title = departament.Title
+                Title = model.Title
             };
 
-            _context.Departaments.Add(newDepartament);
+            _context.Departaments.Add(departament);
             _context.SaveChanges();
         }
     }

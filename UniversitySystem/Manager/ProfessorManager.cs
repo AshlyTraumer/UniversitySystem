@@ -17,12 +17,14 @@ namespace UniversitySystem.Manager
 
         public List<ProfessorViewModel> Get()
         {
-            return _context.Professors.Select(t => new ProfessorViewModel
-            {
-                Id = t.Id,
-                Name = t.Name,
-                DepartamentTitle = t.Departament.Title
-            }).ToList();
+            return _context.Professors
+                .Select(t => new ProfessorViewModel
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    DepartamentTitle = t.Departament.Title
+                })
+            .ToList();
         }
 
         public void Delete(int id)
@@ -33,39 +35,44 @@ namespace UniversitySystem.Manager
             _context.SaveChanges();
         }
 
-        //TODO 
         public ProfessorModel GetById(int id)
         {
             var professor = _context.Professors.Single(x => x.Id == id);
+            var list = _context.Departaments
+                .Select(x => new DropDownList
+                {
+                    Id = x.Id,
+                    Title = x.Title
+                })
+                .ToList();
 
             var model = new ProfessorModel
             {
                 Id = id,
-                Name = professor.Name,
-                DepartamentId = professor.DepartamentId,
-                Departaments = _context.Departaments
+                Name = professor.Name,               
             };
 
             return model;
         }
 
-        //TODO
-        public ProfessorModel GetEmptyModel()
-        {
-            var model = new ProfessorModel
-            {
-                Departaments = _context.Departaments
-            };
 
-            return model;
+        public List<DropDownList> GetList()
+        {
+            return _context.Departaments
+                .Select(x => new DropDownList
+                {
+                    Id = x.Id,
+                    Title = x.Title
+                })
+                .ToList();            
         }
 
-        public void Change(ProfessorModel instance)
+        public void Change(ProfessorModel model)
         {
-            var professor = _context.Professors.Single(x => x.Id == instance.Id);
+            var professor = _context.Professors.Single(x => x.Id == model.Id);
 
-            professor.Name = instance.Name;
-            professor.DepartamentId = instance.DepartamentId;
+            professor.Name = model.Name;
+            professor.DepartamentId = model.DepartamentId;
 
             _context.SaveChanges();
         }

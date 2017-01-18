@@ -23,23 +23,10 @@ namespace UniversitySystem.Controllers
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest("Start.txt");
+                _context = HttpContext.GetContextPerRequest();
                 return _context;
             }
-        }
-
-        //??????
-        /* public User Check()
-         {
-             HttpCookie cookie = Request.Cookies["Cookie"];
-             int coockieId = 0;
-             if ((cookie == null) || (!Int32.TryParse(cookie["id"], out coockieId)))
-                 return null;
-             User user = context.Users.FirstOrDefault(x => x.Id == coockieId);
-             if ((user == null)||(user.Role!=ClassLibrary.Authorization.Role.Admin))
-                 return null;
-             return user;                
-         }*/
+        }        
 
         [HttpGet]
         public ActionResult Index()
@@ -64,8 +51,12 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Change(UserModel model)
         {
-            new UserManager(Context).Change(model);
-            return RedirectToAction("Index", "Admin");
+            if (ModelState.IsValid)
+            {
+                new UserManager(Context).Change(model);
+                return RedirectToAction("Index", "Admin");
+            }
+            return View(model);
         }
     }
 }

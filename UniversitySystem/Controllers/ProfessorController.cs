@@ -20,19 +20,11 @@ namespace UniversitySystem.Controllers
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest("Start.txt");
+                _context = HttpContext.GetContextPerRequest();
                 return _context;
             }
         }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Professor.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(str);
-            sw.Close();
-        }
-
+        
         [HttpGet]
         public ActionResult Index()
         {
@@ -42,14 +34,20 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View(new ProfessorManager(Context).GetEmptyModel());
+            ViewBag.List = new ProfessorManager(Context).GetList();
+            return View(new ProfessorModel());
         }
 
         [HttpPost]
         public ActionResult Create(ProfessorModel model)
         {
-            new ProfessorManager(Context).Create(model);
-            return RedirectToAction("Index", "Professor");
+            if (ModelState.IsValid)
+            {
+                new ProfessorManager(Context).Create(model);
+                return RedirectToAction("Index", "Professor");
+            }
+            ViewBag.List = new ProfessorManager(Context).GetList();
+            return View(model);
         }
 
         [HttpGet]
@@ -62,15 +60,22 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Change(int id)
         {
-            ProfessorModel professor = new ProfessorManager(Context).GetById(id);
+            var manager = new ProfessorManager(Context);
+            ProfessorModel professor = manager.GetById(id);
+            ViewBag.List = manager.GetList();
             return View("Change", professor);
         }
 
         [HttpPost]
         public ActionResult Change(ProfessorModel model)
         {
-            new ProfessorManager(Context).Change(model);
-            return RedirectToAction("Index", "Professor");
+            if (ModelState.IsValid)
+            {
+                new ProfessorManager(Context).Change(model);
+                return RedirectToAction("Index", "Professor");
+            }
+            ViewBag.List = new ProfessorManager(Context).GetList();
+            return View(model);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace UniversitySystem.Controllers
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest("Departament.txt");
+                _context = HttpContext.GetContextPerRequest();
                 return _context;
             }
         }
@@ -43,8 +43,12 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(DepartamentModel model)
         {
-            new DepartamentManager(Context).Create(model);
-            return RedirectToAction("Index", "Departament");
+            if (ModelState.IsValid)
+            {
+                new DepartamentManager(Context).Create(model);
+                return RedirectToAction("Index", "Departament");
+            }
+            return View(model);
         }
 
         [HttpGet]
@@ -64,8 +68,12 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Change(DepartamentModel model)
         {
-            new DepartamentManager(Context).Change(model);
-            return RedirectToAction("Index", "Departament");
+            if (ModelState.IsValid)
+            {
+                new DepartamentManager(Context).Change(model);
+                return RedirectToAction("Index", "Departament");
+            }
+            return View(model);
         }
     }
 }

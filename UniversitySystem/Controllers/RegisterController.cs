@@ -19,7 +19,7 @@ namespace UniversitySystem.Controllers
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest("Register.txt");
+                _context = HttpContext.GetContextPerRequest();
                 return _context;
             }
         }       
@@ -33,9 +33,12 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Join(RegisterModel model)
         {
-            new AuthorizeManager(Context).Register(model);
-            return RedirectToAction("Login", "Start");
-
+            if (ModelState.IsValid)
+            {
+                new AuthorizeManager(Context).Register(model);
+                return RedirectToAction("Login", "Start");
+            }
+            return View("Index");
         }
     }
 }

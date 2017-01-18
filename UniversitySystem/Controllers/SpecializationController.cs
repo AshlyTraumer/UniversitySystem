@@ -18,11 +18,11 @@ namespace UniversitySystem.Controllers
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest("Specialization.txt");
+                _context = HttpContext.GetContextPerRequest();
                 return _context;
             }
         }
-       
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -32,14 +32,20 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View(new SpecializationManager(Context).GetEmptyModel());
+            ViewBag.List = new SpecializationManager(Context).GetList();
+            return View(new SpecializationModel());
         }
 
         [HttpPost]
         public ActionResult Create(SpecializationModel model)
         {
-            new SpecializationManager(Context).Create(model);
-            return RedirectToAction("Index", "Specialization");
+            if (ModelState.IsValid)
+            {
+                new SpecializationManager(Context).Create(model);
+                return RedirectToAction("Index", "Specialization");
+            }
+            ViewBag.List = new SpecializationManager(Context).GetList();
+            return View(model);
         }
 
         [HttpGet]
@@ -52,15 +58,22 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Change(int id)
         {
-            SpecializationModel specialization = new SpecializationManager(Context).GetById(id);
+            var manager = new SpecializationManager(Context);
+            var specialization = manager.GetById(id);
+            ViewBag.List = manager.GetList();
             return View("Change", specialization);
         }
 
         [HttpPost]
         public ActionResult Change(SpecializationModel model)
         {
-            new SpecializationManager(Context).Change(model);
-            return RedirectToAction("Index", "Specialization");
+            if (ModelState.IsValid)
+            {
+                new SpecializationManager(Context).Change(model);                
+                return RedirectToAction("Index", "Specialization");
+            }
+            ViewBag.List = new SpecializationManager(Context).GetList();
+            return View(model);
         }
     }
 }

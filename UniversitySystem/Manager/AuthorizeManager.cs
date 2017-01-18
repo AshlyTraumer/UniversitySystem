@@ -2,6 +2,7 @@
 using ClassLibrary.Authorization;
 using System;
 using System.Linq;
+using System.Web.ModelBinding;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
@@ -16,7 +17,7 @@ namespace UniversitySystem.Manager
         }
 
         public Role? Login(LoginModel model)
-        {
+        {            
             var user = _context.Users.Single(x => x.Login == model.Login);
 
             if (user == null || user.Password != model.Password)

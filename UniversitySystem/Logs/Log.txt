@@ -1,0 +1,4466 @@
+Открыто соединение в 18.01.2017 13:00:26 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 13:00:26 +03:00
+
+-- Выполнено за 146 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 13:00:26 +03:00
+
+Открыто соединение в 18.01.2017 13:00:27 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 13:00:27 +03:00
+
+-- Выполнено за 49 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 13:00:28 +03:00
+
+Открыто соединение в 18.01.2017 13:00:28 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 13:00:28 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 13:00:28 +03:00
+
+Открыто соединение в 18.01.2017 13:00:28 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 13:00:28 +03:00
+
+-- Выполнено за 40 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 13:00:28 +03:00
+
+Открыто соединение в 18.01.2017 13:00:50 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 13:00:50 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 13:00:50 +03:00
+
+Открыто соединение в 18.01.2017 14:09:55 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:09:56 +03:00
+
+-- Выполнено за 19 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:09:56 +03:00
+
+Открыто соединение в 18.01.2017 14:10:04 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:10:04 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:10:04 +03:00
+
+Открыто соединение в 18.01.2017 14:10:06 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:10:06 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:10:06 +03:00
+
+Открыто соединение в 18.01.2017 14:10:09 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:10:09 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:10:09 +03:00
+
+Открыто соединение в 18.01.2017 14:10:09 +03:00
+
+Закрытое соединение в 18.01.2017 14:10:10 +03:00
+
+Открыто соединение в 18.01.2017 14:15:21 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 14:15:21 +03:00
+
+-- Выполнено за 210 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 14:15:22 +03:00
+
+Открыто соединение в 18.01.2017 14:15:22 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:15:22 +03:00
+
+-- Выполнено за 64 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:15:22 +03:00
+
+Открыто соединение в 18.01.2017 14:15:22 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:15:22 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:15:22 +03:00
+
+Открыто соединение в 18.01.2017 14:15:22 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:15:23 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:15:23 +03:00
+
+Открыто соединение в 18.01.2017 14:15:39 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:15:39 +03:00
+
+-- Выполнено за 31 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:15:39 +03:00
+
+Открыто соединение в 18.01.2017 14:15:43 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:15:43 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:15:43 +03:00
+
+Открыто соединение в 18.01.2017 14:15:43 +03:00
+
+Закрытое соединение в 18.01.2017 14:15:43 +03:00
+
+Открыто соединение в 18.01.2017 14:17:55 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 14:17:55 +03:00
+
+-- Выполнено за 59 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 14:17:55 +03:00
+
+Открыто соединение в 18.01.2017 14:17:55 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:17:55 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:17:55 +03:00
+
+Открыто соединение в 18.01.2017 14:17:55 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:17:55 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:17:55 +03:00
+
+Открыто соединение в 18.01.2017 14:17:55 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:17:56 +03:00
+
+-- Выполнено за 92 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:17:56 +03:00
+
+Открыто соединение в 18.01.2017 14:17:59 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:17:59 +03:00
+
+-- Выполнено за 60 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:17:59 +03:00
+
+Открыто соединение в 18.01.2017 14:18:03 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:18:03 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:18:03 +03:00
+
+Открыто соединение в 18.01.2017 14:18:03 +03:00
+
+Закрытое соединение в 18.01.2017 14:18:03 +03:00
+
+Открыто соединение в 18.01.2017 14:21:16 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 14:21:16 +03:00
+
+-- Выполнено за 56 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 14:21:16 +03:00
+
+Открыто соединение в 18.01.2017 14:21:16 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:21:17 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:17 +03:00
+
+Открыто соединение в 18.01.2017 14:21:17 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:21:17 +03:00
+
+-- Выполнено за 50 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:17 +03:00
+
+Открыто соединение в 18.01.2017 14:21:17 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:21:17 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:17 +03:00
+
+Открыто соединение в 18.01.2017 14:21:19 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:21:19 +03:00
+
+-- Выполнено за 27 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:19 +03:00
+
+Открыто соединение в 18.01.2017 14:21:22 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:21:22 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:23 +03:00
+
+Открыто соединение в 18.01.2017 14:21:23 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:21:23 +03:00
+
+-- Выполнено за 80 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:23 +03:00
+
+Открыто соединение в 18.01.2017 14:21:31 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:21:31 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:31 +03:00
+
+Открыто соединение в 18.01.2017 14:21:31 +03:00
+
+Запущенная транзакция в 18.01.2017 14:21:31 +03:00
+
+INSERT [dbo].[Specialization]([Title], [FreeCount], [PayCount], [DepartamentId])
+VALUES (@0, @1, @2, @3)
+SELECT [Id]
+FROM [dbo].[Specialization]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+
+
+-- @0: 'super' (Type = String, Size = 30)
+
+-- @1: '1' (Type = Int32)
+
+-- @2: '2' (Type = Int32)
+
+-- @3: '3' (Type = Int32)
+
+-- Выполнение в 18.01.2017 14:21:31 +03:00
+
+-- Выполнено за 30 мс. Результат: SqlDataReader
+
+
+
+Зафиксированная транзакция в 18.01.2017 14:21:31 +03:00
+
+Закрытое соединение в 18.01.2017 14:21:31 +03:00
+
+Открыто соединение в 18.01.2017 14:21:31 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:21:31 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:32 +03:00
+
+Открыто соединение в 18.01.2017 14:21:35 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:21:35 +03:00
+
+-- Выполнено за 40 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:35 +03:00
+
+Открыто соединение в 18.01.2017 14:21:35 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '6' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:21:35 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:35 +03:00
+
+Открыто соединение в 18.01.2017 14:21:40 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:21:40 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:40 +03:00
+
+Открыто соединение в 18.01.2017 14:21:41 +03:00
+
+Запущенная транзакция в 18.01.2017 14:21:41 +03:00
+
+INSERT [dbo].[Specialization]([Title], [FreeCount], [PayCount], [DepartamentId])
+VALUES (@0, @1, @2, @3)
+SELECT [Id]
+FROM [dbo].[Specialization]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+
+
+-- @0: 'sup' (Type = String, Size = 30)
+
+-- @1: '1' (Type = Int32)
+
+-- @2: '2' (Type = Int32)
+
+-- @3: '3' (Type = Int32)
+
+-- Выполнение в 18.01.2017 14:21:41 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Зафиксированная транзакция в 18.01.2017 14:21:41 +03:00
+
+Закрытое соединение в 18.01.2017 14:21:41 +03:00
+
+Открыто соединение в 18.01.2017 14:21:41 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:21:41 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:41 +03:00
+
+Открыто соединение в 18.01.2017 14:21:44 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:21:44 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:44 +03:00
+
+Открыто соединение в 18.01.2017 14:21:47 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:21:47 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:47 +03:00
+
+Открыто соединение в 18.01.2017 14:21:57 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:21:58 +03:00
+
+-- Выполнено за 13 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:58 +03:00
+
+Открыто соединение в 18.01.2017 14:21:59 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:21:59 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:21:59 +03:00
+
+Открыто соединение в 18.01.2017 14:22:01 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:22:01 +03:00
+
+-- Выполнено за 43 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:01 +03:00
+
+Открыто соединение в 18.01.2017 14:22:04 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:22:04 +03:00
+
+-- Выполнено за 16 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:04 +03:00
+
+Открыто соединение в 18.01.2017 14:22:06 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:22:06 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:06 +03:00
+
+Открыто соединение в 18.01.2017 14:22:07 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Professor] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '21' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:22:07 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:07 +03:00
+
+Открыто соединение в 18.01.2017 14:22:07 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:22:07 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:07 +03:00
+
+Открыто соединение в 18.01.2017 14:22:17 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:22:17 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:17 +03:00
+
+Открыто соединение в 18.01.2017 14:22:19 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:22:19 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:19 +03:00
+
+Открыто соединение в 18.01.2017 14:22:21 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 14:22:21 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:21 +03:00
+
+Открыто соединение в 18.01.2017 14:22:23 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Professor] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '21' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:22:23 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:23 +03:00
+
+Открыто соединение в 18.01.2017 14:22:23 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:22:23 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:23 +03:00
+
+Открыто соединение в 18.01.2017 14:55:57 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 14:55:58 +03:00
+
+-- Выполнено за 202 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 14:55:58 +03:00
+
+Открыто соединение в 18.01.2017 14:55:58 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:55:59 +03:00
+
+-- Выполнено за 40 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:55:59 +03:00
+
+Открыто соединение в 18.01.2017 14:55:59 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:55:59 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:55:59 +03:00
+
+Открыто соединение в 18.01.2017 14:55:59 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'null' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:55:59 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:55:59 +03:00
+
+Открыто соединение в 18.01.2017 14:57:01 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 14:57:02 +03:00
+
+-- Выполнено за 414 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 14:57:02 +03:00
+
+Открыто соединение в 18.01.2017 14:57:02 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:57:03 +03:00
+
+-- Выполнено за 45 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:57:03 +03:00
+
+Открыто соединение в 18.01.2017 14:57:03 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:57:03 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:57:03 +03:00
+
+Открыто соединение в 18.01.2017 14:57:03 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'null' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 14:57:04 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:57:04 +03:00
+
+Открыто соединение в 18.01.2017 15:01:45 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:01:45 +03:00
+
+-- Выполнено за 32 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:01:45 +03:00
+
+Открыто соединение в 18.01.2017 15:01:45 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:01:46 +03:00
+
+-- Выполнено за 26 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:01:46 +03:00
+
+Открыто соединение в 18.01.2017 15:01:46 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:01:46 +03:00
+
+-- Выполнено за 37 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:01:46 +03:00
+
+Открыто соединение в 18.01.2017 15:01:46 +03:00
+
+Запущенная транзакция в 18.01.2017 15:01:46 +03:00
+
+INSERT [dbo].[Authorization]([Login], [Password], [Role])
+VALUES (NULL, NULL, @0)
+SELECT [Id]
+FROM [dbo].[Authorization]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+
+
+-- @0: '1' (Type = Int32)
+
+-- Выполнение в 18.01.2017 15:01:46 +03:00
+
+-- Выполнено за 161 мс. Результат: SqlDataReader
+
+
+
+Зафиксированная транзакция в 18.01.2017 15:01:47 +03:00
+
+Закрытое соединение в 18.01.2017 15:01:47 +03:00
+
+Открыто соединение в 18.01.2017 15:02:00 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'admin' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:02:00 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:02:00 +03:00
+
+Открыто соединение в 18.01.2017 15:02:00 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:02:00 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:02:00 +03:00
+
+Открыто соединение в 18.01.2017 15:04:19 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:04:19 +03:00
+
+-- Выполнено за 94 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:04:19 +03:00
+
+Открыто соединение в 18.01.2017 15:04:20 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:04:20 +03:00
+
+-- Выполнено за 28 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:04:20 +03:00
+
+Открыто соединение в 18.01.2017 15:04:20 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:04:20 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:04:20 +03:00
+
+Открыто соединение в 18.01.2017 15:04:20 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:04:20 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:04:21 +03:00
+
+Открыто соединение в 18.01.2017 15:20:27 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:20:27 +03:00
+
+-- Выполнено за 97 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:20:27 +03:00
+
+Открыто соединение в 18.01.2017 15:20:28 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:20:28 +03:00
+
+-- Выполнено за 48 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:20:28 +03:00
+
+Открыто соединение в 18.01.2017 15:20:28 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:20:28 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:20:28 +03:00
+
+Открыто соединение в 18.01.2017 15:20:28 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:20:29 +03:00
+
+-- Выполнено за 31 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:20:29 +03:00
+
+Открыто соединение в 18.01.2017 15:24:55 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:24:56 +03:00
+
+-- Выполнено за 103 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:24:56 +03:00
+
+Открыто соединение в 18.01.2017 15:24:56 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:24:57 +03:00
+
+-- Выполнено за 62 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:24:57 +03:00
+
+Открыто соединение в 18.01.2017 15:24:57 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:24:57 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:24:57 +03:00
+
+Открыто соединение в 18.01.2017 15:24:57 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:24:57 +03:00
+
+-- Выполнено за 123 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:24:57 +03:00
+
+Открыто соединение в 18.01.2017 15:25:07 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:25:07 +03:00
+
+-- Выполнено за 67 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:07 +03:00
+
+Открыто соединение в 18.01.2017 15:25:12 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:25:12 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:12 +03:00
+
+Открыто соединение в 18.01.2017 15:25:16 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:25:16 +03:00
+
+-- Выполнено за 30 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:16 +03:00
+
+Открыто соединение в 18.01.2017 15:25:19 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:25:19 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:19 +03:00
+
+Открыто соединение в 18.01.2017 15:25:21 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:25:21 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:21 +03:00
+
+Открыто соединение в 18.01.2017 15:25:24 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:25:24 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:24 +03:00
+
+Открыто соединение в 18.01.2017 15:25:24 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:25:24 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:24 +03:00
+
+Открыто соединение в 18.01.2017 15:25:27 +03:00
+
+Запущенная транзакция в 18.01.2017 15:25:27 +03:00
+
+INSERT [dbo].[Departament]([Title])
+VALUES (NULL)
+SELECT [Id]
+FROM [dbo].[Departament]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+
+
+-- Выполнение в 18.01.2017 15:25:27 +03:00
+
+-- Выполнено за 33 мс. Результат: SqlDataReader
+
+
+
+Зафиксированная транзакция в 18.01.2017 15:25:27 +03:00
+
+Закрытое соединение в 18.01.2017 15:25:27 +03:00
+
+Открыто соединение в 18.01.2017 15:25:27 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:25:27 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:25:27 +03:00
+
+Открыто соединение в 18.01.2017 15:27:09 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:27:09 +03:00
+
+-- Выполнено за 95 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:27:10 +03:00
+
+Открыто соединение в 18.01.2017 15:27:10 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:27:11 +03:00
+
+-- Выполнено за 135 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:11 +03:00
+
+Открыто соединение в 18.01.2017 15:27:11 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:27:11 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:11 +03:00
+
+Открыто соединение в 18.01.2017 15:27:11 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:27:11 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:11 +03:00
+
+Открыто соединение в 18.01.2017 15:27:13 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:27:14 +03:00
+
+-- Выполнено за 53 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:14 +03:00
+
+Открыто соединение в 18.01.2017 15:27:17 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '16' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:27:17 +03:00
+
+-- Выполнено за 16 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:17 +03:00
+
+Открыто соединение в 18.01.2017 15:27:17 +03:00
+
+Запущенная транзакция в 18.01.2017 15:27:17 +03:00
+
+DELETE [dbo].[Departament]
+WHERE ([Id] = @0)
+
+
+-- @0: '16' (Type = Int32)
+
+-- Выполнение в 18.01.2017 15:27:17 +03:00
+
+-- Выполнено за 164 мс. Результат: 1
+
+
+
+Зафиксированная транзакция в 18.01.2017 15:27:17 +03:00
+
+Закрытое соединение в 18.01.2017 15:27:17 +03:00
+
+Открыто соединение в 18.01.2017 15:27:17 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:27:17 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:17 +03:00
+
+Открыто соединение в 18.01.2017 15:27:29 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:27:29 +03:00
+
+-- Выполнено за 33 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:29 +03:00
+
+Открыто соединение в 18.01.2017 15:27:31 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:27:31 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:27:31 +03:00
+
+Открыто соединение в 18.01.2017 15:30:17 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:30:17 +03:00
+
+-- Выполнено за 144 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:30:17 +03:00
+
+Открыто соединение в 18.01.2017 15:30:17 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:30:18 +03:00
+
+-- Выполнено за 115 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:18 +03:00
+
+Открыто соединение в 18.01.2017 15:30:18 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:30:18 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:18 +03:00
+
+Открыто соединение в 18.01.2017 15:30:18 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:30:18 +03:00
+
+-- Выполнено за 29 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:18 +03:00
+
+Открыто соединение в 18.01.2017 15:30:23 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:30:23 +03:00
+
+-- Выполнено за 80 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:23 +03:00
+
+Открыто соединение в 18.01.2017 15:30:27 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:30:27 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:27 +03:00
+
+Открыто соединение в 18.01.2017 15:30:31 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:30:31 +03:00
+
+-- Выполнено за 77 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:31 +03:00
+
+Открыто соединение в 18.01.2017 15:30:33 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:30:34 +03:00
+
+-- Выполнено за 36 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:30:34 +03:00
+
+Открыто соединение в 18.01.2017 15:32:05 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:32:06 +03:00
+
+-- Выполнено за 109 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:32:06 +03:00
+
+Открыто соединение в 18.01.2017 15:32:06 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:32:06 +03:00
+
+-- Выполнено за 41 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:06 +03:00
+
+Открыто соединение в 18.01.2017 15:32:07 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:32:07 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:07 +03:00
+
+Открыто соединение в 18.01.2017 15:32:07 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:32:07 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:07 +03:00
+
+Открыто соединение в 18.01.2017 15:32:09 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:32:09 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:09 +03:00
+
+Открыто соединение в 18.01.2017 15:32:11 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:32:11 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:12 +03:00
+
+Открыто соединение в 18.01.2017 15:32:55 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:32:55 +03:00
+
+-- Выполнено за 178 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:32:55 +03:00
+
+Открыто соединение в 18.01.2017 15:32:55 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:32:55 +03:00
+
+-- Выполнено за 33 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:55 +03:00
+
+Открыто соединение в 18.01.2017 15:32:55 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:32:55 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:56 +03:00
+
+Открыто соединение в 18.01.2017 15:32:56 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:32:56 +03:00
+
+-- Выполнено за 12 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:32:56 +03:00
+
+Открыто соединение в 18.01.2017 15:33:00 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:33:01 +03:00
+
+-- Выполнено за 18 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:33:01 +03:00
+
+Открыто соединение в 18.01.2017 15:33:03 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:33:04 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:33:04 +03:00
+
+Открыто соединение в 18.01.2017 15:43:14 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:43:15 +03:00
+
+-- Выполнено за 100 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:43:15 +03:00
+
+Открыто соединение в 18.01.2017 15:43:15 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:43:15 +03:00
+
+-- Выполнено за 181 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:15 +03:00
+
+Открыто соединение в 18.01.2017 15:43:16 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:43:16 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:16 +03:00
+
+Открыто соединение в 18.01.2017 15:43:16 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'admin' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:43:16 +03:00
+
+-- Выполнено за 37 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:16 +03:00
+
+Открыто соединение в 18.01.2017 15:43:16 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:43:16 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:16 +03:00
+
+Открыто соединение в 18.01.2017 15:43:20 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:43:20 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:20 +03:00
+
+Открыто соединение в 18.01.2017 15:43:32 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:43:32 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:32 +03:00
+
+Открыто соединение в 18.01.2017 15:43:42 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:43:42 +03:00
+
+-- Выполнено за 86 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:42 +03:00
+
+Открыто соединение в 18.01.2017 15:43:52 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:43:52 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:52 +03:00
+
+Открыто соединение в 18.01.2017 15:43:53 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '15' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:43:53 +03:00
+
+-- Выполнено за 53 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:43:54 +03:00
+
+Открыто соединение в 18.01.2017 15:44:03 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:44:03 +03:00
+
+-- Выполнено за 33 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:44:04 +03:00
+
+Открыто соединение в 18.01.2017 15:44:13 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:44:13 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:44:13 +03:00
+
+Открыто соединение в 18.01.2017 15:45:57 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:45:58 +03:00
+
+-- Выполнено за 74 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:45:58 +03:00
+
+Открыто соединение в 18.01.2017 15:45:58 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:45:58 +03:00
+
+-- Выполнено за 23 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:45:58 +03:00
+
+Открыто соединение в 18.01.2017 15:45:58 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:45:58 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:45:58 +03:00
+
+Открыто соединение в 18.01.2017 15:45:59 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:45:59 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:45:59 +03:00
+
+Открыто соединение в 18.01.2017 15:46:02 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:46:02 +03:00
+
+-- Выполнено за 115 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:46:02 +03:00
+
+Открыто соединение в 18.01.2017 15:46:04 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:46:04 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:46:04 +03:00
+
+Открыто соединение в 18.01.2017 15:46:37 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:46:38 +03:00
+
+-- Выполнено за 17 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:46:38 +03:00
+
+Открыто соединение в 18.01.2017 15:46:44 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:46:44 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:46:44 +03:00
+
+Открыто соединение в 18.01.2017 15:49:09 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:49:10 +03:00
+
+-- Выполнено за 115 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:49:10 +03:00
+
+Открыто соединение в 18.01.2017 15:49:10 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:49:10 +03:00
+
+-- Выполнено за 96 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:49:10 +03:00
+
+Открыто соединение в 18.01.2017 15:49:10 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:49:11 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:49:11 +03:00
+
+Открыто соединение в 18.01.2017 15:49:11 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:49:11 +03:00
+
+-- Выполнено за 21 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:49:11 +03:00
+
+Открыто соединение в 18.01.2017 15:49:13 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:49:13 +03:00
+
+-- Выполнено за 72 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:49:13 +03:00
+
+Открыто соединение в 18.01.2017 15:49:22 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:49:23 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:49:23 +03:00
+
+Открыто соединение в 18.01.2017 15:49:25 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:49:25 +03:00
+
+-- Выполнено за 30 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:49:26 +03:00
+
+Открыто соединение в 18.01.2017 15:52:13 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:52:13 +03:00
+
+-- Выполнено за 55 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:52:14 +03:00
+
+Открыто соединение в 18.01.2017 15:52:24 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:52:24 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:52:24 +03:00
+
+Открыто соединение в 18.01.2017 15:52:29 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:52:29 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:52:29 +03:00
+
+Открыто соединение в 18.01.2017 15:52:31 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:52:31 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:52:31 +03:00
+
+Открыто соединение в 18.01.2017 15:56:23 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 15:56:24 +03:00
+
+-- Выполнено за 51 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 15:56:24 +03:00
+
+Открыто соединение в 18.01.2017 15:56:24 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:56:24 +03:00
+
+-- Выполнено за 24 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:24 +03:00
+
+Открыто соединение в 18.01.2017 15:56:24 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:56:24 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:24 +03:00
+
+Открыто соединение в 18.01.2017 15:56:24 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 15:56:24 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:24 +03:00
+
+Открыто соединение в 18.01.2017 15:56:27 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:56:27 +03:00
+
+-- Выполнено за 42 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:27 +03:00
+
+Открыто соединение в 18.01.2017 15:56:32 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '6' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 15:56:32 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:32 +03:00
+
+Открыто соединение в 18.01.2017 15:56:32 +03:00
+
+Запущенная транзакция в 18.01.2017 15:56:32 +03:00
+
+DELETE [dbo].[Specialization]
+WHERE ([Id] = @0)
+
+
+-- @0: '6' (Type = Int32)
+
+-- Выполнение в 18.01.2017 15:56:32 +03:00
+
+-- Выполнено за 43 мс. Результат: 1
+
+
+
+Зафиксированная транзакция в 18.01.2017 15:56:32 +03:00
+
+Закрытое соединение в 18.01.2017 15:56:32 +03:00
+
+Открыто соединение в 18.01.2017 15:56:32 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 15:56:32 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:32 +03:00
+
+Открыто соединение в 18.01.2017 15:56:34 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 15:56:34 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 15:56:34 +03:00
+
+Открыто соединение в 18.01.2017 16:00:14 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:00:15 +03:00
+
+-- Выполнено за 68 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:00:15 +03:00
+
+Открыто соединение в 18.01.2017 16:00:15 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:00:15 +03:00
+
+-- Выполнено за 334 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:00:16 +03:00
+
+Открыто соединение в 18.01.2017 16:00:16 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:00:16 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:00:16 +03:00
+
+Открыто соединение в 18.01.2017 16:00:16 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:00:16 +03:00
+
+-- Выполнено за 65 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:00:16 +03:00
+
+Открыто соединение в 18.01.2017 16:00:41 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:00:41 +03:00
+
+-- Выполнено за 27 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:00:41 +03:00
+
+Открыто соединение в 18.01.2017 16:01:00 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:01:00 +03:00
+
+-- Выполнено за 16 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:01:00 +03:00
+
+Открыто соединение в 18.01.2017 16:01:12 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:01:12 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:01:12 +03:00
+
+Открыто соединение в 18.01.2017 16:01:17 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:01:17 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:01:17 +03:00
+
+Открыто соединение в 18.01.2017 16:01:21 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:01:21 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:01:21 +03:00
+
+Открыто соединение в 18.01.2017 16:01:21 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:01:21 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:01:21 +03:00
+
+Открыто соединение в 18.01.2017 16:02:06 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:02:06 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:02:06 +03:00
+
+Открыто соединение в 18.01.2017 16:02:06 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:02:06 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:02:06 +03:00
+
+Открыто соединение в 18.01.2017 16:02:24 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:02:24 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:02:24 +03:00
+
+Открыто соединение в 18.01.2017 16:02:42 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:02:43 +03:00
+
+-- Выполнено за 13 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:02:43 +03:00
+
+Открыто соединение в 18.01.2017 16:02:47 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:02:48 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:02:48 +03:00
+
+Открыто соединение в 18.01.2017 16:02:48 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:02:48 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:02:48 +03:00
+
+Открыто соединение в 18.01.2017 16:03:57 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:03:57 +03:00
+
+-- Выполнено за 165 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:03:57 +03:00
+
+Открыто соединение в 18.01.2017 16:03:58 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:03:58 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:03:58 +03:00
+
+Открыто соединение в 18.01.2017 16:03:58 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:03:58 +03:00
+
+-- Выполнено за 41 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:03:58 +03:00
+
+Открыто соединение в 18.01.2017 16:03:58 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:03:58 +03:00
+
+-- Выполнено за 29 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:03:58 +03:00
+
+Открыто соединение в 18.01.2017 16:04:00 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:04:00 +03:00
+
+-- Выполнено за 27 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:00 +03:00
+
+Открыто соединение в 18.01.2017 16:04:07 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:04:07 +03:00
+
+-- Выполнено за 24 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:07 +03:00
+
+Открыто соединение в 18.01.2017 16:04:07 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:04:07 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:07 +03:00
+
+Открыто соединение в 18.01.2017 16:04:23 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:04:24 +03:00
+
+-- Выполнено за 18 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:24 +03:00
+
+Открыто соединение в 18.01.2017 16:04:24 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:04:24 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:24 +03:00
+
+Открыто соединение в 18.01.2017 16:04:28 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[FreeCount] AS [FreeCount]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '7' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:04:28 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:28 +03:00
+
+Открыто соединение в 18.01.2017 16:04:28 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:04:28 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:28 +03:00
+
+Открыто соединение в 18.01.2017 16:04:37 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:04:37 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:37 +03:00
+
+Открыто соединение в 18.01.2017 16:04:40 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:04:40 +03:00
+
+-- Выполнено за 79 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:40 +03:00
+
+Открыто соединение в 18.01.2017 16:04:50 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:04:50 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:04:50 +03:00
+
+Открыто соединение в 18.01.2017 16:06:33 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:06:33 +03:00
+
+-- Выполнено за 31 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:06:33 +03:00
+
+Открыто соединение в 18.01.2017 16:06:33 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:06:33 +03:00
+
+-- Выполнено за 149 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:34 +03:00
+
+Открыто соединение в 18.01.2017 16:06:34 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:06:34 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:34 +03:00
+
+Открыто соединение в 18.01.2017 16:06:34 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:06:34 +03:00
+
+-- Выполнено за 13 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:34 +03:00
+
+Открыто соединение в 18.01.2017 16:06:43 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:06:43 +03:00
+
+-- Выполнено за 34 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:43 +03:00
+
+Открыто соединение в 18.01.2017 16:06:45 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:06:45 +03:00
+
+-- Выполнено за 12 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:45 +03:00
+
+Открыто соединение в 18.01.2017 16:06:47 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:06:47 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:47 +03:00
+
+Открыто соединение в 18.01.2017 16:06:48 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:06:49 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:49 +03:00
+
+Открыто соединение в 18.01.2017 16:06:50 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Professor] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '21' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:06:50 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:50 +03:00
+
+Открыто соединение в 18.01.2017 16:06:50 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:06:50 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:06:50 +03:00
+
+Открыто соединение в 18.01.2017 16:09:48 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:09:48 +03:00
+
+-- Выполнено за 32 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:09:48 +03:00
+
+Открыто соединение в 18.01.2017 16:09:48 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:09:49 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:49 +03:00
+
+Открыто соединение в 18.01.2017 16:09:49 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:09:49 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:49 +03:00
+
+Открыто соединение в 18.01.2017 16:09:49 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:09:49 +03:00
+
+-- Выполнено за 52 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:49 +03:00
+
+Открыто соединение в 18.01.2017 16:09:52 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:09:52 +03:00
+
+-- Выполнено за 106 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:53 +03:00
+
+Открыто соединение в 18.01.2017 16:09:56 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:09:56 +03:00
+
+-- Выполнено за 53 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:56 +03:00
+
+Открыто соединение в 18.01.2017 16:09:58 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:09:58 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:58 +03:00
+
+Открыто соединение в 18.01.2017 16:09:59 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent2].[Title] AS [Title]
+    FROM  [dbo].[Professor] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 16:09:59 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:09:59 +03:00
+
+Открыто соединение в 18.01.2017 16:10:01 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Professor] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '21' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:10:01 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:10:01 +03:00
+
+Открыто соединение в 18.01.2017 16:10:01 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:10:01 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:10:01 +03:00
+
+Открыто соединение в 18.01.2017 16:10:01 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:10:01 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:10:01 +03:00
+
+Открыто соединение в 18.01.2017 16:10:04 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:10:04 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:10:05 +03:00
+
+Открыто соединение в 18.01.2017 16:15:58 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:15:59 +03:00
+
+-- Выполнено за 33 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:15:59 +03:00
+
+Открыто соединение в 18.01.2017 16:15:59 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:15:59 +03:00
+
+-- Выполнено за 55 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:15:59 +03:00
+
+Открыто соединение в 18.01.2017 16:15:59 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:15:59 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:15:59 +03:00
+
+Открыто соединение в 18.01.2017 16:16:00 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:16:00 +03:00
+
+-- Выполнено за 24 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:16:00 +03:00
+
+Открыто соединение в 18.01.2017 16:17:11 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:17:11 +03:00
+
+-- Выполнено за 6 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:17:11 +03:00
+
+Открыто соединение в 18.01.2017 16:17:11 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:17:12 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:17:12 +03:00
+
+Открыто соединение в 18.01.2017 16:17:12 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:17:12 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:17:12 +03:00
+
+Открыто соединение в 18.01.2017 16:17:12 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:17:12 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:17:12 +03:00
+
+Открыто соединение в 18.01.2017 16:17:38 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:17:38 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:17:38 +03:00
+
+Открыто соединение в 18.01.2017 16:17:52 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:17:52 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:17:52 +03:00
+
+Открыто соединение в 18.01.2017 16:20:24 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.Enrollment','dbo.Specialization','dbo.Authorization','dbo.SpecializationSubjects')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 18.01.2017 16:20:24 +03:00
+
+-- Выполнено за 82 мс. Результат: 10
+
+
+
+Закрытое соединение в 18.01.2017 16:20:24 +03:00
+
+Открыто соединение в 18.01.2017 16:20:24 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:20:25 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:25 +03:00
+
+Открыто соединение в 18.01.2017 16:20:25 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:20:25 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:25 +03:00
+
+Открыто соединение в 18.01.2017 16:20:25 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Login] AS [Login], 
+    [Extent1].[Password] AS [Password], 
+    [Extent1].[Role] AS [Role]
+    FROM [dbo].[Authorization] AS [Extent1]
+    WHERE ([Extent1].[Login] = @p__linq__0) OR (([Extent1].[Login] IS NULL) AND (@p__linq__0 IS NULL))
+
+
+-- p__linq__0: 'sec' (Type = String, Size = 4000)
+
+-- Выполнение в 18.01.2017 16:20:25 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:25 +03:00
+
+Открыто соединение в 18.01.2017 16:20:28 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:20:28 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:28 +03:00
+
+Открыто соединение в 18.01.2017 16:20:35 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:20:35 +03:00
+
+-- Выполнено за 17 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:35 +03:00
+
+Открыто соединение в 18.01.2017 16:20:36 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 16:20:36 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:36 +03:00
+
+Открыто соединение в 18.01.2017 16:20:41 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 16:20:42 +03:00
+
+-- Выполнено за 61 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 16:20:42 +03:00
+

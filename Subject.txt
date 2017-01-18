@@ -617,3 +617,57 @@ SELECT
 
 Закрытое соединение в 18.01.2017 10:58:27 +03:00
 
+Открыто соединение в 18.01.2017 14:15:25 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:15:25 +03:00
+
+-- Выполнено за 36 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:15:25 +03:00
+
+Открыто соединение в 18.01.2017 14:22:09 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 14:22:09 +03:00
+
+-- Выполнено за 82 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:09 +03:00
+
+Открыто соединение в 18.01.2017 14:22:12 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[Form] AS [Form]
+    FROM [dbo].[Subject] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '5' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 14:22:12 +03:00
+
+-- Выполнено за 28 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 14:22:12 +03:00
+

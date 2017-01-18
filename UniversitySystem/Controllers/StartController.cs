@@ -22,7 +22,7 @@ namespace UniversitySystem.Controllers
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest("Start.txt");
+                _context = HttpContext.GetContextPerRequest();
                 return _context;
             }
         }
@@ -33,8 +33,7 @@ namespace UniversitySystem.Controllers
             {
                 return HttpContext.GetOwinContext().Authentication;
             }
-        }
-        //HttpCookie cookie = new HttpCookie("Cookie");        
+        }               
 
         [HttpGet]
         public ActionResult Login()
@@ -50,21 +49,25 @@ namespace UniversitySystem.Controllers
             //  claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
             //  AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = false }, claimsIdentity);
 
-            var role = new AuthorizeManager(Context).Login(model);
-
-            if (role == null)
+            if (ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Incorrect password");
-                return View();
-            }
+                var role = new AuthorizeManager(Context).Login(model);
 
-            switch (role)
-            {
-                case Role.Admin: return RedirectToAction("Index", "Admin");
-                case Role.Secretary: return RedirectToAction("Index", "Secretary");
-                default: return RedirectToAction("Index", "Admin");
-            }
+                if (role == null)
+                {
+                    ModelState.AddModelError("", "Incorrect password");
+                    return View();
+                }
 
+                switch (role)
+                {
+                    case Role.Admin: return RedirectToAction("Index", "Admin");
+                    case Role.Secretary: return RedirectToAction("Index", "Secretary");
+                    default: return RedirectToAction("Index", "Admin");
+                }
+            }
+            else
+                return View(model);
             //AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
     }
