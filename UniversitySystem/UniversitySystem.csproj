@@ -201,6 +201,7 @@
     <Compile Include="Controllers\SecretaryController.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Core\HttpContextExtensions.cs" />
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
     <Compile Include="Manager\ProfessorManager.cs" />

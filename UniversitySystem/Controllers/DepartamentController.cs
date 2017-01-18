@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
 
@@ -13,20 +14,11 @@ namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        RepositoryContext _context;
+        private readonly RepositoryContext _context;
+
         public DepartamentController()
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
-        }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Departament.txt", FileMode.Append, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(str);
-            sw.Close();
-            fs.Close();
+            _context = HttpContext.GetContextPerRequest();
         }
 
         [HttpGet]
