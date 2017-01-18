@@ -12,24 +12,20 @@ using System.Security.Claims;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
 using System.IO;
+using UniversitySystem.Core;
 
 namespace UniversitySystem.Controllers
 {
     public class AdminController : Controller
     {
-        RepositoryContext _context;
-        public AdminController()
+        private RepositoryContext _context;
+        public RepositoryContext Context
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
-        }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Admin.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(str);
-            sw.Close();
+            get
+            {
+                _context = HttpContext.GetContextPerRequest("Start.txt");
+                return _context;
+            }
         }
 
         //??????
@@ -48,27 +44,27 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new UserManager(_context).Get());
+            return View(new UserManager(Context).Get());
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new UserManager(_context).Delete(id);
+            new UserManager(Context).Delete(id);
             return RedirectToAction("Index", "Admin");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            UserModel user = new UserManager(_context).GetById(id);
+            UserModel user = new UserManager(Context).GetById(id);
             return View("Change", user);
         }
 
         [HttpPost]
         public ActionResult Change(UserModel model)
         {
-            new UserManager(_context).Change(model);
+            new UserManager(Context).Change(model);
             return RedirectToAction("Index", "Admin");
         }
     }

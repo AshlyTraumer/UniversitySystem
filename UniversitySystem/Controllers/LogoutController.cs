@@ -24,7 +24,7 @@ namespace UniversitySystem.Controllers
                 return Redirect("/Start");
             cookie.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Add(cookie);*/
-            return RedirectToAction("Index","Start");
+            return RedirectToAction("Login","Start");
         }
     }
 }

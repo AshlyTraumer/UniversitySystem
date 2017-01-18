@@ -7,7 +7,7 @@ namespace UniversitySystem.Core
 {
     public static class HttpContextExtensions
     {
-        public static RepositoryContext GetContextPerRequest(this HttpContextBase httpContext)
+        public static RepositoryContext GetContextPerRequest(this HttpContextBase httpContext,string fileName)
         {
             var key = "RepositoryContext";
 
@@ -17,12 +17,11 @@ namespace UniversitySystem.Core
             {
                 context = new RepositoryContext();
 
-                //httpContext.Server.MapPath("~/Log/");
+                var path=Path.Combine(httpContext.Server.MapPath("~/Logs"), fileName);
 
                 context.Database.Log = str =>
                 {
-                    FileStream fs = new FileStream("e:\\UniversitySystem\\Departament.txt", FileMode.Append,
-                        FileAccess.Write);
+                    FileStream fs = new FileStream(path, FileMode.Append,FileAccess.Write);
                     StreamWriter sw = new StreamWriter(fs);
                     sw.WriteLine(str);
                     sw.Close();

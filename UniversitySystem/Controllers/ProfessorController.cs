@@ -9,16 +9,20 @@ using System.Data.Entity;
 using UniversitySystem.Models;
 using UniversitySystem.Manager;
 using System.IO;
+using UniversitySystem.Core;
 
 namespace UniversitySystem.Controllers
 {
     public class ProfessorController : Controller
     {
-        RepositoryContext _context;
-        public ProfessorController()
+        private RepositoryContext _context;
+        public RepositoryContext Context
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
+            get
+            {
+                _context = HttpContext.GetContextPerRequest("Start.txt");
+                return _context;
+            }
         }
 
         public void LogMethod(string str)
@@ -32,40 +36,40 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new ProfessorManager(_context).Get());
+            return View(new ProfessorManager(Context).Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            return View(new ProfessorManager(_context).GetEmptyModel());
+            return View(new ProfessorManager(Context).GetEmptyModel());
         }
 
         [HttpPost]
         public ActionResult Create(ProfessorModel model)
         {
-            new ProfessorManager(_context).Create(model);
+            new ProfessorManager(Context).Create(model);
             return RedirectToAction("Index", "Professor");
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new ProfessorManager(_context).Delete(id);
+            new ProfessorManager(Context).Delete(id);
             return RedirectToAction("Index", "Professor");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            ProfessorModel professor = new ProfessorManager(_context).GetById(id);
+            ProfessorModel professor = new ProfessorManager(Context).GetById(id);
             return View("Change", professor);
         }
 
         [HttpPost]
         public ActionResult Change(ProfessorModel model)
         {
-            new ProfessorManager(_context).Change(model);
+            new ProfessorManager(Context).Change(model);
             return RedirectToAction("Index", "Professor");
         }
     }

@@ -14,17 +14,24 @@ namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        private readonly RepositoryContext _context;
+        private RepositoryContext _context;        
+        public RepositoryContext Context
+        {
+            get
+            {
+                _context = HttpContext.GetContextPerRequest("Departament.txt");
+                return _context;
+            }
+        }
 
         public DepartamentController()
-        {
-            _context = HttpContext.GetContextPerRequest();
+        {           
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new DepartamentManager(_context).Get());
+            return View(new DepartamentManager(Context).Get());
         }
 
         [HttpGet]
@@ -36,28 +43,28 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(DepartamentModel model)
         {
-            new DepartamentManager(_context).Create(model);
+            new DepartamentManager(Context).Create(model);
             return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new DepartamentManager(_context).Delete(id);
+            new DepartamentManager(Context).Delete(id);
             return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            DepartamentModel departament = new DepartamentManager(_context).GetById(id);
+            DepartamentModel departament = new DepartamentManager(Context).GetById(id);
             return View("Change", departament);
         }
 
         [HttpPost]
         public ActionResult Change(DepartamentModel model)
         {
-            new DepartamentManager(_context).Change(model);
+            new DepartamentManager(Context).Change(model);
             return RedirectToAction("Index", "Departament");
         }
     }

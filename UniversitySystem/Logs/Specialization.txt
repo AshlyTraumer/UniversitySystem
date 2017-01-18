@@ -1,0 +1,146 @@
+Открыто соединение в 18.01.2017 10:47:02 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 10:47:02 +03:00
+
+-- Выполнено за 23 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 10:47:02 +03:00
+
+Открыто соединение в 18.01.2017 10:47:05 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent1].[DepartamentId] AS [DepartamentId]
+    FROM [dbo].[Specialization] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '3' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 10:47:05 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 10:47:05 +03:00
+
+Открыто соединение в 18.01.2017 10:47:05 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+
+
+-- Выполнение в 18.01.2017 10:47:05 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 10:47:05 +03:00
+
+Открыто соединение в 18.01.2017 10:47:09 +03:00
+
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title]
+    FROM [dbo].[Departament] AS [Extent1]
+    WHERE [Extent1].[Id] = @p__linq__0
+
+
+-- p__linq__0: '8' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 18.01.2017 10:47:09 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 10:47:09 +03:00
+
+Открыто соединение в 18.01.2017 10:47:09 +03:00
+
+Запущенная транзакция в 18.01.2017 10:47:09 +03:00
+
+INSERT [dbo].[Specialization]([Title], [FreeCount], [PayCount], [DepartamentId])
+VALUES (@0, @1, @2, @3)
+SELECT [Id]
+FROM [dbo].[Specialization]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+
+
+-- @0: 'super' (Type = String, Size = 30)
+
+-- @1: '1' (Type = Int32)
+
+-- @2: '2' (Type = Int32)
+
+-- @3: '8' (Type = Int32)
+
+-- Выполнение в 18.01.2017 10:47:09 +03:00
+
+-- Выполнено за 24 мс. Результат: SqlDataReader
+
+
+
+Зафиксированная транзакция в 18.01.2017 10:47:09 +03:00
+
+Закрытое соединение в 18.01.2017 10:47:09 +03:00
+
+Открыто соединение в 18.01.2017 10:47:09 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 10:47:09 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 10:47:09 +03:00
+
+Открыто соединение в 18.01.2017 10:58:16 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    [Extent1].[FreeCount] AS [FreeCount], 
+    [Extent1].[PayCount] AS [PayCount], 
+    [Extent2].[Title] AS [Title1]
+    FROM  [dbo].[Specialization] AS [Extent1]
+    INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+
+
+-- Выполнение в 18.01.2017 10:58:16 +03:00
+
+-- Выполнено за 88 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 18.01.2017 10:58:17 +03:00
+

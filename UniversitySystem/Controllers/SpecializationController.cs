@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
 
@@ -12,58 +13,53 @@ namespace UniversitySystem.Controllers
 {
     public class SpecializationController : Controller
     {
-        RepositoryContext _context;
-        public SpecializationController()
+        private RepositoryContext _context;
+        public RepositoryContext Context
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
+            get
+            {
+                _context = HttpContext.GetContextPerRequest("Specialization.txt");
+                return _context;
+            }
         }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Specialization.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(str);
-            sw.Close();
-        }
-
+       
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new SpecializationManager(_context).Get());
+            return View(new SpecializationManager(Context).Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            return View(new SpecializationManager(_context).GetEmptyModel());
+            return View(new SpecializationManager(Context).GetEmptyModel());
         }
 
         [HttpPost]
         public ActionResult Create(SpecializationModel model)
         {
-            new SpecializationManager(_context).Create(model);
+            new SpecializationManager(Context).Create(model);
             return RedirectToAction("Index", "Specialization");
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new SpecializationManager(_context).Delete(id);
+            new SpecializationManager(Context).Delete(id);
             return RedirectToAction("Index", "Specialization");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            SpecializationModel specialization = new SpecializationManager(_context).GetById(id);
+            SpecializationModel specialization = new SpecializationManager(Context).GetById(id);
             return View("Change", specialization);
         }
 
         [HttpPost]
         public ActionResult Change(SpecializationModel model)
         {
-            new SpecializationManager(_context).Change(model);
+            new SpecializationManager(Context).Change(model);
             return RedirectToAction("Index", "Specialization");
         }
     }

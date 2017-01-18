@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
 
@@ -13,20 +14,15 @@ namespace UniversitySystem.Controllers
 {
     public class RegisterController : Controller
     {
-        RepositoryContext _context;
-        public RegisterController()
+        private RepositoryContext _context;
+        public RepositoryContext Context
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
-        }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Register.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(fs);
-            sw.Close();
-        }
+            get
+            {
+                _context = HttpContext.GetContextPerRequest("Register.txt");
+                return _context;
+            }
+        }       
 
         [HttpGet]
         public ActionResult Index()
@@ -37,7 +33,7 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Join(RegisterModel model)
         {
-            new AuthorizeManager(_context).Register(model);
+            new AuthorizeManager(Context).Register(model);
             return RedirectToAction("Login", "Start");
 
         }

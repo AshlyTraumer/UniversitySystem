@@ -11,24 +11,20 @@ using UniversitySystem;
 using UniversitySystem.Models;
 using UniversitySystem.Manager;
 using System.IO;
+using UniversitySystem.Core;
 
 namespace UniversitySystem.Controllers
 {
     public class StartController : Controller
     {
-        RepositoryContext _context;
-        public StartController()
+        private RepositoryContext _context;
+        public RepositoryContext Context
         {
-            _context = new RepositoryContext();
-            _context.Database.Log = LogMethod;
-        }
-
-        public void LogMethod(string str)
-        {
-            FileStream fs = new FileStream("e:\\UniversitySystem\\Start.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.WriteLine(str);            
-            sw.Close();
+            get
+            {
+                _context = HttpContext.GetContextPerRequest("Start.txt");
+                return _context;
+            }
         }
 
         private IAuthenticationManager AuthenticationManager
@@ -54,7 +50,7 @@ namespace UniversitySystem.Controllers
             //  claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
             //  AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = false }, claimsIdentity);
 
-            UserModel user = new AuthorizeManager(_context).Login(model);
+            UserModel user = new AuthorizeManager(Context).Login(model);
             switch (user.Role)
             {
                 case Role.Admin: return RedirectToAction("Index", "Admin");

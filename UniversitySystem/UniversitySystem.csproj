@@ -206,7 +206,6 @@
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
     <Compile Include="Manager\ProfessorManager.cs" />
-    <Compile Include="Manager\RepositoryContex.cs" />
     <Compile Include="Manager\SpecializationManager.cs" />
     <Compile Include="Manager\SubjectManager.cs" />
     <Compile Include="Manager\UserManager.cs" />
@@ -284,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\Logout\" />
   </ItemGroup>
