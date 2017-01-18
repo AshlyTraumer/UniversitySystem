@@ -13,8 +13,9 @@ namespace ClassLibrary
     {
         public RepositoryContext() : base("UniversitySystem")
         {
-        }
-
+          
+        }      
+               
         public DbSet<Departament> Departaments { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Entrant> Entrants { get; set; }

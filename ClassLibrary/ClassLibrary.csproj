@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201701160731422_DomenMigration.Designer.cs">
       <DependentUpon>201701160731422_DomenMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701181408372_InitMigration.cs" />
+    <Compile Include="Migrations\201701181408372_InitMigration.Designer.cs">
+      <DependentUpon>201701181408372_InitMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domen\Result.cs" />
@@ -97,7 +101,11 @@
     <EmbeddedResource Include="Migrations\201701160731422_DomenMigration.resx">
       <DependentUpon>201701160731422_DomenMigration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701181408372_InitMigration.resx">
+      <DependentUpon>201701181408372_InitMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
