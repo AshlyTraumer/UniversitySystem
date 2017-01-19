@@ -27,8 +27,8 @@ namespace UniversitySystem.Models
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            if ((Role == Role.Admin) && (Password.Length > 8))
-                yield return new ValidationResult("Длинный пароль", new[] { "Password" });
+            if ((Role == Role.Admin) && (Password.Length < 8))
+                yield return new ValidationResult("Ненадежный пароль", new[] { "Password", "Role" });
         }
     }
 }

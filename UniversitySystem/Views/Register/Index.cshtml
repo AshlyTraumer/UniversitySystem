@@ -22,28 +22,27 @@
                     <label for="inputEmail3" class="col-sm-2 control-label">Логин</label>
                     <div class="col-sm-10">
                         @Html.ValidationMessageFor(x => x.Login)                        
-                        <input type="text" name="Login" id="Login" placeholder="Введите логин" class="form-control @Html.getValidClass(ViewContext.ViewData.ModelState)">
+                        <input type="text" name="Login" value="@Model.Login" placeholder="Введите логин" class="form-control @Html.GetValidClass(ViewContext.ViewData.ModelState, "Login")">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
                     <div class="col-sm-10">
                         @Html.ValidationMessageFor(x => x.Password) 
-                        <input type="password" name="Password" placeholder="Введите пароль" class="form-control @Html.getValidClass(ViewContext.ViewData.ModelState)">
+                        <input type="password" name="Password" value="@Model.Password" placeholder="Введите пароль" class="form-control @Html.GetValidClass(ViewContext.ViewData.ModelState, "Password")">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Повторите пароль</label>
                     <div class="col-sm-10">
                         @Html.ValidationMessageFor(x => x.RetypePassword)
-                        <input type="password" name="RetypePassword" placeholder="Введите пароль" class="form-control @Html.getValidClass(ViewContext.ViewData.ModelState)">
+                        <input type="password" name="RetypePassword" value="@Model.RetypePassword" placeholder="Введите пароль" class="form-control @Html.GetValidClass(ViewContext.ViewData.ModelState, "RetypePassword")">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Роль:</label>
-                    <div class="col-xs-10">
-                        @Html.ValidationMessageFor(x => x.Role)
-                        <select class="form-control" name="Role">
+                    <div class="col-xs-10">                        
+                        <select class="form-control @Html.GetValidClass(ViewContext.ViewData.ModelState, "Role")" name="Role">
                             @foreach (ClassLibrary.Authorization.Role d in Enum.GetValues(typeof(ClassLibrary.Authorization.Role)))
                             {
                                 <option>@d</option>

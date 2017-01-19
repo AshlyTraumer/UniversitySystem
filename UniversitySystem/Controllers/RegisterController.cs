@@ -38,7 +38,7 @@ namespace UniversitySystem.Controllers
                 new AuthorizeManager(Context).Register(model);
                 return RedirectToAction("Login", "Start");
             }            
-            return View("Index");
+            return View("Index",model);
         }
     }
 }

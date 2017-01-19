@@ -8,10 +8,9 @@ namespace UniversitySystem.Core
 {
     public static class HtmlHelperExtensions
     {
-        public static string getValidClass(this HtmlHelper helper, ModelStateDictionary model)
+        public static string GetValidClass(this HtmlHelper helper, ModelStateDictionary model, string className)
         {
-            
-            if (!model.IsValid)
+            if (model[className]?.Errors.Count > 0)
                 return "valid-error";
             else
                 return "";
