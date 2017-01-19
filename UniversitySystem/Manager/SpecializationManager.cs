@@ -1,8 +1,6 @@
 ﻿using ClassLibrary;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
@@ -10,6 +8,7 @@ namespace UniversitySystem.Manager
     public class SpecializationManager
     {
         private readonly RepositoryContext _context;
+
         public SpecializationManager(RepositoryContext context)
         {
             _context = context;
@@ -25,13 +24,13 @@ namespace UniversitySystem.Manager
                     FreeCount = x.FreeCount,
                     PayCount = x.PayCount,
                     Departament = x.Departament.Title
-                })
-                .ToList();
+                }).ToList();
         }
 
         public void Delete(int id)
         {
             var specialization = _context.Specializations.Single(x => x.Id == id);
+
             _context.Specializations.Remove(specialization);
             _context.SaveChanges();
         }
@@ -45,36 +44,35 @@ namespace UniversitySystem.Manager
                     Title = x.Title,
                     PayCount = x.PayCount,
                     FreeCount = x.FreeCount,
-                })
-                .Single(x => x.Id == id);            
+                }).Single(x => x.Id == id);            
 
             return model;
         }
 
-        public List<DropDownList> GetList()
+        public List<DropDownListItem> GetList()
         {
             return  _context.Departaments
-                .Select(x => new DropDownList
+                .Select(x => new DropDownListItem
                 {
                     Id = x.Id,
                     Title = x.Title
-                })
-                .ToList();            
+                }).ToList();            
         }
 
         public void Change(SpecializationModel model)
         {
             var specialization = _context.Specializations.Single(x => x.Id == model.Id);
+
             specialization.Title = model.Title;
             specialization.FreeCount = model.FreeCount;
             specialization.PayCount = model.PayCount;
+
             _context.SaveChanges();
         }
 
         public void Create(SpecializationModel model)
         {
-            var departament = _context.Departaments.Single(x => x.Id == model.DepartamentId);
-            Specialization specialization = new Specialization()
+            var specialization = new Specialization
             {
                 Title = model.Title,
                 PayCount = model.PayCount,

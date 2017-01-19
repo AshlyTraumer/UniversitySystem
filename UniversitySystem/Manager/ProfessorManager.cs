@@ -23,8 +23,7 @@ namespace UniversitySystem.Manager
                     Id = t.Id,
                     Name = t.Name,
                     DepartamentTitle = t.Departament.Title
-                })
-            .ToList();
+                }).ToList();
         }
 
         public void Delete(int id)
@@ -38,14 +37,7 @@ namespace UniversitySystem.Manager
         public ProfessorModel GetById(int id)
         {
             var professor = _context.Professors.Single(x => x.Id == id);
-            var list = _context.Departaments
-                .Select(x => new DropDownList
-                {
-                    Id = x.Id,
-                    Title = x.Title
-                })
-                .ToList();
-
+            
             var model = new ProfessorModel
             {
                 Id = id,
@@ -56,15 +48,14 @@ namespace UniversitySystem.Manager
         }
 
 
-        public List<DropDownList> GetList()
+        public List<DropDownListItem> GetList()
         {
             return _context.Departaments
-                .Select(x => new DropDownList
+                .Select(x => new DropDownListItem
                 {
                     Id = x.Id,
                     Title = x.Title
-                })
-                .ToList();            
+                }).ToList();            
         }
 
         public void Change(ProfessorModel model)

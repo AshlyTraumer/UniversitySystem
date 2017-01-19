@@ -1,15 +1,14 @@
 ﻿using ClassLibrary;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
     public class SubjectManager
     {
-        private RepositoryContext _context;
+        private readonly RepositoryContext _context;
+
         public SubjectManager(RepositoryContext context)
         {
             _context = context;
@@ -23,13 +22,13 @@ namespace UniversitySystem.Manager
                     Id = x.Id,
                     Title = x.Title,
                     Form = x.Form
-                })
-                .ToList();
+                }).ToList();
         }
 
         public void Delete(int id)
         {
             var subject = _context.Subjects.Single(x => x.Id == id);
+
             _context.Subjects.Remove(subject);
             _context.SaveChanges();
         }
@@ -37,7 +36,8 @@ namespace UniversitySystem.Manager
         public SubjectModel GetById(int id)
         {
             var subject = _context.Subjects.Single(x => x.Id == id);
-            return new SubjectModel()
+
+            return new SubjectModel
             {
                 Id = id,
                 Title = subject.Title,
@@ -48,14 +48,16 @@ namespace UniversitySystem.Manager
         public void Change(SubjectModel model)
         {
             var subject = _context.Subjects.Single(x => x.Id == model.Id);
+
             subject.Title = model.Title;
             subject.Form = model.Form;
+
             _context.SaveChanges();
         }
 
         public void Create(SubjectModel model)
         {
-            var subject = new Subject()
+            var subject = new Subject
             {
                 Title = model.Title,
                 Form = model.Form

@@ -1,16 +1,16 @@
 ﻿using ClassLibrary;
 using ClassLibrary.Authorization;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using UniversitySystem.Core.Exceptions;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class UserManager//:DAO<User>
+    public class UserManager
     {
-        private RepositoryContext _context;
+        private readonly RepositoryContext _context;
+
         public UserManager(RepositoryContext context)
         {
             _context = context;
@@ -18,19 +18,20 @@ namespace UniversitySystem.Manager
 
         public IEnumerable<UserModel> Get()
         {
-            IEnumerable<UserModel> uModel = _context.Users.Select(x => new UserModel
+            var uModel = _context.Users.Select(x => new UserModel
             {
                 Id = x.Id,
                 Login = x.Login,
                 Password = x.Password,
                 Role = x.Role
             }).ToList();
+
             return uModel;
         }
 
         public void Delete(int id)
         {
-            User user = _context.Users.Single(x => x.Id == id);
+            var user = _context.Users.Single(x => x.Id == id);
 
             if (user.Role != Role.Admin)
             {
@@ -38,40 +39,44 @@ namespace UniversitySystem.Manager
                 _context.SaveChanges();
             }
 
-            throw new UniversalException("sdfdfgfghgh");
+            throw new UniversalException("Admin can't be removed");
         }
 
         public UserModel GetById(int id)
         {
-            User user = _context.Users.Single(x => x.Id == id);
+            var user = _context.Users.Single(x => x.Id == id);
 
-            UserModel model = new UserModel()
+            var model = new UserModel
             {
                 Id = id,
                 Login = user.Login,
                 Password = user.Password,
                 Role = user.Role
             };
+
             return model;
         }
 
         public void Change(UserModel instance)
         {
-            User oldUser = _context.Users.Single(x => x.Id == instance.Id);
+            var oldUser = _context.Users.Single(x => x.Id == instance.Id);
+
             oldUser.Login = instance.Login;
             oldUser.Password = instance.Password;
             oldUser.Role = instance.Role;
+
             _context.SaveChanges();
         }
 
         public void Create(UserModel user)
         {
-            User newUser = new User()
+            var newUser = new User
             {
                 Login = user.Login,
                 Password = user.Password,
                 Role = user.Role
             };
+
             _context.Users.Add(newUser);
             _context.SaveChanges();
         }

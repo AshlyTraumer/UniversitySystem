@@ -1,9 +1,4 @@
-﻿using ClassLibrary;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace UniversitySystem.Models
 {
@@ -16,6 +11,5 @@ namespace UniversitySystem.Models
         public string Name { get; set; }
         
         public int DepartamentId{ get; set; }
-       // public List<DropDownList> Departaments { get; set; }
     }
 }

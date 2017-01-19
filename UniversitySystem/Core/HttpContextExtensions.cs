@@ -1,7 +1,6 @@
 ﻿using System.IO;
 using System.Web;
 using ClassLibrary;
-using UniversitySystem.Manager;
 
 namespace UniversitySystem.Core
 {
@@ -21,11 +20,13 @@ namespace UniversitySystem.Core
 
                 context.Database.Log = str =>
                 {
-                    FileStream fs = new FileStream(path, FileMode.Append,FileAccess.Write);
-                    StreamWriter sw = new StreamWriter(fs);
-                    sw.WriteLine(str);
-                    sw.Close();
-                    fs.Close();
+                    using (var fs = new FileStream(path, FileMode.Append, FileAccess.Write))
+                    {
+                        using (var sw = new StreamWriter(fs))
+                        {
+                            sw.WriteLine(str);
+                        }
+                    }
                 };
 
                 httpContext.Items[key] = context;

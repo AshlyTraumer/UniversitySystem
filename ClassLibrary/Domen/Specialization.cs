@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ClassLibrary
 {
@@ -19,6 +13,7 @@ namespace ClassLibrary
         public Departament Departament { get; set; }
 
         public virtual ICollection<SubjectSpecialization> SubjectSpecializations { get; set; }
+
         public Specialization()
         {
             SubjectSpecializations = new List<SubjectSpecialization>();

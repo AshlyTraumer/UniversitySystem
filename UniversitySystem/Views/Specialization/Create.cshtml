@@ -45,7 +45,7 @@
                     <label class="col-sm-10 control-label">Факультет:</label>
                     <div class="col-xs-10">
                         <select class="form-control" name="DepartamentId">
-                            @foreach (UniversitySystem.Models.DropDownList b in ViewBag.List)
+                            @foreach (UniversitySystem.Models.DropDownListItem b in ViewBag.List)
                             {
                                 <option value="@b.Id">@b.Title</option>
                             }

@@ -1,8 +1,7 @@
 ﻿using ClassLibrary;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using UniversitySystem.Core.Exceptions;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
@@ -23,30 +22,27 @@ namespace UniversitySystem.Manager
                 {
                     Id = x.Id,
                     Title = x.Title
-                })
-                .ToList();
+                }).ToList();
         }
 
         public void Delete(int id)
         {
             var departament = _context.Departaments.SingleOrDefault(x => x.Id == id);
+
             if (departament == null)
-                throw new UniversalException("Departament");
+                throw new UniversalException("Departament not found id = " + id);
+
             _context.Departaments.Remove(departament);
             _context.SaveChanges();
         }
 
         public DepartamentModel GetById(int id)
         {
-            var departament = _context.Departaments.Single(x => x.Id == id);
-
-            var model = new DepartamentModel
+            return _context.Departaments.Select(t => new DepartamentModel
             {
-                Id = id,
-                Title = departament.Title
-            };
-
-            return model;
+                Id = t.Id,
+                Title = t.Title
+            }).Single(x => x.Id == id);
         }
 
         public void Change(DepartamentModel model)

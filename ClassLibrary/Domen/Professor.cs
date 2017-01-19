@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ClassLibrary
 {
@@ -12,6 +11,7 @@ namespace ClassLibrary
         public Departament Departament { get; set; }
 
         public virtual ICollection<Schedule> Schedules { get; set; }
+
         public Professor()
         {
             Schedules = new List<Schedule>();

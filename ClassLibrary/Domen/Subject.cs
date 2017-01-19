@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ClassLibrary
 {
@@ -14,14 +10,13 @@ namespace ClassLibrary
 
         public virtual ICollection<Result> Results { get; set; }
         public virtual ICollection<SubjectSpecialization> SubjectSpecializations{ get; set; }
-
-        // public virtual ICollection<Specialization> Specializations { get; set; }
+        
         public virtual ICollection<Schedule> Schedules { get; set; }
+
         public Subject()
         {
             Results = new List<Result>();
             SubjectSpecializations = new List<SubjectSpecialization>();
-           // Specializations = new List<Specialization>();
             Schedules = new List<Schedule>();
         }
     }

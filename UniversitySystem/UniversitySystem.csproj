@@ -204,7 +204,7 @@
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Core\HtmlHelperExtensions.cs" />
     <Compile Include="Core\HttpContextExtensions.cs" />
-    <Compile Include="Manager\UniversalException.cs" />
+    <Compile Include="Core\Exceptions\UniversalException.cs" />
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
     <Compile Include="Manager\ProfessorManager.cs" />
@@ -215,7 +215,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DepartamentModel.cs" />
-    <Compile Include="Models\DropDownList.cs" />
+    <Compile Include="Models\DropDownListItem.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ProfessorModel.cs" />
     <Compile Include="Models\ProfessorViewModel.cs" />

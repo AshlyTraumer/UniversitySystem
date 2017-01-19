@@ -3,13 +3,12 @@
 
 namespace ClassLibrary
 {
-    // Mark of enrollment.
     public enum RegistrationStatus
     {
         [Description ("Бюджетное")]
-        OnFree=1,
+        OnFree = 1,
         [Description("Платное")]
-        OnPaid =2,
+        OnPaid = 2,
         [Description("Не зачислен")]
         None = 3
     }

@@ -53,6 +53,7 @@
     <Compile Include="Authorization\UserConfiguration.cs" />
     <Compile Include="Configuration\DepartamentConfiguration.cs" />
     <Compile Include="Configuration\SubjectSpecializationConfiguration.cs" />
+    <Compile Include="Domen\BaseEntity.cs" />
     <Compile Include="Domen\Departament.cs" />
     <Compile Include="Domen\Enrollment.cs" />
     <Compile Include="Domen\Entrant.cs" />

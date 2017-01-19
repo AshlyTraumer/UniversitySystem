@@ -1,9 +1,5 @@
 ﻿using ClassLibrary.Authorization;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace UniversitySystem.Models
 {
@@ -20,7 +16,5 @@ namespace UniversitySystem.Models
         public string Password { get; set; }
 
         public Role Role { get; set; }
-
-        
     }
 }

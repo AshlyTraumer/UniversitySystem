@@ -1,9 +1,6 @@
 ﻿using ClassLibrary.Authorization;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace UniversitySystem.Models
 {
@@ -22,7 +19,6 @@ namespace UniversitySystem.Models
         [Compare("Password")]
         public string RetypePassword { get; set; }
 
-        [Required]
         public Role Role { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

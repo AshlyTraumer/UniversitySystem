@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
-namespace UniversitySystem.Manager
+namespace UniversitySystem.Core.Exceptions
 {
     [Serializable]
     internal class UniversalException : Exception

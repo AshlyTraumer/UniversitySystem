@@ -1,17 +1,7 @@
 ﻿using ClassLibrary;
-using ClassLibrary.Authorization;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Security.Principal;
-using System.Web;
 using System.Web.Mvc;
-using UniversitySystem;
-using System.Security.Claims;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
-using System.IO;
 using UniversitySystem.Core;
 
 namespace UniversitySystem.Controllers
@@ -19,12 +9,12 @@ namespace UniversitySystem.Controllers
     public class AdminController : Controller
     {
         private RepositoryContext _context;
+
         public RepositoryContext Context
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest();
-                return _context;
+                return HttpContext.GetContextPerRequest();
             }
         }        
 

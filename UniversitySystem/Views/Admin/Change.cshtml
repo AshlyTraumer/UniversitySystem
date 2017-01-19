@@ -1,4 +1,5 @@
-﻿@model UniversitySystem.Models.UserModel
+﻿@using ClassLibrary.Authorization
+@model UniversitySystem.Models.UserModel
 @{
 // ViewBag.Title = "Change";
 }
@@ -35,7 +36,7 @@
                     <label class="col-sm-2 control-label">Роль:</label>
                     <div class="col-xs-10">
                         <select class="form-control" name="Role">
-                            @foreach (ClassLibrary.Authorization.Role d in Enum.GetValues(typeof(ClassLibrary.Authorization.Role)))
+                            @foreach (Role d in Enum.GetValues(typeof(Role)))
                             {
                                 if (Model.Role == d)
                                 {
@@ -45,7 +46,6 @@
                                 {
                                     <option>@d</option>
                                 }
-
                            }
                         </select>
                     </div>
