@@ -20,10 +20,13 @@ namespace ClassLibrary
 
             Property(p => p.Title)
                 .HasMaxLength(30)
-                .IsRequired();           
+                .IsRequired();
 
-            HasMany(p => p.Subjects)
-                .WithMany(c => c.Specializations);
+            HasMany(p => p.SubjectSpecializations)
+               .WithRequired(p => p.Specialization);
+
+            /*  HasMany(p => p.Subjects)
+                  .WithMany(c => c.Specializations);*/
 
             ToTable("dbo.Specialization");
         }

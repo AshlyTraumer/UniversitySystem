@@ -20,74 +20,61 @@ namespace ClassLibrary.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            Subject subject = new Subject
-            {
-                Title = "История Беларуси",
-                Form = "Экзамен"
-            };
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
 
-            context.Departaments.AddOrUpdate
-            (
+            context.Departaments.Add(
                 new Departament
                 {
                     Title = "Исторический",
-                    Professors = new List<Professor>
+                    Professors = new List<Professor>()
                     {
-                      new Professor { Name = "Иванов И. И" },
-                      new Professor { Name = "Петров Г. Г." }
+                        new Professor
+                        {
+                           Name = "Иванов И. И."
+                        },
+                        new Professor
+                        {
+                            Name = "Петров П. П."
+                        }
                     },
                     Specializations = new List<Specialization>
                     {
                         new Specialization
                         {
                             Title = "Археология",
-                            PayCount = 20,
-                            FreeCount = 10,
-                            Subjects = new List<Subject>
+                            FreeCount = 20,
+                            PayCount = 10,
+                            SubjectSpecializations = new List<SubjectSpecialization>
                             {
-                                new Subject
+                                new SubjectSpecialization
                                 {
-                                    Title = "Всемирная история",
-                                    Form = "ЦТ"
+                                    Subject = new Subject
+                                    {
+                                        Title = "История",
+                                        Form = "Экзамен"
+                                    }
                                 },
-                                subject
-                            }
-                        }
-                    }
-                },
-                new Departament
-                {
-                    Title = "Филологический",
-                    Specializations = new List<Specialization>
-                    {
-                        new Specialization
-                        {
-                            Title = "Переводчик",
-                            FreeCount = 12,
-                            PayCount = 14,
-                            Subjects = new List<Subject>
-                            {
-                                subject,
-                                new Subject
+                                new SubjectSpecialization
                                 {
-                                    Title = "Русский язык",
-                                    Form = "Экзамен"
+                                    Subject = new Subject
+                                    {
+                                        Title = "Русский язык",
+                                        Form = "ЦТ"
+                                    }
                                 }
+                            }
 
                             }
                         }
-                    }
-                }
-            );
 
-            context.Subjects.AddOrUpdate(
-                new Subject
-                {
-                    Title = "Математика",
-                    Form = "ЦТ"
                 }
-            );
-            //
+                );
         }
     }
 }

@@ -202,7 +202,9 @@
     <Compile Include="Controllers\SpecializationController.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Core\HtmlHelperExtensions.cs" />
     <Compile Include="Core\HttpContextExtensions.cs" />
+    <Compile Include="Manager\UniversalException.cs" />
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
     <Compile Include="Manager\ProfessorManager.cs" />
@@ -281,6 +283,7 @@
     <Content Include="Views\Specialization\Index.cshtml" />
     <Content Include="Views\Specialization\Create.cshtml" />
     <Content Include="Views\Specialization\Change.cshtml" />
+    <Content Include="Views\Departament\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

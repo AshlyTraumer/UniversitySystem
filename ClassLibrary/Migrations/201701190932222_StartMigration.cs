@@ -3,7 +3,7 @@ namespace ClassLibrary.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Migra : DbMigration
+    public partial class StartMigration : DbMigration
     {
         public override void Up()
         {
@@ -50,7 +50,7 @@ namespace ClassLibrary.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(maxLength: 30),
-                        Form = c.String(maxLength: 30),
+                        Form = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -66,8 +66,7 @@ namespace ClassLibrary.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Entrant", t => t.EntrantId, cascadeDelete: true)
                 .ForeignKey("dbo.Subject", t => t.SubjectId, cascadeDelete: true)
-                .Index(t => t.EntrantId)
-                .Index(t => t.SubjectId);
+                .Index(t => new { t.EntrantId, t.SubjectId }, unique: true, name: "IX_EntrantSubject");
             
             CreateTable(
                 "dbo.Entrant",
@@ -78,7 +77,7 @@ namespace ClassLibrary.Migrations
                         FirstName = c.String(nullable: false, maxLength: 30),
                         Name = c.String(nullable: false, maxLength: 30),
                         LastName = c.String(nullable: false, maxLength: 30),
-                        DateOfBirth = c.DateTime(nullable: false, storeType: "date"),
+                        DateOfBirth = c.DateTime(nullable: false),
                         EnrollmentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -105,8 +104,8 @@ namespace ClassLibrary.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(nullable: false, maxLength: 30),
-                        freeCount = c.Int(nullable: false),
-                        payCount = c.Int(nullable: false),
+                        FreeCount = c.Int(nullable: false),
+                        PayCount = c.Int(nullable: false),
                         DepartamentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -114,17 +113,28 @@ namespace ClassLibrary.Migrations
                 .Index(t => t.DepartamentId);
             
             CreateTable(
-                "dbo.SpecializationSubjects",
+                "dbo.SubjectSpecialization",
                 c => new
                     {
-                        Specialization_Id = c.Int(nullable: false),
-                        Subject_Id = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
+                        SubjectId = c.Int(nullable: false),
+                        SpecializationId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.Specialization_Id, t.Subject_Id })
-                .ForeignKey("dbo.Specialization", t => t.Specialization_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Subject", t => t.Subject_Id, cascadeDelete: true)
-                .Index(t => t.Specialization_Id)
-                .Index(t => t.Subject_Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Specialization", t => t.SpecializationId, cascadeDelete: true)
+                .ForeignKey("dbo.Subject", t => t.SubjectId, cascadeDelete: true)
+                .Index(t => new { t.SpecializationId, t.SubjectId }, unique: true, name: "IX_SubjectSpecialization");
+            
+            CreateTable(
+                "dbo.Authorization",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Login = c.String(maxLength: 30),
+                        Password = c.String(),
+                        Role = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
         }
         
@@ -133,24 +143,23 @@ namespace ClassLibrary.Migrations
             DropForeignKey("dbo.Specialization", "DepartamentId", "dbo.Departament");
             DropForeignKey("dbo.Professor", "DepartamentId", "dbo.Departament");
             DropForeignKey("dbo.Schedule", "ProfessorId", "dbo.Professor");
+            DropForeignKey("dbo.SubjectSpecialization", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.Schedule", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.Result", "SubjectId", "dbo.Subject");
             DropForeignKey("dbo.Result", "EntrantId", "dbo.Entrant");
             DropForeignKey("dbo.Enrollment", "SpecializationId", "dbo.Specialization");
-            DropForeignKey("dbo.SpecializationSubjects", "Subject_Id", "dbo.Subject");
-            DropForeignKey("dbo.SpecializationSubjects", "Specialization_Id", "dbo.Specialization");
+            DropForeignKey("dbo.SubjectSpecialization", "SpecializationId", "dbo.Specialization");
             DropForeignKey("dbo.Entrant", "Id", "dbo.Enrollment");
-            DropIndex("dbo.SpecializationSubjects", new[] { "Subject_Id" });
-            DropIndex("dbo.SpecializationSubjects", new[] { "Specialization_Id" });
+            DropIndex("dbo.SubjectSpecialization", "IX_SubjectSpecialization");
             DropIndex("dbo.Specialization", new[] { "DepartamentId" });
             DropIndex("dbo.Enrollment", new[] { "SpecializationId" });
             DropIndex("dbo.Entrant", new[] { "Id" });
-            DropIndex("dbo.Result", new[] { "SubjectId" });
-            DropIndex("dbo.Result", new[] { "EntrantId" });
+            DropIndex("dbo.Result", "IX_EntrantSubject");
             DropIndex("dbo.Schedule", new[] { "ProfessorId" });
             DropIndex("dbo.Schedule", new[] { "SubjectId" });
             DropIndex("dbo.Professor", new[] { "DepartamentId" });
-            DropTable("dbo.SpecializationSubjects");
+            DropTable("dbo.Authorization");
+            DropTable("dbo.SubjectSpecialization");
             DropTable("dbo.Specialization");
             DropTable("dbo.Enrollment");
             DropTable("dbo.Entrant");

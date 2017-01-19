@@ -16,12 +16,12 @@ namespace ClassLibrary
         public int PayCount { get; set; }   
              
         public int DepartamentId { get; set; }
-        public Departament Departament { get; set; } 
+        public Departament Departament { get; set; }
 
-        public virtual ICollection<Subject> Subjects { get; set; }
+        public virtual ICollection<SubjectSpecialization> SubjectSpecializations { get; set; }
         public Specialization()
         {
-            Subjects = new List<Subject>();            
+            SubjectSpecializations = new List<SubjectSpecialization>();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace UniversitySystem.Models
 {
-    public class RegisterModel
+    public class RegisterModel:IValidatableObject
     {
         [Required]
         [StringLength(50, MinimumLength = 3)]
@@ -24,5 +24,11 @@ namespace UniversitySystem.Models
 
         [Required]
         public Role Role { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if ((Role == Role.Admin) && (Password.Length > 8))
+                yield return new ValidationResult("Длинный пароль", new[] { "Password" });
+        }
     }
 }

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="@Url.Action("Index","Departament")">Факультеты</a></li>
+        <li><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
+        <li><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
+        <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>
+        <li><a href="@Url.Action("Index","Admin")">Расписание ЦТ</a></li>
+        <li><a href="@Url.Action("Index","Logout")">Выход</a></li>
+        <li style="background-color:aqua"><a href="@Url.Action("Create","Departament")">Добавить</a></li>
+    </ul>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            @Html.ValidationSummary()
+        </div>
+    </div>
+    </body>
+</html>
+

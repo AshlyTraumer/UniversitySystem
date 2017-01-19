@@ -38,7 +38,7 @@ namespace UniversitySystem.Manager
                 _context.SaveChanges();
             }
 
-            throw new Exception("sdfdfgfghgh");
+            throw new UniversalException("sdfdfgfghgh");
         }
 
         public UserModel GetById(int id)

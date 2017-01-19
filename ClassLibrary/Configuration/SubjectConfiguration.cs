@@ -27,7 +27,12 @@ namespace ClassLibrary
             HasMany(p => p.Schedules)
                .WithRequired(p => p.Subject);
 
+            HasMany(p => p.SubjectSpecializations)
+               .WithRequired(p => p.Subject);
+
             ToTable("dbo.Subject");
+
+
         }
     }
 }

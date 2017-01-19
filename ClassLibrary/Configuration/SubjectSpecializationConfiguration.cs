@@ -1,5 +1,4 @@
-﻿using ClassLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Infrastructure.Annotations;
@@ -10,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class ResultConfiguration : EntityTypeConfiguration<Result>
+    class SubjectSpecializationConfiguration : EntityTypeConfiguration<SubjectSpecialization>
     {
-        public ResultConfiguration() : base()
+        public SubjectSpecializationConfiguration() : base()
         {
             HasKey(p => p.Id);
 
@@ -21,21 +20,19 @@ namespace ClassLibrary
                HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
 
-            ToTable("dbo.Result");
+            ToTable("dbo.SubjectSpecialization");
 
-            Property(x => x.EntrantId)
+            Property(x => x.SpecializationId)
                 .HasColumnAnnotation(
                     IndexAnnotation.AnnotationName,
                     new IndexAnnotation(
-                    new IndexAttribute("IX_EntrantSubject", 1) { IsUnique = true }));
+                    new IndexAttribute("IX_SubjectSpecialization", 1) { IsUnique = true }));
 
             Property(x => x.SubjectId)
                 .HasColumnAnnotation(
                     IndexAnnotation.AnnotationName,
                     new IndexAnnotation(
-                    new IndexAttribute("IX_EntrantSubject", 2) { IsUnique = true }));
-
-
+                    new IndexAttribute("IX_SubjectSpecialization", 2) { IsUnique = true }));
         }
     }
 }

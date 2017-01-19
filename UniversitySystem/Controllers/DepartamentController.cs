@@ -14,7 +14,7 @@ namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        private RepositoryContext _context;        
+        private RepositoryContext _context;
         public RepositoryContext Context
         {
             get
@@ -25,7 +25,7 @@ namespace UniversitySystem.Controllers
         }
 
         public DepartamentController()
-        {           
+        {
         }
 
         [HttpGet]
@@ -53,9 +53,9 @@ namespace UniversitySystem.Controllers
 
         [HttpGet]
         public ActionResult Delete(int id)
-        {
-            new DepartamentManager(Context).Delete(id);
-            return RedirectToAction("Index", "Departament");
+        {            
+                new DepartamentManager(Context).Delete(id);
+                return RedirectToAction("Index", "Departament");            
         }
 
         [HttpGet]

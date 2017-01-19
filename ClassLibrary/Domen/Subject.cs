@@ -13,12 +13,15 @@ namespace ClassLibrary
         public string Form { get; set; }
 
         public virtual ICollection<Result> Results { get; set; }
-        public virtual ICollection<Specialization> Specializations { get; set; }
+        public virtual ICollection<SubjectSpecialization> SubjectSpecializations{ get; set; }
+
+        // public virtual ICollection<Specialization> Specializations { get; set; }
         public virtual ICollection<Schedule> Schedules { get; set; }
         public Subject()
         {
             Results = new List<Result>();
-            Specializations = new List<Specialization>();
+            SubjectSpecializations = new List<SubjectSpecialization>();
+           // Specializations = new List<Specialization>();
             Schedules = new List<Schedule>();
         }
     }

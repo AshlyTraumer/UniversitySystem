@@ -52,6 +52,7 @@
     <Compile Include="Authorization\User.cs" />
     <Compile Include="Authorization\UserConfiguration.cs" />
     <Compile Include="Configuration\DepartamentConfiguration.cs" />
+    <Compile Include="Configuration\SubjectSpecializationConfiguration.cs" />
     <Compile Include="Domen\Departament.cs" />
     <Compile Include="Domen\Enrollment.cs" />
     <Compile Include="Domen\Entrant.cs" />
@@ -59,21 +60,10 @@
     <Compile Include="Configuration\EnrollmentConfiguration.cs" />
     <Compile Include="Configuration\EntrantConfiguration.cs" />
     <Compile Include="Configuration\ProfessorConfiguration.cs" />
-    <Compile Include="Migrations\201701111225327_Migra.cs" />
-    <Compile Include="Migrations\201701111225327_Migra.Designer.cs">
-      <DependentUpon>201701111225327_Migra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701120638344_Migra2.cs" />
-    <Compile Include="Migrations\201701120638344_Migra2.Designer.cs">
-      <DependentUpon>201701120638344_Migra2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701160731422_DomenMigration.cs" />
-    <Compile Include="Migrations\201701160731422_DomenMigration.Designer.cs">
-      <DependentUpon>201701160731422_DomenMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701181408372_InitMigration.cs" />
-    <Compile Include="Migrations\201701181408372_InitMigration.Designer.cs">
-      <DependentUpon>201701181408372_InitMigration.cs</DependentUpon>
+    <Compile Include="Domen\SubjectSpecialization.cs" />
+    <Compile Include="Migrations\201701190932222_StartMigration.cs" />
+    <Compile Include="Migrations\201701190932222_StartMigration.Designer.cs">
+      <DependentUpon>201701190932222_StartMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,20 +82,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701111225327_Migra.resx">
-      <DependentUpon>201701111225327_Migra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701120638344_Migra2.resx">
-      <DependentUpon>201701120638344_Migra2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701160731422_DomenMigration.resx">
-      <DependentUpon>201701160731422_DomenMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701181408372_InitMigration.resx">
-      <DependentUpon>201701181408372_InitMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701190932222_StartMigration.resx">
+      <DependentUpon>201701190932222_StartMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
