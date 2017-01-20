@@ -9,12 +9,12 @@ namespace UniversitySystem.Controllers
     public class ErrorController : Controller
     {
         // GET: Error
-        public ActionResult ClientView()
+        public ActionResult Http404()
         {
             return View();
         }
 
-        public ActionResult ServerView()
+        public ActionResult Http500()
         {
             return View();
         }

@@ -1,6 +1,8 @@
 ﻿using System.IO;
 using System.Web;
 using ClassLibrary;
+using System.Diagnostics;
+using System;
 
 namespace UniversitySystem.Core
 {
@@ -8,15 +10,15 @@ namespace UniversitySystem.Core
     {
         public static RepositoryContext GetContextPerRequest(this HttpContextBase httpContext)
         {
-            var key = "RepositoryContext";
+            var key = "RepositoryContext";           
 
-            var context = httpContext.Items[key] as RepositoryContext;
+            var context = httpContext.Items[key] as RepositoryContext;        
 
             if (context == null)
             {
                 context = new RepositoryContext();
 
-                var path=Path.Combine(httpContext.Server.MapPath("~/Logs"), "Log.txt");
+                var path = Path.Combine(httpContext.Server.MapPath("~/Logs"), "Log.txt");
 
                 context.Database.Log = str =>
                 {
@@ -29,7 +31,7 @@ namespace UniversitySystem.Core
                     }
                 };
 
-                httpContext.Items[key] = context;
+                httpContext.Items[key] = context;                
             }
 
             return context;

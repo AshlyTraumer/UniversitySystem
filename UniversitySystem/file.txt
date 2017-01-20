@@ -1,0 +1,17 @@
+2017-01-20 15:08:06.4874|ERROR|UniversitySystem.Core.LogService|При обновлении записей возникла ошибка. Дополнительные сведения приведены во внутреннем исключении.
+2017-01-20 15:10:20.9706|ERROR|UniversitySystem.Core.LogService|Не удалось найти общедоступный метод действия "Delete" на контроллере "UniversitySystem.Controllers.SpecializationController".
+2017-01-20 15:11:02.0066|ERROR|UniversitySystem.Core.LogService|Не удалось найти общедоступный метод действия "Delete" на контроллере "UniversitySystem.Controllers.SpecializationController".
+2017-01-20 15:11:25.6748|ERROR|UniversitySystem.Core.LogService|При обновлении записей возникла ошибка. Дополнительные сведения приведены во внутреннем исключении.
+2017-01-20 15:13:04.2072|ERROR|UniversitySystem.Core.LogService|Последовательность не содержит элементов
+2017-01-20 15:26:36.1468|ERROR|UniversitySystem.Core.LogService|При обновлении записей возникла ошибка. Дополнительные сведения приведены во внутреннем исключении.
+2017-01-20 15:33:50.4797|ERROR|UniversitySystem.Core.LogService|При обновлении записей возникла ошибка. Дополнительные сведения приведены во внутреннем исключении.
+
+
+2017-01-20 17:42:28.3420|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:0.2
+2017-01-20 17:42:31.3831|INFO|UniversitySystem.Core.LogService|Result 00:00:02.98
+2017-01-20 17:42:39.6890|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:3.20
+2017-01-20 17:42:39.7040|INFO|UniversitySystem.Core.LogService|Result 00:00:00.00
+2017-01-20 17:42:39.7770|INFO|UniversitySystem.Core.LogService|Action /Secretary 0:0:0.0
+2017-01-20 17:42:40.3979|INFO|UniversitySystem.Core.LogService|Result 00:00:00.61
+2017-01-20 17:42:42.0352|INFO|UniversitySystem.Core.LogService|Action /Departament 0:0:0.16
+2017-01-20 17:42:43.3266|INFO|UniversitySystem.Core.LogService|Result 00:00:01.28

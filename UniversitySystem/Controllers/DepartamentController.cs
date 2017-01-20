@@ -17,7 +17,7 @@ namespace UniversitySystem.Controllers
 
         [HttpGet]
         public ActionResult Index()
-        {
+        {            
             return View(Manager.Get());
         }
 
