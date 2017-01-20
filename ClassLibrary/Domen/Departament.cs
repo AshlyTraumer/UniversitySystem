@@ -2,9 +2,8 @@
 
 namespace ClassLibrary
 {
-    public class Departament
-    {       
-        public int Id { get; set; }        
+    public class Departament: BaseEntity
+    {    
         public string Title { get; set; }
 
         public virtual ICollection<Specialization> Specializations { get; set; }

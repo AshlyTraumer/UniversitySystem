@@ -1,9 +1,7 @@
 ﻿namespace ClassLibrary
 {
-    public class SubjectSpecialization
+    public class SubjectSpecialization : BaseEntity
     {
-        public int Id { get; set; }        
-
         public int SubjectId { get; set; }
         public Subject Subject { get; set; }
 

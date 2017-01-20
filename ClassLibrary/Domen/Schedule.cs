@@ -2,9 +2,8 @@
 
 namespace ClassLibrary
 {
-    public class Schedule
+    public class Schedule : BaseEntity
     {
-        public int Id { get; set; }
         public string Classroom { get; set; }
         public DateTime Date { get; set; }
 

@@ -267,7 +267,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Start\Login.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
-    <Content Include="Views\Register\Join.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Change.cshtml" />
     <Content Include="Views\Secretary\Index.cshtml" />
@@ -283,7 +282,6 @@
     <Content Include="Views\Specialization\Index.cshtml" />
     <Content Include="Views\Specialization\Create.cshtml" />
     <Content Include="Views\Specialization\Change.cshtml" />
-    <Content Include="Views\Departament\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

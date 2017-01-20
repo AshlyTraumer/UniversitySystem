@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<UniversitySystem.Models.UserModel>
-@{
-    ViewBag.Title = "Index";
-    
-}
+@using UniversitySystem.Models
+@using ClassLibrary.Authorization
 
 <html>
 <head>
@@ -24,25 +22,25 @@
                 <td><p>Роль</p></td>
                 <td></td>
             </tr>
-            @foreach (UniversitySystem.Models.UserModel b in Model)
-            {            
+            @foreach (UserModel b in Model)
+            {
                 <tr>
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Login</p></td>
-                    <td><p>@b.Password</p></td>                    
+                    <td><p>@b.Password</p></td>
                     <td><p>@b.Role</p></td>
-                    @if (b.Role!=ClassLibrary.Authorization.Role.Admin)
+                    @if (b.Role != Role.Admin)
                     {
-                        <td><p><a href="/Admin/Delete/@b.Id">Удалить</a>/<a href="/Admin/Change/@b.Id">Изменить</a></p></td>
+                        <td><p><a href="@Url.Action("Delete","Admin", new { id = @b.Id })">Удалить</a>/<a href="@Url.Action("Change","Admin", new { id = @b.Id })">Изменить</a></p></td>
                     }
                     else
                     {
                         <td><p></p></td>
-                    }                
+                    }
                 </tr>
             }
         </table>
-</div>
+    </div>
 
     <style>
         .form form {
@@ -53,6 +51,3 @@
     </style>
 </body>
 </html>
-
-
-

@@ -1,21 +1,16 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
-
-<html>
+﻿<html>
 <head>
     <link rel="stylesheet" href="~/Content/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/bootstrap.css">
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li><a href="~/Departament">Факультеты</a></li>
-        <li><a href="~/Specialization">Специальности</a></li>
-        <li><a href="~/Professor">Преподаватели</a></li>
-        <li><a href="~/Subject">Предметы</a></li>
-        <li class="active"><a href="~/Admin">Расписание ЦТ</a></li>
-        <li><a href="~/Logout/Index">Выход</a></li>
+        <li><a href="@Url.Action("Index","Departament")">Факультеты</a></li>
+        <li><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
+        <li ><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
+        <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>
+        <li class="active"><a href="@Url.Action("Index","Secretary")">Расписание ЦТ</a></li>
+        <li><a href="@Url.Action("Index","Logout")">Выход</a></li>       
     </ul>
 </body>
 </html>

@@ -1,7 +1,5 @@
-﻿@model IEnumerable<UniversitySystem.Models.SubjectModel>
-@{
-    ViewBag.Title = "Index";
-}
+﻿@using UniversitySystem.Models
+@model IEnumerable<SubjectModel>
 
 <html>
 <head>
@@ -26,13 +24,13 @@
                 <td><p>Форма</p></td>
                 <td></td>
             </tr>
-            @foreach (UniversitySystem.Models.SubjectModel b in Model)
+            @foreach (SubjectModel b in Model)
             {
                 <tr>
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Title</p></td>
                     <td><p>@b.Form</p></td>
-                    <td><p><a href="@Url.Action("Delete","Subject",new { id=@b.Id})">Удалить</a>/<a href="@Url.Action("Change","Subject",new { id=@b.Id})">Изменить</a></p></td>
+                    <td><p><a href="@Url.Action("Delete","Subject",new { id = @b.Id})">Удалить</a>/<a href="@Url.Action("Change","Subject",new { id = @b.Id})">Изменить</a></p></td>
                 </tr>
             }
         </table>

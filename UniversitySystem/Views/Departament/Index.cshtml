@@ -1,7 +1,5 @@
 ﻿@model IEnumerable<UniversitySystem.Models.DepartamentModel>
-@{
-    ViewBag.Title = "Index";
-}
+    @using UniversitySystem.Models
 
 <html>
 <head>
@@ -14,7 +12,7 @@
         <li ><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
         <li ><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
         <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>
-        <li><a href="@Url.Action("Index","Admin")">Расписание ЦТ</a></li>
+        <li><a href="@Url.Action("Index","Secretary")">Расписание ЦТ</a></li>
         <li><a href="@Url.Action("Index","Logout")">Выход</a></li>
         <li style="background-color:aqua"><a href="@Url.Action("Create","Departament")">Добавить</a></li>
     </ul>
@@ -27,13 +25,13 @@
                 <td><p>Преподаватели/Специальности</p></td>                
                 <td></td>
             </tr>
-            @foreach (UniversitySystem.Models.DepartamentModel b in Model)
+            @foreach (DepartamentModel b in Model)
             {
                 <tr>
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Title</p></td>
                     <td><p>link/link</p></td>
-                    <td><p><a href="@Url.Action("Delete","Departament",new { id=@b.Id})">Удалить</a>/<a href="@Url.Action("Change","Departament",new { id=@b.Id})">Изменить</a></p></td>                 
+                    <td><p><a href="@Url.Action("Delete","Departament",new { id = @b.Id})">Удалить</a>/<a href="@Url.Action("Change","Departament",new { id = @b.Id})">Изменить</a></p></td>                 
                 </tr>
             }
         </table>

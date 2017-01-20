@@ -1,10 +1,4 @@
-﻿using ClassLibrary;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
@@ -13,20 +7,18 @@ namespace UniversitySystem.Controllers
 {
     public class SubjectController : Controller
     {
-        private RepositoryContext _context;
-        public RepositoryContext Context
+        public SubjectManager Manager
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest();
-                return _context;
+                return new SubjectManager(HttpContext.GetContextPerRequest());
             }
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new SubjectManager(Context).Get());
+            return View(Manager.Get());
         }
 
         [HttpGet]
@@ -40,7 +32,7 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new SubjectManager(Context).Create(model);
+                Manager.Create(model);
                 return RedirectToAction("Index", "Subject");
             }
             return View(model);
@@ -49,15 +41,14 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new SubjectManager(Context).Delete(id);
+            Manager.Delete(id);
             return RedirectToAction("Index", "Subject");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
-        {
-            SubjectModel subject = new SubjectManager(Context).GetById(id);
-            return View("Change", subject);
+        {           
+            return View("Change", Manager.GetById(id));
         }
 
         [HttpPost]
@@ -65,7 +56,7 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new SubjectManager(Context).Change(model);
+                Manager.Change(model);
                 return RedirectToAction("Index", "Subject");
             }
             return View(model);

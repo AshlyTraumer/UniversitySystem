@@ -1,8 +1,6 @@
 ﻿@model UniversitySystem.Models.RegisterModel
-@{
-    ViewBag.Title = "Index";
-}
 @using UniversitySystem.Core
+@using ClassLibrary.Authorization
 
 <html>
 <head>
@@ -43,7 +41,7 @@
                     <label class="col-sm-2 control-label">Роль:</label>
                     <div class="col-xs-10">                        
                         <select class="form-control @Html.GetValidClass(ViewContext.ViewData.ModelState, "Role")" name="Role">
-                            @foreach (ClassLibrary.Authorization.Role d in Enum.GetValues(typeof(ClassLibrary.Authorization.Role)))
+                            @foreach (Role d in Enum.GetValues(typeof(Role)))
                             {
                                 <option>@d</option>
                             }

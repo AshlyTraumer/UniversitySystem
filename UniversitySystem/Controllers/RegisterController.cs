@@ -1,11 +1,4 @@
-﻿using ClassLibrary;
-using ClassLibrary.Authorization;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
@@ -14,15 +7,13 @@ namespace UniversitySystem.Controllers
 {
     public class RegisterController : Controller
     {
-        private RepositoryContext _context;
-        public RepositoryContext Context
+        public AuthorizeManager Manager
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest();
-                return _context;
+                return new AuthorizeManager(HttpContext.GetContextPerRequest());
             }
-        }       
+        }
 
         [HttpGet]
         public ActionResult Index()
@@ -35,7 +26,7 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new AuthorizeManager(Context).Register(model);
+                Manager.Register(model);
                 return RedirectToAction("Login", "Start");
             }            
             return View("Index",model);

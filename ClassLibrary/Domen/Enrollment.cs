@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 
-
 namespace ClassLibrary
 {
     public enum RegistrationStatus
@@ -13,9 +12,8 @@ namespace ClassLibrary
         None = 3
     }
 
-    public class Enrollment
-    {        
-        public int Id { get; set; }
+    public class Enrollment : BaseEntity
+    {    
         public int Points { get; set; }
         public RegistrationStatus RegistrationStatus { get; set; }
 

@@ -1,11 +1,4 @@
-﻿using ClassLibrary;
-using ClassLibrary.Authorization;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
@@ -14,24 +7,18 @@ namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        private RepositoryContext _context;
-        public RepositoryContext Context
+        public DepartamentManager Manager
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest();
-                return _context;
+                return new DepartamentManager(HttpContext.GetContextPerRequest());
             }
-        }
-
-        public DepartamentController()
-        {
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new DepartamentManager(Context).Get());
+            return View(Manager.Get());
         }
 
         [HttpGet]
@@ -45,7 +32,7 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new DepartamentManager(Context).Create(model);
+                Manager.Create(model);
                 return RedirectToAction("Index", "Departament");
             }
             return View(model);
@@ -53,16 +40,15 @@ namespace UniversitySystem.Controllers
 
         [HttpGet]
         public ActionResult Delete(int id)
-        {            
-                new DepartamentManager(Context).Delete(id);
-                return RedirectToAction("Index", "Departament");            
+        {
+            Manager.Delete(id);
+            return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
-        {
-            DepartamentModel departament = new DepartamentManager(Context).GetById(id);
-            return View("Change", departament);
+        {            
+            return View("Change", Manager.GetById(id));
         }
 
         [HttpPost]
@@ -70,7 +56,7 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new DepartamentManager(Context).Change(model);
+                Manager.Change(model);
                 return RedirectToAction("Index", "Departament");
             }
             return View(model);

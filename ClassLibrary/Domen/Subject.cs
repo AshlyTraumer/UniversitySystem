@@ -2,9 +2,8 @@
 
 namespace ClassLibrary
 {
-    public class Subject
-    {
-        public int Id { get; set; }
+    public class Subject : BaseEntity
+    {        
         public string Title { get; set; }
         public string Form { get; set; }
 

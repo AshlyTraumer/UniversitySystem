@@ -1,39 +1,30 @@
 ﻿using ClassLibrary;
 using ClassLibrary.Authorization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Web;
 using System.Web.Mvc;
-using Microsoft.Owin.Security;
-using UniversitySystem;
 using UniversitySystem.Models;
 using UniversitySystem.Manager;
-using System.IO;
 using UniversitySystem.Core;
 
 namespace UniversitySystem.Controllers
 {
     public class StartController : Controller
     {
-        private RepositoryContext _context;
-        public RepositoryContext Context
+        public AuthorizeManager Manager
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest();
-                return _context;
+                return new AuthorizeManager(HttpContext.GetContextPerRequest());
             }
         }
 
-        private IAuthenticationManager AuthenticationManager
+       /* private IAuthenticationManager AuthenticationManager
         {
             get
             {
                 return HttpContext.GetOwinContext().Authentication;
             }
-        }               
+        }   */            
 
         [HttpGet]
         public ActionResult Login()
@@ -51,7 +42,7 @@ namespace UniversitySystem.Controllers
 
             if (ModelState.IsValid)
             {
-                var role = new AuthorizeManager(Context).Login(model);
+                var role = Manager.Login(model);
 
                 if (role == null)
                 {

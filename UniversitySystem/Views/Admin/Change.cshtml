@@ -1,8 +1,5 @@
 ﻿@using ClassLibrary.Authorization
 @model UniversitySystem.Models.UserModel
-@{
-// ViewBag.Title = "Change";
-}
 
 <html>
 <head>
@@ -11,12 +8,12 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li class="active"><a href="~/Admin">Пользователи</a></li>
-        <li><a href="~/Logout/Index">Выход</a></li>
+        <li class="active"><a href="@Url.Action("Login","User")">Пользователи</a></li>
+        <li><a href="@Url.Action("Index","Logout")">Выход</a></li>
     </ul>
 
     <div class="form">
-        <form class="form-horizontal" role="form" method="POST" action="/Admin/Change">
+        <form class="form-horizontal" role="form" method="POST" action="@Url.Action("Change","Admin")">
             <h2>Изменение пользователя</h2>
             <div class="form-group">
                 <div class="form-group">

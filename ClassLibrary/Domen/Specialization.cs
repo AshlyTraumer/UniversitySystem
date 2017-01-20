@@ -2,13 +2,12 @@
 
 namespace ClassLibrary
 {
-    public class Specialization
-    {        
-        public int Id { get; set; }        
+    public class Specialization : BaseEntity
+    {
         public string Title { get; set; }
-        public int FreeCount { get; set; }        
-        public int PayCount { get; set; }   
-             
+        public int FreeCount { get; set; }
+        public int PayCount { get; set; }
+
         public int DepartamentId { get; set; }
         public Departament Departament { get; set; }
 

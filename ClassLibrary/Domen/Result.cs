@@ -1,8 +1,7 @@
 ﻿namespace ClassLibrary
 {
-    public class Result
-    {        
-        public int Id { get; set; }
+    public class Result : BaseEntity
+    {       
         public int Points { get; set; }
 
         public int EntrantId { get; set; }

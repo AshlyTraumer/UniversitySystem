@@ -1,10 +1,4 @@
-﻿using ClassLibrary;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
@@ -13,26 +7,24 @@ namespace UniversitySystem.Controllers
 {
     public class SpecializationController : Controller
     {
-        private RepositoryContext _context;
-        public RepositoryContext Context
+        public SpecializationManager Manager
         {
             get
             {
-                _context = HttpContext.GetContextPerRequest();
-                return _context;
+                return new SpecializationManager(HttpContext.GetContextPerRequest());
             }
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new SpecializationManager(Context).Get());
+            return View(Manager.Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.List = new SpecializationManager(Context).GetList();
+            ViewBag.List = Manager.GetList();
             return View(new SpecializationModel());
         }
 
@@ -41,27 +33,25 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new SpecializationManager(Context).Create(model);
+                Manager.Create(model);
                 return RedirectToAction("Index", "Specialization");
             }
-            ViewBag.List = new SpecializationManager(Context).GetList();
+            ViewBag.List = Manager.GetList();
             return View(model);
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            new SpecializationManager(Context).Delete(id);
+            Manager.Delete(id);
             return RedirectToAction("Index", "Specialization");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
-        {
-            var manager = new SpecializationManager(Context);
-            var specialization = manager.GetById(id);
-            ViewBag.List = manager.GetList();
-            return View("Change", specialization);
+        {            
+            ViewBag.List = Manager.GetList();
+            return View("Change", Manager.GetById(id));
         }
 
         [HttpPost]
@@ -69,10 +59,10 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                new SpecializationManager(Context).Change(model);                
+                Manager.Change(model);                
                 return RedirectToAction("Index", "Specialization");
             }
-            ViewBag.List = new SpecializationManager(Context).GetList();
+            ViewBag.List = Manager.GetList();
             return View(model);
         }
     }

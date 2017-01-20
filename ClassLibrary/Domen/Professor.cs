@@ -2,9 +2,8 @@
 
 namespace ClassLibrary
 {
-    public class Professor
-    {        
-        public int Id { get; set; }
+    public class Professor : BaseEntity
+    {         
         public string Name { get; set; }
 
         public int DepartamentId { get; set; }

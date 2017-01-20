@@ -1,7 +1,5 @@
 ﻿@model UniversitySystem.Models.UserModel
-@{
-    ViewBag.Title = "Index";
-}
+
 
 <html>
 <head>
@@ -15,7 +13,7 @@
     </ul>
 
     <div class="form">        
-        <form class="form-horizontal" role="form" method="POST" action="/Start/Login">
+        <form class="form-horizontal" role="form" method="POST" action="@Url.Action("Login","Start")">
             <div class="form">
                 <h2>Вход</h2>
             </div>

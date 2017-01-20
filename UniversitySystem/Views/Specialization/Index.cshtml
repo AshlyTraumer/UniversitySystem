@@ -1,8 +1,6 @@
-﻿
-@model IEnumerable<UniversitySystem.Models.SpecializationViewModel>
-@{
-    ViewBag.Title = "Index";
-}
+﻿@using UniversitySystem.Models
+@model IEnumerable<SpecializationViewModel>
+
 
 <html>
 <head>
@@ -29,7 +27,7 @@
                 <td><p>Набор на платное</p></td>                
                 <td></td>
             </tr>
-            @foreach (UniversitySystem.Models.SpecializationViewModel b in Model)
+            @foreach (SpecializationViewModel b in Model)
             {
                 <tr>
                     <td><p>@b.Id</p></td>
@@ -37,7 +35,7 @@
                     <td><p>@b.Departament</p></td>
                     <td><p>@b.FreeCount</p></td>
                     <td><p>@b.PayCount</p></td>                    
-                    <td><p><a href="@Url.Action("Delete","Specialization",new { id=@b.Id})">Удалить</a>/<a href="@Url.Action("Change","Specialization",new { id=@b.Id})">Изменить</a></p></td>
+                    <td><p><a href="@Url.Action("Delete","Specialization",new { id = @b.Id})">Удалить</a>/<a href="@Url.Action("Change","Specialization",new { id = @b.Id})">Изменить</a></p></td>
                 </tr>
             }
         </table>

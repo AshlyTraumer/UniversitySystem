@@ -1,7 +1,5 @@
-﻿@model UniversitySystem.Models.SpecializationModel
-@{
-    ViewBag.Title = "Create";
-}
+﻿@using UniversitySystem.Models
+@model SpecializationModel
 
 <html>
 <head>
@@ -14,7 +12,7 @@
         <li class="active"><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
         <li ><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
         <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>
-        <li><a href="@Url.Action("Index","Admin")">Расписание ЦТ</a></li>
+        <li><a href="@Url.Action("Index","Secretary")">Расписание ЦТ</a></li>
         <li><a href="@Url.Action("Index","Logout")">Выход</a></li>
         <li style="background-color:aqua"><a href="@Url.Action("Create","Specialization")">Добавить</a></li>
     </ul>
@@ -44,7 +42,7 @@
                     <label class="col-sm-10 control-label">Факультет:</label>
                     <div class="col-xs-10">
                         <select class="form-control" name="DepartamentId">
-                            @foreach (UniversitySystem.Models.DropDownListItem b in ViewBag.List)
+                            @foreach (DropDownListItem b in ViewBag.List)
                             {
                                 if (b.Id == Model.DepartamentId)
                                 {
