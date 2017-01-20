@@ -47,19 +47,26 @@ namespace UniversitySystem.Controllers
 
         [HttpGet]
         public ActionResult Change(int id)
-        {           
+        {
             return View("Change", Manager.GetById(id));
         }
 
         [HttpPost]
         public ActionResult Change(SubjectModel model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                Manager.Change(model);
-                return RedirectToAction("Index", "Subject");
+                if (ModelState.IsValid)
+                {
+                    Manager.Change(model);
+                    return RedirectToAction("Index", "Subject");
+                }
+                return View(model);
             }
-            return View(model);
+            catch
+            {
+                return RedirectToAction("ServerView", "Error");
+            }
         }
     }
 }

@@ -5,13 +5,10 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class SpecializationManager
-    {
-        private readonly RepositoryContext _context;
-
-        public SpecializationManager(RepositoryContext context)
-        {
-            _context = context;
+    public class SpecializationManager : BaseManager <Specialization>
+    {       
+        public SpecializationManager(RepositoryContext context) :base (context)
+        {            
         }
 
         public List<SpecializationViewModel> Get()
@@ -25,15 +22,7 @@ namespace UniversitySystem.Manager
                     PayCount = x.PayCount,
                     Departament = x.Departament.Title
                 }).ToList();
-        }
-
-        public void Delete(int id)
-        {
-            var specialization = _context.Specializations.Single(x => x.Id == id);
-
-            _context.Specializations.Remove(specialization);
-            _context.SaveChanges();
-        }
+        }        
 
         public SpecializationModel GetById(int id)
         {

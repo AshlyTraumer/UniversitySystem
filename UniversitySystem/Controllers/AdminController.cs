@@ -6,7 +6,7 @@ using UniversitySystem.Core;
 namespace UniversitySystem.Controllers
 {
     public class AdminController : Controller
-    {               
+    {
         public UserManager Manager
         {
             get
@@ -14,7 +14,7 @@ namespace UniversitySystem.Controllers
                 return new UserManager(HttpContext.GetContextPerRequest());
             }
         }
-              
+
 
         [HttpGet]
         public ActionResult Index()
@@ -25,8 +25,15 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            Manager.Delete(id);
-            return RedirectToAction("Index", "Admin");
+            try
+            {
+                Manager.Delete(id);
+                return RedirectToAction("Index", "Admin");
+            }
+            catch
+            {
+                return RedirectToAction("ServerView", "Error");
+            }
         }
 
         [HttpGet]
@@ -38,13 +45,13 @@ namespace UniversitySystem.Controllers
 
         [HttpPost]
         public ActionResult Change(UserModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                Manager.Change(model);
-                return RedirectToAction("Index", "Admin");
-            }
-            return View(model);
+        {            
+                if (ModelState.IsValid)
+                {
+                    Manager.Change(model);
+                    return RedirectToAction("Index", "Admin");
+                }
+                return View(model);            
         }
     }
 }

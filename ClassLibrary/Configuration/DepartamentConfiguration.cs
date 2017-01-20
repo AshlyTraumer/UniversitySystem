@@ -17,10 +17,12 @@ namespace ClassLibrary
                 .HasMaxLength(30);
 
             HasMany(p => p.Specializations)
-               .WithRequired(p => p.Departament);
+               .WithRequired(p => p.Departament)
+               .WillCascadeOnDelete(false); ;
 
             HasMany(p => p.Professors)
-               .WithRequired(p => p.Departament);
+               .WithRequired(p => p.Departament)
+               .WillCascadeOnDelete(false); 
 
             ToTable("dbo.Departament");
         }

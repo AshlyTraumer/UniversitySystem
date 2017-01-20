@@ -40,11 +40,17 @@ namespace UniversitySystem.Controllers
             return View(model);
         }
 
-        [HttpGet]
+        [HttpPost]
         public ActionResult Delete(int id)
         {
+            try { 
             Manager.Delete(id);
             return RedirectToAction("Index", "Specialization");
+            }
+            catch
+            {
+                return RedirectToAction("ServerView", "Error");
+            }
         }
 
         [HttpGet]
@@ -63,7 +69,7 @@ namespace UniversitySystem.Controllers
                 return RedirectToAction("Index", "Specialization");
             }
             ViewBag.List = Manager.GetList();
-            return View(model);
+            return View(model);            
         }
     }
 }

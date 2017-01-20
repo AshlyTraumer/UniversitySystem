@@ -49,9 +49,9 @@ namespace UniversitySystem.Controllers
 
         [HttpGet]
         public ActionResult Delete(int id)
-        {
-            Manager.Delete(id);
-            return RedirectToAction("Index", "Professor");
+        {            
+                Manager.Delete(id);
+                return RedirectToAction("Index", "Professor");            
         }
 
         [HttpGet]
@@ -64,6 +64,7 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Change(ProfessorModel model)
         {
+            try { 
             if (ModelState.IsValid)
             {
                 Manager.Change(model);
@@ -71,6 +72,11 @@ namespace UniversitySystem.Controllers
             }
             ViewBag.List = Manager.GetList();
             return View(model);
+            }
+            catch
+            {
+                return RedirectToAction("ServerView", "Error");
+            }
         }
     }
 }

@@ -18,7 +18,8 @@ namespace ClassLibrary
                 .IsRequired();
 
             HasMany(p => p.Schedules)
-                .WithRequired(p => p.Professor);
+                .WithRequired(p => p.Professor)
+                .WillCascadeOnDelete(false); ;
 
             ToTable("dbo.Professor");
         }

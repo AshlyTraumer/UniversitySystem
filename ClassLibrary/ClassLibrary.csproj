@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201701190932222_StartMigration.Designer.cs">
       <DependentUpon>201701190932222_StartMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701200847318_UnCascadeMigration.cs" />
+    <Compile Include="Migrations\201701200847318_UnCascadeMigration.Designer.cs">
+      <DependentUpon>201701200847318_UnCascadeMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domen\Result.cs" />
@@ -85,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701190932222_StartMigration.resx">
       <DependentUpon>201701190932222_StartMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701200847318_UnCascadeMigration.resx">
+      <DependentUpon>201701200847318_UnCascadeMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,7 +17,8 @@ namespace ClassLibrary
                 .IsRequired();
 
             HasRequired(c => c.Entrant)
-                .WithRequiredPrincipal(c => c.Enrollment);
+                .WithRequiredPrincipal(c => c.Enrollment)
+                .WillCascadeOnDelete(false); ;
 
             ToTable("dbo.Enrollment");
         }

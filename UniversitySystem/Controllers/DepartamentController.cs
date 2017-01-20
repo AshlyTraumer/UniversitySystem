@@ -40,26 +40,33 @@ namespace UniversitySystem.Controllers
 
         [HttpGet]
         public ActionResult Delete(int id)
-        {
-            Manager.Delete(id);
-            return RedirectToAction("Index", "Departament");
+        {            
+                Manager.Delete(id);
+                return RedirectToAction("Index", "Departament");            
         }
 
         [HttpGet]
         public ActionResult Change(int id)
-        {            
+        {
             return View("Change", Manager.GetById(id));
         }
 
         [HttpPost]
         public ActionResult Change(DepartamentModel model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                Manager.Change(model);
-                return RedirectToAction("Index", "Departament");
+                if (ModelState.IsValid)
+                {
+                    Manager.Change(model);
+                    return RedirectToAction("Index", "Departament");
+                }
+                return View(model);
             }
-            return View(model);
+            catch
+            {
+                return RedirectToAction("ServerView", "Error");
+            }
         }
     }
 }

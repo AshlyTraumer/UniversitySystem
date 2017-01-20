@@ -5,11 +5,9 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class SubjectManager
-    {
-        private readonly RepositoryContext _context;
-
-        public SubjectManager(RepositoryContext context)
+    public class SubjectManager : BaseManager<Subject>
+    {       
+        public SubjectManager(RepositoryContext context) : base (context)
         {
             _context = context;
         }
@@ -23,15 +21,7 @@ namespace UniversitySystem.Manager
                     Title = x.Title,
                     Form = x.Form
                 }).ToList();
-        }
-
-        public void Delete(int id)
-        {
-            var subject = _context.Subjects.Single(x => x.Id == id);
-
-            _context.Subjects.Remove(subject);
-            _context.SaveChanges();
-        }
+        }        
 
         public SubjectModel GetById(int id)
         {

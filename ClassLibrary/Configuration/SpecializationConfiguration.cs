@@ -18,7 +18,8 @@ namespace ClassLibrary
                 .IsRequired();
 
             HasMany(p => p.SubjectSpecializations)
-               .WithRequired(p => p.Specialization);
+               .WithRequired(p => p.Specialization)
+               .WillCascadeOnDelete(false); ;
 
             ToTable("dbo.Specialization");
         }

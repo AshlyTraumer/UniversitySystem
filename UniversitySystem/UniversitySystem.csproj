@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DepartamentController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Core\HtmlHelperExtensions.cs" />
     <Compile Include="Core\HttpContextExtensions.cs" />
     <Compile Include="Core\Exceptions\UniversalException.cs" />
+    <Compile Include="Manager\BaseManager.cs" />
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
     <Compile Include="Manager\ProfessorManager.cs" />
@@ -282,6 +284,8 @@
     <Content Include="Views\Specialization\Index.cshtml" />
     <Content Include="Views\Specialization\Create.cshtml" />
     <Content Include="Views\Specialization\Change.cshtml" />
+    <Content Include="Views\Error\ClientView.cshtml" />
+    <Content Include="Views\Error\ServerView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

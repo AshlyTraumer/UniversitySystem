@@ -17,13 +17,16 @@ namespace ClassLibrary
                 .HasMaxLength(30);            
 
             HasMany(p => p.Results)
-               .WithRequired(p => p.Subject);
+               .WithRequired(p => p.Subject)
+               .WillCascadeOnDelete(false); ;
 
             HasMany(p => p.Schedules)
-               .WithRequired(p => p.Subject);
+               .WithRequired(p => p.Subject)
+               .WillCascadeOnDelete(false); ;
 
             HasMany(p => p.SubjectSpecializations)
-               .WithRequired(p => p.Subject);
+               .WithRequired(p => p.Subject)
+               .WillCascadeOnDelete(false); ;
 
             ToTable("dbo.Subject");
         }

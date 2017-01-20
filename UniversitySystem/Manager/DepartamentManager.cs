@@ -6,13 +6,10 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class DepartamentManager 
+    public class DepartamentManager : BaseManager<Departament> 
     {
-        private readonly RepositoryContext _context;
-
-        public DepartamentManager(RepositoryContext context)
-        {
-            _context = context;
+        public DepartamentManager(RepositoryContext context) : base (context)
+        {           
         }
 
         public List<DepartamentModel> Get()
@@ -23,18 +20,7 @@ namespace UniversitySystem.Manager
                     Id = x.Id,
                     Title = x.Title
                 }).ToList();
-        }
-
-        public void Delete(int id)
-        {
-            var departament = _context.Departaments.SingleOrDefault(x => x.Id == id);
-
-            if (departament == null)
-                throw new UniversalException("Departament not found id = " + id);
-
-            _context.Departaments.Remove(departament);
-            _context.SaveChanges();
-        }
+        }        
 
         public DepartamentModel GetById(int id)
         {

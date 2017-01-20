@@ -7,12 +7,10 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class ProfessorManager
+    public class ProfessorManager : BaseManager<Professor>
     {
-        private readonly RepositoryContext _context;
-        public ProfessorManager(RepositoryContext context)
-        {
-            _context = context;
+        public ProfessorManager(RepositoryContext context) : base (context)
+        {           
         }
 
         public List<ProfessorViewModel> Get()
@@ -24,15 +22,7 @@ namespace UniversitySystem.Manager
                     Name = t.Name,
                     DepartamentTitle = t.Departament.Title
                 }).ToList();
-        }
-
-        public void Delete(int id)
-        {
-            var professor = _context.Professors.Single(x => x.Id == id);
-
-            _context.Professors.Remove(professor);
-            _context.SaveChanges();
-        }
+        }        
 
         public ProfessorModel GetById(int id)
         {

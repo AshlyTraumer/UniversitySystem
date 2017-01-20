@@ -1,4 +1,4 @@
-﻿@using UniversitySystem.Models
+﻿@using UniversitySystem.Models;
 @model SpecializationModel
 
 <html>
@@ -8,7 +8,7 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li><a href="@Url.Action("Index","Departament")">Факультеты</a></li>
+        <li><a href=@Url.Action("Index","Departament")>Факультеты</a></li>
         <li class="active"><a href="@Url.Action("Index","Specialization")">Специальности</a></li>
         <li ><a href="@Url.Action("Index","Professor")">Преподаватели</a></li>
         <li><a href="@Url.Action("Index","Subject")">Предметы</a></li>

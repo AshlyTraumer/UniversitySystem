@@ -31,7 +31,8 @@ namespace ClassLibrary
                 .IsRequired();        
 
             HasMany(p => p.Results)                
-               .WithRequired(p => p.Entrant);          
+               .WithRequired(p => p.Entrant)
+               .WillCascadeOnDelete(false); ;          
 
             ToTable("dbo.Entrant");
         }
