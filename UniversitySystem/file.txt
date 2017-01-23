@@ -65,3 +65,13 @@
 2017-01-23 10:29:18.9875|INFO|UniversitySystem.Core.LogService|Result 0:0:0.1
 2017-01-23 10:29:19.1275|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0:0:0.0
 2017-01-23 10:29:19.6404|INFO|UniversitySystem.Core.LogService|Result 0:0:0.50
+
+
+2017-01-23 11:15:45.8509|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-23 11:15:49.1361|INFO|UniversitySystem.Core.LogService|Result 3.22
+2017-01-23 11:15:58.5737|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 4.59
+2017-01-23 11:15:58.6328|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-23 11:15:58.7388|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.0
+2017-01-23 11:16:05.3310|INFO|UniversitySystem.Core.LogService|Result 6.57
+2017-01-23 11:17:00.2122|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Specialization Time: 0.13
+2017-01-23 11:17:07.4694|INFO|UniversitySystem.Core.LogService|Result 7.22
