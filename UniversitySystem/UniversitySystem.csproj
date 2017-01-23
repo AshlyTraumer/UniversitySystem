@@ -204,6 +204,7 @@
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
+    <Compile Include="Manager\ScheduleManager.cs" />
     <Compile Include="Controllers\SpecializationController.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
@@ -225,9 +226,12 @@
     <Compile Include="Models\DepartamentModel.cs" />
     <Compile Include="Models\DropDownListItem.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ChangeModelBase.cs" />
     <Compile Include="Models\ProfessorModel.cs" />
     <Compile Include="Models\ProfessorViewModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\ScheduleModel.cs" />
+    <Compile Include="Models\ScheduleViewModel.cs" />
     <Compile Include="Models\SpecializationModel.cs" />
     <Compile Include="Models\SpecializationViewModel.cs" />
     <Compile Include="Models\SubjectModel.cs" />
@@ -300,6 +304,10 @@
     <Content Include="Views\Error\ServerView.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Http500.cshtml" />
+    <Content Include="Views\Secretary\Create.cshtml" />
+    <Content Include="Views\Secretary\Change.cshtml" />
+    <Content Include="Views\Professor\Select.cshtml" />
+    <Content Include="Views\Specialization\Select.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

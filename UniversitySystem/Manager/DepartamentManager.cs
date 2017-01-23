@@ -1,12 +1,11 @@
 ﻿using ClassLibrary;
 using System.Collections.Generic;
 using System.Linq;
-using UniversitySystem.Core.Exceptions;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class DepartamentManager : BaseManager<Departament> 
+    public class DepartamentManager : BaseManager<Departament, DepartamentModel> 
     {
         public DepartamentManager(RepositoryContext context) : base (context)
         {           
@@ -14,7 +13,7 @@ namespace UniversitySystem.Manager
 
         public List<DepartamentModel> Get()
         {
-            return _context.Departaments
+            return Context.Departaments
                 .Select(x => new DepartamentModel
                 {
                     Id = x.Id,
@@ -24,20 +23,11 @@ namespace UniversitySystem.Manager
 
         public DepartamentModel GetById(int id)
         {
-            return _context.Departaments.Select(t => new DepartamentModel
+            return Context.Departaments.Select(t => new DepartamentModel
             {
                 Id = t.Id,
                 Title = t.Title
             }).Single(x => x.Id == id);
-        }
-
-        public void Change(DepartamentModel model)
-        {
-            var departament = _context.Departaments.Single(x => x.Id == model.Id);
-
-            departament.Title = model.Title;
-
-            _context.SaveChanges();
         }
 
         public void Create(DepartamentModel model)
@@ -47,8 +37,13 @@ namespace UniversitySystem.Manager
                 Title = model.Title
             };
 
-            _context.Departaments.Add(departament);
-            _context.SaveChanges();
+            Context.Departaments.Add(departament);
+            Context.SaveChanges();
+        }
+
+        protected override void Update(Departament entity,DepartamentModel model)
+        {
+            entity.Title = model.Title;
         }
     }
 }

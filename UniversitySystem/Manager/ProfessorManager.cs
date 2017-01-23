@@ -7,7 +7,7 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class ProfessorManager : BaseManager<Professor>
+    public class ProfessorManager : BaseManager<Professor, ProfessorModel>
     {
         public ProfessorManager(RepositoryContext context) : base (context)
         {           
@@ -15,7 +15,7 @@ namespace UniversitySystem.Manager
 
         public List<ProfessorViewModel> Get()
         {
-            return _context.Professors
+            return Context.Professors
                 .Select(t => new ProfessorViewModel
                 {
                     Id = t.Id,
@@ -26,7 +26,7 @@ namespace UniversitySystem.Manager
 
         public ProfessorModel GetById(int id)
         {
-            var professor = _context.Professors.Single(x => x.Id == id);
+            var professor = Context.Professors.Single(x => x.Id == id);
             
             var model = new ProfessorModel
             {
@@ -40,22 +40,12 @@ namespace UniversitySystem.Manager
 
         public List<DropDownListItem> GetList()
         {
-            return _context.Departaments
+            return Context.Departaments
                 .Select(x => new DropDownListItem
                 {
                     Id = x.Id,
                     Title = x.Title
                 }).ToList();            
-        }
-
-        public void Change(ProfessorModel model)
-        {
-            var professor = _context.Professors.Single(x => x.Id == model.Id);
-
-            professor.Name = model.Name;
-            professor.DepartamentId = model.DepartamentId;
-
-            _context.SaveChanges();
         }
 
         public void Create(ProfessorModel model)
@@ -66,8 +56,28 @@ namespace UniversitySystem.Manager
                 DepartamentId = model.DepartamentId
             };
 
-            _context.Professors.Add(professor);
-            _context.SaveChanges();
+            Context.Professors.Add(professor);
+            Context.SaveChanges();
+        }
+       
+
+        protected override void Update(Professor entity, ProfessorModel model)
+        {
+            entity.Name = model.Name;
+            entity.DepartamentId = model.DepartamentId;
+        }
+
+        public List<ProfessorViewModel> GetListById(int id)
+        {
+            return Context.Professors
+                .Where(x => x.DepartamentId == id)
+                .Select(t => new ProfessorViewModel
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    DepartamentTitle = t.Departament.Title
+                })
+                .ToList();
         }
     }
 }

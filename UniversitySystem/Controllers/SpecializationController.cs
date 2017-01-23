@@ -65,5 +65,10 @@ namespace UniversitySystem.Controllers
             ViewBag.List = Manager.GetList();
             return View(model);            
         }
+
+        public ActionResult Select(int id)
+        {
+            return View(Manager.GetListById(id));
+        }
     }
 }

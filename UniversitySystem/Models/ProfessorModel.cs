@@ -2,10 +2,8 @@
 
 namespace UniversitySystem.Models
 {
-    public class ProfessorModel
+    public class ProfessorModel : ChangeModelBase
     {
-        public int Id { get; set; }
-
         [Required]
         [StringLength(50, MinimumLength = 3)]
         public string Name { get; set; }

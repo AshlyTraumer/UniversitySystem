@@ -30,7 +30,7 @@
                 <tr>
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Title</p></td>
-                    <td><p>link/link</p></td>
+                    <td><a href="@Url.Action("Select","Professor",new { id = @b.Id})">link</a>/<a href="@Url.Action("Select","Specialization",new { id = @b.Id})">link</a></td>
                     <td><p><a href="@Url.Action("Delete","Departament",new { id = @b.Id})">Удалить</a>/<a href="@Url.Action("Change","Departament",new { id = @b.Id})">Изменить</a></p></td>                 
                 </tr>
             }

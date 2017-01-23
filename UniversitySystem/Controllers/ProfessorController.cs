@@ -72,5 +72,10 @@ namespace UniversitySystem.Controllers
                 return RedirectToAction("Http500", "Error");
             }
         }
+
+        public ActionResult Select(int id)
+        {
+            return View(Manager.GetListById(id));
+        }
     }
 }

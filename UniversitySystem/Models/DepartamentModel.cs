@@ -2,9 +2,9 @@
 
 namespace UniversitySystem.Models
 {
-    public class DepartamentModel
+    public class DepartamentModel : ChangeModelBase
     {
-        public int Id { get; set; }
+       // public int Id { get; set; }
 
         [Required]
         [StringLength(50, MinimumLength = 3)]

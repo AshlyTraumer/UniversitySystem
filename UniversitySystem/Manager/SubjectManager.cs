@@ -5,16 +5,16 @@ using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
 {
-    public class SubjectManager : BaseManager<Subject>
+    public class SubjectManager : BaseManager<Subject, SubjectModel>
     {       
         public SubjectManager(RepositoryContext context) : base (context)
         {
-            _context = context;
+            Context = context;
         }
 
         public List<SubjectModel> Get()
         {
-            return _context.Subjects
+            return Context.Subjects
                 .Select(x => new SubjectModel
                 {
                     Id = x.Id,
@@ -25,7 +25,7 @@ namespace UniversitySystem.Manager
 
         public SubjectModel GetById(int id)
         {
-            var subject = _context.Subjects.Single(x => x.Id == id);
+            var subject = Context.Subjects.Single(x => x.Id == id);
 
             return new SubjectModel
             {
@@ -33,16 +33,6 @@ namespace UniversitySystem.Manager
                 Title = subject.Title,
                 Form = subject.Form
             };            
-        }
-
-        public void Change(SubjectModel model)
-        {
-            var subject = _context.Subjects.Single(x => x.Id == model.Id);
-
-            subject.Title = model.Title;
-            subject.Form = model.Form;
-
-            _context.SaveChanges();
         }
 
         public void Create(SubjectModel model)
@@ -53,8 +43,14 @@ namespace UniversitySystem.Manager
                 Form = model.Form
             };
 
-            _context.Subjects.Add(subject);
-            _context.SaveChanges();
+            Context.Subjects.Add(subject);
+            Context.SaveChanges();
+        }
+
+        protected override void Update(Subject entity, SubjectModel model)
+        {
+            entity.Title = model.Title;
+            entity.Form = model.Form;
         }
     }
 }

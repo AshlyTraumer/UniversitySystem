@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UniversitySystem.Models;
+using System;
 
 namespace UniversitySystem.Manager
 {
-    public class SpecializationManager : BaseManager <Specialization>
+    public class SpecializationManager : BaseManager <Specialization, SpecializationModel>
     {       
         public SpecializationManager(RepositoryContext context) :base (context)
         {            
@@ -13,7 +14,7 @@ namespace UniversitySystem.Manager
 
         public List<SpecializationViewModel> Get()
         {
-            return _context.Specializations
+            return Context.Specializations
                 .Select(x => new SpecializationViewModel
                 {
                     Id = x.Id,
@@ -26,7 +27,7 @@ namespace UniversitySystem.Manager
 
         public SpecializationModel GetById(int id)
         {
-            var model = _context.Specializations
+            var model = Context.Specializations
                 .Select(x => new SpecializationModel
                 {
                     Id = x.Id,
@@ -40,23 +41,12 @@ namespace UniversitySystem.Manager
 
         public List<DropDownListItem> GetList()
         {
-            return  _context.Departaments
+            return  Context.Departaments
                 .Select(x => new DropDownListItem
                 {
                     Id = x.Id,
                     Title = x.Title
                 }).ToList();            
-        }
-
-        public void Change(SpecializationModel model)
-        {
-            var specialization = _context.Specializations.Single(x => x.Id == model.Id);
-
-            specialization.Title = model.Title;
-            specialization.FreeCount = model.FreeCount;
-            specialization.PayCount = model.PayCount;
-
-            _context.SaveChanges();
         }
 
         public void Create(SpecializationModel model)
@@ -69,8 +59,29 @@ namespace UniversitySystem.Manager
                 DepartamentId = model.DepartamentId
             };
 
-            _context.Specializations.Add(specialization);
-            _context.SaveChanges();
+            Context.Specializations.Add(specialization);
+            Context.SaveChanges();
+        }
+
+        protected override void Update(Specialization entity, SpecializationModel model)
+        {
+            entity.Title = model.Title;
+            entity.FreeCount = model.FreeCount;
+            entity.PayCount = model.PayCount;
+        }
+
+        public List<SpecializationViewModel> GetListById(int id)
+        {
+            return Context.Specializations
+                .Where(x => x.DepartamentId == id)
+                .Select(x => new SpecializationViewModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    FreeCount = x.FreeCount,
+                    PayCount = x.PayCount,
+                    Departament = x.Departament.Title
+                }).ToList();
         }
     }
 }
