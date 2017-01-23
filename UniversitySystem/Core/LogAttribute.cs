@@ -11,7 +11,9 @@ namespace UniversitySystem.Core
         {
             var stopWatch = filterContext.HttpContext.Items[Key] as Stopwatch;
 
-            if (stopWatch == null) return;
+            if (stopWatch == null)
+                return;
+
             stopWatch.Stop();
 
             var result = stopWatch.Elapsed;
