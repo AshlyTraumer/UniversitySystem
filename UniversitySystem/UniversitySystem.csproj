@@ -210,9 +210,8 @@
     <Compile Include="Core\HtmlHelperExtensions.cs" />
     <Compile Include="Core\HttpContextExtensions.cs" />
     <Compile Include="Core\Exceptions\UniversalException.cs" />
+    <Compile Include="Core\LogAttribute.cs" />
     <Compile Include="Core\LogService.cs" />
-    <Compile Include="Core\StopWatchAttribute.cs" />
-    <Compile Include="Core\StopWatchResultAttribute.cs" />
     <Compile Include="Manager\BaseManager.cs" />
     <Compile Include="Manager\DepartamentManager.cs" />
     <Compile Include="Manager\AuthorizeManager.cs" />
