@@ -7,18 +7,18 @@ namespace UniversitySystem.Controllers
 {
     public class SpecializationController : Controller
     {
-        public SpecializationManager Manager => new SpecializationManager(HttpContext.GetContextPerRequest());
+        private SpecializationManager _manager => new SpecializationManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(Manager.Get());
+            return View(_manager.Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.List = Manager.GetList();
+            ViewBag.List = _manager.GetList();
             return View(new SpecializationModel());
         }
 
@@ -27,10 +27,10 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                Manager.Create(model);
+                _manager.Create(model);
                 return RedirectToAction("Index", "Specialization");
             }
-            ViewBag.List = Manager.GetList();
+            ViewBag.List = _manager.GetList();
             return View(model);
         }
 
@@ -38,7 +38,7 @@ namespace UniversitySystem.Controllers
         public ActionResult Delete(int id)
         {
             try { 
-            Manager.Delete(id);
+            _manager.Delete(id);
             return RedirectToAction("Index", "Specialization");
             }
             catch
@@ -50,8 +50,8 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Change(int id)
         {            
-            ViewBag.List = Manager.GetList();
-            return View("Change", Manager.GetById(id));
+            ViewBag.List = _manager.GetList();
+            return View("Change", _manager.GetById(id));
         }
 
         [HttpPost]
@@ -59,16 +59,16 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                Manager.Change(model);                
+                _manager.Change(model);                
                 return RedirectToAction("Index", "Specialization");
             }
-            ViewBag.List = Manager.GetList();
+            ViewBag.List = _manager.GetList();
             return View(model);            
         }
 
         public ActionResult Select(int id)
         {
-            return View(Manager.GetListById(id));
+            return View(_manager.GetListById(id));
         }
     }
 }

@@ -14,18 +14,18 @@ namespace UniversitySystem.Controllers
 {
     public class ProfessorController : Controller
     {
-        public ProfessorManager Manager => new ProfessorManager(HttpContext.GetContextPerRequest());
+        private ProfessorManager _manager => new ProfessorManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(Manager.Get());
+            return View(_manager.Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.List = Manager.GetList();
+            ViewBag.List = _manager.GetList();
             return View(new ProfessorModel());
         }
 
@@ -34,25 +34,25 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                Manager.Create(model);
+                _manager.Create(model);
                 return RedirectToAction("Index", "Professor");
             }
-            ViewBag.List = Manager.GetList();
+            ViewBag.List = _manager.GetList();
             return View(model);
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {            
-                Manager.Delete(id);
+                _manager.Delete(id);
                 return RedirectToAction("Index", "Professor");            
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            ViewBag.List = Manager.GetList();
-            return View("Change", Manager.GetById(id));
+            ViewBag.List = _manager.GetList();
+            return View("Change", _manager.GetById(id));
         }
 
         [HttpPost]
@@ -61,10 +61,10 @@ namespace UniversitySystem.Controllers
             try { 
             if (ModelState.IsValid)
             {
-                Manager.Change(model);
+                _manager.Change(model);
                 return RedirectToAction("Index", "Professor");
             }
-            ViewBag.List = Manager.GetList();
+            ViewBag.List = _manager.GetList();
             return View(model);
             }
             catch
@@ -75,7 +75,7 @@ namespace UniversitySystem.Controllers
 
         public ActionResult Select(int id)
         {
-            return View(Manager.GetListById(id));
+            return View(_manager.GetListById(id));
         }
     }
 }

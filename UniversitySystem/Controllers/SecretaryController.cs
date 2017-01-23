@@ -7,19 +7,19 @@ namespace UniversitySystem.Controllers
 {
     public class SecretaryController : Controller
     {
-        public ScheduleManager Manager => new ScheduleManager(HttpContext.GetContextPerRequest());
+        private ScheduleManager _manager => new ScheduleManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
         {
-            return View(Manager.Get());
+            return View(_manager.Get());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.ProfessorList = Manager.GetProfessorList();
-            ViewBag.SubjectList = Manager.GetSubjectList();
+            ViewBag.ProfessorList = _manager.GetProfessorList();
+            ViewBag.SubjectList = _manager.GetSubjectList();
             return View(new ScheduleModel());
         }
 
@@ -28,27 +28,27 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                Manager.Create(model);
+                _manager.Create(model);
                 return RedirectToAction("Index", "Secretary");
             }
-            ViewBag.ProfessorList = Manager.GetProfessorList();
-            ViewBag.SubjectList = Manager.GetSubjectList();
+            ViewBag.ProfessorList = _manager.GetProfessorList();
+            ViewBag.SubjectList = _manager.GetSubjectList();
             return View(model);
         }
 
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            Manager.Delete(id);
+            _manager.Delete(id);
             return RedirectToAction("Index", "Secretary");
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            ViewBag.ProfessorList = Manager.GetProfessorList();
-            ViewBag.SubjectList = Manager.GetSubjectList();
-            return View("Change", Manager.GetById(id));
+            ViewBag.ProfessorList = _manager.GetProfessorList();
+            ViewBag.SubjectList = _manager.GetSubjectList();
+            return View("Change", _manager.GetById(id));
         }
 
         [HttpPost]
@@ -57,7 +57,7 @@ namespace UniversitySystem.Controllers
             try
             {
                 if (!ModelState.IsValid) return View(model);
-                Manager.Change(model);
+                _manager.Change(model);
                 return RedirectToAction("Index", "Secretary");
             }
             catch
