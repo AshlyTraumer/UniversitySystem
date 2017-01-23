@@ -6,24 +6,27 @@ namespace UniversitySystem.Core
 {
     public class StopWatchAttribute : FilterAttribute, IActionFilter
     {
-        private string _key = "StopWatch";
+        private const string Key = "StopWatch";
+
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            var stopWatch = filterContext.HttpContext.Items[_key] as Stopwatch;
+            var stopWatch = filterContext.HttpContext.Items[Key] as Stopwatch;
+
+            if (stopWatch == null) return;
             stopWatch.Stop();
+
             var result = stopWatch.Elapsed;
 
-            string elapsedTime = String.Format("{0:}:{1:}:{2:}.{3:}",
-            result.Hours, result.Minutes, result.Seconds, result.Milliseconds / 10);
-
-            new LogService().WriteInfo("Action "+filterContext.HttpContext.Request.Url.AbsolutePath+ " "+elapsedTime);
+            string elapsedTime = $"{result.Hours}:{result.Minutes}:{result.Seconds}.{result.Milliseconds / 10}";
+            string message = $"Action {filterContext.HttpContext.Request.HttpMethod} {filterContext.HttpContext.Request.Url?.AbsoluteUri} Time: {elapsedTime}";
+            new LogService().WriteInfo(message);
         }
 
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
             var stopWatch = new Stopwatch();
             stopWatch.Start();            
-            filterContext.HttpContext.Items[_key] = stopWatch;            
+            filterContext.HttpContext.Items[Key] = stopWatch;            
         }
     }
 }

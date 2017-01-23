@@ -8,9 +8,9 @@ namespace UniversitySystem
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+           // filters.Add(new HandleErrorAttribute());
             filters.Add(new StopWatchAttribute());
-            filters.Add(new StopWatchResultAttribute());
+            filters.Add(new StopWatchResultAttribute());            
         }
     }
 }

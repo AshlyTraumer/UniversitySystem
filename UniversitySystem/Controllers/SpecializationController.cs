@@ -7,13 +7,7 @@ namespace UniversitySystem.Controllers
 {
     public class SpecializationController : Controller
     {
-        public SpecializationManager Manager
-        {
-            get
-            {
-                return new SpecializationManager(HttpContext.GetContextPerRequest());
-            }
-        }
+        public SpecializationManager Manager => new SpecializationManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
@@ -49,7 +43,7 @@ namespace UniversitySystem.Controllers
             }
             catch
             {
-                return RedirectToAction("ServerView", "Error");
+                return RedirectToAction("Http500", "Error");
             }
         }
 

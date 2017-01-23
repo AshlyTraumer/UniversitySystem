@@ -7,13 +7,7 @@ namespace UniversitySystem.Controllers
 {
     public class DepartamentController : Controller
     {
-        public DepartamentManager Manager
-        {
-            get
-            {
-                return new DepartamentManager(HttpContext.GetContextPerRequest());
-            }
-        }
+        public DepartamentManager Manager => new DepartamentManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
@@ -30,12 +24,9 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(DepartamentModel model)
         {
-            if (ModelState.IsValid)
-            {
-                Manager.Create(model);
-                return RedirectToAction("Index", "Departament");
-            }
-            return View(model);
+            if (!ModelState.IsValid) return View(model);
+            Manager.Create(model);
+            return RedirectToAction("Index", "Departament");
         }
 
         [HttpGet]
@@ -56,16 +47,13 @@ namespace UniversitySystem.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    Manager.Change(model);
-                    return RedirectToAction("Index", "Departament");
-                }
-                return View(model);
+                if (!ModelState.IsValid) return View(model);
+                Manager.Change(model);
+                return RedirectToAction("Index", "Departament");
             }
             catch
             {
-                return RedirectToAction("ServerView", "Error");
+                return RedirectToAction("Http500", "Error");
             }
         }
     }

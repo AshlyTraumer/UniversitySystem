@@ -7,13 +7,7 @@ namespace UniversitySystem.Controllers
 {
     public class SubjectController : Controller
     {
-        public SubjectManager Manager
-        {
-            get
-            {
-                return new SubjectManager(HttpContext.GetContextPerRequest());
-            }
-        }
+        public SubjectManager Manager => new SubjectManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
@@ -30,12 +24,9 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(SubjectModel model)
         {
-            if (ModelState.IsValid)
-            {
-                Manager.Create(model);
-                return RedirectToAction("Index", "Subject");
-            }
-            return View(model);
+            if (!ModelState.IsValid) return View(model);
+            Manager.Create(model);
+            return RedirectToAction("Index", "Subject");
         }
 
         [HttpGet]
@@ -65,7 +56,7 @@ namespace UniversitySystem.Controllers
             }
             catch
             {
-                return RedirectToAction("ServerView", "Error");
+                return RedirectToAction("Http500", "Error");
             }
         }
     }

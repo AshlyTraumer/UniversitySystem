@@ -15,3 +15,53 @@
 2017-01-20 17:42:40.3979|INFO|UniversitySystem.Core.LogService|Result 00:00:00.61
 2017-01-20 17:42:42.0352|INFO|UniversitySystem.Core.LogService|Action /Departament 0:0:0.16
 2017-01-20 17:42:43.3266|INFO|UniversitySystem.Core.LogService|Result 00:00:01.28
+2017-01-20 17:54:26.7451|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:0.3
+2017-01-20 17:54:29.7291|INFO|UniversitySystem.Core.LogService|Result 00:00:02.85
+2017-01-20 17:55:04.7678|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:2.21
+2017-01-20 17:55:04.7848|INFO|UniversitySystem.Core.LogService|Result 00:00:00.00
+2017-01-20 17:55:04.9625|INFO|UniversitySystem.Core.LogService|Action /Secretary 0:0:0.0
+2017-01-20 17:55:12.0564|INFO|UniversitySystem.Core.LogService|Result 00:00:07.08
+2017-01-20 17:55:18.2547|INFO|UniversitySystem.Core.LogService|Action /Departament 0:0:0.15
+2017-01-20 17:55:19.6377|INFO|UniversitySystem.Core.LogService|Result 00:00:01.36
+2017-01-20 17:55:30.6422|INFO|UniversitySystem.Core.LogService|Action /Departament/Delete/1 0:0:6.9
+2017-01-20 17:55:30.6573|ERROR|UniversitySystem.Core.LogService|При обновлении записей возникла ошибка. Дополнительные сведения приведены во внутреннем исключении.
+2017-01-20 17:55:30.7648|INFO|UniversitySystem.Core.LogService|Action /Departament/Delete/1 0:0:0.0
+2017-01-20 17:55:37.9674|INFO|UniversitySystem.Core.LogService|Result 00:00:07.15
+
+
+2017-01-23 09:20:34.0554|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:0.6
+2017-01-23 09:20:36.9625|INFO|UniversitySystem.Core.LogService|Result 00:00:02.74
+2017-01-23 09:21:07.4946|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:11.73
+2017-01-23 09:21:07.5372|INFO|UniversitySystem.Core.LogService|Result 00:00:00.01
+2017-01-23 09:21:07.7369|INFO|UniversitySystem.Core.LogService|Action /Secretary 0:0:0.0
+2017-01-23 09:21:07.9120|INFO|UniversitySystem.Core.LogService|Result 00:00:00.16
+2017-01-23 09:21:12.6213|INFO|UniversitySystem.Core.LogService|Action /Specialization 0:0:0.20
+2017-01-23 09:21:35.6886|INFO|UniversitySystem.Core.LogService|Result 00:00:23.06
+2017-01-23 09:21:44.4935|ERROR|UniversitySystem.Core.LogService|Не удалось найти общедоступный метод действия "Delete" на контроллере "UniversitySystem.Controllers.SpecializationController".
+2017-01-23 09:21:44.5247|INFO|UniversitySystem.Core.LogService|Action /Specialization/Delete/3 0:0:0.0
+2017-01-23 09:21:44.9253|INFO|UniversitySystem.Core.LogService|Result 00:00:00.38
+
+2017-01-23 09:24:34.2645|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:0.3
+2017-01-23 09:24:37.2627|INFO|UniversitySystem.Core.LogService|Result 00:00:02.94
+2017-01-23 09:24:45.3485|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:3.25
+2017-01-23 09:24:45.3635|INFO|UniversitySystem.Core.LogService|Result 00:00:00.00
+2017-01-23 09:24:45.4676|INFO|UniversitySystem.Core.LogService|Action /Secretary 0:0:0.0
+2017-01-23 09:24:46.0965|INFO|UniversitySystem.Core.LogService|Result 00:00:00.61
+
+2017-01-23 09:36:44.7997|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:0.2
+2017-01-23 09:36:47.3398|INFO|UniversitySystem.Core.LogService|Result 0:0:2.49
+2017-01-23 09:36:55.2534|INFO|UniversitySystem.Core.LogService|Action /Start/Login 0:0:2.75
+2017-01-23 09:36:55.2534|INFO|UniversitySystem.Core.LogService|Result 0:0:0.0
+2017-01-23 09:36:55.3339|INFO|UniversitySystem.Core.LogService|Action /Secretary 0:0:0.0
+2017-01-23 09:36:55.8493|INFO|UniversitySystem.Core.LogService|Result 0:0:0.50
+2017-01-23 09:36:59.0475|INFO|UniversitySystem.Core.LogService|Action /Specialization 0:0:0.16
+2017-01-23 09:37:00.4561|INFO|UniversitySystem.Core.LogService|Result 0:0:1.39
+
+
+
+2017-01-23 10:29:08.4229|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0:0:0.3
+2017-01-23 10:29:11.1461|INFO|UniversitySystem.Core.LogService|Result 0:0:2.65
+2017-01-23 10:29:18.9559|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0:0:2.83
+2017-01-23 10:29:18.9875|INFO|UniversitySystem.Core.LogService|Result 0:0:0.1
+2017-01-23 10:29:19.1275|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0:0:0.0
+2017-01-23 10:29:19.6404|INFO|UniversitySystem.Core.LogService|Result 0:0:0.50

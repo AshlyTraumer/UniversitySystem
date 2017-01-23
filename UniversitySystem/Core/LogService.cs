@@ -5,17 +5,17 @@ namespace UniversitySystem.Core
 {
     public class LogService
     {
-        private Logger _logger;
+        private readonly Logger _logger;
         public LogService()
         {
             _logger = LogManager.GetCurrentClassLogger();
         }
 
-        public void WriteError(String message)
+        public void WriteError(string message)
         {            
            _logger.Log(LogLevel.Error, message);
         }
-        public void WriteInfo(String message)
+        public void WriteInfo(string message)
         {
             _logger.Log(LogLevel.Info, message);
         }

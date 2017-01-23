@@ -14,13 +14,7 @@ namespace UniversitySystem.Controllers
 {
     public class ProfessorController : Controller
     {
-        public ProfessorManager Manager
-        {
-            get
-            {
-                return new ProfessorManager(HttpContext.GetContextPerRequest());
-            }
-        }
+        public ProfessorManager Manager => new ProfessorManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
@@ -75,7 +69,7 @@ namespace UniversitySystem.Controllers
             }
             catch
             {
-                return RedirectToAction("ServerView", "Error");
+                return RedirectToAction("Http500", "Error");
             }
         }
     }

@@ -10,15 +10,9 @@ namespace UniversitySystem.Controllers
 {
     public class StartController : Controller
     {
-        public AuthorizeManager Manager
-        {
-            get
-            {
-                return new AuthorizeManager(HttpContext.GetContextPerRequest());
-            }
-        }
+        public AuthorizeManager Manager => new AuthorizeManager(HttpContext.GetContextPerRequest());
 
-       /* private IAuthenticationManager AuthenticationManager
+        /* private IAuthenticationManager AuthenticationManager
         {
             get
             {

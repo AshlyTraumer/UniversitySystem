@@ -7,14 +7,7 @@ namespace UniversitySystem.Controllers
 {
     public class AdminController : Controller
     {
-        public UserManager Manager
-        {
-            get
-            {
-                return new UserManager(HttpContext.GetContextPerRequest());
-            }
-        }
-
+        public UserManager Manager => new UserManager(HttpContext.GetContextPerRequest());
 
         [HttpGet]
         public ActionResult Index()
@@ -32,26 +25,23 @@ namespace UniversitySystem.Controllers
             }
             catch
             {
-                return RedirectToAction("ServerView", "Error");
+                return RedirectToAction("Http500", "Error");
             }
         }
 
         [HttpGet]
         public ActionResult Change(int id)
         {
-            UserModel user = Manager.GetById(id);
+            var user = Manager.GetById(id);
             return View("Change", user);
         }
 
         [HttpPost]
         public ActionResult Change(UserModel model)
-        {            
-                if (ModelState.IsValid)
-                {
-                    Manager.Change(model);
-                    return RedirectToAction("Index", "Admin");
-                }
-                return View(model);            
+        {
+            if (!ModelState.IsValid) return View(model);
+            Manager.Change(model);
+            return RedirectToAction("Index", "Admin");
         }
     }
 }

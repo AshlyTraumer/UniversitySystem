@@ -300,6 +300,7 @@
     <Content Include="Views\Error\ClientView.cshtml" />
     <Content Include="Views\Error\ServerView.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
+    <Content Include="Views\Error\Http500.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
