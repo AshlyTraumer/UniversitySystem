@@ -23,7 +23,12 @@ namespace UniversitySystem
         private void Application_Error(Object sender, EventArgs e)
         {
             var exception = Server.GetLastError();
-            if (exception == null) return;
+
+            if (exception == null)
+                return;
+
+            var httpException = exception as HttpException;
+            var status = httpException?.ErrorCode ?? 500;
 
             new LogService().WriteError(exception.Message);
                                     
@@ -31,7 +36,7 @@ namespace UniversitySystem
 
             var routeData = new RouteData();
             routeData.Values["controller"] = "Error";
-            routeData.Values["action"] = "Http404";
+            routeData.Values["action"] = "Http" + status;
             
             IController errorsController = new ErrorController();
             HttpContextWrapper wrapper = new HttpContextWrapper(Context);

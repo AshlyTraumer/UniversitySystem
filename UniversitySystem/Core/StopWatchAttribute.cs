@@ -12,12 +12,15 @@ namespace UniversitySystem.Core
         {
             var stopWatch = filterContext.HttpContext.Items[Key] as Stopwatch;
 
-            if (stopWatch == null) return;
+            if (stopWatch == null)
+                return;
+
             stopWatch.Stop();
 
             var result = stopWatch.Elapsed;
 
             string elapsedTime = $"{result.Hours}:{result.Minutes}:{result.Seconds}.{result.Milliseconds / 10}";
+            result.ToString("hh:mm:ss.ms");
             string message = $"Action {filterContext.HttpContext.Request.HttpMethod} {filterContext.HttpContext.Request.Url?.AbsoluteUri} Time: {elapsedTime}";
             new LogService().WriteInfo(message);
         }
