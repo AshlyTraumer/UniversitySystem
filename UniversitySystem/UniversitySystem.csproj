@@ -198,12 +198,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CommitteeController.cs" />
     <Compile Include="Controllers\DepartamentController.cs" />
+    <Compile Include="Controllers\EntrantController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
+    <Compile Include="Manager\EntrantManager.cs" />
+    <Compile Include="Manager\ResultManager.cs" />
     <Compile Include="Manager\ScheduleManager.cs" />
     <Compile Include="Controllers\SpecializationController.cs" />
     <Compile Include="Controllers\StartController.cs" />
@@ -225,11 +230,15 @@
     </Compile>
     <Compile Include="Models\DepartamentModel.cs" />
     <Compile Include="Models\DropDownListItem.cs" />
+    <Compile Include="Models\EntrantModel.cs" />
+    <Compile Include="Models\EntrantViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ChangeModelBase.cs" />
     <Compile Include="Models\ProfessorModel.cs" />
     <Compile Include="Models\ProfessorViewModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\ResultModel.cs" />
+    <Compile Include="Models\ResultViewModel.cs" />
     <Compile Include="Models\ScheduleModel.cs" />
     <Compile Include="Models\ScheduleViewModel.cs" />
     <Compile Include="Models\SpecializationModel.cs" />
@@ -308,6 +317,11 @@
     <Content Include="Views\Secretary\Change.cshtml" />
     <Content Include="Views\Professor\Select.cshtml" />
     <Content Include="Views\Specialization\Select.cshtml" />
+    <Content Include="Views\Committee\Index.cshtml" />
+    <Content Include="Views\Entrant\Index.cshtml" />
+    <Content Include="Views\Entrant\Create.cshtml" />
+    <Content Include="Views\Entrant\Change.cshtml" />
+    <Content Include="Views\Committee\Change.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

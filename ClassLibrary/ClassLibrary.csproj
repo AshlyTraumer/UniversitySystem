@@ -59,20 +59,14 @@
     <Compile Include="Configuration\SubjectSpecializationConfiguration.cs" />
     <Compile Include="Domen\BaseEntity.cs" />
     <Compile Include="Domen\Departament.cs" />
-    <Compile Include="Domen\Enrollment.cs" />
     <Compile Include="Domen\Entrant.cs" />
     <Compile Include="Domen\Professor.cs" />
-    <Compile Include="Configuration\EnrollmentConfiguration.cs" />
     <Compile Include="Configuration\EntrantConfiguration.cs" />
     <Compile Include="Configuration\ProfessorConfiguration.cs" />
     <Compile Include="Domen\SubjectSpecialization.cs" />
-    <Compile Include="Migrations\201701190932222_StartMigration.cs" />
-    <Compile Include="Migrations\201701190932222_StartMigration.Designer.cs">
-      <DependentUpon>201701190932222_StartMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701200847318_UnCascadeMigration.cs" />
-    <Compile Include="Migrations\201701200847318_UnCascadeMigration.Designer.cs">
-      <DependentUpon>201701200847318_UnCascadeMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201701240904384_MigraLast.cs" />
+    <Compile Include="Migrations\201701240904384_MigraLast.Designer.cs">
+      <DependentUpon>201701240904384_MigraLast.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,11 +91,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701190932222_StartMigration.resx">
-      <DependentUpon>201701190932222_StartMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701200847318_UnCascadeMigration.resx">
-      <DependentUpon>201701200847318_UnCascadeMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701240904384_MigraLast.resx">
+      <DependentUpon>201701240904384_MigraLast.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

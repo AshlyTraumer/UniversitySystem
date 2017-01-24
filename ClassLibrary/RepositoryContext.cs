@@ -10,7 +10,6 @@ namespace ClassLibrary
         }      
                
         public DbSet<Departament> Departaments { get; set; }
-        public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Entrant> Entrants { get; set; }
         public DbSet<Professor> Professors { get; set; }
         public DbSet<Result> Results { get; set; }
@@ -23,7 +22,6 @@ namespace ClassLibrary
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new DepartamentConfiguration());
-            modelBuilder.Configurations.Add(new EnrollmentConfiguration());
             modelBuilder.Configurations.Add(new EntrantConfiguration());
             modelBuilder.Configurations.Add(new ProfessorConfiguration());
             modelBuilder.Configurations.Add(new ResultConfiguration());

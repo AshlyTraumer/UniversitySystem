@@ -10,10 +10,9 @@ namespace ClassLibrary
         public string FirstName { get; set; }        
         public string Name { get; set; }        
         public string LastName { get; set; }        
-        public DateTime DateOfBirth { get; set; }        
+        public DateTime DateOfBirth { get; set; }   
 
-        public int EnrollmentId { get; set; }
-        public Enrollment Enrollment { get; set; }
+        
 
         public virtual ICollection<Result> Results { get; set; }
 

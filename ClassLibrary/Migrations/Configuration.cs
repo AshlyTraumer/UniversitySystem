@@ -1,7 +1,6 @@
 namespace ClassLibrary.Migrations
 {
     using System;
-    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -27,54 +26,6 @@ namespace ClassLibrary.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-
-            context.Departaments.Add(
-                new Departament
-                {
-                    Title = "Исторический",
-                    Professors = new List<Professor>()
-                    {
-                        new Professor
-                        {
-                           Name = "Иванов И. И."
-                        },
-                        new Professor
-                        {
-                            Name = "Петров П. П."
-                        }
-                    },
-                    Specializations = new List<Specialization>
-                    {
-                        new Specialization
-                        {
-                            Title = "Археология",
-                            FreeCount = 20,
-                            PayCount = 10,
-                            SubjectSpecializations = new List<SubjectSpecialization>
-                            {
-                                new SubjectSpecialization
-                                {
-                                    Subject = new Subject
-                                    {
-                                        Title = "История",
-                                        Form = "Экзамен"
-                                    }
-                                },
-                                new SubjectSpecialization
-                                {
-                                    Subject = new Subject
-                                    {
-                                        Title = "Русский язык",
-                                        Form = "ЦТ"
-                                    }
-                                }
-                            }
-
-                            }
-                        }
-
-                }
-                );
         }
     }
 }

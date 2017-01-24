@@ -1,0 +1,60 @@
+﻿@using UniversitySystem.Models
+@model IEnumerable<EntrantViewModel>
+
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="@Url.Action("Index","Entrant")">Абитуриенты</a></li>
+    <li ><a href=@Url.Action("Index","Results")>Результаты</a></li>
+    <li><a href=@Url.Action("Index","Logout")>Выход</a></li>
+    <li style="background-color:aqua"><a href="@Url.Action("Create","Entrant")">Записать</a></li>
+</ul>
+    
+    <div class="form">
+        <table class="table">
+            <tr>
+                <td><p>ID</p></td>
+                <td><p>№ паспорта</p></td>
+                <td><p>Фамилия</p></td>
+                <td><p>Имя</p></td>
+                <td><p>Отчество</p></td>
+                <td><p>Дата рождения</p></td>
+                <td><p>Результат</p></td>
+                <td></td>
+            </tr>
+            @foreach (EntrantViewModel b in Model)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p>@b.Passport</p></td>
+                    <td><p>@b.FirstName</p></td>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.LastName</p></td>
+                    <td><p>@b.DateOfBirth.ToString("d")</p></td>
+                    <td><p>@b.ResultStatus</p></td>
+                    
+
+                    <td><p><a href="@Url.Action("Delete","Entrant",new { id=@b.Id})">Удалить</a>/<a href="@Url.Action("Change","Entrant",new { id=@b.Id})">Изменить</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <style>
+        .form form {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+    </style>
+
+</body>
+</html>
