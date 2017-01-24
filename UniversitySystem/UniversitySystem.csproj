@@ -204,6 +204,7 @@
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
+    <Compile Include="Core\RoleSet.cs" />
     <Compile Include="Manager\ScheduleManager.cs" />
     <Compile Include="Controllers\SpecializationController.cs" />
     <Compile Include="Controllers\StartController.cs" />
