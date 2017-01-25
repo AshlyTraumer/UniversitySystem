@@ -56,7 +56,12 @@ namespace UniversitySystem.Controllers
         {
             try
             {
-                if (!ModelState.IsValid) return View(model);
+                if (!ModelState.IsValid)
+                {
+                    ViewBag.ProfessorList = _manager.GetProfessorList();
+                    ViewBag.SubjectList = _manager.GetSubjectList();
+                    return View(model);
+                }
                 _manager.Change(model);
                 return RedirectToAction("Index", "Secretary");
             }

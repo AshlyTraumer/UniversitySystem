@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ClassLibrary.Authorization;
 
@@ -16,25 +17,34 @@ namespace UniversitySystem.Core
 
         public RoleSetWrapper(IEnumerable<Role> roles)
         {
-            RoleSet = 0; //TODO delete and implement
+            RoleSet = 0;
+            foreach (var role in roles)
+            {
+                RoleSet  |= (int)role;
+            }
+
         }
 
         public IEnumerable<Role> Roles
         {
             get
             {
-                return Enumerable.Empty<Role>(); //TODO delete and implement
+                var role = (Role)RoleSet;
+                return Enum.GetValues(typeof(Role))
+                            .Cast<Role>()
+                            .Where(s => role.HasFlag(s));
+                //return Enumerable.Empty<Role>(); //TODO delete and implement
             }
         }
 
         public void SetRole(Role role)
         {
-            //TODO
+            RoleSet |= (int) role;
         }
 
         public void ResetRole(Role role)
         {
-            //TODO
+            RoleSet = ~(~RoleSet | (int) role);
         }
     }
 
@@ -42,7 +52,9 @@ namespace UniversitySystem.Core
     {
         public static string GetDescription(this Role role)
         {
-            return string.Empty; //TODO delete & implement
+            var field = role.GetType().GetField(role.ToString());
+            var attribute = Attribute.GetCustomAttribute(field, typeof(System.ComponentModel.DescriptionAttribute)) as System.ComponentModel.DescriptionAttribute;
+            return attribute == null ? role.ToString() : attribute.Description;
         }
     }
 }

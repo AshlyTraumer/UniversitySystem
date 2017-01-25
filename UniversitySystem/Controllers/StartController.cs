@@ -43,13 +43,13 @@ namespace UniversitySystem.Controllers
                     ModelState.AddModelError("", "Incorrect password");
                     return View();
                 }
-
-                switch (role)
+                
+                
+                switch ((Role)role.Value.RoleSet)
                 {
                     case Role.Admin: return RedirectToAction("Index", "Admin");
                     case Role.Secretary: return RedirectToAction("Index", "Secretary");
                     case Role.Committee: return RedirectToAction("Index", "Committee");
-                    case Role.Entrant: return RedirectToAction("Index", "Entrant");
                     default: return RedirectToAction("Index", "Admin");
                 }
             }

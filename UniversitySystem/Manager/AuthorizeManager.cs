@@ -1,6 +1,7 @@
 ﻿using ClassLibrary;
 using ClassLibrary.Authorization;
 using System.Linq;
+using UniversitySystem.Core;
 using UniversitySystem.Models;
 
 namespace UniversitySystem.Manager
@@ -14,23 +15,24 @@ namespace UniversitySystem.Manager
             _context = context;
         }
 
-        public Role? Login(LoginModel model)
+        public RoleSetWrapper? Login(LoginModel model)
         {            
             var user = _context.Users.Single(x => x.Login == model.Login);
 
             if (user == null || user.Password != model.Password)
                 return null;
 
-            return user.Role;
+            return new RoleSetWrapper(user.Id);
         }
 
         public void Register(RegisterModel model)
         {
+            var role = new RoleSetWrapper( model.Role);
             var user = new User
             {
                 Login = model.Login,
                 Password = model.Password,
-                Role = model.Role
+                Role = role.RoleSet
             };
 
             _context.Users.Add(user);

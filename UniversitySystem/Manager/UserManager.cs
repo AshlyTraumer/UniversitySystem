@@ -2,6 +2,7 @@
 using ClassLibrary.Authorization;
 using System.Collections.Generic;
 using System.Linq;
+using UniversitySystem.Core;
 using UniversitySystem.Core.Exceptions;
 using UniversitySystem.Models;
 
@@ -23,7 +24,7 @@ namespace UniversitySystem.Manager
                 Id = x.Id,
                 Login = x.Login,
                 Password = x.Password,
-                Role = x.Role
+               // Role = x.Role
             }).ToList();
 
             return uModel;
@@ -33,7 +34,7 @@ namespace UniversitySystem.Manager
         {
             var user = _context.Users.Single(x => x.Id == id);
 
-            if (user.Role != Role.Admin)
+           // if (user.Role != Role.Admin)
             {
                 _context.Users.Remove(user);
                 _context.SaveChanges();
@@ -51,9 +52,8 @@ namespace UniversitySystem.Manager
                 Id = id,
                 Login = user.Login,
                 Password = user.Password,
-                Role = user.Role
+                Role = (Role) user.Role
             };
-
             return model;
         }
 
@@ -63,7 +63,7 @@ namespace UniversitySystem.Manager
 
             oldUser.Login = instance.Login;
             oldUser.Password = instance.Password;
-            oldUser.Role = instance.Role;
+            oldUser.Role =  (int) instance.Role;
 
             _context.SaveChanges();
         }
@@ -74,7 +74,7 @@ namespace UniversitySystem.Manager
             {
                 Login = user.Login,
                 Password = user.Password,
-                Role = user.Role
+                Role = (int) user.Role
             };
 
             _context.Users.Add(newUser);

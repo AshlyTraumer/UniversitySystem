@@ -207,6 +207,7 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
+    <Compile Include="Core\RoleSet.cs" />
     <Compile Include="Manager\EntrantManager.cs" />
     <Compile Include="Manager\ResultManager.cs" />
     <Compile Include="Manager\ScheduleManager.cs" />
