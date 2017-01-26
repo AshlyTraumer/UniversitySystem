@@ -9,5 +9,7 @@ namespace UniversitySystem.Models
         public string Name { get; set; }
         
         public int DepartamentId{ get; set; }
+
+        
     }
 }

@@ -24,7 +24,7 @@ namespace UniversitySystem.Manager
                 Id = x.Id,
                 Login = x.Login,
                 Password = x.Password,
-               // Role = x.Role
+                Role = x.Role
             }).ToList();
 
             return uModel;
@@ -52,7 +52,7 @@ namespace UniversitySystem.Manager
                 Id = id,
                 Login = user.Login,
                 Password = user.Password,
-                Role = (Role) user.Role
+                //Role = (Role) user.Role
             };
             return model;
         }
@@ -63,7 +63,7 @@ namespace UniversitySystem.Manager
 
             oldUser.Login = instance.Login;
             oldUser.Password = instance.Password;
-            oldUser.Role =  (int) instance.Role;
+           // oldUser.Role =  (int) instance.Role;
 
             _context.SaveChanges();
         }
@@ -74,7 +74,7 @@ namespace UniversitySystem.Manager
             {
                 Login = user.Login,
                 Password = user.Password,
-                Role = (int) user.Role
+              //  Role = (int) user.Role
             };
 
             _context.Users.Add(newUser);

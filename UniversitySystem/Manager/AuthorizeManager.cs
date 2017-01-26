@@ -1,4 +1,5 @@
-﻿using ClassLibrary;
+﻿using System.Collections.Generic;
+using ClassLibrary;
 using ClassLibrary.Authorization;
 using System.Linq;
 using UniversitySystem.Core;
@@ -22,17 +23,16 @@ namespace UniversitySystem.Manager
             if (user == null || user.Password != model.Password)
                 return null;
 
-            return new RoleSetWrapper(user.Id);
+            return new RoleSetWrapper(new List<Role> { user.Role});
         }
 
         public void Register(RegisterModel model)
         {
-            var role = new RoleSetWrapper( model.Role);
             var user = new User
             {
                 Login = model.Login,
                 Password = model.Password,
-                Role = role.RoleSet
+                Role = model.Role
             };
 
             _context.Users.Add(user);

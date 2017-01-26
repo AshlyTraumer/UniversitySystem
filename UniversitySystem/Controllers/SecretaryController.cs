@@ -26,6 +26,7 @@ namespace UniversitySystem.Controllers
         [HttpPost]
         public ActionResult Create(ScheduleModel model)
         {
+            
             if (ModelState.IsValid)
             {
                 _manager.Create(model);
@@ -34,6 +35,8 @@ namespace UniversitySystem.Controllers
             ViewBag.ProfessorList = _manager.GetProfessorList();
             ViewBag.SubjectList = _manager.GetSubjectList();
             return View(model);
+
+            
         }
 
         [HttpGet]

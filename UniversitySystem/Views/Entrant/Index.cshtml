@@ -27,7 +27,7 @@
                 <td><p>Имя</p></td>
                 <td><p>Отчество</p></td>
                 <td><p>Дата рождения</p></td>
-                <td><p>Результат</p></td>
+                
                 <td></td>
             </tr>
             @foreach (EntrantViewModel b in Model)
@@ -39,7 +39,7 @@
                     <td><p>@b.Name</p></td>
                     <td><p>@b.LastName</p></td>
                     <td><p>@b.DateOfBirth.ToString("d")</p></td>
-                    <td><p>@b.ResultStatus</p></td>
+                    
                     
 
                     <td><p><a href="@Url.Action("Delete","Entrant",new { id=@b.Id})">Удалить</a>/<a href="@Url.Action("Change","Entrant",new { id=@b.Id})">Изменить</a></p></td>

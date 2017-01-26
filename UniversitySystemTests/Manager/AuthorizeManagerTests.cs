@@ -14,7 +14,7 @@ namespace UniversitySystem.Manager.Tests
         {
             var list = new List<Role> {Role.Admin, Role.Committee};
             var role = new RoleSetWrapper(list);
-            Assert.IsTrue(role.RoleSet == 5);
+            Assert.Equals(role.RoleSet, 5);
         }
 
         [TestMethod()]
@@ -22,7 +22,7 @@ namespace UniversitySystem.Manager.Tests
         {
             var list = (int) Role.Admin;
             var role = new RoleSetWrapper(list);
-            Assert.IsTrue(role.RoleSet == 1);
+            Assert.Equals(role.RoleSet, 1);
         }
 
         [TestMethod()]
@@ -31,7 +31,7 @@ namespace UniversitySystem.Manager.Tests
             var list = new List<Role> { Role.Admin, Role.Committee };
             var role = new RoleSetWrapper(list);
             var l = role.Roles;
-            Assert.IsTrue(l.Contains(Role.Committee)&& l.Contains(Role.Admin));
+            Assert.IsTrue(l.Contains(Role.Committee) && l.Contains(Role.Admin));
         }
 
         [TestMethod()]
@@ -40,9 +40,9 @@ namespace UniversitySystem.Manager.Tests
             var list = new List<Role> { Role.Admin, Role.Committee };
             var role = new RoleSetWrapper(list);
             role.ResetRole(Role.Secretary);
-            Assert.IsTrue(role.RoleSet == 5);
+            Assert.Equals(role.RoleSet, 5);
             role.ResetRole(Role.Admin);
-            Assert.IsTrue(role.RoleSet == 4);
+            Assert.Equals(role.RoleSet, 4);
         }
 
         [TestMethod()]
@@ -50,16 +50,16 @@ namespace UniversitySystem.Manager.Tests
         {
             var role = new RoleSetWrapper((int) Role.Admin);
             role.SetRole(Role.Admin);
-            Assert.IsTrue(role.RoleSet == 1);
+            Assert.Equals(role.RoleSet, 1);
             role.SetRole(Role.Secretary);
-            Assert.IsTrue(role.RoleSet == 3);
+            Assert.Equals(role.RoleSet, 3);
         }
 
         [TestMethod()]
         public void DescriptionTest()
         {
             string str = Role.Admin.GetDescription();
-            Assert.IsTrue(str == "Администратор");
+            Assert.Equals(str, "Администратор");
         }
     }
 }

@@ -44,7 +44,7 @@ namespace UniversitySystem.Core
 
         public void ResetRole(Role role)
         {
-            RoleSet = ~(~RoleSet | (int) role);
+            RoleSet &= ~(int) role;
         }
     }
 

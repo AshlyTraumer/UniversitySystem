@@ -20,11 +20,11 @@ namespace UniversitySystem.Models
         [Compare("Password")]
         public string RetypePassword { get; set; }
 
-        public IEnumerable<Role> Role { get; set; }
+        public Role Role { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            if ((Role.Contains(ClassLibrary.Authorization.Role.Admin)) && (Password.Length < 8))
+            if ((Role == Role.Admin) && (Password.Length < 8))
                 yield return new ValidationResult("Ненадежный пароль", new[] { "Password", "Role" });
         }
     }

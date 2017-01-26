@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<UniversitySystem.Models.UserModel>
 @using UniversitySystem.Models
 @using ClassLibrary.Authorization
+@using UniversitySystem.Core
 
 <html>
 <head>
@@ -28,8 +29,8 @@
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Login</p></td>
                     <td><p>@b.Password</p></td>
-                    <td><p>@b.Role</p></td>
-                    @if (b.Role != Role.Admin)
+                    <td><p>@b.Role.GetDescription()</p></td>
+                    @if (b.Role.GetDescription() != Role.Admin.GetDescription())
                     {
                         <td><p><a href="@Url.Action("Delete","Admin", new { id = @b.Id })">Удалить</a>/<a href="@Url.Action("Change","Admin", new { id = @b.Id })">Изменить</a></p></td>
                     }
