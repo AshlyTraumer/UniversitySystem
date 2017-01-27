@@ -8,8 +8,10 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li class="active"><a href="~/Start">Вход</a></li>
-        <li><a href="~/Register">Регистрация</a></li>       
+        <li class="active"><a href="@Url.Action("Login","Start")">Вход</a></li>
+        <li><a href="@Url.Action("Index","Register")">Регистрация</a></li>       
+        <li><a href="@Url.Action("Get","Report")">Report</a></li>  
+        <li><a href="@Url.Action("GetAjax","Report")">Report Ajax</a></li>         
     </ul>
 
     <div class="form">        

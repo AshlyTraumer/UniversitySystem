@@ -26878,3 +26878,5854 @@ SELECT
 
 Закрытое соединение в 26.01.2017 10:28:26 +03:00
 
+Открыто соединение в 27.01.2017 16:09:40 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:09:40 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:09:40 +03:00
+
+Открыто соединение в 27.01.2017 16:09:40 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:09:40 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:09:40 +03:00
+
+Открыто соединение в 27.01.2017 16:09:40 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:09:40 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:09:40 +03:00
+
+Открыто соединение в 27.01.2017 16:09:40 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:09:40 +03:00
+
+-- Выполнено за 18 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:09:40 +03:00
+
+Открыто соединение в 27.01.2017 16:29:24 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:29:25 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:25 +03:00
+
+Открыто соединение в 27.01.2017 16:29:25 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:29:26 +03:00
+
+-- Выполнено за 12 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:26 +03:00
+
+Открыто соединение в 27.01.2017 16:29:26 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:29:26 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:26 +03:00
+
+Открыто соединение в 27.01.2017 16:29:26 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:29:26 +03:00
+
+-- Выполнено за 112 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:26 +03:00
+
+Открыто соединение в 27.01.2017 16:29:36 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:29:36 +03:00
+
+-- Выполнено за 41 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:36 +03:00
+
+Открыто соединение в 27.01.2017 16:29:36 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:29:36 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:36 +03:00
+
+Открыто соединение в 27.01.2017 16:29:36 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:29:36 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:36 +03:00
+
+Открыто соединение в 27.01.2017 16:29:36 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:29:37 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:37 +03:00
+
+Открыто соединение в 27.01.2017 16:29:37 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:29:37 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:37 +03:00
+
+Открыто соединение в 27.01.2017 16:29:37 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:29:37 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:37 +03:00
+
+Открыто соединение в 27.01.2017 16:29:37 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:29:37 +03:00
+
+-- Выполнено за 35 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:37 +03:00
+
+Открыто соединение в 27.01.2017 16:29:37 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:29:37 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:29:37 +03:00
+
+Открыто соединение в 27.01.2017 16:30:18 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:30:18 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:30:18 +03:00
+
+Открыто соединение в 27.01.2017 16:30:18 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:30:18 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:30:18 +03:00
+
+Открыто соединение в 27.01.2017 16:30:18 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:30:18 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:30:18 +03:00
+
+Открыто соединение в 27.01.2017 16:30:18 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:30:18 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:30:18 +03:00
+
+Открыто соединение в 27.01.2017 16:30:32 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:30:32 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:30:32 +03:00
+
+Открыто соединение в 27.01.2017 16:52:53 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:52:53 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:53 +03:00
+
+Открыто соединение в 27.01.2017 16:52:53 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:52:53 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:53 +03:00
+
+Открыто соединение в 27.01.2017 16:52:53 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:52:53 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:53 +03:00
+
+Открыто соединение в 27.01.2017 16:52:53 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:52:53 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:53 +03:00
+
+Открыто соединение в 27.01.2017 16:52:59 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:52:59 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:59 +03:00
+
+Открыто соединение в 27.01.2017 16:52:59 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:52:59 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:59 +03:00
+
+Открыто соединение в 27.01.2017 16:52:59 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:52:59 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:59 +03:00
+
+Открыто соединение в 27.01.2017 16:52:59 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:52:59 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:52:59 +03:00
+
+Открыто соединение в 27.01.2017 16:57:22 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:57:22 +03:00
+
+-- Выполнено за 47 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:57:22 +03:00
+
+Открыто соединение в 27.01.2017 16:57:22 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:57:22 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:57:22 +03:00
+
+Открыто соединение в 27.01.2017 16:57:22 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:57:22 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:57:23 +03:00
+
+Открыто соединение в 27.01.2017 16:57:23 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:57:23 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:57:23 +03:00
+
+Открыто соединение в 27.01.2017 16:59:20 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:59:20 +03:00
+
+-- Выполнено за 31 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:20 +03:00
+
+Открыто соединение в 27.01.2017 16:59:20 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:59:21 +03:00
+
+-- Выполнено за 19 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:21 +03:00
+
+Открыто соединение в 27.01.2017 16:59:21 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:59:21 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:21 +03:00
+
+Открыто соединение в 27.01.2017 16:59:21 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:59:21 +03:00
+
+-- Выполнено за 29 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:21 +03:00
+
+Открыто соединение в 27.01.2017 16:59:34 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 16:59:34 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:34 +03:00
+
+Открыто соединение в 27.01.2017 16:59:34 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 16:59:34 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:34 +03:00
+
+Открыто соединение в 27.01.2017 16:59:34 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 16:59:34 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:34 +03:00
+
+Открыто соединение в 27.01.2017 16:59:34 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 16:59:34 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 16:59:34 +03:00
+
+Открыто соединение в 27.01.2017 17:00:55 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:00:55 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:00:55 +03:00
+
+Открыто соединение в 27.01.2017 17:00:55 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:00:55 +03:00
+
+-- Выполнено за 46 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:00:55 +03:00
+
+Открыто соединение в 27.01.2017 17:00:55 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:00:55 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:00:55 +03:00
+
+Открыто соединение в 27.01.2017 17:00:55 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:00:55 +03:00
+
+-- Выполнено за 207 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:00:55 +03:00
+
+Открыто соединение в 27.01.2017 17:02:06 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:02:06 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:02:07 +03:00
+
+Открыто соединение в 27.01.2017 17:02:07 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:02:07 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:02:07 +03:00
+
+Открыто соединение в 27.01.2017 17:02:07 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:02:07 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:02:07 +03:00
+
+Открыто соединение в 27.01.2017 17:02:07 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:02:07 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:02:07 +03:00
+
+Открыто соединение в 27.01.2017 17:03:47 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:03:47 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:03:47 +03:00
+
+Открыто соединение в 27.01.2017 17:03:47 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:03:47 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:03:47 +03:00
+
+Открыто соединение в 27.01.2017 17:03:47 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:03:47 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:03:47 +03:00
+
+Открыто соединение в 27.01.2017 17:03:47 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:03:47 +03:00
+
+-- Выполнено за 31 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:03:47 +03:00
+
+Открыто соединение в 27.01.2017 17:05:32 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:05:32 +03:00
+
+-- Выполнено за 48 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:05:32 +03:00
+
+Открыто соединение в 27.01.2017 17:05:32 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:05:32 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:05:32 +03:00
+
+Открыто соединение в 27.01.2017 17:05:32 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:05:32 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:05:32 +03:00
+
+Открыто соединение в 27.01.2017 17:05:32 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:05:32 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:05:32 +03:00
+
+Открыто соединение в 27.01.2017 17:06:38 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:06:38 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:38 +03:00
+
+Открыто соединение в 27.01.2017 17:06:38 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:06:38 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:38 +03:00
+
+Открыто соединение в 27.01.2017 17:06:38 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:06:38 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:38 +03:00
+
+Открыто соединение в 27.01.2017 17:06:38 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:06:38 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:38 +03:00
+
+Открыто соединение в 27.01.2017 17:06:43 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:06:43 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:43 +03:00
+
+Открыто соединение в 27.01.2017 17:06:43 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:06:43 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:43 +03:00
+
+Открыто соединение в 27.01.2017 17:06:43 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:06:43 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:43 +03:00
+
+Открыто соединение в 27.01.2017 17:06:43 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:06:43 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:43 +03:00
+
+Открыто соединение в 27.01.2017 17:06:55 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:06:56 +03:00
+
+-- Выполнено за 32 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:06:56 +03:00
+
+Открыто соединение в 27.01.2017 17:07:31 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:07:31 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:07:31 +03:00
+
+Открыто соединение в 27.01.2017 17:07:31 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:07:31 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:07:31 +03:00
+
+Открыто соединение в 27.01.2017 17:07:31 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:07:31 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:07:31 +03:00
+
+Открыто соединение в 27.01.2017 17:07:31 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:07:31 +03:00
+
+-- Выполнено за 12 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:07:31 +03:00
+
+Открыто соединение в 27.01.2017 17:07:43 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:07:43 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:07:43 +03:00
+
+Открыто соединение в 27.01.2017 17:09:58 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:09:59 +03:00
+
+-- Выполнено за 60 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:09:59 +03:00
+
+Открыто соединение в 27.01.2017 17:09:59 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:09:59 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:09:59 +03:00
+
+Открыто соединение в 27.01.2017 17:09:59 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:09:59 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:09:59 +03:00
+
+Открыто соединение в 27.01.2017 17:09:59 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:09:59 +03:00
+
+-- Выполнено за 13 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:09:59 +03:00
+
+Открыто соединение в 27.01.2017 17:10:17 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:10:18 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:18 +03:00
+
+Открыто соединение в 27.01.2017 17:10:18 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:10:18 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:18 +03:00
+
+Открыто соединение в 27.01.2017 17:10:18 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:10:18 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:18 +03:00
+
+Открыто соединение в 27.01.2017 17:10:18 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:10:18 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:18 +03:00
+
+Открыто соединение в 27.01.2017 17:10:22 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:10:22 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:23 +03:00
+
+Открыто соединение в 27.01.2017 17:10:23 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:10:23 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:23 +03:00
+
+Открыто соединение в 27.01.2017 17:10:23 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:10:23 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:23 +03:00
+
+Открыто соединение в 27.01.2017 17:10:23 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:10:23 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:10:23 +03:00
+
+Открыто соединение в 27.01.2017 17:11:45 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:11:45 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:11:45 +03:00
+
+Открыто соединение в 27.01.2017 17:11:45 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:11:45 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:11:45 +03:00
+
+Открыто соединение в 27.01.2017 17:11:45 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:11:45 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:11:45 +03:00
+
+Открыто соединение в 27.01.2017 17:11:45 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:11:45 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:11:45 +03:00
+
+Открыто соединение в 27.01.2017 17:12:20 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:12:20 +03:00
+
+-- Выполнено за 18 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:12:20 +03:00
+
+Открыто соединение в 27.01.2017 17:12:20 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:12:20 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:12:21 +03:00
+
+Открыто соединение в 27.01.2017 17:12:21 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:12:21 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:12:21 +03:00
+
+Открыто соединение в 27.01.2017 17:12:21 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:12:21 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:12:21 +03:00
+
+Открыто соединение в 27.01.2017 17:13:40 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:13:40 +03:00
+
+-- Выполнено за 332 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:13:41 +03:00
+
+Открыто соединение в 27.01.2017 17:13:41 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:13:41 +03:00
+
+-- Выполнено за 348 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:13:42 +03:00
+
+Открыто соединение в 27.01.2017 17:13:42 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:13:42 +03:00
+
+-- Выполнено за 47 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:13:42 +03:00
+
+Открыто соединение в 27.01.2017 17:13:42 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:13:42 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:13:42 +03:00
+
+Открыто соединение в 27.01.2017 17:14:18 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:14:18 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:18 +03:00
+
+Открыто соединение в 27.01.2017 17:14:18 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:14:18 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:18 +03:00
+
+Открыто соединение в 27.01.2017 17:14:18 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:14:18 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:18 +03:00
+
+Открыто соединение в 27.01.2017 17:14:18 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:14:18 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:19 +03:00
+
+Открыто соединение в 27.01.2017 17:14:29 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:14:29 +03:00
+
+-- Выполнено за 43 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:29 +03:00
+
+Открыто соединение в 27.01.2017 17:14:46 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:14:46 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:47 +03:00
+
+Открыто соединение в 27.01.2017 17:14:47 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:14:47 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:47 +03:00
+
+Открыто соединение в 27.01.2017 17:14:47 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:14:47 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:47 +03:00
+
+Открыто соединение в 27.01.2017 17:14:47 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:14:47 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:47 +03:00
+
+Открыто соединение в 27.01.2017 17:14:55 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:14:55 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:14:55 +03:00
+
+Открыто соединение в 27.01.2017 17:15:19 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:15:19 +03:00
+
+-- Выполнено за 16 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:19 +03:00
+
+Открыто соединение в 27.01.2017 17:15:19 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:15:20 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:20 +03:00
+
+Открыто соединение в 27.01.2017 17:15:20 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:15:20 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:20 +03:00
+
+Открыто соединение в 27.01.2017 17:15:20 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:15:20 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:20 +03:00
+
+Открыто соединение в 27.01.2017 17:15:28 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:15:28 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:28 +03:00
+
+Открыто соединение в 27.01.2017 17:15:53 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:15:53 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:53 +03:00
+
+Открыто соединение в 27.01.2017 17:15:53 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:15:53 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:53 +03:00
+
+Открыто соединение в 27.01.2017 17:15:53 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:15:53 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:53 +03:00
+
+Открыто соединение в 27.01.2017 17:15:53 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:15:53 +03:00
+
+-- Выполнено за 14 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:15:53 +03:00
+
+Открыто соединение в 27.01.2017 17:16:00 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:16:00 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:16:00 +03:00
+
+Открыто соединение в 27.01.2017 17:16:34 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:16:35 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:16:35 +03:00
+
+Открыто соединение в 27.01.2017 17:16:35 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:16:35 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:16:35 +03:00
+
+Открыто соединение в 27.01.2017 17:16:35 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:16:35 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:16:35 +03:00
+
+Открыто соединение в 27.01.2017 17:16:35 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:16:35 +03:00
+
+-- Выполнено за 16 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:16:35 +03:00
+
+Открыто соединение в 27.01.2017 17:16:50 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:16:51 +03:00
+
+-- Выполнено за 13 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:16:51 +03:00
+
+Открыто соединение в 27.01.2017 17:20:09 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:20:09 +03:00
+
+-- Выполнено за 91 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:20:09 +03:00
+
+Открыто соединение в 27.01.2017 17:20:09 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:20:10 +03:00
+
+-- Выполнено за 17 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:20:10 +03:00
+
+Открыто соединение в 27.01.2017 17:20:10 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:20:10 +03:00
+
+-- Выполнено за 64 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:20:10 +03:00
+
+Открыто соединение в 27.01.2017 17:20:10 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:20:10 +03:00
+
+-- Выполнено за 90 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:20:10 +03:00
+
+Открыто соединение в 27.01.2017 17:20:24 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:20:25 +03:00
+
+-- Выполнено за 16 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:20:25 +03:00
+
+Открыто соединение в 27.01.2017 17:21:14 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:21:14 +03:00
+
+-- Выполнено за 17 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:21:14 +03:00
+
+Открыто соединение в 27.01.2017 17:21:14 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:21:14 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:21:15 +03:00
+
+Открыто соединение в 27.01.2017 17:21:15 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:21:15 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:21:15 +03:00
+
+Открыто соединение в 27.01.2017 17:21:15 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:21:15 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:21:15 +03:00
+
+Открыто соединение в 27.01.2017 17:21:34 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:21:34 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:21:34 +03:00
+
+Открыто соединение в 27.01.2017 17:22:25 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:22:25 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:22:25 +03:00
+
+Открыто соединение в 27.01.2017 17:22:25 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:22:25 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:22:25 +03:00
+
+Открыто соединение в 27.01.2017 17:22:25 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:22:25 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:22:25 +03:00
+
+Открыто соединение в 27.01.2017 17:22:25 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:22:25 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:22:25 +03:00
+
+Открыто соединение в 27.01.2017 17:22:36 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:22:37 +03:00
+
+-- Выполнено за 17 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:22:37 +03:00
+
+Открыто соединение в 27.01.2017 17:23:25 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:23:25 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:23:25 +03:00
+
+Открыто соединение в 27.01.2017 17:23:25 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:23:25 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:23:25 +03:00
+
+Открыто соединение в 27.01.2017 17:23:25 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:23:25 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:23:25 +03:00
+
+Открыто соединение в 27.01.2017 17:23:25 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:23:25 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:23:25 +03:00
+
+Открыто соединение в 27.01.2017 17:23:33 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:23:33 +03:00
+
+-- Выполнено за 358 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:23:33 +03:00
+
+Открыто соединение в 27.01.2017 17:25:47 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:25:47 +03:00
+
+-- Выполнено за 67 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:25:47 +03:00
+
+Открыто соединение в 27.01.2017 17:25:47 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:25:47 +03:00
+
+-- Выполнено за 11 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:25:47 +03:00
+
+Открыто соединение в 27.01.2017 17:25:47 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:25:47 +03:00
+
+-- Выполнено за 8 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:25:47 +03:00
+
+Открыто соединение в 27.01.2017 17:25:47 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:25:47 +03:00
+
+-- Выполнено за 168 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:25:48 +03:00
+
+Открыто соединение в 27.01.2017 17:25:57 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:25:57 +03:00
+
+-- Выполнено за 71 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:25:57 +03:00
+
+Открыто соединение в 27.01.2017 17:26:57 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:26:57 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:26:57 +03:00
+
+Открыто соединение в 27.01.2017 17:26:57 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:26:57 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:26:57 +03:00
+
+Открыто соединение в 27.01.2017 17:26:57 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:26:58 +03:00
+
+-- Выполнено за 17 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:26:58 +03:00
+
+Открыто соединение в 27.01.2017 17:26:58 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:26:58 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:26:58 +03:00
+
+Открыто соединение в 27.01.2017 17:28:19 +03:00
+
+
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Departament','dbo.Professor','dbo.Schedule','dbo.Subject','dbo.Result','dbo.Entrant','dbo.SubjectSpecialization','dbo.Specialization','dbo.Authorization')
+    OR t.TABLE_NAME = 'EdmMetadata'
+
+
+-- Выполнение в 27.01.2017 17:28:20 +03:00
+
+-- Выполнено за 253 мс. Результат: 9
+
+
+
+Закрытое соединение в 27.01.2017 17:28:20 +03:00
+
+Открыто соединение в 27.01.2017 17:28:21 +03:00
+
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 27.01.2017 17:28:24 +03:00
+
+-- Выполнено за 6 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:24 +03:00
+
+Открыто соединение в 27.01.2017 17:28:24 +03:00
+
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+
+
+-- p__linq__0: 'ClassLibrary.Migrations.Configuration' (Type = String, Size = 4000)
+
+-- Выполнение в 27.01.2017 17:28:24 +03:00
+
+-- Выполнено за 143 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:24 +03:00
+
+Открыто соединение в 27.01.2017 17:28:25 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:28:26 +03:00
+
+-- Выполнено за 67 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:26 +03:00
+
+Открыто соединение в 27.01.2017 17:28:26 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:28:26 +03:00
+
+-- Выполнено за 120 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:26 +03:00
+
+Открыто соединение в 27.01.2017 17:28:26 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:28:27 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:27 +03:00
+
+Открыто соединение в 27.01.2017 17:28:27 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:28:27 +03:00
+
+-- Выполнено за 12 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:27 +03:00
+
+Открыто соединение в 27.01.2017 17:28:39 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:28:40 +03:00
+
+-- Выполнено за 100 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:28:40 +03:00
+
+Открыто соединение в 27.01.2017 17:33:53 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:33:53 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:33:54 +03:00
+
+Открыто соединение в 27.01.2017 17:33:54 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:33:54 +03:00
+
+-- Выполнено за 45 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:33:54 +03:00
+
+Открыто соединение в 27.01.2017 17:33:54 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:33:54 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:33:54 +03:00
+
+Открыто соединение в 27.01.2017 17:33:54 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:33:54 +03:00
+
+-- Выполнено за 22 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:33:54 +03:00
+
+Открыто соединение в 27.01.2017 17:34:02 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:34:02 +03:00
+
+-- Выполнено за 678 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:34:03 +03:00
+
+Открыто соединение в 27.01.2017 17:40:09 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:40:09 +03:00
+
+-- Выполнено за 117 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:09 +03:00
+
+Открыто соединение в 27.01.2017 17:40:09 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:40:09 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:09 +03:00
+
+Открыто соединение в 27.01.2017 17:40:09 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:40:09 +03:00
+
+-- Выполнено за 26 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:09 +03:00
+
+Открыто соединение в 27.01.2017 17:40:09 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:40:09 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:09 +03:00
+
+Открыто соединение в 27.01.2017 17:40:10 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:40:10 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:10 +03:00
+
+Открыто соединение в 27.01.2017 17:40:17 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:40:17 +03:00
+
+-- Выполнено за 159 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:17 +03:00
+
+Открыто соединение в 27.01.2017 17:40:17 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:40:18 +03:00
+
+-- Выполнено за 15 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:18 +03:00
+
+Открыто соединение в 27.01.2017 17:40:18 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:40:18 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:18 +03:00
+
+Открыто соединение в 27.01.2017 17:40:18 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:40:18 +03:00
+
+-- Выполнено за 5 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:18 +03:00
+
+Открыто соединение в 27.01.2017 17:40:27 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:40:27 +03:00
+
+-- Выполнено за 199 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:40:28 +03:00
+
+Открыто соединение в 27.01.2017 17:44:00 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:44:00 +03:00
+
+-- Выполнено за 7 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:00 +03:00
+
+Открыто соединение в 27.01.2017 17:44:00 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:44:00 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:00 +03:00
+
+Открыто соединение в 27.01.2017 17:44:00 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:44:00 +03:00
+
+-- Выполнено за 4 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:00 +03:00
+
+Открыто соединение в 27.01.2017 17:44:00 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:44:00 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:00 +03:00
+
+Открыто соединение в 27.01.2017 17:44:07 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:44:07 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:07 +03:00
+
+Открыто соединение в 27.01.2017 17:44:07 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:44:07 +03:00
+
+-- Выполнено за 20 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:07 +03:00
+
+Открыто соединение в 27.01.2017 17:44:07 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:44:07 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:07 +03:00
+
+Открыто соединение в 27.01.2017 17:44:07 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:44:07 +03:00
+
+-- Выполнено за 1 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:44:07 +03:00
+
+Открыто соединение в 27.01.2017 17:44:07 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:44:08 +03:00
+
+-- Выполнено за 10 мс. Результат: SqlDataReader
+
+
+
+Открыто соединение в 27.01.2017 17:45:46 +03:00
+
+SELECT 
+    [Project2].[SubjectId] AS [SubjectId], 
+    [Project2].[Title] AS [Title], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[SubjectId] AS [SubjectId], 
+        [Project1].[Title] AS [Title], 
+        [Project1].[C1] AS [C1], 
+        (SELECT 
+            MAX([Extent4].[Points]) AS [A1]
+            FROM [dbo].[Result] AS [Extent4]
+            WHERE [Project1].[SubjectId] = [Extent4].[SubjectId]) AS [C2]
+        FROM ( SELECT 
+            [Extent1].[SubjectId] AS [SubjectId], 
+            [Extent2].[Title] AS [Title], 
+            (SELECT 
+                MIN([Extent3].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent3]
+                WHERE [Extent1].[SubjectId] = [Extent3].[SubjectId]) AS [C1]
+            FROM  [dbo].[SubjectSpecialization] AS [Extent1]
+            INNER JOIN [dbo].[Specialization] AS [Extent2] ON [Extent1].[SpecializationId] = [Extent2].[Id]
+            WHERE [Extent1].[SpecializationId] = @p__linq__0
+        )  AS [Project1]
+    )  AS [Project2]
+
+
+-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+-- Выполнение в 27.01.2017 17:45:47 +03:00
+
+-- Выполнено за 3 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:45:47 +03:00
+
+Открыто соединение в 27.01.2017 17:45:47 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:45:47 +03:00
+
+-- Выполнено за 111 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:45:47 +03:00
+
+Открыто соединение в 27.01.2017 17:45:47 +03:00
+
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Title] AS [Title], 
+    (SELECT 
+        AVG( CAST( [Extent2].[Points] AS float)) AS [A1]
+        FROM [dbo].[Result] AS [Extent2]
+        WHERE [Extent1].[Id] = [Extent2].[SubjectId]) AS [C1]
+    FROM [dbo].[Subject] AS [Extent1]
+
+
+-- Выполнение в 27.01.2017 17:45:47 +03:00
+
+-- Выполнено за 2 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:45:47 +03:00
+
+Открыто соединение в 27.01.2017 17:45:47 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:45:47 +03:00
+
+-- Выполнено за 9 мс. Результат: SqlDataReader
+
+
+
+Закрытое соединение в 27.01.2017 17:45:47 +03:00
+
+Открыто соединение в 27.01.2017 17:45:47 +03:00
+
+SELECT 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Title] AS [Title], 
+    [Project1].[C1] AS [C1]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent2].[Title] AS [Title], 
+        (SELECT 
+            COUNT(1) AS [A1]
+            FROM [dbo].[Schedule] AS [Extent3]
+            WHERE [Extent1].[Id] = [Extent3].[ProfessorId]) AS [C1]
+        FROM  [dbo].[Professor] AS [Extent1]
+        INNER JOIN [dbo].[Departament] AS [Extent2] ON [Extent1].[DepartamentId] = [Extent2].[Id]
+    )  AS [Project1]
+    ORDER BY [Project1].[C1] DESC
+
+
+-- Выполнение в 27.01.2017 17:45:47 +03:00
+
+-- Выполнено за 44 мс. Результат: SqlDataReader
+
+Открыто соединение в 27.01.2017 17:45:47 +03:00
+
+SELECT 
+    [Project2].[Id] AS [Id], 
+    [Project2].[Passport] AS [Passport], 
+    [Project2].[C1] AS [C1], 
+    [Project2].[C2] AS [C2]
+    FROM ( SELECT 
+        [Project1].[Id] AS [Id], 
+        [Project1].[Passport] AS [Passport], 
+        [Project1].[FirstName] + N' ' + [Project1].[Name] + N' ' + [Project1].[LastName] AS [C1], 
+        [Project1].[C1] AS [C2]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[Passport] AS [Passport], 
+            [Extent1].[FirstName] AS [FirstName], 
+            [Extent1].[Name] AS [Name], 
+            [Extent1].[LastName] AS [LastName], 
+            (SELECT 
+                SUM([Extent2].[Points]) AS [A1]
+                FROM [dbo].[Result] AS [Extent2]
+                WHERE [Extent1].[Id] = [Extent2].[EntrantId]) AS [C1]
+            FROM [dbo].[Entrant] AS [Extent1]
+        )  AS [Project1]
+    )  AS [Project2]
+    ORDER BY [Project2].[C2] DESC
+
+
+-- Выполнение в 27.01.2017 17:45:48 +03:00
+

@@ -1,0 +1,66 @@
+﻿@model UniversitySystem.Models.ReportModel.CommonReportModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="span6" id="TopEntrant"></div>
+        <div class="span6" id="AverageSubject"></div>
+        <div class="span6" id="ProfessorQuery"></div>
+        <div class="span6" id="SpecialityMinMax"></div>
+    </div>
+</div>
+
+
+     <script>
+         $(document).ready(function() {
+             $.ajax({
+                 url: '@Url.Action("TopEntrantPartial", "Report")',
+                 type: 'GET',
+                 success: function(data) {
+                     $('#TopEntrant').html(data);
+                 }
+             });
+
+             $.ajax({
+                 url: '@Url.Action("ProfessorQueryPartial", "Report")',
+                 type: 'GET',
+                 success: function (data) {
+                     $('#ProfessorQuery').html(data);
+                 }
+             });
+
+             $.ajax({
+                 url: '@Url.Action("AverageSubjectMarkPartial", "Report")',
+                 type: 'GET',
+                 success: function (data) {
+                     $('#AverageSubject').html(data);
+                 }
+             });
+
+             $.ajax({
+                 url: '@Url.Action("SpecialityMinMaxPartial", "Report")',
+                 type: 'GET',
+                 success: function (data) {
+                     $('#SpecialityMinMax').html(data);
+                 }
+             });
+         });
+     </script>
+   
+
+
+
+
+</body>
+</html>
+
+

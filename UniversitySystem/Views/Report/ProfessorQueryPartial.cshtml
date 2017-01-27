@@ -1,0 +1,24 @@
+﻿@model IEnumerable<UniversitySystem.Models.ReportModel.ProfessorQueryModel>
+@{
+    ViewBag.Title = "ProfessorQueryPartial";
+}
+
+<h2>Нагрузка преподавателей</h2>
+<table class="table">
+    <tr>
+        <th>Факультет</th>
+        <th>ФИО</th>
+        <th>Количество экзаменов</th>
+    </tr>
+    
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.DapartamentTitle</td>
+                <td>@m.ProfessorName</td>
+                <td>@m.ExamCount</td>
+            </tr>
+        }
+   
+</table>
+
