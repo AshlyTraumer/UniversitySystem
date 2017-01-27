@@ -5,6 +5,8 @@ using System.Web.Mvc;
 using UniversitySystem.Models;
 using UniversitySystem.Manager;
 using UniversitySystem.Core;
+using UniversitySystem.Models.ReportModel;
+using UniversitySystem.Report;
 
 namespace UniversitySystem.Controllers
 {
@@ -23,6 +25,7 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Login()
         {
+            var list = new SpecialityMinMaxQuery(new RepositoryContext()).Get(2);
             return View();
         }
 

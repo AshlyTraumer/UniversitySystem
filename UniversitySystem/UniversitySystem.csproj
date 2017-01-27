@@ -238,6 +238,11 @@
     <Compile Include="Models\ProfessorModel.cs" />
     <Compile Include="Models\ProfessorViewModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\ReportModel\AverageSubjectMarkModel.cs" />
+    <Compile Include="Models\ReportModel\ProfessorQueryModel.cs" />
+    <Compile Include="Models\ReportModel\SpecialityMinMaxModel.cs" />
+    <Compile Include="Report\ProfessorQuery.cs" />
+    <Compile Include="Models\ReportModel\TopEntrantModel.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\ResultViewModel.cs" />
     <Compile Include="Models\ScheduleModel.cs" />
@@ -247,6 +252,11 @@
     <Compile Include="Models\SubjectModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\AverageSubjectMarkQuery.cs" />
+    <Compile Include="Report\IReportParam.cs" />
+    <Compile Include="Report\IReport.cs" />
+    <Compile Include="Report\SpecialityMinMaxQuery.cs" />
+    <Compile Include="Report\TopEntrantQuery.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

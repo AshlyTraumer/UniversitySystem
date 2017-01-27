@@ -9,7 +9,6 @@ namespace UniversitySystem.Manager
     public abstract class BaseManager<T, TModel> where T : BaseEntity where TModel : ChangeModelBase
     {
         protected RepositoryContext Context;
-       // protected T _entity;
 
         protected BaseManager(RepositoryContext context)
         {            

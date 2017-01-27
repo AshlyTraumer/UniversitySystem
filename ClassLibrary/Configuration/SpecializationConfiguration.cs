@@ -17,7 +17,7 @@ namespace ClassLibrary
                 .HasMaxLength(30)
                 .IsRequired();
 
-            HasMany(p => p.SubjectSpecializations)
+            HasMany(p => p.SubjectsSpecialization)
                .WithRequired(p => p.Specialization)
                .WillCascadeOnDelete(false); ;
 

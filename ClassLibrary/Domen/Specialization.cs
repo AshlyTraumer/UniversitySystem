@@ -11,11 +11,11 @@ namespace ClassLibrary
         public int DepartamentId { get; set; }
         public Departament Departament { get; set; }
 
-        public virtual ICollection<SubjectSpecialization> SubjectSpecializations { get; set; }
+        public virtual ICollection<SubjectSpecialization> SubjectsSpecialization { get; set; }
 
         public Specialization()
         {
-            SubjectSpecializations = new List<SubjectSpecialization>();
+            SubjectsSpecialization = new List<SubjectSpecialization>();
         }
     }
 }
