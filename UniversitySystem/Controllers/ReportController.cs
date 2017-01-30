@@ -37,23 +37,25 @@ namespace UniversitySystem.Controllers
         }
 
         public ActionResult TopEntrantPartial()
+       // public JsonResult TopEntrantPartial()
         {
-            return PartialView(new TopEntrantQuery(Context).Get());
+            //return Json(new TopEntrantQuery(Context).Get(), JsonRequestBehavior.AllowGet);
+            return PartialView("_TopEntrantPartial", new TopEntrantQuery(Context).Get());
         }
 
         public ActionResult ProfessorQueryPartial( )
         {
-            return PartialView(new ProfessorQuery(Context).Get());
+            return PartialView("_ProfessorQueryPartial",new ProfessorQuery(Context).Get());
         }
 
         public ActionResult AverageSubjectMarkPartial()
         {
-            return PartialView(new AverageSubjectMarkQuery(Context).Get());
+            return PartialView("_AverageSubjectMarkPartial", new AverageSubjectMarkQuery(Context).Get());
         }
 
         public ActionResult SpecialityMinMaxPartial()
         {
-            return PartialView(new SpecialityMinMaxQuery(Context).Get(2));
+            return PartialView("_SpecialityMinMaxPartial", new SpecialityMinMaxQuery(Context).Get(2));
         }
     }
 }

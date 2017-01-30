@@ -1275,3 +1275,241 @@
 2017-01-27 17:52:17.4941|INFO|UniversitySystem.Core.LogService|Result 0.0
 2017-01-27 17:52:17.8759|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.6
 2017-01-27 17:52:17.9074|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-30 09:15:09.4869|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 13.81
+2017-01-30 09:15:11.5609|INFO|UniversitySystem.Core.LogService|Result 1.84
+2017-01-30 09:15:15.2725|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.58
+2017-01-30 09:15:15.6886|INFO|UniversitySystem.Core.LogService|Result 0.39
+2017-01-30 09:15:16.5110|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.23
+2017-01-30 09:15:16.5266|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.24
+2017-01-30 09:15:16.6324|INFO|UniversitySystem.Core.LogService|Result 0.6
+2017-01-30 09:15:16.7085|INFO|UniversitySystem.Core.LogService|Result 0.17
+2017-01-30 09:15:16.7845|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.2
+2017-01-30 09:15:16.7845|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.0
+2017-01-30 09:15:16.8446|INFO|UniversitySystem.Core.LogService|Result 0.5
+2017-01-30 09:15:16.8914|INFO|UniversitySystem.Core.LogService|Result 0.8
+2017-01-30 09:26:08.9325|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 5.70
+2017-01-30 09:26:16.5203|INFO|UniversitySystem.Core.LogService|Result 7.47
+2017-01-30 09:26:18.7235|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.31
+2017-01-30 09:26:20.3365|INFO|UniversitySystem.Core.LogService|Result 1.59
+2017-01-30 09:26:20.7943|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.6
+2017-01-30 09:26:20.8113|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:26:20.8313|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.7
+2017-01-30 09:26:20.9880|INFO|UniversitySystem.Core.LogService|Result 0.14
+2017-01-30 09:26:21.1566|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.41
+2017-01-30 09:26:21.1721|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:26:21.3042|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.10
+2017-01-30 09:26:21.3972|INFO|UniversitySystem.Core.LogService|Result 0.8
+2017-01-30 09:29:27.6825|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 2.8
+2017-01-30 09:29:30.2378|INFO|UniversitySystem.Core.LogService|Result 2.35
+2017-01-30 09:29:32.7784|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.13
+2017-01-30 09:29:33.8917|INFO|UniversitySystem.Core.LogService|Result 1.9
+2017-01-30 09:29:34.3875|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.7
+2017-01-30 09:29:34.4330|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-01-30 09:29:34.4471|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.7
+2017-01-30 09:29:34.5286|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:29:34.5531|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.19
+2017-01-30 09:29:34.5696|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:29:34.7703|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.8
+2017-01-30 09:29:34.8493|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-30 09:33:47.8534|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 1.95
+2017-01-30 09:33:50.2733|INFO|UniversitySystem.Core.LogService|Result 2.32
+2017-01-30 09:33:57.2586|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.13
+2017-01-30 09:33:58.3036|INFO|UniversitySystem.Core.LogService|Result 1.2
+2017-01-30 09:33:59.5919|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.3
+2017-01-30 09:33:59.6174|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:33:59.7975|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.22
+2017-01-30 09:33:59.9246|INFO|UniversitySystem.Core.LogService|Result 0.11
+2017-01-30 09:33:59.9826|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.42
+2017-01-30 09:34:00.0031|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.8
+2017-01-30 09:34:00.0307|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:34:00.0031|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:42:13.2097|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 5.64
+2017-01-30 09:42:22.5047|INFO|UniversitySystem.Core.LogService|Result 9.11
+2017-01-30 09:42:47.9452|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.27
+2017-01-30 09:42:54.7035|INFO|UniversitySystem.Core.LogService|Result 6.74
+2017-01-30 09:42:55.0687|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.5
+2017-01-30 09:42:55.1228|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:42:55.1913|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "AverageSubjectMarkPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/AverageSubjectMarkPartial.aspx
+~/Views/Report/AverageSubjectMarkPartial.ascx
+~/Views/Shared/AverageSubjectMarkPartial.aspx
+~/Views/Shared/AverageSubjectMarkPartial.ascx
+~/Views/Report/AverageSubjectMarkPartial.cshtml
+~/Views/Report/AverageSubjectMarkPartial.vbhtml
+~/Views/Shared/AverageSubjectMarkPartial.cshtml
+~/Views/Shared/AverageSubjectMarkPartial.vbhtml
+2017-01-30 09:42:55.1913|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.14
+2017-01-30 09:42:55.2383|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:42:55.2834|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "ProfessorQueryPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/ProfessorQueryPartial.aspx
+~/Views/Report/ProfessorQueryPartial.ascx
+~/Views/Shared/ProfessorQueryPartial.aspx
+~/Views/Shared/ProfessorQueryPartial.ascx
+~/Views/Report/ProfessorQueryPartial.cshtml
+~/Views/Report/ProfessorQueryPartial.vbhtml
+~/Views/Shared/ProfessorQueryPartial.cshtml
+~/Views/Shared/ProfessorQueryPartial.vbhtml
+2017-01-30 09:42:55.2834|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.0
+2017-01-30 09:42:55.2113|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.0
+2017-01-30 09:42:56.2425|INFO|UniversitySystem.Core.LogService|Result 0.93
+2017-01-30 09:42:56.2425|INFO|UniversitySystem.Core.LogService|Result 0.91
+2017-01-30 09:42:56.4356|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.4
+2017-01-30 09:42:56.4772|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.5
+2017-01-30 09:42:56.4937|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:42:56.5082|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "SpecialityMinMaxPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/SpecialityMinMaxPartial.aspx
+~/Views/Report/SpecialityMinMaxPartial.ascx
+~/Views/Shared/SpecialityMinMaxPartial.aspx
+~/Views/Shared/SpecialityMinMaxPartial.ascx
+~/Views/Report/SpecialityMinMaxPartial.cshtml
+~/Views/Report/SpecialityMinMaxPartial.vbhtml
+~/Views/Shared/SpecialityMinMaxPartial.cshtml
+~/Views/Shared/SpecialityMinMaxPartial.vbhtml
+2017-01-30 09:42:56.5187|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.0
+2017-01-30 09:42:56.5287|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:42:56.5442|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-30 09:48:04.7296|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 1.63
+2017-01-30 09:48:07.1623|INFO|UniversitySystem.Core.LogService|Result 2.24
+2017-01-30 09:48:11.0874|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.11
+2017-01-30 09:48:12.4439|INFO|UniversitySystem.Core.LogService|Result 1.33
+2017-01-30 09:48:12.9259|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.8
+2017-01-30 09:48:12.9589|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:48:12.9799|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.5
+2017-01-30 09:48:13.0134|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-30 09:48:13.0405|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "ProfessorQueryPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/ProfessorQueryPartial.aspx
+~/Views/Report/ProfessorQueryPartial.ascx
+~/Views/Shared/ProfessorQueryPartial.aspx
+~/Views/Shared/ProfessorQueryPartial.ascx
+~/Views/Report/ProfessorQueryPartial.cshtml
+~/Views/Report/ProfessorQueryPartial.vbhtml
+~/Views/Shared/ProfessorQueryPartial.cshtml
+~/Views/Shared/ProfessorQueryPartial.vbhtml
+2017-01-30 09:48:13.0660|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.0
+2017-01-30 09:48:13.2001|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.30
+2017-01-30 09:48:13.2001|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.1
+2017-01-30 09:48:13.2336|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:48:13.2186|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:48:13.2856|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "AverageSubjectMarkPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/AverageSubjectMarkPartial.aspx
+~/Views/Report/AverageSubjectMarkPartial.ascx
+~/Views/Shared/AverageSubjectMarkPartial.aspx
+~/Views/Shared/AverageSubjectMarkPartial.ascx
+~/Views/Report/AverageSubjectMarkPartial.cshtml
+~/Views/Report/AverageSubjectMarkPartial.vbhtml
+~/Views/Shared/AverageSubjectMarkPartial.cshtml
+~/Views/Shared/AverageSubjectMarkPartial.vbhtml
+2017-01-30 09:48:13.2996|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.0
+2017-01-30 09:48:14.2908|INFO|UniversitySystem.Core.LogService|Result 1.9
+2017-01-30 09:48:14.3218|INFO|UniversitySystem.Core.LogService|Result 0.92
+2017-01-30 09:51:58.0268|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 2.47
+2017-01-30 09:52:00.2610|INFO|UniversitySystem.Core.LogService|Result 2.19
+2017-01-30 09:52:07.9871|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.15
+2017-01-30 09:52:09.0204|INFO|UniversitySystem.Core.LogService|Result 1.0
+2017-01-30 09:52:09.5592|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_SpecialityMinMaxPartial Time: 0.8
+2017-01-30 09:52:09.6563|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:52:09.6698|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_AverageSubjectMarkPartial Time: 0.11
+2017-01-30 09:52:09.7383|INFO|UniversitySystem.Core.LogService|Result 0.5
+2017-01-30 09:52:09.7894|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_ProfessorQueryPartial Time: 0.26
+2017-01-30 09:52:09.8124|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:52:10.0421|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_TopEntrantPartial Time: 0.10
+2017-01-30 09:52:10.0656|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:53:36.0827|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 1.58
+2017-01-30 09:53:38.7476|INFO|UniversitySystem.Core.LogService|Result 2.55
+2017-01-30 09:53:47.1258|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.11
+2017-01-30 09:53:48.2854|INFO|UniversitySystem.Core.LogService|Result 1.14
+2017-01-30 09:53:48.6390|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_TopEntrantPartial Time: 0.6
+2017-01-30 09:53:48.6906|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-30 09:53:48.7471|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_ProfessorQueryPartial Time: 0.11
+2017-01-30 09:53:48.9462|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_AverageSubjectMarkPartial Time: 0.31
+2017-01-30 09:53:48.9462|INFO|UniversitySystem.Core.LogService|Result 0.18
+2017-01-30 09:53:48.9752|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:53:49.0953|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_SpecialityMinMaxPartial Time: 0.15
+2017-01-30 09:53:49.1814|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:54:03.5648|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.2
+2017-01-30 09:54:10.9741|INFO|UniversitySystem.Core.LogService|Result 7.38
+2017-01-30 09:54:11.7381|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_TopEntrantPartial Time: 0.10
+2017-01-30 09:54:11.7581|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:54:11.9547|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_SpecialityMinMaxPartial Time: 0.31
+2017-01-30 09:54:11.9662|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:54:12.5461|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_AverageSubjectMarkPartial Time: 0.89
+2017-01-30 09:54:12.5902|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:54:12.9089|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/_ProfessorQueryPartial Time: 0.36
+2017-01-30 09:54:13.0334|INFO|UniversitySystem.Core.LogService|Result 0.6
+2017-01-30 09:59:10.0458|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 2.42
+2017-01-30 09:59:12.5641|INFO|UniversitySystem.Core.LogService|Result 2.40
+2017-01-30 09:59:14.9242|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.11
+2017-01-30 09:59:16.3660|INFO|UniversitySystem.Core.LogService|Result 1.42
+2017-01-30 09:59:16.9282|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.16
+2017-01-30 09:59:16.9492|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 09:59:17.0663|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.21
+2017-01-30 09:59:17.1804|INFO|UniversitySystem.Core.LogService|Result 0.9
+2017-01-30 09:59:17.1954|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "AverageSubjectMarkPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/AverageSubjectMarkPartial.aspx
+~/Views/Report/AverageSubjectMarkPartial.ascx
+~/Views/Shared/AverageSubjectMarkPartial.aspx
+~/Views/Shared/AverageSubjectMarkPartial.ascx
+~/Views/Report/AverageSubjectMarkPartial.cshtml
+~/Views/Report/AverageSubjectMarkPartial.vbhtml
+~/Views/Shared/AverageSubjectMarkPartial.cshtml
+~/Views/Shared/AverageSubjectMarkPartial.vbhtml
+2017-01-30 09:59:17.2234|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.0
+2017-01-30 09:59:17.2659|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.34
+2017-01-30 09:59:17.3039|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-30 09:59:17.3140|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.8
+2017-01-30 09:59:17.3830|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 09:59:17.3710|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти частичное представление "SpecialityMinMaxPartial" или ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Report/SpecialityMinMaxPartial.aspx
+~/Views/Report/SpecialityMinMaxPartial.ascx
+~/Views/Shared/SpecialityMinMaxPartial.aspx
+~/Views/Shared/SpecialityMinMaxPartial.ascx
+~/Views/Report/SpecialityMinMaxPartial.cshtml
+~/Views/Report/SpecialityMinMaxPartial.vbhtml
+~/Views/Shared/SpecialityMinMaxPartial.cshtml
+~/Views/Shared/SpecialityMinMaxPartial.vbhtml
+2017-01-30 09:59:17.4260|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.0
+2017-01-30 09:59:18.1775|INFO|UniversitySystem.Core.LogService|Result 0.94
+2017-01-30 09:59:18.1930|INFO|UniversitySystem.Core.LogService|Result 0.74
+2017-01-30 10:00:22.4999|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 1.51
+2017-01-30 10:00:24.9033|INFO|UniversitySystem.Core.LogService|Result 2.34
+2017-01-30 10:00:27.4448|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.21
+2017-01-30 10:00:28.6022|INFO|UniversitySystem.Core.LogService|Result 1.13
+2017-01-30 10:00:29.2041|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.19
+2017-01-30 10:00:29.2411|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 10:00:29.3081|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.10
+2017-01-30 10:00:29.3732|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.24
+2017-01-30 10:00:29.3897|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 10:00:29.3897|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-01-30 10:00:29.3897|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.6
+2017-01-30 10:00:29.4878|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 10:02:04.9678|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 1.30
+2017-01-30 10:02:07.1977|INFO|UniversitySystem.Core.LogService|Result 2.16
+2017-01-30 10:02:10.8960|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.11
+2017-01-30 10:02:11.9792|INFO|UniversitySystem.Core.LogService|Result 1.7
+2017-01-30 10:02:12.5481|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.25
+2017-01-30 10:02:12.5671|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 10:02:12.6751|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.30
+2017-01-30 10:02:12.6926|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 10:02:12.6926|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.14
+2017-01-30 10:02:12.7397|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 10:02:12.8297|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.5
+2017-01-30 10:02:12.8728|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 10:36:52.6236|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 3.93
+2017-01-30 10:37:01.7394|INFO|UniversitySystem.Core.LogService|Result 9.6
+2017-01-30 10:37:01.7928|ERROR|UniversitySystem.Core.LogService|E:\UniversitySystem\UniversitySystem\Views\Start\Login.cshtml(25): error CS0122: 'Resource' is inaccessible due to its protection level
+2017-01-30 11:19:40.6882|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 5.67
+2017-01-30 11:19:52.4666|INFO|UniversitySystem.Core.LogService|Result 11.73
+2017-01-30 11:19:52.4978|ERROR|UniversitySystem.Core.LogService|E:\UniversitySystem\UniversitySystem\Views\Start\Login.cshtml(25): error CS0122: 'Resource' is inaccessible due to its protection level
+2017-01-30 11:43:47.2270|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 5.49
+2017-01-30 11:43:53.5106|INFO|UniversitySystem.Core.LogService|Result 6.10
+2017-01-30 11:43:53.5346|ERROR|UniversitySystem.Core.LogService|E:\UniversitySystem\UniversitySystem\Views\Start\Login.cshtml(25): error CS0122: 'Resource' is inaccessible due to its protection level
+2017-01-30 11:51:07.7705|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 4.92
+2017-01-30 11:51:15.1412|INFO|UniversitySystem.Core.LogService|Result 7.28
+2017-01-30 11:51:43.8577|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-01-30 11:51:48.8110|INFO|UniversitySystem.Core.LogService|Result 4.94
+2017-01-30 11:54:42.8306|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-30 11:54:45.0667|INFO|UniversitySystem.Core.LogService|Result 2.18
+2017-01-30 11:57:11.0663|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 11:57:13.5365|INFO|UniversitySystem.Core.LogService|Result 2.34
+2017-01-30 11:57:55.5656|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 11:57:57.7999|INFO|UniversitySystem.Core.LogService|Result 2.18

@@ -9,15 +9,17 @@
         <th>ФИО</th>
         <th>Набранный балл</th>
     </tr>
-    
-        @foreach (var m in Model)
-        {
-            <tr>
-             <td>@m.Passport</td>
-             <td>@m.Name</td>
-             <td>@m.Points</td>
-         </tr>
-        }
-    
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Passport</td>
+            <td>@m.Name</td>
+            <td>@m.Points</td>
+        </tr>
+    }
+
 </table>
+
+
 

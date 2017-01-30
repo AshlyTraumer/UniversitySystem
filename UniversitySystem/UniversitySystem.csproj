@@ -209,6 +209,16 @@
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
     <Compile Include="Core\RoleSet.cs" />
+    <Compile Include="Resources\Resource.Designer.cs">
+      <DependentUpon>Resource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Resource.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.en.resx</DependentUpon>
+    </Compile>
     <Compile Include="Manager\EntrantManager.cs" />
     <Compile Include="Manager\ResultManager.cs" />
     <Compile Include="Manager\ScheduleManager.cs" />
@@ -335,12 +345,12 @@
     <Content Include="Views\Entrant\Create.cshtml" />
     <Content Include="Views\Entrant\Change.cshtml" />
     <Content Include="Views\Committee\Change.cshtml" />
-    <Content Include="Views\Report\TopEntrantPartial.cshtml" />
-    <Content Include="Views\Report\ProfessorQueryPartial.cshtml" />
-    <Content Include="Views\Report\AverageSubjectMarkPartial.cshtml" />
-    <Content Include="Views\Report\SpecialityMinMaxPartial.cshtml" />
     <Content Include="Views\Report\Get.cshtml" />
     <Content Include="Views\Report\GetAjax.cshtml" />
+    <Content Include="Views\Report\_ProfessorQueryPartial.cshtml" />
+    <Content Include="Views\Report\_AverageSubjectMarkPartial.cshtml" />
+    <Content Include="Views\Report\_SpecialityMinMaxPartial.cshtml" />
+    <Content Include="Views\Report\_TopEntrantPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -361,6 +371,18 @@
       <Project>{2aaa4b31-b276-44c7-9bf6-3d63854d9164}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

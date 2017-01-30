@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<UniversitySystem.Models.ReportModel.AverageSubjectMarkModel>
+
+<h2>Средний балл по предмету</h2>
+<table class="table">
+    <tr>
+        <th>Идентификатор</th>
+        <th>Предмет</th>
+        <th>Средний балл</th>
+    </tr>
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Id</td>
+            <td>@m.Title</td>
+            <td>@m.Points</td>
+        </tr>
+    }
+
+</table>
+

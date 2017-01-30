@@ -10,15 +10,17 @@
         <th>ФИО</th>
         <th>Количество экзаменов</th>
     </tr>
-    
-        @foreach (var m in Model)
-        {
-            <tr>
-                <td>@m.DapartamentTitle</td>
-                <td>@m.ProfessorName</td>
-                <td>@m.ExamCount</td>
-            </tr>
-        }
-   
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.DapartamentTitle</td>
+            <td>@m.ProfessorName</td>
+            <td>@m.ExamCount</td>
+        </tr>
+    }
+
 </table>
+
+
 

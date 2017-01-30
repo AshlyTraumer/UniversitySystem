@@ -1,6 +1,8 @@
 ﻿using ClassLibrary;
 using ClassLibrary.Authorization;
 using System;
+using System.Globalization;
+using System.Threading;
 using System.Web.Mvc;
 using UniversitySystem.Models;
 using UniversitySystem.Manager;
@@ -25,7 +27,9 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-            var list = new SpecialityMinMaxQuery(new RepositoryContext()).Get(2);
+            // var list = new SpecialityMinMaxQuery(new RepositoryContext()).Get(2);
+           // Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en");
+           // Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en");
             return View();
         }
 
