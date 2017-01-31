@@ -1,5 +1,5 @@
 ﻿@using UniversitySystem.Models
-@model IEnumerable<EntrantViewModel>
+@model IEnumerable<EntrantViewMapperModel>
 
 @{
     Layout = null;
@@ -23,21 +23,19 @@
             <tr>
                 <td><p>ID</p></td>
                 <td><p>№ паспорта</p></td>
-                <td><p>Фамилия</p></td>
-                <td><p>Имя</p></td>
-                <td><p>Отчество</p></td>
+                <td><p>ФИО</p></td>
                 <td><p>Дата рождения</p></td>
                 
                 <td></td>
             </tr>
-            @foreach (EntrantViewModel b in Model)
+            @foreach (EntrantViewMapperModel b in Model)
             {
                 <tr>
                     <td><p>@b.Id</p></td>
                     <td><p>@b.Passport</p></td>
-                    <td><p>@b.FirstName</p></td>
+                    @*<td><p>@b.FirstName</p></td>*@
                     <td><p>@b.Name</p></td>
-                    <td><p>@b.LastName</p></td>
+                    @*<td><p>@b.LastName</p></td>*@
                     <td><p>@b.DateOfBirth.ToString("d")</p></td>
                     
                     

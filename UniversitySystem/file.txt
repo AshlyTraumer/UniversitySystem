@@ -1513,3 +1513,341 @@
 2017-01-30 11:57:13.5365|INFO|UniversitySystem.Core.LogService|Result 2.34
 2017-01-30 11:57:55.5656|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
 2017-01-30 11:57:57.7999|INFO|UniversitySystem.Core.LogService|Result 2.18
+2017-01-30 14:23:26.1940|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 14:23:36.2520|INFO|UniversitySystem.Core.LogService|Result 9.92
+2017-01-30 14:23:47.6031|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 8.10
+2017-01-30 14:23:55.4549|INFO|UniversitySystem.Core.LogService|Result 7.83
+2017-01-30 14:23:55.9523|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:23:55.9523|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.0
+2017-01-30 14:23:55.9678|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:23:55.9883|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:23:56.0253|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:23:56.0718|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:23:56.2400|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.2
+2017-01-30 14:23:56.2585|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:23:56.3941|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.1
+2017-01-30 14:23:56.4126|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:23:57.3512|INFO|UniversitySystem.Core.LogService|Result 1.26
+2017-01-30 14:25:02.0450|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.5
+2017-01-30 14:25:03.7756|INFO|UniversitySystem.Core.LogService|Result 1.73
+2017-01-30 14:25:04.3926|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:25:04.4226|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:25:04.4226|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.6
+2017-01-30 14:25:04.4601|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:25:04.5012|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:25:04.4601|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.4
+2017-01-30 14:25:04.5427|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.16
+2017-01-30 14:25:04.5782|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:25:04.5717|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 14:25:04.5437|INFO|UniversitySystem.Core.LogService|Result 0.6
+2017-01-30 14:25:04.5437|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-01-30 14:26:04.2335|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.4
+2017-01-30 14:26:04.2335|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:32:51.4347|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 14:32:53.6036|INFO|UniversitySystem.Core.LogService|Result 2.11
+2017-01-30 14:32:59.8670|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 3.56
+2017-01-30 14:33:01.1284|INFO|UniversitySystem.Core.LogService|Result 1.22
+2017-01-30 14:33:01.4991|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.6
+2017-01-30 14:33:01.4991|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.5
+2017-01-30 14:33:01.5157|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:33:01.5417|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:33:01.6077|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:33:01.6543|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:33:01.7478|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.29
+2017-01-30 14:33:01.7953|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-30 14:33:01.9334|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.19
+2017-01-30 14:33:01.9474|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:33:02.6664|INFO|UniversitySystem.Core.LogService|Result 1.0
+2017-01-30 14:34:05.8613|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 14:34:07.8759|INFO|UniversitySystem.Core.LogService|Result 1.95
+2017-01-30 14:34:11.9841|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 2.40
+2017-01-30 14:34:13.3582|INFO|UniversitySystem.Core.LogService|Result 1.36
+2017-01-30 14:34:13.7670|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:34:13.8165|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:34:13.8275|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.13
+2017-01-30 14:34:13.8621|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 14:34:13.8906|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:34:13.9096|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:34:14.0402|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.6
+2017-01-30 14:34:14.0582|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:34:14.1112|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.30
+2017-01-30 14:34:14.1252|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:34:14.5960|INFO|UniversitySystem.Core.LogService|Result 0.66
+2017-01-30 14:36:59.3026|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.5
+2017-01-30 14:37:15.8841|INFO|UniversitySystem.Core.LogService|Result 16.56
+2017-01-30 14:37:16.9268|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.15
+2017-01-30 14:37:17.0043|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.22
+2017-01-30 14:37:17.1789|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:37:17.1939|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:37:17.2090|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:37:17.2215|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:37:17.2345|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:37:17.2090|INFO|UniversitySystem.Core.LogService|Result 0.20
+2017-01-30 14:37:17.3045|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.51
+2017-01-30 14:37:17.3355|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:37:17.2345|INFO|UniversitySystem.Core.LogService|Result 0.23
+2017-01-30 14:38:40.3135|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-30 14:38:48.1212|INFO|UniversitySystem.Core.LogService|Result 7.75
+2017-01-30 14:38:57.3825|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 3.24
+2017-01-30 14:39:04.0473|INFO|UniversitySystem.Core.LogService|Result 6.65
+2017-01-30 14:39:04.3815|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.5
+2017-01-30 14:39:04.4165|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 14:39:04.5671|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.10
+2017-01-30 14:39:04.5816|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:04.5816|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.27
+2017-01-30 14:39:04.6337|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:04.7162|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:39:04.7497|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.6
+2017-01-30 14:39:04.7497|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:39:04.7632|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:05.5258|INFO|UniversitySystem.Core.LogService|Result 0.74
+2017-01-30 14:39:26.3346|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.2
+2017-01-30 14:39:26.3502|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:37.6229|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 4.31
+2017-01-30 14:39:39.0765|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:39.9980|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 2.37
+2017-01-30 14:39:45.3369|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:47.1175|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 13.66
+2017-01-30 14:39:48.5094|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:39:52.5227|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 25.62
+2017-01-30 14:39:52.6699|INFO|UniversitySystem.Core.LogService|Result 0.14
+2017-01-30 14:39:52.6930|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:39:52.7045|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:39:52.7506|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:40:39.2147|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.7
+2017-01-30 14:40:45.7166|INFO|UniversitySystem.Core.LogService|Result 6.49
+2017-01-30 14:40:46.3190|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.2
+2017-01-30 14:40:46.3500|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 14:40:46.3775|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:40:46.3900|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:40:46.3900|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:40:46.3190|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.1
+2017-01-30 14:40:46.4946|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.14
+2017-01-30 14:40:46.5096|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:40:46.5822|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.5
+2017-01-30 14:40:46.6022|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:40:46.6407|INFO|UniversitySystem.Core.LogService|Result 0.14
+2017-01-30 14:41:02.5224|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.4
+2017-01-30 14:41:09.2432|INFO|UniversitySystem.Core.LogService|Result 6.71
+2017-01-30 14:41:10.0170|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.5
+2017-01-30 14:41:10.0755|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:10.0755|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.10
+2017-01-30 14:41:10.0755|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.10
+2017-01-30 14:41:10.2917|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:10.2337|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-30 14:41:10.6009|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.25
+2017-01-30 14:41:10.6159|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:10.6324|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:41:10.6915|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:41:10.7070|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:14.5388|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.4
+2017-01-30 14:41:14.5544|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:14.8672|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.3
+2017-01-30 14:41:14.8953|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 14:41:14.9198|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:41:14.9468|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:41:14.9668|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:14.9173|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.5
+2017-01-30 14:41:15.0118|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:15.2090|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.5
+2017-01-30 14:41:15.2195|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:15.2350|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.2
+2017-01-30 14:41:15.2350|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:25.3585|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.3
+2017-01-30 14:41:32.0363|INFO|UniversitySystem.Core.LogService|Result 6.65
+2017-01-30 14:41:32.4527|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.3
+2017-01-30 14:41:32.5363|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-01-30 14:41:32.5573|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:41:32.5673|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:41:32.5783|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:32.6008|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.15
+2017-01-30 14:41:32.6203|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:32.6714|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.22
+2017-01-30 14:41:32.6969|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:32.8215|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.12
+2017-01-30 14:41:32.8365|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:41:53.8974|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.1
+2017-01-30 14:42:00.0206|INFO|UniversitySystem.Core.LogService|Result 6.10
+2017-01-30 14:42:00.5969|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.16
+2017-01-30 14:42:00.6229|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.18
+2017-01-30 14:42:00.6925|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:42:00.6925|INFO|UniversitySystem.Core.LogService|Result 0.7
+2017-01-30 14:42:00.6925|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.19
+2017-01-30 14:42:00.8206|INFO|UniversitySystem.Core.LogService|Result 0.8
+2017-01-30 14:42:00.8401|ERROR|UniversitySystem.Core.LogService|Этот запрос заблокирован, поскольку конфиденциальная информация не может быть раскрыта для веб-сайтов сторонних организаций, если такая информация используется в запросе GET. Чтобы разрешить запросы GET, задайте для JsonRequestBehavior значение AllowGet.
+2017-01-30 14:42:00.9041|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:42:00.9041|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:42:00.9291|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.11
+2017-01-30 14:42:00.9406|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:45:22.6717|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 14:45:24.9801|INFO|UniversitySystem.Core.LogService|Result 2.24
+2017-01-30 14:45:39.6424|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 2.25
+2017-01-30 14:45:45.9956|INFO|UniversitySystem.Core.LogService|Result 6.34
+2017-01-30 14:45:46.4789|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.0
+2017-01-30 14:45:46.5159|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.6
+2017-01-30 14:45:46.5159|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 14:45:46.5705|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-30 14:45:46.6295|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.16
+2017-01-30 14:45:46.6465|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:45:46.8587|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.14
+2017-01-30 14:45:46.8767|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:46:42.6191|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-30 14:46:44.7783|INFO|UniversitySystem.Core.LogService|Result 2.4
+2017-01-30 14:46:48.6628|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 2.0
+2017-01-30 14:46:49.8947|INFO|UniversitySystem.Core.LogService|Result 1.22
+2017-01-30 14:46:50.4095|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.9
+2017-01-30 14:46:50.4391|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:46:50.4901|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.6
+2017-01-30 14:46:50.5306|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-30 14:46:50.5521|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.18
+2017-01-30 14:46:50.5656|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:46:50.7803|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.9
+2017-01-30 14:46:50.8213|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-01-30 14:54:36.9575|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.14
+2017-01-30 14:54:45.2665|INFO|UniversitySystem.Core.LogService|Result 8.29
+2017-01-30 14:54:47.3068|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.10
+2017-01-30 14:54:47.3303|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:54:47.5414|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.28
+2017-01-30 14:54:47.5559|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 14:54:47.6670|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.45
+2017-01-30 14:54:47.8311|INFO|UniversitySystem.Core.LogService|Result 0.12
+2017-01-30 14:54:47.8841|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.23
+2017-01-30 14:54:47.9007|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:00:49.8897|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.23
+2017-01-30 15:00:58.6265|INFO|UniversitySystem.Core.LogService|Result 8.71
+2017-01-30 15:01:16.5133|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.5
+2017-01-30 15:01:16.5289|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:01:56.3590|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.3
+2017-01-30 15:02:04.6838|INFO|UniversitySystem.Core.LogService|Result 8.30
+2017-01-30 15:02:08.4256|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.33
+2017-01-30 15:02:08.4431|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:02:09.1446|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.31
+2017-01-30 15:02:09.1556|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:02:09.9921|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.29
+2017-01-30 15:02:10.0071|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:02:10.2073|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 1.89
+2017-01-30 15:02:10.2253|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:02:51.4874|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.12
+2017-01-30 15:02:59.1491|INFO|UniversitySystem.Core.LogService|Result 7.65
+2017-01-30 15:03:02.7698|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 1.50
+2017-01-30 15:03:02.7823|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:03:02.7823|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 1.13
+2017-01-30 15:03:02.8234|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:03:02.9424|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.16
+2017-01-30 15:03:02.9644|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:03:04.1032|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.74
+2017-01-30 15:03:04.1562|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 15:07:34.3819|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.20
+2017-01-30 15:07:43.1060|INFO|UniversitySystem.Core.LogService|Result 8.71
+2017-01-30 15:07:44.9479|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.65
+2017-01-30 15:07:44.9639|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:07:45.7329|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.81
+2017-01-30 15:07:45.7554|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:07:45.7329|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.4
+2017-01-30 15:07:45.8010|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:07:46.6030|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.16
+2017-01-30 15:07:46.6165|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:08:20.8901|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.29
+2017-01-30 15:08:28.2522|INFO|UniversitySystem.Core.LogService|Result 7.32
+2017-01-30 15:08:29.1062|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.23
+2017-01-30 15:08:29.2578|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:08:29.2653|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.36
+2017-01-30 15:08:29.6251|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 15:08:29.6636|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.17
+2017-01-30 15:08:29.6886|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-30 15:08:29.7927|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.17
+2017-01-30 15:08:29.8062|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-30 16:24:24.3521|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-01-30 16:24:25.5563|INFO|UniversitySystem.Core.LogService|Result 1.6
+2017-01-30 16:24:33.1424|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 5.43
+2017-01-30 16:24:33.4157|INFO|UniversitySystem.Core.LogService|Result 0.26
+2017-01-30 16:24:34.3768|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.39
+2017-01-30 16:24:34.5945|INFO|UniversitySystem.Core.LogService|Result 0.19
+2017-01-30 16:24:34.6130|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.38
+2017-01-30 16:24:34.6260|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.25
+2017-01-30 16:24:34.6665|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-30 16:24:34.7276|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.3
+2017-01-30 16:24:34.7276|INFO|UniversitySystem.Core.LogService|Result 0.9
+2017-01-30 16:24:34.7826|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-31 09:57:22.6093|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.9
+2017-01-31 09:57:23.9692|INFO|UniversitySystem.Core.LogService|Result 1.20
+2017-01-31 09:57:33.8237|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 6.62
+2017-01-31 09:57:34.2440|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-01-31 09:57:35.2302|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.25
+2017-01-31 09:57:35.4508|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.32
+2017-01-31 09:57:35.4658|INFO|UniversitySystem.Core.LogService|Result 0.17
+2017-01-31 09:57:35.5424|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.45
+2017-01-31 09:57:35.5624|INFO|UniversitySystem.Core.LogService|Result 0.5
+2017-01-31 09:57:35.5874|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-31 09:57:35.8716|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.14
+2017-01-31 09:57:35.9311|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-01-31 10:18:25.6720|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-01-31 10:18:28.9116|INFO|UniversitySystem.Core.LogService|Result 3.17
+2017-01-31 10:18:40.1905|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 3.20
+2017-01-31 10:18:40.2196|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-31 10:18:40.5146|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.19
+2017-01-31 10:18:47.3890|INFO|UniversitySystem.Core.LogService|Result 6.86
+2017-01-31 10:19:00.5669|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.14
+2017-01-31 10:19:07.6002|INFO|UniversitySystem.Core.LogService|Result 7.2
+2017-01-31 10:29:20.6308|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 10:29:22.8225|INFO|UniversitySystem.Core.LogService|Result 2.13
+2017-01-31 10:29:42.1909|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.87
+2017-01-31 10:29:42.2099|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-31 10:29:42.3440|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.5
+2017-01-31 10:29:48.4584|INFO|UniversitySystem.Core.LogService|Result 6.10
+2017-01-31 10:29:52.1463|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.64
+2017-01-31 10:29:53.2141|INFO|UniversitySystem.Core.LogService|Result 1.5
+2017-01-31 10:29:53.2411|ERROR|UniversitySystem.Core.LogService|E:\UniversitySystem\UniversitySystem\Views\Entrant\Index.cshtml(33): error CS0030: Cannot convert type 'UniversitySystem.Models.EntrantViewMapperModel' to 'UniversitySystem.Models.EntrantViewModel'
+2017-01-31 10:31:44.1254|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 10:31:46.8043|INFO|UniversitySystem.Core.LogService|Result 2.61
+2017-01-31 10:31:56.6197|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 2.64
+2017-01-31 10:31:56.6447|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-31 10:31:56.7873|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.7
+2017-01-31 10:32:02.9977|INFO|UniversitySystem.Core.LogService|Result 6.19
+2017-01-31 10:32:05.7027|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.45
+2017-01-31 10:32:06.6440|INFO|UniversitySystem.Core.LogService|Result 0.92
+2017-01-31 10:32:06.6840|ERROR|UniversitySystem.Core.LogService|E:\UniversitySystem\UniversitySystem\Views\Entrant\Index.cshtml(33): error CS0030: Cannot convert type 'UniversitySystem.Models.EntrantViewMapperModel' to 'UniversitySystem.Models.EntrantViewModel'
+2017-01-31 10:32:38.3582|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 10:32:38.8494|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-01-31 10:32:47.9711|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.82
+2017-01-31 10:32:47.9927|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-31 10:32:48.1088|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.4
+2017-01-31 10:32:48.1518|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-31 10:33:46.1952|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 10:33:48.3488|INFO|UniversitySystem.Core.LogService|Result 2.9
+2017-01-31 10:34:04.5930|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.26
+2017-01-31 10:34:04.6191|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-01-31 10:34:04.7351|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.3
+2017-01-31 10:34:11.0211|INFO|UniversitySystem.Core.LogService|Result 6.27
+2017-01-31 10:36:22.6000|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 10:36:24.8047|INFO|UniversitySystem.Core.LogService|Result 2.15
+2017-01-31 10:36:42.4505|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.85
+2017-01-31 10:36:42.5531|INFO|UniversitySystem.Core.LogService|Result 0.9
+2017-01-31 10:36:42.6311|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.3
+2017-01-31 10:36:49.9208|INFO|UniversitySystem.Core.LogService|Result 7.27
+2017-01-31 10:37:11.1960|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 3.90
+2017-01-31 10:37:17.6549|INFO|UniversitySystem.Core.LogService|Result 6.44
+2017-01-31 10:38:06.0478|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 10:38:06.5802|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-01-31 10:38:27.7098|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.56
+2017-01-31 10:38:27.7269|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-31 10:38:27.8450|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.3
+2017-01-31 10:38:27.8790|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-31 10:38:34.5191|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.40
+2017-01-31 10:38:41.4971|INFO|UniversitySystem.Core.LogService|Result 6.95
+2017-01-31 10:38:43.6631|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Create Time: 0.16
+2017-01-31 10:38:43.6972|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-31 10:38:45.6500|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-01-31 10:38:45.6650|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-31 11:05:51.1630|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-01-31 11:05:53.8482|INFO|UniversitySystem.Core.LogService|Result 2.63
+2017-01-31 11:06:07.1638|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 10.79
+2017-01-31 11:06:14.0164|INFO|UniversitySystem.Core.LogService|Result 6.83
+2017-01-31 11:06:14.4482|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.6
+2017-01-31 11:06:14.4988|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.8
+2017-01-31 11:06:14.5823|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-01-31 11:06:14.5373|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-01-31 11:06:14.6439|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.24
+2017-01-31 11:06:14.6569|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-01-31 11:06:14.9221|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.10
+2017-01-31 11:06:14.9381|INFO|UniversitySystem.Core.LogService|Result 0.0

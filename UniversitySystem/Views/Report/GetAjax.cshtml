@@ -25,9 +25,16 @@
              $.ajax({
                  url: '@Url.Action("TopEntrantPartial", "Report")',
                  type: 'GET',
+                 contentType: "application/json; charset=utf-8",
+                 dataType: "json",
                  success: function (data) {
-                     alert(data);
-                      $('#TopEntrant').html(data);
+                     var user = "<h2>Рейтинг абитуриентов</h2><table class='table'><tr><th>Номер паспорта</th><th>ФИО</th><th>Набранный балл</th></tr>"
+                     for (var i = 0; i < data.length; i++) 
+                         user += "<tr><td>"+data[i].Name+"</td><td>"+data[i].Passport+"</td><td>"+data[i].Points+"</td></tr>";
+                         user += "</table>";
+        
+                    // alert(user);
+                      $('#TopEntrant').html(user);
                  }
              });
 

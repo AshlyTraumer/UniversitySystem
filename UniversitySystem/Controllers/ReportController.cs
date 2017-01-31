@@ -39,8 +39,8 @@ namespace UniversitySystem.Controllers
         public ActionResult TopEntrantPartial()
        // public JsonResult TopEntrantPartial()
         {
-            //return Json(new TopEntrantQuery(Context).Get(), JsonRequestBehavior.AllowGet);
-            return PartialView("_TopEntrantPartial", new TopEntrantQuery(Context).Get());
+            return Json(new TopEntrantQuery(Context).Get(), JsonRequestBehavior.AllowGet);
+            // return PartialView("_TopEntrantPartial", new TopEntrantQuery(Context).Get());
         }
 
         public ActionResult ProfessorQueryPartial( )

@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using AutoMapper;
 using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
@@ -12,7 +14,12 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(_manager.Get());
+            // Пробное
+            Mapper.Initialize(cfg => cfg.CreateMap<EntrantViewModel, EntrantViewMapperModel>()
+                .ForMember("Name", opt => opt.MapFrom(c => c.FirstName + " " + c.Name + " " + c.LastName)));
+           
+            var model = Mapper.Map<IEnumerable<EntrantViewModel>, List<EntrantViewMapperModel>>(_manager.Get());
+            return View(model);
         }
 
         [HttpGet]
@@ -67,6 +74,6 @@ namespace UniversitySystem.Controllers
             }
         }
 
-        
+
     }
 }
