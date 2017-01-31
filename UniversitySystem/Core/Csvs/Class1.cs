@@ -34,7 +34,7 @@ namespace UniversitySystem.Core.Csvs
         void Import(byte[] zipContent);
     }
 
-    public class CsvWrapper : ICsvHelper
+    public class CsvWrapper : ICsvWrapper
     {
         private readonly ICommonRepository _commonRepository;
         private readonly ICsvHelper _csvHelper;
@@ -48,12 +48,13 @@ namespace UniversitySystem.Core.Csvs
             _csvZipper = csvZipper;
         }
 
-        public CsvFile Export<T>(List<T> items)
+
+        public byte[] Export()
         {
             throw new NotImplementedException();
         }
 
-        public List<T> Import<T>(CsvFile csvFile)
+        public void Import(byte[] zipContent)
         {
             throw new NotImplementedException();
         }
