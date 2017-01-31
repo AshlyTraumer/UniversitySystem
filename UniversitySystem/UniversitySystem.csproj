@@ -212,6 +212,7 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
+    <Compile Include="Core\Csvs\Class1.cs" />
     <Compile Include="Core\RoleSet.cs" />
     <Compile Include="Models\EntrantViewMapperModel.cs" />
     <Compile Include="Resources\Resource.Designer.cs">
