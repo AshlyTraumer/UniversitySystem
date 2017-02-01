@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using ClassLibrary;
 using UniversitySystem.Core.Csvs.Interfaces;
 
@@ -7,6 +10,9 @@ namespace UniversitySystem.Core.Csvs
 {
     public class CsvHelper : ICsvHelper
     {
+        private readonly CultureInfo _cultureInfo = Thread.CurrentThread.CurrentCulture;
+        private const string Format = "dd.MM.yyyy";
+
         public CsvFile Export<T>(List<T> items)
         {
             var strList = new List<string>();
@@ -21,23 +27,22 @@ namespace UniversitySystem.Core.Csvs
 
             foreach (var item in items)
             {
-                //var list = new List<string>();
-                //foreach (var tPropSome in tProp)
-                //    if (tPropSome.PropertyType == typeof(DateTime))
-                //    {
-                //        var date = (DateTime) tPropSome.GetValue(item, null);
-                //        list.Add(date.ToShortDateString());
-                //    }
-                //    else
-                //    {
-                //        list.Add(tPropSome.GetValue(item).ToString());
-                //    }
-                //strList.Add(string.Join(";",list));    
+                var list = new List<string>();
 
-                strList.Add(string.Join(";", tProp.Select(q => q.GetValue(item))));
+                foreach (var tPropSome in tProp)
+                    list.Add(tPropSome.PropertyType == typeof(DateTime)
+                        ? ((DateTime) tPropSome.GetValue(item, null)).ToString(Format, _cultureInfo)
+                        : tPropSome.GetValue(item).ToString());
+
+                strList.Add(string.Join(";",list));  
             }
 
             return new CsvFile(tType.Name+".csv",strList); 
+        }
+
+        public List<T> Import<T>(CsvFile csvFile)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

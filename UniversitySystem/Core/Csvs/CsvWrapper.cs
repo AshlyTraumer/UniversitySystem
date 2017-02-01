@@ -14,7 +14,7 @@ namespace UniversitySystem.Core.Csvs
         //TODO throw argumentnullexception
         public CsvWrapper(ICommonRepository commonRepository, ICsvHelper csvHelper, ICsvZipper csvZipper)
         {
-            if (commonRepository == null | csvHelper == null | csvZipper == null)
+            if (commonRepository == null || csvHelper == null || csvZipper == null)
                 throw new ArgumentNullException();
 
             _commonRepository = commonRepository;

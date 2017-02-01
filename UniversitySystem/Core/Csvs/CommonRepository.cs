@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using ClassLibrary;
 using UniversitySystem.Core.Csvs.Interfaces;
@@ -15,9 +14,12 @@ namespace UniversitySystem.Core.Csvs
             _context = context;
         }
 
-       public void AddOrUpdate<T>(IEnumerable<T> items)
+       public void AddOrUpdate<T>(IEnumerable<T> items) where T : BaseEntity
         {
-            throw new NotImplementedException();
+            foreach (var item in items)
+            {
+                var setItem = _context.Set<T>();
+            }
         }
 
         public List<T> GetAll<T>() where T : BaseEntity
