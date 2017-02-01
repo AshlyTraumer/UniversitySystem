@@ -88,6 +88,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -212,7 +213,17 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\SecretaryController.cs" />
+    <Compile Include="Controllers\ZipController.cs" />
     <Compile Include="Core\Csvs\Class1.cs" />
+    <Compile Include="Core\Csvs\CommonRepository.cs" />
+    <Compile Include="Core\Csvs\CsvFile.cs" />
+    <Compile Include="Core\Csvs\CsvHelper.cs" />
+    <Compile Include="Core\Csvs\CsvWrapper.cs" />
+    <Compile Include="Core\Csvs\CsvZipper.cs" />
+    <Compile Include="Core\Csvs\Interfaces\ICommonRepository.cs" />
+    <Compile Include="Core\Csvs\Interfaces\ICsvHelper.cs" />
+    <Compile Include="Core\Csvs\Interfaces\ICsvWrapper.cs" />
+    <Compile Include="Core\Csvs\Interfaces\ICsvZipper.cs" />
     <Compile Include="Core\RoleSet.cs" />
     <Compile Include="Models\EntrantViewMapperModel.cs" />
     <Compile Include="Resources\Resource.Designer.cs">
@@ -364,6 +375,7 @@
     <Folder Include="Logs\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\Logout\" />
+    <Folder Include="Views\Zip\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

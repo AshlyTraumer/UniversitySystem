@@ -60,6 +60,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Core\Csvs\CsvHelperTests.cs" />
     <Compile Include="Manager\AuthorizeManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\TopEntrantQueryTests.cs" />
