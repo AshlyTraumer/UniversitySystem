@@ -1973,3 +1973,457 @@
 2017-02-01 11:46:34.6294|INFO|UniversitySystem.Core.LogService|Result 2.39
 2017-02-01 11:46:39.2375|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 1.54
 2017-02-01 11:46:39.3436|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 11:55:36.5745|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 11:55:40.4061|INFO|UniversitySystem.Core.LogService|Result 3.77
+2017-02-01 11:55:58.1660|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 11:56:04.1178|INFO|UniversitySystem.Core.LogService|Result 5.93
+2017-02-01 11:56:57.4178|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 11:57:03.2584|INFO|UniversitySystem.Core.LogService|Result 5.82
+2017-02-01 12:00:15.8421|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:00:21.9067|INFO|UniversitySystem.Core.LogService|Result 6.5
+2017-02-01 12:00:47.4056|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:00:53.1658|INFO|UniversitySystem.Core.LogService|Result 5.74
+2017-02-01 12:03:53.3879|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-01 12:04:02.5609|INFO|UniversitySystem.Core.LogService|Result 9.2
+2017-02-01 12:07:12.6864|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:07:19.8264|INFO|UniversitySystem.Core.LogService|Result 7.12
+2017-02-01 12:07:24.7244|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:07:24.7400|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 12:08:28.1504|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:08:28.1660|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 12:08:33.3161|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:08:39.2148|INFO|UniversitySystem.Core.LogService|Result 5.87
+2017-02-01 12:13:09.1163|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:13:15.2069|INFO|UniversitySystem.Core.LogService|Result 6.7
+2017-02-01 12:15:07.9043|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:15:07.9199|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 12:15:39.4237|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:15:45.2853|INFO|UniversitySystem.Core.LogService|Result 5.85
+2017-02-01 12:16:36.8611|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:16:42.7963|INFO|UniversitySystem.Core.LogService|Result 5.92
+2017-02-01 12:17:25.1912|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:17:30.9322|INFO|UniversitySystem.Core.LogService|Result 5.72
+2017-02-01 12:17:32.8787|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-01 12:17:32.8943|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 12:20:47.9111|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 12:20:50.7015|INFO|UniversitySystem.Core.LogService|Result 2.72
+2017-02-01 12:20:53.1199|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 12:20:53.6153|INFO|UniversitySystem.Core.LogService|Result 0.47
+2017-02-01 12:29:10.3632|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 12:29:12.7371|INFO|UniversitySystem.Core.LogService|Result 2.32
+2017-02-01 12:29:28.0225|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 12:29:33.4738|INFO|UniversitySystem.Core.LogService|Result 5.43
+2017-02-01 13:06:25.0326|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 13:06:27.6071|INFO|UniversitySystem.Core.LogService|Result 2.52
+2017-02-01 13:06:30.6089|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 13:06:31.0943|INFO|UniversitySystem.Core.LogService|Result 0.46
+2017-02-01 13:08:33.4974|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 13:08:36.0612|INFO|UniversitySystem.Core.LogService|Result 2.51
+2017-02-01 13:08:39.4163|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 13:08:39.8606|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-01 14:19:43.0599|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 14:19:46.3427|INFO|UniversitySystem.Core.LogService|Result 3.22
+2017-02-01 14:19:48.5485|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 14:19:49.3446|INFO|UniversitySystem.Core.LogService|Result 0.78
+2017-02-01 14:38:55.1550|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 14:38:57.5399|INFO|UniversitySystem.Core.LogService|Result 2.31
+2017-02-01 14:39:01.7649|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 14:39:02.2372|INFO|UniversitySystem.Core.LogService|Result 0.46
+2017-02-01 14:43:18.4023|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 14:43:20.5144|INFO|UniversitySystem.Core.LogService|Result 2.6
+2017-02-01 14:43:24.3036|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 14:43:24.7922|INFO|UniversitySystem.Core.LogService|Result 0.47
+2017-02-01 14:47:48.9246|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 14:47:51.2338|INFO|UniversitySystem.Core.LogService|Result 2.23
+2017-02-01 14:47:53.0497|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 14:47:53.5492|INFO|UniversitySystem.Core.LogService|Result 0.48
+2017-02-01 14:51:22.5727|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 14:51:24.7773|INFO|UniversitySystem.Core.LogService|Result 2.15
+2017-02-01 14:51:26.4657|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 14:51:26.9776|INFO|UniversitySystem.Core.LogService|Result 0.49
+2017-02-01 14:59:09.9942|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 14:59:12.1511|INFO|UniversitySystem.Core.LogService|Result 2.10
+2017-02-01 14:59:14.0238|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 14:59:14.4866|INFO|UniversitySystem.Core.LogService|Result 0.44
+2017-02-01 15:03:11.3933|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 15:03:13.6279|INFO|UniversitySystem.Core.LogService|Result 2.12
+2017-02-01 15:03:15.5529|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 15:03:16.2070|INFO|UniversitySystem.Core.LogService|Result 0.63
+2017-02-01 15:06:20.4402|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 15:06:23.6775|INFO|UniversitySystem.Core.LogService|Result 3.12
+2017-02-01 15:11:14.7812|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 15:11:20.4486|INFO|UniversitySystem.Core.LogService|Result 5.64
+2017-02-01 15:22:30.4865|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 15:22:32.7958|INFO|UniversitySystem.Core.LogService|Result 2.26
+2017-02-01 15:22:37.5211|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 15:22:38.1526|INFO|UniversitySystem.Core.LogService|Result 0.61
+2017-02-01 15:26:09.5687|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 15:26:12.0680|INFO|UniversitySystem.Core.LogService|Result 2.34
+2017-02-01 15:26:14.8837|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 15:26:15.3980|INFO|UniversitySystem.Core.LogService|Result 0.50
+2017-02-01 15:48:44.0959|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 15:48:46.5043|INFO|UniversitySystem.Core.LogService|Result 2.36
+2017-02-01 15:48:53.4504|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 15:48:53.9224|INFO|UniversitySystem.Core.LogService|Result 0.45
+2017-02-01 15:59:43.4915|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 15:59:45.8100|INFO|UniversitySystem.Core.LogService|Result 2.25
+2017-02-01 16:01:46.8133|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:01:53.5644|INFO|UniversitySystem.Core.LogService|Result 6.73
+2017-02-01 16:03:27.2406|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 16:03:29.6902|INFO|UniversitySystem.Core.LogService|Result 2.37
+2017-02-01 16:03:31.4821|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:03:32.0230|INFO|UniversitySystem.Core.LogService|Result 0.52
+2017-02-01 16:04:54.2807|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-01 16:04:54.8448|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-01 16:04:56.8282|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:04:56.8622|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-01 16:05:04.8682|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 5.77
+2017-02-01 16:05:04.8838|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 16:05:17.8425|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:05:17.8555|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 16:10:42.1914|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-01 16:10:44.3843|INFO|UniversitySystem.Core.LogService|Result 2.14
+2017-02-01 16:10:47.0293|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:10:47.4265|INFO|UniversitySystem.Core.LogService|Result 0.38
+2017-02-01 16:16:27.3214|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 16:16:29.5937|INFO|UniversitySystem.Core.LogService|Result 2.21
+2017-02-01 16:16:31.6888|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:16:32.1586|INFO|UniversitySystem.Core.LogService|Result 0.45
+2017-02-01 16:23:52.8562|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 16:23:55.1297|INFO|UniversitySystem.Core.LogService|Result 2.21
+2017-02-01 16:23:57.1121|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:23:57.6310|INFO|UniversitySystem.Core.LogService|Result 0.50
+2017-02-01 16:54:42.4858|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-01 16:54:50.3967|INFO|UniversitySystem.Core.LogService|Result 7.84
+2017-02-01 16:54:53.5798|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:54:54.4577|INFO|UniversitySystem.Core.LogService|Result 0.86
+2017-02-01 16:57:18.8217|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 16:57:19.4881|INFO|UniversitySystem.Core.LogService|Result 0.57
+2017-02-01 16:57:22.8532|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 16:57:22.8968|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-01 17:00:15.4625|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 17:00:16.1210|INFO|UniversitySystem.Core.LogService|Result 0.60
+2017-02-01 17:00:18.8408|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:00:18.8819|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-01 17:01:40.9613|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 17:01:41.4851|INFO|UniversitySystem.Core.LogService|Result 0.46
+2017-02-01 17:02:18.2023|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 33.92
+2017-02-01 17:02:18.2164|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-01 17:02:43.5278|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 17:02:44.0072|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-01 17:02:47.8939|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:02:47.9424|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-01 17:12:53.2304|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 17:12:55.7708|INFO|UniversitySystem.Core.LogService|Result 2.49
+2017-02-01 17:13:32.6438|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:13:38.2452|INFO|UniversitySystem.Core.LogService|Result 5.58
+2017-02-01 17:20:04.0500|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 17:20:04.5855|INFO|UniversitySystem.Core.LogService|Result 0.37
+2017-02-01 17:20:06.2063|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:20:06.2333|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-01 17:23:51.5481|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 17:23:53.8835|INFO|UniversitySystem.Core.LogService|Result 2.28
+2017-02-01 17:23:56.8833|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:23:57.4440|INFO|UniversitySystem.Core.LogService|Result 0.54
+2017-02-01 17:26:50.3824|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 17:26:53.1236|INFO|UniversitySystem.Core.LogService|Result 2.69
+2017-02-01 17:26:55.0553|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:26:55.4611|INFO|UniversitySystem.Core.LogService|Result 0.39
+2017-02-01 17:50:14.8935|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 17:50:17.4503|INFO|UniversitySystem.Core.LogService|Result 2.50
+2017-02-01 17:50:19.1622|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:50:19.5770|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-01 17:52:40.6847|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-01 17:52:43.2067|INFO|UniversitySystem.Core.LogService|Result 2.39
+2017-02-01 17:52:52.8612|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 17:52:58.3810|INFO|UniversitySystem.Core.LogService|Result 5.50
+2017-02-01 17:59:52.6521|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-01 18:00:02.0311|INFO|UniversitySystem.Core.LogService|Result 9.25
+2017-02-01 18:00:04.3453|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-01 18:00:05.1560|INFO|UniversitySystem.Core.LogService|Result 0.79
+2017-02-02 09:21:55.1329|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.8
+2017-02-02 09:21:56.2767|INFO|UniversitySystem.Core.LogService|Result 0.88
+2017-02-02 09:21:59.9501|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:22:00.1500|INFO|UniversitySystem.Core.LogService|Result 0.18
+2017-02-02 09:25:10.2155|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 09:25:10.6162|INFO|UniversitySystem.Core.LogService|Result 0.31
+2017-02-02 09:25:14.1748|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 1.77
+2017-02-02 09:25:14.1958|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-02 09:27:47.7214|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:27:47.8217|INFO|UniversitySystem.Core.LogService|Result 0.7
+2017-02-02 09:37:38.8108|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 09:37:39.3923|INFO|UniversitySystem.Core.LogService|Result 0.53
+2017-02-02 09:37:41.6833|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:37:41.8087|INFO|UniversitySystem.Core.LogService|Result 0.11
+2017-02-02 09:41:26.2465|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 09:41:28.7973|INFO|UniversitySystem.Core.LogService|Result 2.50
+2017-02-02 09:41:31.3537|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:41:32.1851|INFO|UniversitySystem.Core.LogService|Result 0.81
+2017-02-02 09:43:34.0352|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 09:43:34.5010|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-02 09:43:37.4653|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:43:37.4965|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-02 09:49:28.7879|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 09:49:30.9764|INFO|UniversitySystem.Core.LogService|Result 2.15
+2017-02-02 09:49:33.1776|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:49:33.7069|INFO|UniversitySystem.Core.LogService|Result 0.50
+2017-02-02 09:52:54.8798|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 09:52:56.9886|INFO|UniversitySystem.Core.LogService|Result 2.4
+2017-02-02 09:52:58.6864|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:52:59.1239|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-02 09:54:40.4510|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 09:54:41.0501|INFO|UniversitySystem.Core.LogService|Result 0.50
+2017-02-02 09:54:42.7930|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:54:42.8303|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-02 09:55:23.8807|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 09:55:24.4318|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-02 09:55:25.7393|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:55:25.8018|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 09:58:18.2220|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 09:58:20.4385|INFO|UniversitySystem.Core.LogService|Result 2.15
+2017-02-02 09:58:22.2593|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 09:58:22.6802|INFO|UniversitySystem.Core.LogService|Result 0.41
+2017-02-02 10:00:17.2345|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 10:00:17.6754|INFO|UniversitySystem.Core.LogService|Result 0.38
+2017-02-02 10:00:19.4544|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:00:19.4856|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 10:00:36.1304|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.56
+2017-02-02 10:00:36.1504|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:00:36.5231|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.12
+2017-02-02 10:00:46.7295|INFO|UniversitySystem.Core.LogService|Result 10.17
+2017-02-02 10:00:52.8047|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Subject Time: 0.2
+2017-02-02 10:00:53.7154|INFO|UniversitySystem.Core.LogService|Result 0.87
+2017-02-02 10:01:20.4509|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 10:01:20.4665|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:01:20.5512|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 10:01:20.5668|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:01:22.4298|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.45
+2017-02-02 10:01:22.4455|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:01:31.4870|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.11
+2017-02-02 10:01:31.5027|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:03:24.3595|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:03:24.3910|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:01.3748|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 27.67
+2017-02-02 10:04:01.3905|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:01.4751|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти представление "ImportFile" или его образец, либо ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Zip/ImportFile.aspx
+~/Views/Zip/ImportFile.ascx
+~/Views/Shared/ImportFile.aspx
+~/Views/Shared/ImportFile.ascx
+~/Views/Zip/ImportFile.cshtml
+~/Views/Zip/ImportFile.vbhtml
+~/Views/Shared/ImportFile.cshtml
+~/Views/Shared/ImportFile.vbhtml
+2017-02-02 10:04:01.4907|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 0.0
+2017-02-02 10:04:08.4159|INFO|UniversitySystem.Core.LogService|Result 6.90
+2017-02-02 10:04:23.3468|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 10:04:23.3624|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:23.4627|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.0
+2017-02-02 10:04:23.4894|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:26.5464|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Departament Time: 0.3
+2017-02-02 10:04:33.1270|INFO|UniversitySystem.Core.LogService|Result 6.58
+2017-02-02 10:04:39.6128|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 10:04:39.6339|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:39.7136|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 10:04:39.7437|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:46.3519|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.1
+2017-02-02 10:04:46.3832|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:04:46.4877|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.3
+2017-02-02 10:04:53.0212|INFO|UniversitySystem.Core.LogService|Result 6.53
+2017-02-02 10:04:55.5795|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.44
+2017-02-02 10:04:56.7781|INFO|UniversitySystem.Core.LogService|Result 1.20
+2017-02-02 10:05:45.0685|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 10:05:45.7245|INFO|UniversitySystem.Core.LogService|Result 0.57
+2017-02-02 10:05:47.6668|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:05:47.7258|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-02-02 10:07:56.3116|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 10:07:58.5914|INFO|UniversitySystem.Core.LogService|Result 2.22
+2017-02-02 10:08:00.1895|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:08:00.6426|INFO|UniversitySystem.Core.LogService|Result 0.44
+2017-02-02 10:09:42.4255|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 10:09:44.6774|INFO|UniversitySystem.Core.LogService|Result 2.19
+2017-02-02 10:09:46.3358|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:09:46.7677|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-02 10:10:38.8391|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 47.13
+2017-02-02 10:10:38.8437|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:10:38.8653|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти представление "ImportFile" или его образец, либо ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Zip/ImportFile.aspx
+~/Views/Zip/ImportFile.ascx
+~/Views/Shared/ImportFile.aspx
+~/Views/Shared/ImportFile.ascx
+~/Views/Zip/ImportFile.cshtml
+~/Views/Zip/ImportFile.vbhtml
+~/Views/Shared/ImportFile.cshtml
+~/Views/Shared/ImportFile.vbhtml
+2017-02-02 10:10:38.8810|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 0.0
+2017-02-02 10:10:45.2534|INFO|UniversitySystem.Core.LogService|Result 6.35
+2017-02-02 10:11:13.6701|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 10:11:13.7038|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-02 10:11:13.8131|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.4
+2017-02-02 10:11:20.6642|INFO|UniversitySystem.Core.LogService|Result 6.83
+2017-02-02 10:11:22.5428|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.41
+2017-02-02 10:11:23.2084|INFO|UniversitySystem.Core.LogService|Result 0.64
+2017-02-02 10:45:01.7500|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 10:45:04.3646|INFO|UniversitySystem.Core.LogService|Result 2.51
+2017-02-02 10:45:25.0187|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 1.88
+2017-02-02 10:45:25.0500|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:45:51.3788|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.10
+2017-02-02 10:45:51.3944|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:45:51.5103|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.4
+2017-02-02 10:45:58.1237|INFO|UniversitySystem.Core.LogService|Result 6.57
+2017-02-02 10:46:01.6984|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/3 Time: 0.14
+2017-02-02 10:46:01.7034|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:01.7815|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 10:46:01.7815|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:02.9328|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/2 Time: 0.8
+2017-02-02 10:46:02.9998|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:03.1404|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 10:46:03.1404|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:04.1022|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/1 Time: 0.5
+2017-02-02 10:46:04.1179|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:04.1491|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 10:46:04.1648|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:05.8416|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.44
+2017-02-02 10:46:06.7372|INFO|UniversitySystem.Core.LogService|Result 0.87
+2017-02-02 10:46:08.7942|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/4 Time: 0.6
+2017-02-02 10:46:08.8098|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:08.8944|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-02 10:46:08.9101|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:10.2975|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 10:46:10.3240|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:10.3950|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 10:46:10.4135|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:11.4492|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:46:12.1296|INFO|UniversitySystem.Core.LogService|Result 0.64
+2017-02-02 10:46:19.5719|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 10:46:19.5875|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:19.7294|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.1
+2017-02-02 10:46:19.7464|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:21.6530|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 10:46:21.6687|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:21.7165|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 10:46:21.7300|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:46:22.7102|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:46:22.7252|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:49:35.2206|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 10:49:37.5554|INFO|UniversitySystem.Core.LogService|Result 2.26
+2017-02-02 10:49:41.3025|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:49:41.7159|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-02 10:51:09.7307|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 10:51:10.1565|INFO|UniversitySystem.Core.LogService|Result 0.34
+2017-02-02 10:51:17.1236|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.30
+2017-02-02 10:51:17.1573|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 10:51:17.3660|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-02 10:51:24.5915|INFO|UniversitySystem.Core.LogService|Result 7.21
+2017-02-02 10:51:26.5697|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.46
+2017-02-02 10:51:27.3069|INFO|UniversitySystem.Core.LogService|Result 0.72
+2017-02-02 10:51:29.1791|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти общедоступный метод действи€ "Index" на контроллере "UniversitySystem.Controllers.ResultsController".
+2017-02-02 10:51:56.4739|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 10:51:56.8902|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-02 10:52:00.0451|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:52:00.0919|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 10:56:19.3221|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 10:56:19.7521|INFO|UniversitySystem.Core.LogService|Result 0.36
+2017-02-02 10:56:21.5002|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 10:56:21.5471|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 11:00:14.9678|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 11:00:15.4612|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-02 11:00:16.9025|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:00:16.9538|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-02 11:00:48.3755|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 23.58
+2017-02-02 11:00:48.4914|INFO|UniversitySystem.Core.LogService|Result 0.9
+2017-02-02 11:00:48.5266|ERROR|UniversitySystem.Core.LogService|Ќе удалось найти представление "ImportFile" или его образец, либо ни один обработчик представлений не поддерживает места поиска. ¬ыполн€лс€ поиск в следующих местах:
+~/Views/Zip/ImportFile.aspx
+~/Views/Zip/ImportFile.ascx
+~/Views/Shared/ImportFile.aspx
+~/Views/Shared/ImportFile.ascx
+~/Views/Zip/ImportFile.cshtml
+~/Views/Zip/ImportFile.vbhtml
+~/Views/Shared/ImportFile.cshtml
+~/Views/Shared/ImportFile.vbhtml
+2017-02-02 11:00:48.5596|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 0.0
+2017-02-02 11:00:55.6862|INFO|UniversitySystem.Core.LogService|Result 7.12
+2017-02-02 11:01:07.5286|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 11:01:07.5443|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:01:07.6637|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.4
+2017-02-02 11:01:07.7607|INFO|UniversitySystem.Core.LogService|Result 0.7
+2017-02-02 11:02:34.8472|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 11:02:37.1050|INFO|UniversitySystem.Core.LogService|Result 2.22
+2017-02-02 11:02:38.9226|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:02:39.3484|INFO|UniversitySystem.Core.LogService|Result 0.41
+2017-02-02 11:03:24.0546|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 11:03:24.5344|INFO|UniversitySystem.Core.LogService|Result 0.41
+2017-02-02 11:03:26.6068|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:03:26.6537|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 11:05:17.6532|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 11:05:18.1153|INFO|UniversitySystem.Core.LogService|Result 0.36
+2017-02-02 11:05:22.5990|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:05:22.6524|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-02 11:05:30.6330|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.24
+2017-02-02 11:05:30.6555|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:05:30.8976|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.3
+2017-02-02 11:05:38.1800|INFO|UniversitySystem.Core.LogService|Result 7.27
+2017-02-02 11:05:41.4689|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.41
+2017-02-02 11:05:42.1657|INFO|UniversitySystem.Core.LogService|Result 0.67
+2017-02-02 11:05:53.8650|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/5 Time: 0.10
+2017-02-02 11:05:53.8872|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:05:53.9653|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-02 11:05:53.9874|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:05:54.7067|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/6 Time: 0.1
+2017-02-02 11:05:54.7289|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:05:54.8070|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-02 11:05:54.8070|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:08:09.2438|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-02 11:08:09.7086|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-02 11:08:11.3752|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:08:11.4447|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-02 11:09:34.0262|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 11:09:34.4659|INFO|UniversitySystem.Core.LogService|Result 0.36
+2017-02-02 11:09:36.3503|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:09:36.4163|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-02 11:09:45.2176|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 2.9
+2017-02-02 11:09:45.2332|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:10:01.5138|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.10
+2017-02-02 11:10:01.5294|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:10:01.6766|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.7
+2017-02-02 11:10:01.7198|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 11:10:10.9162|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/12 Time: 0.19
+2017-02-02 11:10:10.9630|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-02 11:10:17.3445|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/12 Time: 0.0
+2017-02-02 11:10:17.3601|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:10:23.5670|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/12 Time: 0.10
+2017-02-02 11:10:23.5826|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:10:23.6863|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 11:10:23.6988|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:11.0157|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 11:11:11.0313|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:11.1315|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 11:11:11.1472|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:12.3445|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:11:12.3660|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:26.1453|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 4.29
+2017-02-02 11:11:26.1643|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:26.3254|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 11:11:26.3579|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:32.1159|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 11:11:32.1381|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:11:32.2167|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 11:11:32.2428|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:08.2224|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/10 Time: 0.2
+2017-02-02 11:12:08.2380|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:08.3226|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.1
+2017-02-02 11:12:08.3539|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:09.8441|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 11:12:09.8597|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:09.9302|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 11:12:09.9427|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:11.3876|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 11:12:11.4097|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:16.1493|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Zip/ImportFile Time: 0.9
+2017-02-02 11:12:16.1543|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:16.2858|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 11:12:16.2858|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:21.1314|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 11:12:21.1470|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 11:12:21.2316|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 11:12:21.2316|INFO|UniversitySystem.Core.LogService|Result 0.0

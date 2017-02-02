@@ -14,7 +14,7 @@ namespace UniversitySystem.Core.Csvs
         public CsvFile(string fileName, IEnumerable<string> csvStrings)
         {
             if ((fileName == null) || (csvStrings == null))
-                throw new ArgumentNullException();
+                throw new ArgumentNullException("Неизвестное имя файла или пустой контент");
 
             FileName = fileName;
             CsvStrings = new ReadOnlyCollection<string>(csvStrings.ToList());

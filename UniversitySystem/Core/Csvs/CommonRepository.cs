@@ -13,13 +13,20 @@ namespace UniversitySystem.Core.Csvs
         {
             _context = context;
         }
-
-       public void AddOrUpdate<T>(IEnumerable<T> items) where T : BaseEntity
+        
+        public void AddOrUpdate<T>(IEnumerable<T> items) where T : BaseEntity
         {
             foreach (var item in items)
             {
-                var setItem = _context.Set<T>();
+                var link = _context.Set<T>().SingleOrDefault(x => x.Id == item.Id);
+
+                if (link == null)
+                    _context.Set<T>().Add(item);
+                else
+                    link.UpdateByImport(item);
             }
+
+            _context.SaveChanges();
         }
 
         public List<T> GetAll<T>() where T : BaseEntity
