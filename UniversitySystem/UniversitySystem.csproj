@@ -86,9 +86,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -227,6 +229,8 @@
     <Compile Include="Core\Csvs\Interfaces\ICsvZipper.cs" />
     <Compile Include="Core\RoleSet.cs" />
     <Compile Include="Models\EntrantViewMapperModel.cs" />
+    <Compile Include="Models\ReportModel\BaseReportModel.cs" />
+    <Compile Include="Report\ReportTask.cs" />
     <Compile Include="Resources\Resource.Designer.cs">
       <DependentUpon>Resource.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -369,7 +373,6 @@
     <Content Include="Views\Report\_AverageSubjectMarkPartial.cshtml" />
     <Content Include="Views\Report\_SpecialityMinMaxPartial.cshtml" />
     <Content Include="Views\Report\_TopEntrantPartial.cshtml" />
-    <Content Include="Views\Report\TopEntrantPartial.cshtml" />
     <Content Include="Views\Zip\Import.cshtml" />
   </ItemGroup>
   <ItemGroup>

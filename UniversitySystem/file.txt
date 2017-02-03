@@ -2427,3 +2427,637 @@
 2017-02-02 11:12:21.1470|INFO|UniversitySystem.Core.LogService|Result 0.0
 2017-02-02 11:12:21.2316|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
 2017-02-02 11:12:21.2316|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:28:41.4999|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 14:28:50.0592|INFO|UniversitySystem.Core.LogService|Result 8.45
+2017-02-02 14:30:59.2162|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 14:31:01.5852|INFO|UniversitySystem.Core.LogService|Result 2.28
+2017-02-02 14:47:31.0597|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 14:47:34.1028|INFO|UniversitySystem.Core.LogService|Result 2.85
+2017-02-02 14:47:51.1333|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 4.71
+2017-02-02 14:47:51.1554|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:13.4380|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.7
+2017-02-02 14:48:13.4914|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:13.6271|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.3
+2017-02-02 14:48:22.7980|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 14:48:22.8136|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:22.9769|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.1
+2017-02-02 14:48:23.2552|INFO|UniversitySystem.Core.LogService|Result 0.25
+2017-02-02 14:48:23.2552|INFO|UniversitySystem.Core.LogService|Result 9.62
+2017-02-02 14:48:26.5822|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/14 Time: 0.28
+2017-02-02 14:48:26.6044|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:26.7692|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 14:48:26.7852|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:27.7063|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/12 Time: 0.4
+2017-02-02 14:48:27.7313|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:27.8259|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 14:48:27.8424|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:30.2515|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/11 Time: 0.46
+2017-02-02 14:48:30.2665|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:30.4186|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-02 14:48:30.4331|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:32.1998|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.90
+2017-02-02 14:48:39.9576|INFO|UniversitySystem.Core.LogService|Result 7.75
+2017-02-02 14:48:41.9730|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/7 Time: 0.5
+2017-02-02 14:48:41.9730|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:42.1483|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.6
+2017-02-02 14:48:42.1623|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:42.9918|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/3 Time: 0.1
+2017-02-02 14:48:43.0074|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:43.1039|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-02 14:48:43.1209|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:45.3979|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-02 14:48:45.4119|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:45.6931|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 14:48:45.7086|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:48:47.7808|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 14:48:48.3895|INFO|UniversitySystem.Core.LogService|Result 0.59
+2017-02-02 14:54:56.0719|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 14:54:58.6363|INFO|UniversitySystem.Core.LogService|Result 2.51
+2017-02-02 14:55:08.6955|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 2.19
+2017-02-02 14:55:08.7312|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:55:08.9094|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.5
+2017-02-02 14:55:16.1445|INFO|UniversitySystem.Core.LogService|Result 7.22
+2017-02-02 14:55:18.4771|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.43
+2017-02-02 14:55:19.8976|INFO|UniversitySystem.Core.LogService|Result 1.33
+2017-02-02 14:55:26.6290|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Change/12 Time: 4.81
+2017-02-02 14:55:26.8338|INFO|UniversitySystem.Core.LogService|Result 0.15
+2017-02-02 14:55:29.3680|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.8
+2017-02-02 14:55:29.4815|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:55:31.5784|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/12 Time: 0.15
+2017-02-02 14:55:31.5899|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:55:31.6935|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-02 14:55:31.7260|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:55:32.5476|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/11 Time: 0.2
+2017-02-02 14:55:32.5626|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:55:32.7052|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-02 14:55:32.7222|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 14:56:01.8232|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-02 14:56:02.9951|INFO|UniversitySystem.Core.LogService|Result 1.9
+2017-02-02 14:56:08.0288|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 14:56:15.1738|INFO|UniversitySystem.Core.LogService|Result 7.13
+2017-02-02 15:08:03.0512|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 15:08:05.4659|INFO|UniversitySystem.Core.LogService|Result 2.36
+2017-02-02 15:12:13.8273|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 15:12:16.3877|INFO|UniversitySystem.Core.LogService|Result 2.50
+2017-02-02 15:12:20.4551|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:12:20.9236|INFO|UniversitySystem.Core.LogService|Result 0.44
+2017-02-02 15:15:59.0474|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 15:16:01.7512|INFO|UniversitySystem.Core.LogService|Result 2.46
+2017-02-02 15:16:08.5865|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:16:09.2722|INFO|UniversitySystem.Core.LogService|Result 0.66
+2017-02-02 15:19:43.2930|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 15:19:46.8394|INFO|UniversitySystem.Core.LogService|Result 3.44
+2017-02-02 15:19:48.8768|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:19:49.3331|INFO|UniversitySystem.Core.LogService|Result 0.44
+2017-02-02 15:21:57.9919|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 15:22:00.9299|INFO|UniversitySystem.Core.LogService|Result 2.87
+2017-02-02 15:22:03.8988|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:22:04.3739|INFO|UniversitySystem.Core.LogService|Result 0.45
+2017-02-02 15:37:55.5207|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-02 15:37:58.4646|INFO|UniversitySystem.Core.LogService|Result 2.87
+2017-02-02 15:38:14.7782|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:38:21.1894|INFO|UniversitySystem.Core.LogService|Result 6.38
+2017-02-02 15:39:43.7675|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 15:39:48.1118|INFO|UniversitySystem.Core.LogService|Result 4.29
+2017-02-02 15:40:03.1445|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:40:10.1328|INFO|UniversitySystem.Core.LogService|Result 6.94
+2017-02-02 15:50:01.9597|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 15:50:04.4626|INFO|UniversitySystem.Core.LogService|Result 2.33
+2017-02-02 15:50:06.4743|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:50:07.1818|INFO|UniversitySystem.Core.LogService|Result 0.69
+2017-02-02 15:51:38.4147|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 15:51:38.9559|INFO|UniversitySystem.Core.LogService|Result 0.46
+2017-02-02 15:51:40.6972|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 15:51:40.7262|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-02 15:54:32.1886|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 15:54:35.2533|INFO|UniversitySystem.Core.LogService|Result 2.90
+2017-02-02 16:01:19.3307|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 16:01:22.1330|INFO|UniversitySystem.Core.LogService|Result 2.72
+2017-02-02 16:01:25.0541|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 16:01:25.6871|INFO|UniversitySystem.Core.LogService|Result 0.60
+2017-02-02 16:04:36.3367|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 16:04:39.1480|INFO|UniversitySystem.Core.LogService|Result 2.74
+2017-02-02 16:04:41.5361|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-02 16:04:42.1319|INFO|UniversitySystem.Core.LogService|Result 0.57
+2017-02-02 16:53:14.7205|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 16:53:23.5355|INFO|UniversitySystem.Core.LogService|Result 8.73
+2017-02-02 16:54:22.1222|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-02 16:54:22.1600|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-02 16:54:51.6840|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 16:54:53.7915|INFO|UniversitySystem.Core.LogService|Result 2.4
+2017-02-02 16:56:53.3184|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.7
+2017-02-02 16:57:07.1694|INFO|UniversitySystem.Core.LogService|Result 13.80
+2017-02-02 16:57:24.2152|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 14.39
+2017-02-02 16:57:24.3017|INFO|UniversitySystem.Core.LogService|Result 0.6
+2017-02-02 17:43:17.8467|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 17:43:21.0340|INFO|UniversitySystem.Core.LogService|Result 3.14
+2017-02-02 17:43:35.2633|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 5.71
+2017-02-02 17:43:35.2823|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-02 17:46:40.7722|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-02 17:46:43.4053|INFO|UniversitySystem.Core.LogService|Result 2.54
+2017-02-02 17:49:03.1650|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 17:49:06.5966|INFO|UniversitySystem.Core.LogService|Result 2.98
+2017-02-02 17:51:58.8526|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-02 17:52:01.5052|INFO|UniversitySystem.Core.LogService|Result 2.54
+2017-02-02 17:53:24.9720|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-02 17:53:25.4739|INFO|UniversitySystem.Core.LogService|Result 0.45
+2017-02-03 09:35:22.8631|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:35:31.1391|INFO|UniversitySystem.Core.LogService|Result 8.10
+2017-02-03 09:36:36.2494|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:36:36.8929|INFO|UniversitySystem.Core.LogService|Result 0.58
+2017-02-03 09:36:46.9291|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 2.67
+2017-02-03 09:36:46.9541|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-03 09:36:47.3524|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.16
+2017-02-03 09:36:55.7956|INFO|UniversitySystem.Core.LogService|Result 8.42
+2017-02-03 09:37:03.7583|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 4.0
+2017-02-03 09:37:05.0296|INFO|UniversitySystem.Core.LogService|Result 1.25
+2017-02-03 09:37:09.1352|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/17 Time: 0.32
+2017-02-03 09:37:09.1472|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:09.3098|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.8
+2017-02-03 09:37:09.3244|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:10.1789|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/18 Time: 0.1
+2017-02-03 09:37:10.1789|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:10.2765|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-03 09:37:10.2935|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:11.3942|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/19 Time: 0.8
+2017-02-03 09:37:11.4122|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:11.6064|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.4
+2017-02-03 09:37:11.6479|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:12.6511|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/20 Time: 0.5
+2017-02-03 09:37:12.6621|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:12.7352|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-03 09:37:12.7492|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:18.9414|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Change/21 Time: 4.42
+2017-02-03 09:37:18.9744|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-03 09:37:35.8296|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Entrant/Change/21 Time: 3.1
+2017-02-03 09:37:35.8481|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:36.0253|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-03 09:37:36.0378|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:37:38.3147|ERROR|UniversitySystem.Core.LogService|Не удалось найти общедоступный метод действия "Index" на контроллере "UniversitySystem.Controllers.ResultsController".
+2017-02-03 09:37:59.5905|ERROR|UniversitySystem.Core.LogService|Не удалось найти общедоступный метод действия "Index" на контроллере "UniversitySystem.Controllers.ResultsController".
+2017-02-03 09:39:33.3679|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-03 09:39:33.8757|INFO|UniversitySystem.Core.LogService|Result 0.44
+2017-02-03 09:39:42.6882|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 2.41
+2017-02-03 09:39:42.7092|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-03 09:39:43.0220|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.17
+2017-02-03 09:39:43.0615|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-03 09:40:57.5432|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:40:57.9502|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 09:41:05.2791|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.23
+2017-02-03 09:41:05.3071|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:05.4682|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-03 09:41:13.3091|INFO|UniversitySystem.Core.LogService|Result 7.82
+2017-02-03 09:41:16.4940|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.53
+2017-02-03 09:41:17.5358|INFO|UniversitySystem.Core.LogService|Result 1.2
+2017-02-03 09:41:19.6948|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Change/16 Time: 0.6
+2017-02-03 09:41:19.7321|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-03 09:41:23.3056|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-03 09:41:23.3263|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:24.4964|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Create Time: 0.1
+2017-02-03 09:41:24.6455|INFO|UniversitySystem.Core.LogService|Result 0.13
+2017-02-03 09:41:27.7223|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-03 09:41:27.7223|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:30.8829|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/16 Time: 0.17
+2017-02-03 09:41:30.8985|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:31.0336|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.3
+2017-02-03 09:41:31.0501|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:32.3124|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/21 Time: 0.2
+2017-02-03 09:41:32.3314|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:32.4480|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-03 09:41:32.4630|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:34.0373|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-03 09:41:34.0605|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:35.0216|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Create Time: 0.6
+2017-02-03 09:41:35.0371|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:46.1679|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Entrant/Create Time: 0.15
+2017-02-03 09:41:46.1836|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:46.3265|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-03 09:41:46.3375|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:41:48.8379|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Create Time: 0.0
+2017-02-03 09:41:48.8692|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:42:05.3283|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Entrant/Create Time: 0.3
+2017-02-03 09:42:05.3439|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:42:05.4598|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.3
+2017-02-03 09:42:05.5010|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:42:10.0361|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-03 09:42:10.0562|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:42:25.0204|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-03 09:42:25.0416|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:42:25.1207|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-03 09:42:25.1579|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:29.1755|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:43:29.6259|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 09:43:38.2267|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.45
+2017-02-03 09:43:38.2482|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:38.3723|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.4
+2017-02-03 09:43:38.4668|INFO|UniversitySystem.Core.LogService|Result 0.7
+2017-02-03 09:43:41.4144|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/17 Time: 0.9
+2017-02-03 09:43:41.4678|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-02-03 09:43:44.2934|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/17 Time: 0.4
+2017-02-03 09:43:44.3090|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:44.3781|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-03 09:43:44.3937|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:45.7049|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/18 Time: 0.4
+2017-02-03 09:43:45.7164|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:49.0167|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/18 Time: 0.2
+2017-02-03 09:43:49.0479|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:49.1648|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-03 09:43:49.1813|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:50.5352|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/19 Time: 0.4
+2017-02-03 09:43:50.5352|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:53.6941|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/19 Time: 0.8
+2017-02-03 09:43:53.6941|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:53.7735|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-03 09:43:53.7735|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:43:55.0448|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/17 Time: 0.1
+2017-02-03 09:43:55.0633|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:44:00.6349|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/17 Time: 0.1
+2017-02-03 09:44:00.6506|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:44:00.7923|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-03 09:44:00.8048|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:44:02.9702|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-03 09:44:02.9807|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:44:03.0432|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-03 09:44:03.0563|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:47:26.7071|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:47:29.0201|INFO|UniversitySystem.Core.LogService|Result 2.27
+2017-02-03 09:47:55.3406|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 1.51
+2017-02-03 09:47:55.3719|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-03 09:47:55.4878|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.3
+2017-02-03 09:48:02.6509|INFO|UniversitySystem.Core.LogService|Result 7.15
+2017-02-03 09:48:05.5881|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Subject Time: 0.1
+2017-02-03 09:48:06.4500|INFO|UniversitySystem.Core.LogService|Result 0.85
+2017-02-03 09:48:08.6057|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Subject/Delete/3 Time: 0.13
+2017-02-03 09:48:08.6213|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:48:08.7735|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Subject Time: 0.0
+2017-02-03 09:48:08.7920|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:48:10.8787|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-03 09:48:10.8943|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:48:10.9477|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-03 09:48:10.9633|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 09:49:17.0065|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:49:17.4256|INFO|UniversitySystem.Core.LogService|Result 0.34
+2017-02-03 09:57:22.7405|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:57:31.0183|INFO|UniversitySystem.Core.LogService|Result 8.20
+2017-02-03 09:57:38.4291|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 4.50
+2017-02-03 09:59:46.9883|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 09:59:49.3846|INFO|UniversitySystem.Core.LogService|Result 2.31
+2017-02-03 09:59:55.1740|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.64
+2017-02-03 09:59:56.4510|INFO|UniversitySystem.Core.LogService|Result 1.23
+2017-02-03 10:06:33.8250|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 10:06:36.0764|INFO|UniversitySystem.Core.LogService|Result 2.20
+2017-02-03 10:06:46.6772|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 8.9
+2017-02-03 10:06:53.7864|INFO|UniversitySystem.Core.LogService|Result 7.10
+2017-02-03 10:07:41.9071|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 10:07:44.1557|INFO|UniversitySystem.Core.LogService|Result 2.19
+2017-02-03 10:07:49.9937|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.51
+2017-02-03 10:07:51.2933|INFO|UniversitySystem.Core.LogService|Result 1.28
+2017-02-03 10:31:34.6385|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 10:31:45.7096|INFO|UniversitySystem.Core.LogService|Result 11.1
+2017-02-03 10:35:13.2998|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 10:35:15.5557|INFO|UniversitySystem.Core.LogService|Result 2.19
+2017-02-03 10:36:26.8878|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 10:36:29.1327|INFO|UniversitySystem.Core.LogService|Result 2.19
+2017-02-03 10:36:36.5358|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 4.35
+2017-02-03 10:37:58.5510|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 10:38:00.7681|INFO|UniversitySystem.Core.LogService|Result 2.14
+2017-02-03 10:38:08.6141|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.50
+2017-02-03 10:38:09.7563|INFO|UniversitySystem.Core.LogService|Result 1.12
+2017-02-03 10:38:57.6972|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 10:38:59.9756|INFO|UniversitySystem.Core.LogService|Result 2.18
+2017-02-03 10:39:05.2265|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.56
+2017-02-03 10:39:06.4013|INFO|UniversitySystem.Core.LogService|Result 1.16
+2017-02-03 10:39:55.9398|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 10:39:58.6825|INFO|UniversitySystem.Core.LogService|Result 2.68
+2017-02-03 10:40:41.8812|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.27
+2017-02-03 10:40:48.8299|INFO|UniversitySystem.Core.LogService|Result 6.93
+2017-02-03 10:42:00.5821|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 10:42:02.8070|INFO|UniversitySystem.Core.LogService|Result 2.17
+2017-02-03 10:42:06.1379|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.41
+2017-02-03 10:42:07.6019|INFO|UniversitySystem.Core.LogService|Result 1.44
+2017-02-03 11:03:21.5088|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 11:03:24.0982|INFO|UniversitySystem.Core.LogService|Result 2.54
+2017-02-03 11:04:51.5925|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 11:04:54.0457|INFO|UniversitySystem.Core.LogService|Result 2.38
+2017-02-03 11:07:50.5804|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 11:07:55.0282|INFO|UniversitySystem.Core.LogService|Result 4.39
+2017-02-03 11:08:00.1111|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.97
+2017-02-03 11:08:02.2309|INFO|UniversitySystem.Core.LogService|Result 2.10
+2017-02-03 11:08:07.5368|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.8
+2017-02-03 11:08:07.5588|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 11:08:08.6681|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.5
+2017-02-03 11:08:08.7031|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-03 11:08:08.7031|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.6
+2017-02-03 11:08:08.7376|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 11:08:08.8217|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.1
+2017-02-03 11:08:09.0243|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 11:08:09.0513|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.43
+2017-02-03 11:08:09.0809|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 11:51:29.8577|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 11:51:32.6904|INFO|UniversitySystem.Core.LogService|Result 2.77
+2017-02-03 11:51:43.3833|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 7.59
+2017-02-03 11:51:50.8462|INFO|UniversitySystem.Core.LogService|Result 7.45
+2017-02-03 12:10:11.3022|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 12:10:18.9948|INFO|UniversitySystem.Core.LogService|Result 7.62
+2017-02-03 12:10:29.0191|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.81
+2017-02-03 12:10:35.9156|INFO|UniversitySystem.Core.LogService|Result 6.89
+2017-02-03 12:13:37.8610|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 12:13:40.0739|INFO|UniversitySystem.Core.LogService|Result 2.16
+2017-02-03 12:40:56.8071|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 12:40:59.3536|INFO|UniversitySystem.Core.LogService|Result 2.49
+2017-02-03 12:41:11.4160|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 7.47
+2017-02-03 12:41:11.4721|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 12:41:11.4971|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 12:41:18.1209|INFO|UniversitySystem.Core.LogService|Result 6.60
+2017-02-03 12:41:46.1645|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 7.48
+2017-02-03 12:41:46.1856|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 12:41:46.1981|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 12:41:46.2171|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 12:48:26.0829|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 12:48:28.4981|INFO|UniversitySystem.Core.LogService|Result 2.23
+2017-02-03 12:49:23.5308|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.98
+2017-02-03 12:49:30.4123|INFO|UniversitySystem.Core.LogService|Result 6.86
+2017-02-03 12:50:52.5241|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 12:50:55.4283|INFO|UniversitySystem.Core.LogService|Result 2.85
+2017-02-03 12:51:04.9348|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.0
+2017-02-03 12:51:11.7982|INFO|UniversitySystem.Core.LogService|Result 6.85
+2017-02-03 12:52:07.5829|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 12:52:09.8509|INFO|UniversitySystem.Core.LogService|Result 2.21
+2017-02-03 12:52:14.6243|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.15
+2017-02-03 12:52:14.7959|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 12:52:14.8304|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 12:52:15.8480|INFO|UniversitySystem.Core.LogService|Result 0.99
+2017-02-03 12:53:02.7402|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 12:53:04.8728|INFO|UniversitySystem.Core.LogService|Result 2.6
+2017-02-03 12:53:09.0405|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.53
+2017-02-03 12:53:10.5201|INFO|UniversitySystem.Core.LogService|Result 1.45
+2017-02-03 14:36:01.4329|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:36:09.4129|INFO|UniversitySystem.Core.LogService|Result 7.91
+2017-02-03 14:36:19.6003|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 5.89
+2017-02-03 14:36:19.6223|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:36:19.6534|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:36:26.2587|INFO|UniversitySystem.Core.LogService|Result 6.59
+2017-02-03 14:39:01.9390|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:39:04.5126|INFO|UniversitySystem.Core.LogService|Result 2.48
+2017-02-03 14:39:45.3557|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:39:47.9987|INFO|UniversitySystem.Core.LogService|Result 2.56
+2017-02-03 14:40:21.9102|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.51
+2017-02-03 14:40:22.0908|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:40:22.1393|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:40:28.2350|INFO|UniversitySystem.Core.LogService|Result 6.7
+2017-02-03 14:41:09.4749|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:41:09.8902|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 14:41:35.6099|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.48
+2017-02-03 14:41:35.6279|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:41:35.6549|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:41:35.8285|INFO|UniversitySystem.Core.LogService|Result 0.12
+2017-02-03 14:42:44.1540|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:42:46.6095|INFO|UniversitySystem.Core.LogService|Result 2.40
+2017-02-03 14:42:51.6008|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.87
+2017-02-03 14:42:51.6233|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:42:51.6443|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:42:52.5677|INFO|UniversitySystem.Core.LogService|Result 0.90
+2017-02-03 14:43:49.5399|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:43:51.7560|INFO|UniversitySystem.Core.LogService|Result 2.12
+2017-02-03 14:45:00.4685|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:45:02.7266|INFO|UniversitySystem.Core.LogService|Result 2.20
+2017-02-03 14:45:06.5272|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.79
+2017-02-03 14:45:08.0468|INFO|UniversitySystem.Core.LogService|Result 1.50
+2017-02-03 14:46:08.7346|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-03 14:46:11.1032|INFO|UniversitySystem.Core.LogService|Result 2.30
+2017-02-03 14:46:19.9544|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.76
+2017-02-03 14:46:20.0535|ERROR|UniversitySystem.Core.LogService|Произошла одна или несколько ошибок.
+2017-02-03 14:46:20.1235|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:46:20.8215|INFO|UniversitySystem.Core.LogService|Result 0.68
+2017-02-03 14:46:40.9386|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-03 14:46:40.9546|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 14:47:57.9897|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:48:00.2210|INFO|UniversitySystem.Core.LogService|Result 2.15
+2017-02-03 14:48:05.2202|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.16
+2017-02-03 14:48:05.2372|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:48:05.2582|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:48:06.7753|INFO|UniversitySystem.Core.LogService|Result 1.50
+2017-02-03 14:49:28.3516|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:49:30.7545|INFO|UniversitySystem.Core.LogService|Result 2.35
+2017-02-03 14:49:34.7551|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.7
+2017-02-03 14:49:34.8892|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:49:34.9573|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:49:35.6873|INFO|UniversitySystem.Core.LogService|Result 0.71
+2017-02-03 14:51:10.0905|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:51:12.8060|INFO|UniversitySystem.Core.LogService|Result 2.65
+2017-02-03 14:51:16.5993|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.0
+2017-02-03 14:51:16.6418|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:51:16.6643|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:51:17.6081|INFO|UniversitySystem.Core.LogService|Result 0.78
+2017-02-03 14:53:22.6208|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:53:24.9516|INFO|UniversitySystem.Core.LogService|Result 2.21
+2017-02-03 14:53:29.1089|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.68
+2017-02-03 14:53:30.5304|INFO|UniversitySystem.Core.LogService|Result 1.41
+2017-02-03 14:54:27.3872|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:54:29.6350|INFO|UniversitySystem.Core.LogService|Result 2.19
+2017-02-03 14:54:33.4927|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.90
+2017-02-03 14:54:33.5082|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:54:33.5287|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:54:34.4799|INFO|UniversitySystem.Core.LogService|Result 0.92
+2017-02-03 14:55:06.4885|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-03 14:55:06.9106|INFO|UniversitySystem.Core.LogService|Result 0.36
+2017-02-03 14:55:10.0548|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.27
+2017-02-03 14:55:17.3971|INFO|UniversitySystem.Core.LogService|Result 7.32
+2017-02-03 14:56:19.9623|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 14:56:22.3739|INFO|UniversitySystem.Core.LogService|Result 2.35
+2017-02-03 14:56:25.8229|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.62
+2017-02-03 14:56:26.9357|INFO|UniversitySystem.Core.LogService|Result 1.10
+2017-02-03 14:57:18.5150|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:57:20.8350|INFO|UniversitySystem.Core.LogService|Result 2.27
+2017-02-03 14:57:24.0436|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.51
+2017-02-03 14:57:24.0611|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:57:24.0826|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:57:24.7963|INFO|UniversitySystem.Core.LogService|Result 0.70
+2017-02-03 14:57:50.7048|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:57:51.2284|INFO|UniversitySystem.Core.LogService|Result 0.46
+2017-02-03 14:57:54.6711|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.70
+2017-02-03 14:57:54.7091|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:57:54.7326|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:57:54.8602|INFO|UniversitySystem.Core.LogService|Result 0.9
+2017-02-03 14:57:58.1572|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.10
+2017-02-03 14:57:58.1717|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:57:58.1863|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:57:58.2023|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 14:58:00.7985|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-03 14:58:00.8141|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 14:58:03.0123|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.14
+2017-02-03 14:58:03.0253|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:58:03.0353|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:58:03.0493|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 14:58:24.4798|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:58:25.4344|INFO|UniversitySystem.Core.LogService|Result 0.63
+2017-02-03 14:58:29.4202|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.60
+2017-02-03 14:58:29.4692|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:58:29.4883|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:58:29.7054|INFO|UniversitySystem.Core.LogService|Result 0.19
+2017-02-03 14:59:30.9005|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 14:59:33.3973|INFO|UniversitySystem.Core.LogService|Result 2.44
+2017-02-03 14:59:37.3938|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.87
+2017-02-03 14:59:37.4534|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 14:59:37.4964|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 14:59:38.2669|INFO|UniversitySystem.Core.LogService|Result 0.74
+2017-02-03 15:00:38.5025|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:00:40.6394|INFO|UniversitySystem.Core.LogService|Result 2.9
+2017-02-03 15:00:44.1115|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.59
+2017-02-03 15:00:45.6935|INFO|UniversitySystem.Core.LogService|Result 1.57
+2017-02-03 15:01:37.5800|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-03 15:01:39.8182|INFO|UniversitySystem.Core.LogService|Result 2.18
+2017-02-03 15:01:43.6462|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.71
+2017-02-03 15:01:43.6602|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:01:43.6833|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:01:44.6219|INFO|UniversitySystem.Core.LogService|Result 0.92
+2017-02-03 15:02:53.3018|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:02:55.5385|INFO|UniversitySystem.Core.LogService|Result 2.18
+2017-02-03 15:02:59.4798|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.26
+2017-02-03 15:02:59.4978|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:02:59.5173|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:03:01.0996|INFO|UniversitySystem.Core.LogService|Result 1.55
+2017-02-03 15:04:09.2183|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:04:11.4958|INFO|UniversitySystem.Core.LogService|Result 2.22
+2017-02-03 15:04:14.7518|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.44
+2017-02-03 15:04:14.7678|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:04:14.7899|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:04:15.6044|INFO|UniversitySystem.Core.LogService|Result 0.79
+2017-02-03 15:05:35.0453|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:05:37.3342|INFO|UniversitySystem.Core.LogService|Result 2.23
+2017-02-03 15:05:42.6344|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.21
+2017-02-03 15:05:43.7864|INFO|UniversitySystem.Core.LogService|Result 1.14
+2017-02-03 15:06:51.8232|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:06:54.0692|INFO|UniversitySystem.Core.LogService|Result 2.14
+2017-02-03 15:06:58.4182|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.22
+2017-02-03 15:06:58.4339|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:06:58.4964|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:06:59.3139|INFO|UniversitySystem.Core.LogService|Result 0.72
+2017-02-03 15:08:14.2119|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:08:16.5399|INFO|UniversitySystem.Core.LogService|Result 2.26
+2017-02-03 15:08:28.4726|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.86
+2017-02-03 15:08:28.4911|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:08:28.5121|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:08:34.4483|INFO|UniversitySystem.Core.LogService|Result 5.92
+2017-02-03 15:10:11.7519|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:10:12.1702|INFO|UniversitySystem.Core.LogService|Result 0.34
+2017-02-03 15:10:15.8255|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.44
+2017-02-03 15:10:23.5596|INFO|UniversitySystem.Core.LogService|Result 7.71
+2017-02-03 15:10:50.5222|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:10:50.9340|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 15:10:54.7129|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.70
+2017-02-03 15:10:54.7654|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:10:54.8100|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:10:54.9170|INFO|UniversitySystem.Core.LogService|Result 0.6
+2017-02-03 15:11:04.5889|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.7
+2017-02-03 15:11:04.6109|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:11:04.6219|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:11:04.6469|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 15:12:06.7567|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-03 15:12:09.0832|INFO|UniversitySystem.Core.LogService|Result 2.27
+2017-02-03 15:12:15.2838|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.67
+2017-02-03 15:12:15.3013|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:12:15.3343|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:12:16.4356|INFO|UniversitySystem.Core.LogService|Result 0.96
+2017-02-03 15:13:00.4686|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:13:00.9174|INFO|UniversitySystem.Core.LogService|Result 0.38
+2017-02-03 15:13:45.8578|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 38.10
+2017-02-03 15:13:53.6924|INFO|UniversitySystem.Core.LogService|Result 7.82
+2017-02-03 15:14:20.6416|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:14:21.0950|INFO|UniversitySystem.Core.LogService|Result 0.38
+2017-02-03 15:14:24.3877|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.59
+2017-02-03 15:14:24.4112|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:14:24.4348|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:14:24.5859|INFO|UniversitySystem.Core.LogService|Result 0.13
+2017-02-03 15:15:01.2643|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:15:01.6806|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 15:15:09.4236|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 2.11
+2017-02-03 15:15:09.4587|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-03 15:15:27.9905|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.5
+2017-02-03 15:15:28.0095|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 15:15:28.1396|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.4
+2017-02-03 15:15:36.2268|INFO|UniversitySystem.Core.LogService|Result 8.6
+2017-02-03 15:15:39.5453|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.65
+2017-02-03 15:15:41.0218|INFO|UniversitySystem.Core.LogService|Result 1.46
+2017-02-03 15:15:42.6569|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-03 15:15:42.6704|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 15:15:42.9030|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-03 15:15:42.9446|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 15:15:45.0153|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.46
+2017-02-03 15:15:45.0334|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:15:45.0629|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:15:45.2010|INFO|UniversitySystem.Core.LogService|Result 0.12
+2017-02-03 15:16:13.7454|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-03 15:16:14.2487|INFO|UniversitySystem.Core.LogService|Result 0.43
+2017-02-03 15:16:21.6906|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 5.45
+2017-02-03 15:16:21.7166|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:16:21.8127|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:16:22.0398|INFO|UniversitySystem.Core.LogService|Result 0.21
+2017-02-03 15:16:26.5481|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.11
+2017-02-03 15:16:26.6639|INFO|UniversitySystem.Core.LogService|Result 0.10
+2017-02-03 15:16:27.7046|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.11
+2017-02-03 15:16:27.7366|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-03 15:16:27.8692|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.18
+2017-02-03 15:16:27.8692|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.28
+2017-02-03 15:16:27.8902|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 15:16:27.9298|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-03 15:16:27.9978|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.13
+2017-02-03 15:16:28.0378|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-03 15:16:34.0878|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.92
+2017-02-03 15:16:34.2997|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:16:34.3458|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:16:34.3858|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-03 15:18:02.0479|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:18:02.5773|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-03 15:18:20.3504|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 15.79
+2017-02-03 15:18:20.5907|INFO|UniversitySystem.Core.LogService|Result 0.19
+2017-02-03 15:18:52.5245|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:18:53.0879|INFO|UniversitySystem.Core.LogService|Result 0.44
+2017-02-03 15:20:18.5112|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:20:21.2017|INFO|UniversitySystem.Core.LogService|Result 2.53
+2017-02-03 15:24:52.4503|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:24:52.9126|INFO|UniversitySystem.Core.LogService|Result 0.40
+2017-02-03 15:25:06.6353|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 11.79
+2017-02-03 15:25:06.8272|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:25:06.8597|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:25:13.4799|INFO|UniversitySystem.Core.LogService|Result 6.61
+2017-02-03 15:25:53.3387|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:25:53.7770|INFO|UniversitySystem.Core.LogService|Result 0.38
+2017-02-03 15:26:04.8133|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 8.40
+2017-02-03 15:26:05.0180|ERROR|UniversitySystem.Core.LogService|В этом контексте была начата вторая операция до завершения предыдущей асинхронной операции. Используйте "await", чтобы гарантировать завершение асинхронных операций перед вызовом другого метода в данном контексте. Потокобезопасность членов экземпляров не гарантируется.
+2017-02-03 15:26:05.0450|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 0.0
+2017-02-03 15:26:05.0950|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-03 15:26:26.1988|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:26:26.5951|INFO|UniversitySystem.Core.LogService|Result 0.34
+2017-02-03 15:27:51.0299|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-03 15:27:51.4658|INFO|UniversitySystem.Core.LogService|Result 0.34
+2017-02-03 15:28:21.2162|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:28:21.6878|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 15:28:54.4108|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:28:54.9026|INFO|UniversitySystem.Core.LogService|Result 0.35
+2017-02-03 15:35:04.4756|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-03 15:35:04.9054|INFO|UniversitySystem.Core.LogService|Result 0.36
+2017-02-03 15:36:14.5928|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:36:17.1158|INFO|UniversitySystem.Core.LogService|Result 2.40
+2017-02-03 15:37:59.4818|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:38:01.9484|INFO|UniversitySystem.Core.LogService|Result 2.43
+2017-02-03 15:40:39.9586|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:40:42.1221|INFO|UniversitySystem.Core.LogService|Result 2.7
+2017-02-03 15:44:54.6313|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:44:56.8998|INFO|UniversitySystem.Core.LogService|Result 2.16
+2017-02-03 15:46:09.4477|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-03 15:46:11.6384|INFO|UniversitySystem.Core.LogService|Result 2.13
+2017-02-03 15:46:22.2785|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 7.89
+2017-02-03 15:46:29.8366|INFO|UniversitySystem.Core.LogService|Result 7.54
+2017-02-03 15:46:51.6582|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:46:52.1025|INFO|UniversitySystem.Core.LogService|Result 0.38
+2017-02-03 15:49:05.8902|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:49:06.3805|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-03 15:55:47.2338|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:55:49.4034|INFO|UniversitySystem.Core.LogService|Result 2.11
+2017-02-03 15:56:03.1166|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 10.28
+2017-02-03 15:56:09.7084|INFO|UniversitySystem.Core.LogService|Result 6.56
+2017-02-03 15:56:29.7979|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-03 15:56:30.2822|INFO|UniversitySystem.Core.LogService|Result 0.42
+2017-02-03 15:56:44.6165|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 10.96
+2017-02-03 15:56:44.9137|INFO|UniversitySystem.Core.LogService|Result 0.13

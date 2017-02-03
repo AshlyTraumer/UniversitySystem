@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Transactions;
 using ClassLibrary;
 using UniversitySystem.Core.Csvs.Interfaces;
+using TransactionScope = System.Activities.Statements.TransactionScope;
 
 namespace UniversitySystem.Core.Csvs
 {
@@ -20,18 +23,28 @@ namespace UniversitySystem.Core.Csvs
             {
                 var link = _context.Set<T>().SingleOrDefault(x => x.Id == item.Id);
 
-                if (link == null)
-                    _context.Set<T>().Add(item);
-                else
+                if (link != null)
+                {
                     link.UpdateByImport(item);
+                 //   _context.SaveChanges();
+                }
+                else
+                {
+                       // _context.Database.ExecuteSqlCommand($"SET IDENTITY_INSERT dbo.{typeof(T).Name} On");
+                        _context.Set<T>().Add(item);
+                      //  _context.SaveChanges();
+                      //  _context.Database.ExecuteSqlCommand($"SET IDENTITY_INSERT dbo.{typeof(T).Name} Off ");
+                }
             }
 
             _context.SaveChanges();
+          
         }
 
+       
         public List<T> GetAll<T>() where T : BaseEntity
         {
-            return _context.Set<T>().ToList<T>();
+                return _context.Set<T>().ToList<T>();
         }
     }
 }

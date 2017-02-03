@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace UniversitySystem.Report
 {
@@ -6,8 +7,9 @@ namespace UniversitySystem.Report
     {
     }
 
-    public interface IQueryParam<in T, out TResult>
+    public interface IQueryParam<in T, TResult>
     {
+        Task<TResult> GetAsync(T param);
         TResult Get(T param);
     }
 }

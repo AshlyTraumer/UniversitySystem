@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using ClassLibrary;
 using UniversitySystem.Models.ReportModel;
 
@@ -14,15 +16,26 @@ namespace UniversitySystem.Report
             _context = context;
         }
 
-        public List<AverageSubjectMarkModel> Get()
+        public async Task<List<AverageSubjectMarkModel>> GetAsync()
         {
-            return _context.Subjects.Select(t => new AverageSubjectMarkModel
+            return await _context.Subjects.Select(t => new AverageSubjectMarkModel
             {
                 Id = t.Id,
                 Title = t.Title,
                 Points = t.Results.Select(x => x.Points).Average()
-            }
-             ).ToList();
+            })
+            .ToListAsync();
+        }
+
+        public List<AverageSubjectMarkModel> Get()
+        {
+            return  _context.Subjects.Select(t => new AverageSubjectMarkModel
+            {
+                Id = t.Id,
+                Title = t.Title,
+                Points = t.Results.Select(x => x.Points).Average()
+            })
+            .ToList();
         }
     }
 }

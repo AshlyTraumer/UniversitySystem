@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 using ClassLibrary;
 using UniversitySystem.Models.ReportModel;
 
@@ -14,9 +16,9 @@ namespace UniversitySystem.Report
             _context = context;
         }
 
-        public SpecialityMinMaxModel Get(int param)
+        public async Task<SpecialityMinMaxModel> GetAsync(int param)
         {
-            var list = _context.SubjectsSpecialization
+            var list = await _context.SubjectsSpecialization
                 .Where(q => q.SpecializationId == param)
                 .Select(q => new
                 {
@@ -24,7 +26,7 @@ namespace UniversitySystem.Report
                     MinPoint = q.Subject.Results.Select(w => w.Points).Min(),
                     MaxPoint = q.Subject.Results.Select(w => w.Points).Max()
                 })
-                .ToList();
+                .ToListAsync();
 
 
             return new SpecialityMinMaxModel
@@ -35,6 +37,28 @@ namespace UniversitySystem.Report
                 MaxPoint = list.Select(w => w.MaxPoint).Max()
             };
 
+        }
+
+        public SpecialityMinMaxModel Get(int param)
+        {
+            var list = _context.SubjectsSpecialization
+               .Where(q => q.SpecializationId == param)
+               .Select(q => new
+               {
+                   q.Specialization.Title,
+                   MinPoint = q.Subject.Results.Select(w => w.Points).Min(),
+                   MaxPoint = q.Subject.Results.Select(w => w.Points).Max()
+               })
+               .ToList();
+
+
+            return new SpecialityMinMaxModel
+            {
+                Title = list.Select(w => w.Title).First(),
+                Id = param,
+                MinPoint = list.Select(w => w.MinPoint).Min(),
+                MaxPoint = list.Select(w => w.MaxPoint).Max()
+            };
         }
     }
 }

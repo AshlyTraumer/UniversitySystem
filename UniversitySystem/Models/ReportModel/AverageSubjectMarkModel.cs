@@ -1,6 +1,6 @@
 ﻿namespace UniversitySystem.Models.ReportModel
 {
-    public class AverageSubjectMarkModel
+    public class AverageSubjectMarkModel : BaseReportModel
     {
         //ид, название, ср. оценка
         public int Id { get; set; }

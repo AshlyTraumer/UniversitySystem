@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace UniversitySystem.Report
 {
@@ -6,8 +7,9 @@ namespace UniversitySystem.Report
     {
     }
 
-    public interface IQuery<out TResult>
+    public interface IQuery<TResult>
     {
+        Task<TResult> GetAsync();
         TResult Get();
     }
 }

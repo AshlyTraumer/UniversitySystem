@@ -1,6 +1,6 @@
 ﻿namespace UniversitySystem.Models.ReportModel
 {
-    public class SpecialityMinMaxModel
+    public class SpecialityMinMaxModel : BaseReportModel
     {
         //ид, название, мин балл, макс балл
         public int Id { get; set; }

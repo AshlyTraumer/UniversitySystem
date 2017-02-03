@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using ClassLibrary;
 using UniversitySystem.Core.Csvs.Interfaces;
 using static System.String;
@@ -36,6 +37,12 @@ namespace UniversitySystem.Core.Csvs
 
         public byte[] Export()
         {
+            /*return _csvZipper.Zip(new List<CsvFile>
+            {
+                TaskExportAsync<Entrant>().Result,
+                TaskExportAsync<Departament>().Result
+            });*/
+
             return _csvZipper.Zip(new List<CsvFile>
             {
                 _csvHelper.Export(_commonRepository.GetAll<Entrant>()),
@@ -47,6 +54,14 @@ namespace UniversitySystem.Core.Csvs
                 _csvHelper.Export(_commonRepository.GetAll<Subject>())
             });
         }
+
+        private async Task<CsvFile> TaskExportAsync<T>() where T : BaseEntity
+        {
+            return await Task.Run<CsvFile>(() => _csvHelper.Export(_commonRepository.GetAll<T>()));
+        }
+
+        
+
 
         public void Import(byte[] zipContent)
         {

@@ -1,6 +1,6 @@
 ﻿namespace UniversitySystem.Models.ReportModel
 {
-    public class ProfessorQueryModel
+    public class ProfessorQueryModel : BaseReportModel
     {
         //препод., факультет, количество экзаменов
         public string ProfessorName { get; set; }

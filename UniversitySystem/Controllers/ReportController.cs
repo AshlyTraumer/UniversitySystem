@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using ClassLibrary;
 using UniversitySystem.Core;
 using UniversitySystem.Models.ReportModel;
 using UniversitySystem.Report;
+
 
 namespace UniversitySystem.Controllers
 {
@@ -12,17 +14,27 @@ namespace UniversitySystem.Controllers
         public RepositoryContext Context => HttpContext.GetContextPerRequest();
 
         // GET: Report
-        public ActionResult Get()
+        public async  Task<ActionResult> Get()
         {
-            
+            var pTask = new ProfessorQuery(new RepositoryContext()).GetAsync();
+            var asmTask = new AverageSubjectMarkQuery(new RepositoryContext()).GetAsync();
+            var smmTask = new SpecialityMinMaxQuery(new RepositoryContext()).GetAsync(2);
+            var teTask = new TopEntrantQuery(new RepositoryContext()).GetAsync();
+
+            await Task.WhenAll(pTask, asmTask, teTask, smmTask);
+
             return View(new CommonReportModel
             {
-                SpecialityMinMaxModel = new SpecialityMinMaxQuery(Context).Get(2),
-                TopEntrantModels = new TopEntrantQuery(Context).Get(),
-                AverageSubjectMarkModels = new AverageSubjectMarkQuery(Context).Get(),
-                ProfessorQueryModels = new ProfessorQuery(Context).Get()
+                SpecialityMinMaxModel = smmTask.Result,
+                TopEntrantModels = teTask.Result,
+                AverageSubjectMarkModels = asmTask.Result,
+                ProfessorQueryModels = pTask.Result
             });
         }
+
+
+        
+
 
         public ActionResult GetAjax()
         {
@@ -37,15 +49,15 @@ namespace UniversitySystem.Controllers
         }
 
         public ActionResult TopEntrantPartial()
-       // public JsonResult TopEntrantPartial()
+        // public JsonResult TopEntrantPartial()
         {
             return Json(new TopEntrantQuery(Context).Get(), JsonRequestBehavior.AllowGet);
             // return PartialView("_TopEntrantPartial", new TopEntrantQuery(Context).Get());
         }
 
-        public ActionResult ProfessorQueryPartial( )
+        public ActionResult ProfessorQueryPartial()
         {
-            return PartialView("_ProfessorQueryPartial",new ProfessorQuery(Context).Get());
+            return PartialView("_ProfessorQueryPartial", new ProfessorQuery(Context).Get());
         }
 
         public ActionResult AverageSubjectMarkPartial()
