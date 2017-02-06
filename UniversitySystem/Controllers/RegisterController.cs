@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Runtime.Caching;
+using System.Web.Mvc;
 using UniversitySystem.Core;
 using UniversitySystem.Manager;
 using UniversitySystem.Models;
@@ -12,6 +13,7 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+           // MemoryCache.Default.Remove("professor_query");
             return View(new RegisterModel());
         }
 
@@ -20,6 +22,7 @@ namespace UniversitySystem.Controllers
         {
             if (!ModelState.IsValid) return View("Index", model);
             _manager.Register(model);
+            
             return RedirectToAction("Login", "Start");
         }
     }

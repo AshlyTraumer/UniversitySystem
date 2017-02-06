@@ -3061,3 +3061,333 @@
 2017-02-03 15:56:30.2822|INFO|UniversitySystem.Core.LogService|Result 0.42
 2017-02-03 15:56:44.6165|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 10.96
 2017-02-03 15:56:44.9137|INFO|UniversitySystem.Core.LogService|Result 0.13
+2017-02-06 12:05:36.8739|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-06 12:05:46.6328|INFO|UniversitySystem.Core.LogService|Result 9.48
+2017-02-06 12:06:53.7103|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 11.34
+2017-02-06 12:07:01.5752|INFO|UniversitySystem.Core.LogService|Result 7.84
+2017-02-06 12:07:02.8300|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.2
+2017-02-06 12:07:02.8895|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-06 12:07:02.9676|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.14
+2017-02-06 12:07:02.9906|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.17
+2017-02-06 12:07:03.0011|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.0
+2017-02-06 12:07:03.3921|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-06 12:07:03.2762|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 12:07:03.4077|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-02-06 13:00:53.4258|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-06 13:01:02.0518|INFO|UniversitySystem.Core.LogService|Result 8.51
+2017-02-06 13:01:10.2827|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 4.80
+2017-02-06 13:01:12.0308|INFO|UniversitySystem.Core.LogService|Result 1.73
+2017-02-06 13:01:13.0011|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.14
+2017-02-06 13:01:13.2647|INFO|UniversitySystem.Core.LogService|Result 0.24
+2017-02-06 13:01:13.4834|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.8
+2017-02-06 13:01:13.5024|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 13:01:13.5024|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.51
+2017-02-06 13:01:13.6100|INFO|UniversitySystem.Core.LogService|Result 0.5
+2017-02-06 13:01:13.6870|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.7
+2017-02-06 13:01:13.7155|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:12:03.9470|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-06 14:12:19.7790|INFO|UniversitySystem.Core.LogService|Result 15.61
+2017-02-06 14:13:35.8086|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 6.97
+2017-02-06 14:13:44.0712|INFO|UniversitySystem.Core.LogService|Result 8.17
+2017-02-06 14:13:45.0128|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.2
+2017-02-06 14:13:45.1234|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-06 14:13:45.1824|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.17
+2017-02-06 14:13:45.2455|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.24
+2017-02-06 14:13:45.2455|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:13:45.2895|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:13:46.5496|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 1.47
+2017-02-06 14:13:46.5809|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:13:57.2944|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.36
+2017-02-06 14:13:57.3322|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-06 14:13:57.6109|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.18
+2017-02-06 14:14:06.1201|INFO|UniversitySystem.Core.LogService|Result 8.48
+2017-02-06 14:14:10.1591|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.54
+2017-02-06 14:14:11.1171|INFO|UniversitySystem.Core.LogService|Result 0.94
+2017-02-06 14:14:13.1742|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Create Time: 0.6
+2017-02-06 14:14:13.2433|INFO|UniversitySystem.Core.LogService|Result 0.5
+2017-02-06 14:14:31.5009|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Entrant/Create Time: 0.89
+2017-02-06 14:14:31.5165|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:31.7795|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.4
+2017-02-06 14:14:31.8165|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:34.8485|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-06 14:14:34.8642|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:37.8231|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:14:37.8387|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:37.9238|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:14:37.9551|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:39.7434|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.1
+2017-02-06 14:14:39.7679|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:40.5334|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.20
+2017-02-06 14:14:40.5464|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:40.5334|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.0
+2017-02-06 14:14:40.6190|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:40.7681|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.2
+2017-02-06 14:14:40.7771|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:14:40.7771|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.0
+2017-02-06 14:14:40.8191|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:15:57.5502|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 31.90
+2017-02-06 14:15:57.6348|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:15:58.6343|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.4
+2017-02-06 14:15:58.6533|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:15:58.6743|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.7
+2017-02-06 14:15:58.6894|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:15:58.7069|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.9
+2017-02-06 14:15:58.7069|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:15:59.3073|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.6
+2017-02-06 14:15:59.3188|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:07.9971|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.1
+2017-02-06 14:16:08.0192|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:08.0973|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-06 14:16:08.1195|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:12.6052|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/21 Time: 0.34
+2017-02-06 14:16:12.6274|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:12.7561|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-06 14:16:12.7691|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:14.0915|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Delete/20 Time: 0.4
+2017-02-06 14:16:14.1040|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:14.2726|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-06 14:16:14.2892|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:15.1442|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.2
+2017-02-06 14:16:15.2128|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:17.4938|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant/Delete/24 Time: 0.22
+2017-02-06 14:16:17.5103|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:17.5628|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Entrant Time: 0.1
+2017-02-06 14:16:17.5808|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:18.8457|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:16:18.8587|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:19.2214|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:16:19.2625|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:31.6154|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 10.60
+2017-02-06 14:16:31.6310|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:32.6978|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.10
+2017-02-06 14:16:32.7919|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:32.7919|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.11
+2017-02-06 14:16:32.8454|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:32.8144|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.15
+2017-02-06 14:16:32.9220|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:16:33.3072|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.28
+2017-02-06 14:16:33.3418|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:17:49.6655|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-06 14:17:50.5359|INFO|UniversitySystem.Core.LogService|Result 0.79
+2017-02-06 14:19:19.1307|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 26.56
+2017-02-06 14:19:19.4471|INFO|UniversitySystem.Core.LogService|Result 0.22
+2017-02-06 14:19:19.9494|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.2
+2017-02-06 14:19:20.0264|INFO|UniversitySystem.Core.LogService|Result 0.6
+2017-02-06 14:19:20.3171|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.12
+2017-02-06 14:19:20.5628|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-06 14:19:20.5668|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.63
+2017-02-06 14:19:20.6514|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-06 14:19:20.8030|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.6
+2017-02-06 14:19:20.8625|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:19:29.9892|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.8
+2017-02-06 14:19:30.0049|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:19:30.1051|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-06 14:19:30.1569|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-06 14:19:37.3436|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/17 Time: 0.15
+2017-02-06 14:19:37.4061|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-02-06 14:19:40.7946|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/17 Time: 0.24
+2017-02-06 14:19:40.8102|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:19:40.9274|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.0
+2017-02-06 14:19:40.9419|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:19:42.3234|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:19:42.3329|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:19:42.4404|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:19:42.4560|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:19:59.9596|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 16.3
+2017-02-06 14:19:59.9908|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:20:00.7820|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.7
+2017-02-06 14:20:00.8231|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:20:00.8471|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.9
+2017-02-06 14:20:00.8471|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:20:01.0667|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.12
+2017-02-06 14:20:01.0832|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:20:01.2689|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.20
+2017-02-06 14:20:01.3229|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:21:06.1972|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 43.46
+2017-02-06 14:21:06.2202|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:21:06.8802|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.6
+2017-02-06 14:21:06.8802|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:21:06.9312|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.7
+2017-02-06 14:21:06.9842|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:21:07.3675|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.6
+2017-02-06 14:21:07.3800|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:21:07.3800|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.7
+2017-02-06 14:21:07.4035|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:23:09.8673|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-06 14:23:12.3397|INFO|UniversitySystem.Core.LogService|Result 2.43
+2017-02-06 14:23:34.9239|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 20.8
+2017-02-06 14:23:42.2634|INFO|UniversitySystem.Core.LogService|Result 7.23
+2017-02-06 14:23:43.0038|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.9
+2017-02-06 14:23:43.0258|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:23:43.1509|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.22
+2017-02-06 14:23:43.1830|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:23:43.3676|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.6
+2017-02-06 14:23:43.3826|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:23:43.4046|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.7
+2017-02-06 14:23:43.4226|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:23:50.7625|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.5
+2017-02-06 14:23:50.7625|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:23:50.8748|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-06 14:23:52.1061|INFO|UniversitySystem.Core.LogService|Result 1.15
+2017-02-06 14:23:56.8428|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee/Change/17 Time: 0.4
+2017-02-06 14:23:56.8810|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:24:00.2469|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Committee/Change/17 Time: 0.5
+2017-02-06 14:24:00.2625|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:00.3784|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Committee Time: 0.2
+2017-02-06 14:24:00.3784|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:02.0532|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:24:02.0727|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:02.1647|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:24:02.1777|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:22.4814|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 19.78
+2017-02-06 14:24:22.5887|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:23.0890|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.1
+2017-02-06 14:24:23.1218|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:23.1046|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.2
+2017-02-06 14:24:23.1580|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:23.4612|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.21
+2017-02-06 14:24:23.4742|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:24:23.6728|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.13
+2017-02-06 14:24:23.6848|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:25:06.3022|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 24.86
+2017-02-06 14:30:27.4416|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 14:30:35.3079|INFO|UniversitySystem.Core.LogService|Result 7.78
+2017-02-06 14:30:59.6896|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 21.59
+2017-02-06 14:31:07.5140|INFO|UniversitySystem.Core.LogService|Result 7.78
+2017-02-06 14:31:08.3891|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.2
+2017-02-06 14:31:08.4322|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:31:08.7068|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.32
+2017-02-06 14:31:08.7334|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:08.9110|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.32
+2017-02-06 14:31:09.1306|INFO|UniversitySystem.Core.LogService|Result 0.20
+2017-02-06 14:31:09.2747|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.6
+2017-02-06 14:31:09.2912|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:18.6482|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.13
+2017-02-06 14:31:18.6794|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:18.9184|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.13
+2017-02-06 14:31:26.0832|INFO|UniversitySystem.Core.LogService|Result 7.13
+2017-02-06 14:31:29.8662|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.3
+2017-02-06 14:31:31.0463|INFO|UniversitySystem.Core.LogService|Result 1.15
+2017-02-06 14:31:33.9836|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor/Change/2 Time: 0.30
+2017-02-06 14:31:34.0237|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:31:39.9812|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Professor/Change/2 Time: 0.33
+2017-02-06 14:31:39.9968|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:40.1167|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.5
+2017-02-06 14:31:40.1322|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:42.3615|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor/Change/2 Time: 0.1
+2017-02-06 14:31:42.3771|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:45.2807|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Professor/Change/2 Time: 0.4
+2017-02-06 14:31:45.2963|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:45.3653|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.0
+2017-02-06 14:31:45.3810|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:48.4884|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Subject Time: 0.8
+2017-02-06 14:31:55.2282|INFO|UniversitySystem.Core.LogService|Result 6.73
+2017-02-06 14:31:56.3447|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:31:56.3577|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:31:56.4333|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:31:56.4473|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:32:19.8609|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 21.62
+2017-02-06 14:32:19.8779|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:32:20.6559|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.4
+2017-02-06 14:32:20.6930|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.7
+2017-02-06 14:32:20.7375|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:32:20.6930|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:32:20.9221|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.9
+2017-02-06 14:32:20.9321|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:32:20.9887|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.6
+2017-02-06 14:32:20.9887|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:35:09.6725|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 14:35:11.8408|INFO|UniversitySystem.Core.LogService|Result 2.11
+2017-02-06 14:35:48.7696|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 22.94
+2017-02-06 14:35:56.1746|INFO|UniversitySystem.Core.LogService|Result 7.35
+2017-02-06 14:35:56.8510|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 0.3
+2017-02-06 14:35:56.8765|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-06 14:35:56.9105|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 0.8
+2017-02-06 14:35:56.9485|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:35:57.1297|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 0.5
+2017-02-06 14:35:57.1502|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:35:57.1877|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 0.4
+2017-02-06 14:35:57.2502|INFO|UniversitySystem.Core.LogService|Result 0.4
+2017-02-06 14:36:09.1666|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.12
+2017-02-06 14:36:09.2019|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:36:09.3021|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.3
+2017-02-06 14:36:16.4680|INFO|UniversitySystem.Core.LogService|Result 7.14
+2017-02-06 14:36:19.2612|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.1
+2017-02-06 14:36:20.0209|INFO|UniversitySystem.Core.LogService|Result 0.73
+2017-02-06 14:36:22.3291|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor/Change/2 Time: 0.8
+2017-02-06 14:36:22.3760|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:36:27.9671|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Professor/Change/2 Time: 0.12
+2017-02-06 14:36:27.9827|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:36:28.0679|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.0
+2017-02-06 14:36:28.0835|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:36:30.7926|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:36:30.7926|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:36:31.0100|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:36:31.0255|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:36:56.9994|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 20.78
+2017-02-06 14:38:25.1640|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 14:38:27.5133|INFO|UniversitySystem.Core.LogService|Result 2.21
+2017-02-06 14:38:31.2333|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/GetAjax Time: 0.0
+2017-02-06 14:38:32.1200|INFO|UniversitySystem.Core.LogService|Result 0.87
+2017-02-06 14:38:38.0015|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/AverageSubjectMarkPartial Time: 3.94
+2017-02-06 14:38:38.0235|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:38:38.0505|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/TopEntrantPartial Time: 5.23
+2017-02-06 14:38:38.1851|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/SpecialityMinMaxPartial Time: 5.34
+2017-02-06 14:38:38.1981|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/ProfessorQueryPartial Time: 5.36
+2017-02-06 14:38:38.1981|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:38:38.2256|INFO|UniversitySystem.Core.LogService|Result 0.1
+2017-02-06 14:38:38.2256|INFO|UniversitySystem.Core.LogService|Result 0.15
+2017-02-06 14:39:41.6144|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 14:39:43.9464|INFO|UniversitySystem.Core.LogService|Result 2.28
+2017-02-06 14:39:51.4939|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 4.87
+2017-02-06 14:39:52.9339|INFO|UniversitySystem.Core.LogService|Result 1.42
+2017-02-06 14:40:01.6307|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.10
+2017-02-06 14:40:01.6464|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:40:01.7623|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.3
+2017-02-06 14:40:02.6281|INFO|UniversitySystem.Core.LogService|Result 0.84
+2017-02-06 14:40:05.1922|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.2
+2017-02-06 14:40:05.9469|INFO|UniversitySystem.Core.LogService|Result 0.73
+2017-02-06 14:40:07.7311|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor/Change/2 Time: 0.9
+2017-02-06 14:40:07.7643|INFO|UniversitySystem.Core.LogService|Result 0.2
+2017-02-06 14:40:12.9580|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Professor/Change/2 Time: 0.13
+2017-02-06 14:40:12.9736|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:40:13.0582|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.0
+2017-02-06 14:40:13.0738|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:40:15.0562|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:40:15.0562|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:40:15.3211|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:40:15.3362|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:40:20.6277|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.63
+2017-02-06 14:40:20.6592|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:40:29.2046|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 2.57
+2017-02-06 14:40:29.2202|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:51:33.1337|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 14:51:35.8713|INFO|UniversitySystem.Core.LogService|Result 2.69
+2017-02-06 14:51:48.5389|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 9.39
+2017-02-06 14:51:56.0197|INFO|UniversitySystem.Core.LogService|Result 7.46
+2017-02-06 14:52:01.1388|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 1.42
+2017-02-06 14:52:01.2391|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:08.8961|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Start/Login Time: 0.5
+2017-02-06 14:52:08.9117|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:09.0497|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Secretary Time: 0.6
+2017-02-06 14:52:15.5777|INFO|UniversitySystem.Core.LogService|Result 6.50
+2017-02-06 14:52:18.5614|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.1
+2017-02-06 14:52:19.4772|INFO|UniversitySystem.Core.LogService|Result 0.88
+2017-02-06 14:52:21.6101|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor/Change/2 Time: 0.11
+2017-02-06 14:52:21.6635|INFO|UniversitySystem.Core.LogService|Result 0.3
+2017-02-06 14:52:26.2703|INFO|UniversitySystem.Core.LogService|Action POST http://localhost:59188/Professor/Change/2 Time: 0.24
+2017-02-06 14:52:26.2904|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:26.4272|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Professor Time: 0.5
+2017-02-06 14:52:26.4272|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:28.4509|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Logout Time: 0.0
+2017-02-06 14:52:28.4821|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:28.6633|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:52:28.6788|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:34.1038|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.88
+2017-02-06 14:52:34.1587|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:38.3726|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Register Time: 0.0
+2017-02-06 14:52:44.7295|INFO|UniversitySystem.Core.LogService|Result 6.33
+2017-02-06 14:52:46.5289|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.0
+2017-02-06 14:52:46.5491|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 14:52:56.9162|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 9.1
+2017-02-06 14:52:56.9318|INFO|UniversitySystem.Core.LogService|Result 0.0
