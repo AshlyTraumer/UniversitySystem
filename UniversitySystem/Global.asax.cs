@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac;
+using Autofac.Integration.Mvc;
+using ClassLibrary;
 using UniversitySystem.Controllers;
 using UniversitySystem.Core;
+using UniversitySystem.Core.Csvs;
+using UniversitySystem.Core.Csvs.Interfaces;
 
 namespace UniversitySystem
 {
@@ -18,9 +21,24 @@ namespace UniversitySystem
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            var builder = new ContainerBuilder();
+
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            
+            builder.RegisterInstance(new RepositoryContext()).As<RepositoryContext>();
+            builder.RegisterType<CommonRepository>().As<ICommonRepository>().InstancePerRequest();
+
+            builder.RegisterType<CsvHelper>().As<ICsvHelper>();
+            builder.RegisterType<CsvZipper>().As<ICsvZipper>();
+            builder.RegisterType<CsvWrapper>().As<ICsvWrapper>();
+
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container)); 
         }
 
-        private void Application_Error(Object sender, EventArgs e)
+        private void Application_Error(object sender, EventArgs e)
         {
             var exception = Server.GetLastError();
 

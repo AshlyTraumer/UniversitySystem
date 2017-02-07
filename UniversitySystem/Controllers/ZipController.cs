@@ -1,28 +1,25 @@
-﻿using System.Data.SqlClient;
-using System.Globalization;
-using System.IO;
-using System.Net.Mime;
-using System.Threading;
+﻿using System.Net.Mime;
 using System.Web.Mvc;
 using ClassLibrary;
 using UniversitySystem.Core.Csvs;
+using UniversitySystem.Core.Csvs.Interfaces;
 
 namespace UniversitySystem.Controllers
 {
     public class ZipController : Controller
     {
+        private readonly ICsvWrapper _wrapper;
+
+        public ZipController( ICsvWrapper csvWrapper)
+        {
+            _wrapper = csvWrapper;
+        }
+
         public FileResult Export()
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB",true);
-            var wrapper = new CsvWrapper(
-                new CommonRepository(new RepositoryContext()),
-                new CsvHelper(), 
-                new CsvZipper());
-
-            var data = wrapper.Export();
+            var data = _wrapper.Export();
 
             return File(data, MediaTypeNames.Application.Zip, "fileZip.zip");
-
         }
 
         public ActionResult Import()

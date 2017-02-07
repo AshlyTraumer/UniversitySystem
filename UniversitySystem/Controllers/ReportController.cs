@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using ClassLibrary;
@@ -15,29 +16,66 @@ namespace UniversitySystem.Controllers
         public RepositoryContext Context => HttpContext.GetContextPerRequest();
 
         // GET: Report
-        public async  Task<ActionResult> Get()
+        public async Task<ActionResult> Get()
         {
-            /*  var pTask = new ProfessorQuery(new RepositoryContext()).GetAsync();
-              var asmTask = new AverageSubjectMarkQuery(new RepositoryContext()).GetAsync();
-              var smmTask = new SpecialityMinMaxQuery(new RepositoryContext()).GetAsync(2);
-              var teTask = new TopEntrantQuery(new RepositoryContext()).GetAsync();
+            var cache = new AppCache(HttpContext.Cache);
 
-              await Task.WhenAll(pTask, asmTask, teTask, smmTask);
+            /* var pTask = new ProfessorQuery(new RepositoryContext()).GetAsync();
+             var asmTask = new AverageSubjectMarkQuery(new RepositoryContext()).GetAsync();
+             var smmTask = new SpecialityMinMaxQuery(new RepositoryContext()).GetAsync(2);
+             var teTask = new TopEntrantQuery(new RepositoryContext()).GetAsync();
 
-              return View(new CommonReportModel
-              {
-                  SpecialityMinMaxModel = smmTask.Result,
-                  TopEntrantModels = teTask.Result,
-                  AverageSubjectMarkModels = asmTask.Result,
-                  ProfessorQueryModels = pTask.Result
-              });*/
+             await Task.WhenAll(pTask, asmTask, teTask, smmTask);
+
+             return View(new CommonReportModel
+             {
+                 SpecialityMinMaxModel = smmTask.Result,
+                 TopEntrantModels = teTask.Result,
+                 AverageSubjectMarkModels = asmTask.Result,
+                 ProfessorQueryModels = pTask.Result
+             });*/
+
+
+          /*  var model = new CommonReportModel
+            {
+                SpecialityMinMaxModel = cache.GetAllFromCache<int, SpecialityMinMaxModel>
+                 (
+                     "sreciality_min_max",
+                     new SpecialityMinMaxQuery(Context).Get,
+                     2
+                 ),
+
+                AverageSubjectMarkModels = cache.GetAllFromCache<List<AverageSubjectMarkModel>>
+                 (
+                     "average_mark",
+                     new AverageSubjectMarkQuery(Context).Get
+                 ),
+
+                TopEntrantModels = cache.GetAllFromCache<List<TopEntrantModel>>
+                (
+                    "top_entrant",
+                    new TopEntrantQuery(Context).Get
+                ),
+
+                ProfessorQueryModels = cache.GetAllFromCache<List<ProfessorQueryModel>>
+                (
+                    "professor_model",
+                    new ProfessorQuery(Context).Get
+                 )
+            };*/
+            
 
             var model = new CommonReportModel
             {
-                SpecialityMinMaxModel = new SpecialityMinMaxQuery(Context).Get(2),
-                AverageSubjectMarkModels = new AverageSubjectMarkQuery(Context).Get(),
-                ProfessorQueryModels = new ProfessorQueryCache(Context).GetAllFromCache("professor_query"),
-                TopEntrantModels = new TopEntrantCache(Context).GetAllFromCache("top_entrant")
+                AverageSubjectMarkModels = new DecoratorCache<AverageSubjectMarkModel>(new AverageSubjectMarkQuery(Context)).SetKey("asm").Get(),
+                SpecialityMinMaxModel = cache.GetAllFromCache<int, SpecialityMinMaxModel>
+                 (
+                     "sreciality_min_max",
+                     new SpecialityMinMaxQuery(Context).Get,
+                     2
+                 ),
+                TopEntrantModels = new DecoratorCache<TopEntrantModel>(new TopEntrantQuery(Context)).SetKey("te").Get(),
+                ProfessorQueryModels = new DecoratorCache<ProfessorQueryModel>(new ProfessorQuery(Context)).SetKey("pq").Get()
             };
 
             return View(model);
@@ -70,4 +108,6 @@ namespace UniversitySystem.Controllers
             return PartialView("_SpecialityMinMaxPartial", new SpecialityMinMaxQuery(Context).Get(2));
         }
     }
+
+    
 }

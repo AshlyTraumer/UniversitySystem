@@ -3391,3 +3391,76 @@
 2017-02-06 14:52:46.5491|INFO|UniversitySystem.Core.LogService|Result 0.0
 2017-02-06 14:52:56.9162|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 9.1
 2017-02-06 14:52:56.9318|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-06 15:37:28.1541|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 15:37:36.2595|INFO|UniversitySystem.Core.LogService|Result 8.1
+2017-02-06 16:02:50.2456|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-06 16:02:52.6982|INFO|UniversitySystem.Core.LogService|Result 2.40
+2017-02-06 16:03:05.3703|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 7.96
+2017-02-06 16:03:12.3052|INFO|UniversitySystem.Core.LogService|Result 6.92
+2017-02-06 16:08:18.9706|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-06 16:08:21.8751|INFO|UniversitySystem.Core.LogService|Result 2.83
+2017-02-06 16:08:32.4440|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 7.18
+2017-02-06 16:08:39.1845|INFO|UniversitySystem.Core.LogService|Result 6.72
+2017-02-06 16:38:52.6679|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-06 16:39:00.7518|INFO|UniversitySystem.Core.LogService|Result 8.2
+2017-02-06 16:42:58.4297|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 5.2
+2017-02-06 16:43:06.1542|INFO|UniversitySystem.Core.LogService|Result 7.59
+2017-02-06 16:52:21.8215|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-06 16:52:27.4500|INFO|UniversitySystem.Core.LogService|Result 5.56
+2017-02-06 16:52:43.4968|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Report/Get Time: 3.91
+2017-02-06 16:52:50.5661|INFO|UniversitySystem.Core.LogService|Result 7.5
+2017-02-07 10:10:37.1812|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-07 10:10:45.7045|INFO|UniversitySystem.Core.LogService|Result 8.35
+2017-02-07 10:13:30.2839|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-07 10:13:32.7616|INFO|UniversitySystem.Core.LogService|Result 2.38
+2017-02-07 10:13:43.7063|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 10:13:43.7333|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.0
+2017-02-07 10:13:49.8280|INFO|UniversitySystem.Core.LogService|Result 6.7
+2017-02-07 10:14:29.3516|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 10:14:29.3637|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Import Time: 0.0
+2017-02-07 10:14:29.3837|INFO|UniversitySystem.Core.LogService|Result 0.0
+2017-02-07 11:00:27.9296|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-07 11:00:36.2366|INFO|UniversitySystem.Core.LogService|Result 8.25
+2017-02-07 11:03:42.6063|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-07 11:03:45.6505|INFO|UniversitySystem.Core.LogService|Result 2.96
+2017-02-07 11:04:56.9700|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 10.39
+2017-02-07 11:04:57.0951|INFO|UniversitySystem.Core.LogService|Result 0.8
+2017-02-07 11:07:06.9124|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-07 11:07:17.1199|INFO|UniversitySystem.Core.LogService|Result 10.9
+2017-02-07 11:08:28.8959|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-07 11:08:31.6599|INFO|UniversitySystem.Core.LogService|Result 2.68
+2017-02-07 11:09:08.3609|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 11:09:08.3889|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.0
+2017-02-07 11:09:17.3745|INFO|UniversitySystem.Core.LogService|Result 8.97
+2017-02-07 11:10:14.9274|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-07 11:10:18.5037|INFO|UniversitySystem.Core.LogService|Result 3.49
+2017-02-07 11:32:19.6104|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-07 11:32:22.3572|INFO|UniversitySystem.Core.LogService|Result 2.64
+2017-02-07 11:34:13.7248|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-07 11:34:16.0244|INFO|UniversitySystem.Core.LogService|Result 2.24
+2017-02-07 11:38:44.3979|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 11:38:44.4240|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.0
+2017-02-07 11:38:50.8866|INFO|UniversitySystem.Core.LogService|Result 6.44
+2017-02-07 11:40:09.0375|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-07 11:40:11.5221|INFO|UniversitySystem.Core.LogService|Result 2.43
+2017-02-07 11:40:15.3297|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 11:40:15.3557|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.0
+2017-02-07 11:40:16.1883|INFO|UniversitySystem.Core.LogService|Result 0.81
+2017-02-07 11:41:31.4971|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-07 11:41:33.9094|INFO|UniversitySystem.Core.LogService|Result 2.36
+2017-02-07 11:41:37.1522|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 11:41:37.1742|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.0
+2017-02-07 11:41:37.9584|INFO|UniversitySystem.Core.LogService|Result 0.76
+2017-02-07 11:42:38.5059|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.2
+2017-02-07 11:42:41.5976|INFO|UniversitySystem.Core.LogService|Result 3.2
+2017-02-07 11:43:38.2826|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.4
+2017-02-07 11:43:40.5373|INFO|UniversitySystem.Core.LogService|Result 2.20
+2017-02-07 11:43:43.0329|ERROR|UniversitySystem.Core.LogService|ѕроизошла ошибка при попытке создать контроллер типа "UniversitySystem.Controllers.ZipController". ”бедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+2017-02-07 11:43:43.0529|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 0.0
+2017-02-07 11:43:43.8436|INFO|UniversitySystem.Core.LogService|Result 0.77
+2017-02-07 11:44:48.1418|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.5
+2017-02-07 11:44:50.5444|INFO|UniversitySystem.Core.LogService|Result 2.33
+2017-02-07 12:38:04.5248|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Start/Login Time: 0.3
+2017-02-07 12:38:07.8957|INFO|UniversitySystem.Core.LogService|Result 3.31
+2017-02-07 12:38:23.1856|INFO|UniversitySystem.Core.LogService|Action GET http://localhost:59188/Zip/Export Time: 8.37
+2017-02-07 12:38:23.2167|INFO|UniversitySystem.Core.LogService|Result 0.1

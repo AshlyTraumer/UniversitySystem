@@ -45,13 +45,13 @@ namespace UniversitySystem.Core.Csvs
 
             return _csvZipper.Zip(new List<CsvFile>
             {
-                _csvHelper.Export(_commonRepository.GetAll<Entrant>()),
+              //  _csvHelper.Export(_commonRepository.GetAll<Entrant>()),
                 _csvHelper.Export(_commonRepository.GetAll<Departament>()),
-                _csvHelper.Export(_commonRepository.GetAll<Professor>()),
-                _csvHelper.Export(_commonRepository.GetAll<Result>()),
-                _csvHelper.Export(_commonRepository.GetAll<Schedule>()),
-                _csvHelper.Export(_commonRepository.GetAll<Specialization>()),
-                _csvHelper.Export(_commonRepository.GetAll<Subject>())
+              //  _csvHelper.Export(_commonRepository.GetAll<Professor>()),
+              //  _csvHelper.Export(_commonRepository.GetAll<Result>()),
+              //  _csvHelper.Export(_commonRepository.GetAll<Schedule>()),
+              //  _csvHelper.Export(_commonRepository.GetAll<Specialization>()),
+              //  _csvHelper.Export(_commonRepository.GetAll<Subject>())
             });
         }
 
