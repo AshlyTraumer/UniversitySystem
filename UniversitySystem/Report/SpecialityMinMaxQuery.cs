@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using ClassLibrary;
@@ -41,7 +42,7 @@ namespace UniversitySystem.Report
 
         public SpecialityMinMaxModel Get(int param)
         {
-            var list = _context.SubjectsSpecialization
+            /*var list = _context.SubjectsSpecialization
                .Where(q => q.SpecializationId == param)
                .Select(q => new
                {
@@ -58,7 +59,16 @@ namespace UniversitySystem.Report
                 Id = param,
                 MinPoint = list.Select(w => w.MinPoint).Min(),
                 MaxPoint = list.Select(w => w.MaxPoint).Max()
-            };
+            };*/
+
+            //Stored procedure.
+            return _context.Database
+                .SqlQuery<SpecialityMinMaxModel>
+                (
+                    "GetSpecialityReport @p",
+                    new SqlParameter("@p", param)
+                )
+                .Single();
         }
     }
 }

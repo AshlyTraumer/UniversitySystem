@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201701240904384_MigraLast.Designer.cs">
       <DependentUpon>201701240904384_MigraLast.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702080740378_AddColumnMigration.cs" />
+    <Compile Include="Migrations\201702080740378_AddColumnMigration.Designer.cs">
+      <DependentUpon>201702080740378_AddColumnMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domen\Result.cs" />
@@ -93,6 +97,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701240904384_MigraLast.resx">
       <DependentUpon>201701240904384_MigraLast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702080740378_AddColumnMigration.resx">
+      <DependentUpon>201702080740378_AddColumnMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

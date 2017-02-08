@@ -8,6 +8,7 @@ namespace ClassLibrary
 
         public int DepartamentId { get; set; }
         public Departament Departament { get; set; }
+        public int ExamCount { get; set; }
 
         public virtual ICollection<Schedule> Schedules { get; set; }
 

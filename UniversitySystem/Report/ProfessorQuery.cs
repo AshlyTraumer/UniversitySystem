@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using ClassLibrary;
@@ -31,14 +32,19 @@ namespace UniversitySystem.Report
 
         public List<ProfessorQueryModel> Get()
         {
+            // Trigger.
             return  _context.Professors.Select(t => new ProfessorQueryModel
             {
                 ProfessorName = t.Name,
                 DapartamentTitle = t.Departament.Title,
-                ExamCount = t.Schedules.Select(q => q.SubjectId).Count()
+                ExamCount = t.ExamCount
             })
                 .OrderByDescending(x => x.ExamCount)
                 .ToList();
+
+            // Stored procedure.
+           // var model = _context.Database.SqlQuery<ProfessorQueryModel> ("GetProfessorReport").ToList();
+           // return model;
         }
     }
 }

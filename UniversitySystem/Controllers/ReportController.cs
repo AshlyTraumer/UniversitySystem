@@ -73,7 +73,7 @@ namespace UniversitySystem.Controllers
                      "sreciality_min_max",
                      new SpecialityMinMaxQuery(Context).Get,
                      2
-                 ),
+                 ),                
                 TopEntrantModels = new DecoratorCache<TopEntrantModel>(new TopEntrantQuery(Context)).SetKey("te").Get(),
                 ProfessorQueryModels = new DecoratorCache<ProfessorQueryModel>(new ProfessorQuery(Context)).SetKey("pq").Get()
             };
@@ -87,10 +87,8 @@ namespace UniversitySystem.Controllers
         }
 
         public ActionResult TopEntrantPartial()
-        // public JsonResult TopEntrantPartial()
         {
             return Json(new TopEntrantQuery(Context).Get(), JsonRequestBehavior.AllowGet);
-            // return PartialView("_TopEntrantPartial", new TopEntrantQuery(Context).Get());
         }
 
         public ActionResult ProfessorQueryPartial()

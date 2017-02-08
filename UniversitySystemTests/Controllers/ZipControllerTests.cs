@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Autofac.Extras.Moq;
+using Castle.Components.DictionaryAdapter;
 using ClassLibrary;
+using Moq;
 using UniversitySystem.Core.Csvs;
 using UniversitySystem.Core.Csvs.Interfaces;
 
@@ -29,7 +32,7 @@ namespace UniversitySystem.Controllers.Tests
                 var q = new CsvWrapper(mock.Mock<ICommonRepository>().Object, new CsvHelper(), new CsvZipper());
                 var w = q.Export();
 
-               mock.Mock<ICommonRepository>().Setup(x => x.AddOrUpdate(test)).Verifiable();
+               mock.Mock<ICommonRepository>().Setup(x => x.AddOrUpdate(test));
                 var qq = new CsvWrapper(mock.Mock<ICommonRepository>().Object, new CsvHelper(), new CsvZipper());
                 qq.Import(w);
 

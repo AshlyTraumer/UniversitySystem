@@ -75,9 +75,10 @@ namespace UniversitySystem.Core.Csvs
                 var generic = method.MakeGenericMethod(type);
                 var objects = generic.Invoke(_csvHelper, new object[] {item });
 
-                method = typeof(CommonRepository).GetMethod("AddOrUpdate");
-                generic = method.MakeGenericMethod(type);
-                generic.Invoke(_commonRepository, new object[] { objects});
+                
+                 method = typeof(CommonRepository).GetMethod("AddOrUpdate");
+                 generic = method.MakeGenericMethod(type);
+                 generic.Invoke(_commonRepository, new object[] { objects});
 
             }
         }
