@@ -20,7 +20,7 @@ namespace UniversitySystem.Controllers
         {
             var cache = new AppCache(HttpContext.Cache);
 
-            /* var pTask = new ProfessorQuery(new RepositoryContext()).GetAsync();
+             var pTask = new ProfessorQuery(new RepositoryContext()).GetAsync();
              var asmTask = new AverageSubjectMarkQuery(new RepositoryContext()).GetAsync();
              var smmTask = new SpecialityMinMaxQuery(new RepositoryContext()).GetAsync(2);
              var teTask = new TopEntrantQuery(new RepositoryContext()).GetAsync();
@@ -33,7 +33,7 @@ namespace UniversitySystem.Controllers
                  TopEntrantModels = teTask.Result,
                  AverageSubjectMarkModels = asmTask.Result,
                  ProfessorQueryModels = pTask.Result
-             });*/
+             });
 
 
           /*  var model = new CommonReportModel
@@ -65,7 +65,7 @@ namespace UniversitySystem.Controllers
             };*/
             
 
-            var model = new CommonReportModel
+           /* var model = new CommonReportModel
             {
                 AverageSubjectMarkModels = new DecoratorCache<AverageSubjectMarkModel>(new AverageSubjectMarkQuery(Context)).SetKey("asm").Get(),
                 SpecialityMinMaxModel = cache.GetAllFromCache<int, SpecialityMinMaxModel>
@@ -78,7 +78,7 @@ namespace UniversitySystem.Controllers
                 ProfessorQueryModels = new DecoratorCache<ProfessorQueryModel>(new ProfessorQuery(Context)).SetKey("pq").Get()
             };
 
-            return View(model);
+            return View(model);*/
         }
 
         public ActionResult GetAjax()

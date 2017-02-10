@@ -15,6 +15,7 @@ namespace UniversitySystem.Models
 
         [Required]
         public string Date { get; set; }
+        
 
         public int SubjectId { get; set; }
 

@@ -10,6 +10,7 @@ using UniversitySystem.Controllers;
 using UniversitySystem.Core;
 using UniversitySystem.Core.Csvs;
 using UniversitySystem.Core.Csvs.Interfaces;
+using UniversitySystem.Models;
 
 namespace UniversitySystem
 {
@@ -21,7 +22,7 @@ namespace UniversitySystem
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+            ModelBinders.Binders.Add(typeof(ScheduleModel), new DateTimeModelBinder());
 
             var builder = new ContainerBuilder();
 
@@ -57,7 +58,7 @@ namespace UniversitySystem
             routeData.Values["action"] = "Http" + status;
             
             IController errorsController = new ErrorController();
-            HttpContextWrapper wrapper = new HttpContextWrapper(Context);
+            var wrapper = new HttpContextWrapper(Context);
             var rc = new RequestContext(wrapper, routeData);
             errorsController.Execute(rc);
         }

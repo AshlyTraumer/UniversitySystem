@@ -1,14 +1,8 @@
-﻿using ClassLibrary;
-using ClassLibrary.Authorization;
-using System;
-using System.Globalization;
-using System.Threading;
+﻿using ClassLibrary.Authorization;
 using System.Web.Mvc;
 using UniversitySystem.Models;
 using UniversitySystem.Manager;
 using UniversitySystem.Core;
-using UniversitySystem.Models.ReportModel;
-using UniversitySystem.Report;
 
 namespace UniversitySystem.Controllers
 {
@@ -25,15 +19,21 @@ namespace UniversitySystem.Controllers
         }   */            
 
         [HttpGet]
+        [Route("Start/Singin")]
         public ActionResult Login()
         {
             // var list = new SpecialityMinMaxQuery(new RepositoryContext()).Get(2);
            // Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en");
            // Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en");
+
+
             return View();
         }
 
+        
+
         [HttpPost]
+        [Route("Start/Singin")]
         public ActionResult Login(LoginModel model)
         {
             //  var claimsIdentity = new ClaimsIdentity();

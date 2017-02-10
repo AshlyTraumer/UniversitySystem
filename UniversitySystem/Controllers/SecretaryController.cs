@@ -18,6 +18,7 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Create()
         {
+            
             ViewBag.ProfessorList = _manager.GetProfessorList();
             ViewBag.SubjectList = _manager.GetSubjectList();
             return View(new ScheduleModel());

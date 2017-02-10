@@ -13,6 +13,14 @@ namespace UniversitySystem
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+            routes.MapRoute(
+                "Download",                                           
+                "Download/{action}",                            
+                new { controller = "Zip" } 
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
