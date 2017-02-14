@@ -54,10 +54,12 @@
     <Compile Include="Adapter\AdapterTests.cs" />
     <Compile Include="Builder\DirectorTests.cs" />
     <Compile Include="ClientTests.cs" />
+    <Compile Include="Facade\FacadeTests.cs" />
     <Compile Include="FactoryMethod\EnFactoryMethodTests.cs" />
     <Compile Include="LazyInitialization\CustomCacheTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototype\ContentCloneTests.cs" />
+    <Compile Include="Proxy\SpecialEnterTests.cs" />
     <Compile Include="Singleton\AppConfigTests.cs" />
   </ItemGroup>
   <ItemGroup>

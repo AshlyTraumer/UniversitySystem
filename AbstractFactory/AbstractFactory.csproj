@@ -66,6 +66,7 @@
     <Compile Include="Domen\Header\RuHeader.cs" />
     <Compile Include="AbstractFactory\Letter %28Factory%29\ILetter.cs" />
     <Compile Include="AbstractFactory\Letter %28Factory%29\RuLetter.cs" />
+    <Compile Include="Facade\Facade.cs" />
     <Compile Include="FactoryMethod\EnFactoryMethod.cs" />
     <Compile Include="FactoryMethod\ErrorModel.cs" />
     <Compile Include="FactoryMethod\IFactoryMethod.cs" />
@@ -80,6 +81,9 @@
     <Compile Include="Prototype\ContentClone.cs" />
     <Compile Include="Prototype\HeaderClone.cs" />
     <Compile Include="Prototype\IClone.cs" />
+    <Compile Include="Proxy\GeneralEnter.cs" />
+    <Compile Include="Proxy\Person.cs" />
+    <Compile Include="Proxy\SpecialEnter.cs" />
     <Compile Include="Singleton\CustomSingleton.cs" />
   </ItemGroup>
   <ItemGroup>

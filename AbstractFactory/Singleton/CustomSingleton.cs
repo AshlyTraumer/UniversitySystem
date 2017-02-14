@@ -4,7 +4,7 @@ namespace AbstractFactory.Singleton
 {
     public sealed class AppConfig
     {
-        private static AppConfig _instance = new AppConfig();
+        private static readonly AppConfig _instance = new AppConfig();
         private static Dictionary<string, string> _config;
 
         private AppConfig()

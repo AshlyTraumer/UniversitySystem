@@ -6,7 +6,7 @@ namespace AbstractFactory.Letter.Header
     {
         public string Get(string name)
         {
-            return string.Concat(Headers.EnHello,name);
+            return $"{Headers.EnHello}{name}";
         }
     }
 }

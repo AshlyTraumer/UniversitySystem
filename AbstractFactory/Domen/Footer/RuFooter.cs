@@ -7,7 +7,7 @@ namespace AbstractFactory.Letter.Footer
     {
         public string Get(DateTime date)
         {
-            return $"{Footers.RuFooter}, {date.ToString("dd.MM.yyyy")}";
+            return $"{Footers.RuFooter} {date.ToString("dd.MM.yyyy")}";
         }
     }
 }
