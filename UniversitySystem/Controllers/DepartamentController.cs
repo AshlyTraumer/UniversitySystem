@@ -12,6 +12,7 @@ namespace UniversitySystem.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+           
             return View(_manager.Get());
         }
 

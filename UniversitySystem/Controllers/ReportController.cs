@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 using ClassLibrary;
 using UniversitySystem.Cache;
@@ -16,6 +14,7 @@ namespace UniversitySystem.Controllers
         public RepositoryContext Context => HttpContext.GetContextPerRequest();
 
         // GET: Report
+        [OutputCacheAttribute(Duration = 300)]
         public async Task<ActionResult> Get()
         {
             var cache = new AppCache(HttpContext.Cache);
@@ -26,7 +25,7 @@ namespace UniversitySystem.Controllers
              var teTask = new TopEntrantQuery(new RepositoryContext()).GetAsync();
 
              await Task.WhenAll(pTask, asmTask, teTask, smmTask);
-
+            
              return View(new CommonReportModel
              {
                  SpecialityMinMaxModel = smmTask.Result,
@@ -83,24 +82,29 @@ namespace UniversitySystem.Controllers
 
         public ActionResult GetAjax()
         {
+           
             return View();
         }
 
+        [ChildActionOnly]
         public ActionResult TopEntrantPartial()
         {
             return Json(new TopEntrantQuery(Context).Get(), JsonRequestBehavior.AllowGet);
         }
 
+        [ChildActionOnly]
         public ActionResult ProfessorQueryPartial()
         {
             return PartialView("_ProfessorQueryPartial", new ProfessorQuery(Context).Get());
         }
 
+        [ChildActionOnly]
         public ActionResult AverageSubjectMarkPartial()
         {
             return PartialView("_AverageSubjectMarkPartial", new AverageSubjectMarkQuery(Context).Get());
         }
 
+        [ChildActionOnly]
         public ActionResult SpecialityMinMaxPartial()
         {
             return PartialView("_SpecialityMinMaxPartial", new SpecialityMinMaxQuery(Context).Get(2));
