@@ -52,10 +52,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Adapter\AdapterTests.cs" />
+    <Compile Include="Bridge\MonthlyReportTests.cs" />
     <Compile Include="Builder\DirectorTests.cs" />
     <Compile Include="ClientTests.cs" />
+    <Compile Include="Composite\CompositeTests.cs" />
     <Compile Include="Facade\FacadeTests.cs" />
     <Compile Include="FactoryMethod\EnFactoryMethodTests.cs" />
+    <Compile Include="Flyweight\FlyweightFactoryTests.cs" />
     <Compile Include="LazyInitialization\CustomCacheTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prototype\ContentCloneTests.cs" />
