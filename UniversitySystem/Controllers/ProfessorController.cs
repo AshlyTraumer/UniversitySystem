@@ -34,10 +34,10 @@ namespace UniversitySystem.Controllers
         {
             if (ModelState.IsValid)
             {
-               _manager.Create(model);
+               //_manager.Create(model);
                 return RedirectToAction("Index", "Professor");
             }
-            ViewBag.List = _manager.GetList();
+           // ViewBag.List = _manager.GetList();
             return View(model);
         }
 
